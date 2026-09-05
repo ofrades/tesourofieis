@@ -44,4 +44,29 @@ function isFirstSaturday(date: Date): boolean {
   return date.getDate() <= 7 && date.getDay() === 6;
 }
 
-export { isFirstFriday, isFirstSaturday, parseLocalDate, shiftLocalDate, yyyyMMDD };
+// Quaresma de São Miguel Arcanjo: 15 August (Assumption) through
+// 29 September (Dedication of St. Michael), 46 days. Returns the
+// 1-based day of the devotion, or null outside the period.
+// Time-of-day agnostic: only the calendar date matters.
+function stMichaelLentDay(date: Date): number | null {
+  const year = date.getFullYear();
+  const start = new Date(year, 7, 15).getTime();
+  const end = new Date(year, 8, 29).getTime();
+  const day = new Date(year, date.getMonth(), date.getDate()).getTime();
+  if (day < start || day > end) return null;
+  return Math.round((day - start) / 86_400_000) + 1;
+}
+
+function isStMichaelLent(date: Date): boolean {
+  return stMichaelLentDay(date) !== null;
+}
+
+export {
+  isFirstFriday,
+  isFirstSaturday,
+  isStMichaelLent,
+  parseLocalDate,
+  shiftLocalDate,
+  stMichaelLentDay,
+  yyyyMMDD,
+};

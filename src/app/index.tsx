@@ -16,7 +16,7 @@ import { COLORS } from "~/constants/Colors";
 import { useCalendar } from "~/providers/calendar";
 import { useCalendarEdition } from "~/providers/edition";
 import { useTodaysIndulgences } from "~/hooks/useTodaysIndulgences";
-import { isFirstFriday, isFirstSaturday, yyyyMMDD } from "~/lib/utils";
+import { isFirstFriday, isFirstSaturday, stMichaelLentDay, yyyyMMDD } from "~/lib/utils";
 import { useAppTheme } from "~/theme";
 
 export default function PageRender() {
@@ -35,6 +35,7 @@ export default function PageRender() {
   }
 
   const currentPrayer = getPrayer(date);
+  const lentDay = stMichaelLentDay(date);
 
   const { width } = useWindowDimensions();
   const isCompactLayout = width < 420;
@@ -203,6 +204,13 @@ export default function PageRender() {
                 href="/devocionario/rosario"
                 title="💙 Primeiro Sábado — Imaculado Coração de Maria"
                 description="Rosário e Comunhão reparadora"
+              />
+            )}
+            {lentDay !== null && (
+              <LinkCard
+                href="/devocionario/oracoes/coroasaomiguel"
+                title="⚔️ Quaresma de São Miguel"
+                description={`Dia ${lentDay} de 40 · Coroa de São Miguel`}
               />
             )}
           </View>

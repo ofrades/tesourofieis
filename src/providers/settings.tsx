@@ -1,5 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { isFirstFriday, isFirstSaturday, yyyyMMDD } from "~/lib/utils";
+import { isFirstFriday, isFirstSaturday, stMichaelLentDay, yyyyMMDD } from "~/lib/utils";
 import { burgundy } from "config";
 import { addDays, isWithinInterval, parseISO, subDays } from "date-fns";
 import * as Application from "expo-application";
@@ -55,6 +55,11 @@ const NOTIFICATIONS = {
     title: "🙏 Novena",
     times: { hour: 20, minute: 0 },
     link: "devocionario/novenas",
+  },
+  ST_MICHAEL_LENT: {
+    title: "⚔️ Quaresma de São Miguel",
+    link: "devocionario/oracoes/coroasaomiguel",
+    color: "#5C6BC0",
   },
   OFFICE: {
     title: "⏰ Hora do Ofício",
@@ -456,6 +461,45 @@ export function SettingsProvider({ children }: React.PropsWithChildren) {
             );
           }
         }
+      }
+    }
+
+    if (settings.novenaEnabled) {
+      const today = new Date();
+      const maxDays = 30;
+      for (let i = 0; i < maxDays; i++) {
+        const date = addDays(today, i);
+        const lentDay = stMichaelLentDay(date);
+        if (lentDay === null) continue;
+        // 20–28 September is already covered by the novena notifications
+        // for the Dedication of St. Michael (same 20:00 slot) — skip to
+        // avoid a duplicate reminder for the same devotion.
+        if (date.getMonth() === 8 && date.getDate() >= 20 && date.getDate() <= 28) {
+          continue;
+        }
+        const devotionDate = new Date(
+          date.getFullYear(),
+          date.getMonth(),
+          date.getDate(),
+          NOTIFICATIONS.NOVENA.times.hour,
+          NOTIFICATIONS.NOVENA.times.minute,
+        );
+        if (devotionDate <= today) continue;
+        await scheduleNotification(
+          {
+            content: {
+              title: NOTIFICATIONS.ST_MICHAEL_LENT.title,
+              body: `Dia ${lentDay} de 40 — Coroa de São Miguel e penitência`,
+              data: { url: NOTIFICATIONS.ST_MICHAEL_LENT.link },
+              color: NOTIFICATIONS.ST_MICHAEL_LENT.color,
+            },
+            trigger: {
+              type: Notifications.SchedulableTriggerInputTypes.DATE,
+              date: devotionDate,
+            },
+          },
+          `st-michael-lent-${yyyyMMDD(date)}`,
+        );
       }
     }
 

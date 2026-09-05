@@ -161,7 +161,7 @@ export const Notifications = () => {
       <NotificationToggle
         title="Novenas"
         icon="circle"
-        description="Receba alertas nos dias de novena."
+        description="Receba alertas nos dias de novena, incluindo a Quaresma de São Miguel (15 ago – 29 set)."
         times={["20:00"]}
         enabled={settings.novenaEnabled}
         toggle={() => setNotificationPref("NOVENA", !settings.novenaEnabled)}
