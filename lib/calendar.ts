@@ -480,6 +480,9 @@ export class Calendar {
       yield* Effect.sync(() => self.resolveConcurrency()).pipe(
         Effect.withSpan("Calendar.resolveConcurrency", { attributes: { year: self.year } }),
       );
+      yield* Effect.sync(() => self.insertDevotionalVotives()).pipe(
+        Effect.withSpan("Calendar.insertDevotionalVotives", { attributes: { year: self.year } }),
+      );
 
       yield* Effect.logDebug(`Built calendar for ${self.year}: ${self.container.size} days`);
     }).pipe(Effect.withSpan("Calendar.build", { attributes: { year: self.year } }));
@@ -603,6 +606,47 @@ export class Calendar {
       if (isAnchorDay) {
         fallbackMass = day.mass[0];
       }
+    }
+  }
+
+  /**
+   * insertDevotionalVotives: after concurrency is settled, offer the First
+   * Friday (Sacred Heart) and First Saturday (Immaculate Heart) votive
+   * Masses as `alternatives` where the edition's own rule permits.
+   *
+   * Alternatives never participate in concurrency: the celebrated Masses
+   * are untouched, so precedence logic cannot be corrupted — at worst an
+   * option is withheld. Unknown ranks veto rather than permit.
+   */
+  private insertDevotionalVotives(): void {
+    const spec = this.definition.devotionalVotives;
+    if (!spec || !this.masses) return;
+
+    for (const [dateKey, day] of this.container) {
+      if (day.mass.length === 0) continue;
+      const parsed = parseLocalDate(dateKey);
+      if (parsed.getDate() > 7) continue;
+      const weekday = parsed.getDay();
+      const rule = weekday === 5 ? spec.friday : weekday === 6 ? spec.saturday : undefined;
+      if (!rule) continue;
+
+      const votive = this.masses.getById(rule.observanceId);
+      if (!votive) continue;
+      if (day.mass.some((m) => m.id === votive.id)) continue;
+      if (day.alternatives.some((m) => m.id === votive.id)) continue;
+
+      const top = Math.max(...day.mass.map((m) => m.precedence ?? Number.POSITIVE_INFINITY));
+      if (top >= rule.belowPrecedence) continue;
+      if (day.mass.some((m) => m.id !== undefined && rule.excludedIds.includes(m.id))) continue;
+      if (
+        rule.excludedMonthDays.some(
+          ([month, date]) => parsed.getMonth() === month && parsed.getDate() === date,
+        )
+      ) {
+        continue;
+      }
+
+      day.alternatives.push(this.masses.createMassWithDate(votive, dateKey));
     }
   }
 

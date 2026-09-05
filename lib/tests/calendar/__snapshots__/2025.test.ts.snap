@@ -66,7 +66,20 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Natal",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-01-04",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-01-04",
     "mass": [
       {
@@ -1039,7 +1052,20 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Epifania",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-02-01",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-02-01",
     "mass": [
       {
@@ -1265,7 +1291,21 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Epifania",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-02-07",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-02-07",
     "mass": [
       {
@@ -2003,6 +2043,18 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
         "rank": 3,
         "type": "sancti",
       },
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-03-01",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
     ],
     "date": "2025-03-01",
     "mass": [
@@ -2155,7 +2207,21 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Quaresma",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-03-07",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-03-07",
     "mass": [
       {
@@ -2989,7 +3055,21 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Quaresma",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-04-04",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-04-04",
     "mass": [
       {
@@ -3024,7 +3104,20 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Quaresma",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-04-05",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-04-05",
     "mass": [
       {
@@ -3895,7 +3988,21 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Páscoa",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-05-02",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-05-02",
     "mass": [
       {
@@ -3930,7 +4037,20 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Páscoa",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-05-03",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-05-03",
     "mass": [
       {
@@ -5241,7 +5361,21 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Páscoa",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-06-06",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-06-06",
     "mass": [
       {
@@ -6254,6 +6388,19 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
         "rank": 3,
         "type": "sancti",
       },
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-07-04",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
     ],
     "date": "2025-07-04",
     "mass": [
@@ -6275,7 +6422,20 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-07-05",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-07-05",
     "mass": [
       {
@@ -7291,7 +7451,21 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-08-01",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-08-01",
     "mass": [
       {
@@ -7326,7 +7500,20 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-08-02",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-08-02",
     "mass": [
       {
@@ -8555,7 +8742,21 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-09-05",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-09-05",
     "mass": [
       {
@@ -8590,7 +8791,20 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-09-06",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-09-06",
     "mass": [
       {
@@ -9523,7 +9737,21 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-10-03",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-10-03",
     "mass": [
       {
@@ -9558,7 +9786,20 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-10-04",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-10-04",
     "mass": [
       {
@@ -10919,7 +11160,21 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-11-07",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-11-07",
     "mass": [
       {
@@ -11984,6 +12239,19 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
         "rank": 4,
         "type": "sancti",
       },
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-12-05",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
     ],
     "date": "2025-12-05",
     "mass": [
@@ -12019,7 +12287,20 @@ exports[`calendar 2025 (default edition) renders entire calendar correctly 1`] =
     "season": "Advento",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2025-12-06",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2025-12-06",
     "mass": [
       {

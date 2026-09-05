@@ -34,6 +34,32 @@ export interface ConcurrencyRule {
 }
 
 /**
+ * A devotional votive Mass (First Friday Sacred Heart / First Saturday
+ * Immaculate Heart) offered as an `alternatives` entry when rubrics permit.
+ *
+ * Each edition owns its rule as data: the engine only applies it, never
+ * branches on edition ids. Thresholds are strict: the votive is offered
+ * only when every celebrated mass ranks strictly below `belowPrecedence`.
+ * Deliberately conservative — when in doubt the option is withheld rather
+ * than a wrong Mass being suggested.
+ */
+export interface DevotionalVotiveRule {
+  /** Observance id in the edition's map cloned into `alternatives`. */
+  observanceId: string;
+  /** Strict upper bound on the day's top precedence. */
+  belowPrecedence: number;
+  /** Celebrated observance ids that veto the votive (e.g. feasts of the Lord). */
+  excludedIds: string[];
+  /** Civil [month (0-based), day] pairs vetoed regardless of rank. */
+  excludedMonthDays: [number, number][];
+}
+
+export interface DevotionalVotives {
+  friday: DevotionalVotiveRule;
+  saturday: DevotionalVotiveRule;
+}
+
+/**
  * A calendar edition as a first-class bundle of data + rubrics.
  *
  * Each edition supplies its own observance set and its own ordered rule
@@ -58,6 +84,11 @@ export interface CalendarDefinition {
    * resolution (e.g., Advent ferias promoted from Dec 17-23).
    */
   adjustRank?(mass: Mass, date: string | undefined, precedence: number): number;
+  /**
+   * First Friday / First Saturday devotional votives offered as
+   * `alternatives` when the edition's rubrics permit. Absent = no votives.
+   */
+  devotionalVotives?: DevotionalVotives;
   /** Ordered concurrency rules for this edition's rubrics. */
   rules(index: MassIndex, rubrics: Rubrics): ConcurrencyRule[];
 }

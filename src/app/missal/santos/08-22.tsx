@@ -3,12 +3,24 @@ import Language from "~/components/Language";
 import LinkCard from "~/components/LinkCard";
 import PageWrapper from "~/components/Page";
 import { Typography } from "~/components/typography";
+import { useCalendar } from "~/providers/calendar";
+import { isFirstSaturday } from "~/lib/utils";
 
 export default function Page0822() {
+  const { date } = useCalendar();
+  const showFirstSaturday = isFirstSaturday(date);
+
   return (
     <PageWrapper>
       <H1 text="Imaculado Coração da B. Virgem Maria, a 22 de Agosto" />
 
+      {showFirstSaturday && (
+        <LinkCard
+          href="/devocionario/rosario"
+          title="Primeiro Sábado — Desagravo ao Imaculado Coração"
+          description="Rosário · 15 min de meditação · Confissão e Comunhão reparadora"
+        />
+      )}
       <aside>
         Depois de ter em plena guerra consagrado o género humano ao Imaculado Coração de Maria para
         o colocar por este modo debaixo da particular protecção da Mãe do Salvador, Pio XII decretou

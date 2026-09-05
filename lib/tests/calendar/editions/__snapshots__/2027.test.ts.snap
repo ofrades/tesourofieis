@@ -1297,7 +1297,21 @@ exports[`calendar pre-55 2027 renders the full year 1`] = `
     "season": "Septuagésima",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-02-05",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-02-05",
     "mass": [
       {
@@ -2256,7 +2270,21 @@ exports[`calendar pre-55 2027 renders the full year 1`] = `
     "season": "Quaresma",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-03-05",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-03-05",
     "mass": [
       {
@@ -4234,7 +4262,21 @@ exports[`calendar pre-55 2027 renders the full year 1`] = `
     "season": "Páscoa",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-05-07",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-05-07",
     "mass": [
       {
@@ -6332,7 +6374,21 @@ exports[`calendar pre-55 2027 renders the full year 1`] = `
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-07-02",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-07-02",
     "mass": [
       {
@@ -8898,7 +8954,21 @@ exports[`calendar pre-55 2027 renders the full year 1`] = `
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-09-03",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-09-03",
     "mass": [
       {
@@ -8933,7 +9003,20 @@ exports[`calendar pre-55 2027 renders the full year 1`] = `
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-09-04",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-09-04",
     "mass": [
       {
@@ -9916,6 +9999,19 @@ exports[`calendar pre-55 2027 renders the full year 1`] = `
         "precedence": 1.5,
         "rank": 4,
         "type": "sancti",
+      },
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-10-01",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
       },
     ],
     "date": "2027-10-01",
@@ -11362,6 +11458,19 @@ exports[`calendar pre-55 2027 renders the full year 1`] = `
         "rank": 4,
         "type": "sancti",
       },
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-11-05",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
     ],
     "date": "2027-11-05",
     "mass": [
@@ -11399,6 +11508,18 @@ exports[`calendar pre-55 2027 renders the full year 1`] = `
         "precedence": 1.5,
         "rank": 4,
         "type": "sancti",
+      },
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-11-06",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
       },
     ],
     "date": "2027-11-06",
@@ -12431,7 +12552,21 @@ exports[`calendar pre-55 2027 renders the full year 1`] = `
     "season": "Advento",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-12-03",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-12-03",
     "mass": [
       {
@@ -13434,7 +13569,20 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Natal",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-01-02",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-01-02",
     "mass": [
       {
@@ -14637,7 +14785,21 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Septuagésima",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-02-05",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-02-05",
     "mass": [
       {
@@ -14672,7 +14834,20 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Septuagésima",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-02-06",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-02-06",
     "mass": [
       {
@@ -15545,7 +15720,21 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Quaresma",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-03-05",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-03-05",
     "mass": [
       {
@@ -15566,7 +15755,20 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Quaresma",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-03-06",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-03-06",
     "mass": [
       {
@@ -17529,7 +17731,21 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Páscoa",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-05-07",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-05-07",
     "mass": [
       {
@@ -18651,7 +18867,20 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-06-05",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-06-05",
     "mass": [
       {
@@ -19643,7 +19872,20 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-07-03",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-07-03",
     "mass": [
       {
@@ -20941,7 +21183,20 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-08-07",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-08-07",
     "mass": [
       {
@@ -21937,7 +22192,21 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-09-03",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-09-03",
     "mass": [
       {
@@ -21972,7 +22241,20 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-09-04",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-09-04",
     "mass": [
       {
@@ -22905,6 +23187,19 @@ exports[`calendar 62 2027 renders the full year 1`] = `
         "rank": 4,
         "type": "sancti",
       },
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-10-01",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
     ],
     "date": "2027-10-01",
     "mass": [
@@ -22940,7 +23235,20 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Pentecostes",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-10-02",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-10-02",
     "mass": [
       {
@@ -24298,6 +24606,19 @@ exports[`calendar 62 2027 renders the full year 1`] = `
         "rank": 4,
         "type": "sancti",
       },
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-11-05",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
     ],
     "date": "2027-11-05",
     "mass": [
@@ -24335,6 +24656,18 @@ exports[`calendar 62 2027 renders the full year 1`] = `
         "precedence": 1.5,
         "rank": 4,
         "type": "sancti",
+      },
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-11-06",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
       },
     ],
     "date": "2027-11-06",
@@ -25348,7 +25681,21 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Advento",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-12-03",
+        "flexibility": "votivas",
+        "id": "VOTIVE_PENT02_5",
+        "link": "missal/votivas/coracaojesus",
+        "name": "Santíssimo Coração de Jesus",
+        "novena": true,
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-12-03",
     "mass": [
       {
@@ -25383,7 +25730,20 @@ exports[`calendar 62 2027 renders the full year 1`] = `
     "season": "Advento",
   },
   Day {
-    "alternatives": [],
+    "alternatives": [
+      {
+        "category": "votivas",
+        "color": "w",
+        "date": "2027-12-04",
+        "flexibility": "votivas",
+        "id": "VOTIVE_IMMACULATE_HEART",
+        "link": "missal/santos/08-22",
+        "name": "Imaculado Coração de Maria",
+        "precedence": 0.5,
+        "rank": 4,
+        "type": "feria",
+      },
+    ],
     "date": "2027-12-04",
     "mass": [
       {

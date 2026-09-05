@@ -23,6 +23,16 @@ export const VOTIVAS: MassMap = {
     category: "votivas",
     novena: true,
   },
+  VOTIVE_IMMACULATE_HEART: {
+    flexibility: "votivas",
+    rankVariants: [{ rubrics: "*", name: "Votiva", precedence: 0.5 }],
+    id: "VOTIVE_IMMACULATE_HEART",
+    name: "Imaculado Coração de Maria",
+    color: "w",
+    link: "missal/santos/08-22",
+    type: "feria",
+    category: "votivas",
+  },
   VOTIVE_ANGELS: {
     flexibility: "votivas",
     rankVariants: [{ rubrics: "*", name: "Votiva", precedence: 0.5 }],
