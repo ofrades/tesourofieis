@@ -1,12 +1,25 @@
 import { H1, H3 } from "~/components/Headings";
 import Language from "~/components/Language";
+import LinkCard from "~/components/LinkCard";
 import PageWrapper from "~/components/Page";
 import { Typography } from "~/components/typography";
+import { isFirstFriday } from "~/lib/utils";
+import { useCalendar } from "~/providers/calendar";
 
 export default function PagePent25() {
+  const { date } = useCalendar();
+
   return (
     <PageWrapper>
       <H1 text="Santíssimo Coração de Jesus" />
+
+      {isFirstFriday(date) && (
+        <LinkCard
+          href="/devocionario/oracoes/consagracaosagradocoracaojesus"
+          title="Primeira Sexta-feira — Reparação ao Sagrado Coração"
+          description="Consagração · Comunhão reparadora"
+        />
+      )}
 
       <H3 text="Intróito" />
 
