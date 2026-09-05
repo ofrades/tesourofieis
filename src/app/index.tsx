@@ -16,7 +16,7 @@ import { COLORS } from "~/constants/Colors";
 import { useCalendar } from "~/providers/calendar";
 import { useCalendarEdition } from "~/providers/edition";
 import { useTodaysIndulgences } from "~/hooks/useTodaysIndulgences";
-import { yyyyMMDD } from "~/lib/utils";
+import { isFirstFriday, isFirstSaturday, yyyyMMDD } from "~/lib/utils";
 import { useAppTheme } from "~/theme";
 
 export default function PageRender() {
@@ -191,6 +191,20 @@ export default function PageRender() {
             {day.alternatives?.map((item) => (
               <LinkCard key={item.id} mass={item} variant="featured" />
             ))}
+            {isFirstFriday(date) && (
+              <LinkCard
+                href="/devocionario/oracoes/consagracaosagradocoracaojesus"
+                title="❤️ Primeira Sexta-feira — Sagrado Coração de Jesus"
+                description="Missa e Comunhão reparadora"
+              />
+            )}
+            {isFirstSaturday(date) && (
+              <LinkCard
+                href="/devocionario/rosario"
+                title="💙 Primeiro Sábado — Imaculado Coração de Maria"
+                description="Rosário e Comunhão reparadora"
+              />
+            )}
           </View>
 
           <View

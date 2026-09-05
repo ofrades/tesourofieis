@@ -152,7 +152,7 @@ export const Notifications = () => {
       <NotificationToggle
         title="Missa do Dia"
         icon="calendar"
-        description="Receba informações sobre as celebrações e comemorações do dia."
+        description="Receba informações sobre as celebrações e comemorações do dia. Inclui lembretes da Primeira Sexta-feira (Sagrado Coração) e do Primeiro Sábado (Imaculado Coração)."
         times={["7:00"]}
         enabled={settings.massEnabled}
         toggle={() => setNotificationPref("MASS", !settings.massEnabled)}

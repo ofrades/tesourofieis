@@ -36,4 +36,12 @@ function shiftLocalDate(dateString: string, days: number): string {
   return shifted;
 }
 
-export { parseLocalDate, shiftLocalDate, yyyyMMDD };
+function isFirstFriday(date: Date): boolean {
+  return date.getDate() <= 7 && date.getDay() === 5;
+}
+
+function isFirstSaturday(date: Date): boolean {
+  return date.getDate() <= 7 && date.getDay() === 6;
+}
+
+export { isFirstFriday, isFirstSaturday, parseLocalDate, shiftLocalDate, yyyyMMDD };

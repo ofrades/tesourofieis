@@ -1,5 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { yyyyMMDD } from "~/lib/utils";
+import { isFirstFriday, isFirstSaturday, yyyyMMDD } from "~/lib/utils";
 import { burgundy } from "config";
 import { addDays, isWithinInterval, parseISO, subDays } from "date-fns";
 import * as Application from "expo-application";
@@ -38,6 +38,18 @@ const NOTIFICATIONS = {
   MASS: {
     title: "📅 Missa",
     times: { hour: 7, minute: 0 },
+  },
+  FIRST_FRIDAY: {
+    title: "❤️ Primeira Sexta-feira — Sagrado Coração de Jesus",
+    body: "Missa e Comunhão reparadora ao Sagrado Coração de Jesus. Confissão, Comunhão e acto de reparação.",
+    link: "devocionario/oracoes/consagracaosagradocoracaojesus",
+    color: "#C62828",
+  },
+  FIRST_SATURDAY: {
+    title: "💙 Primeiro Sábado — Imaculado Coração de Maria",
+    body: "Rosário, Confissão, Comunhão reparadora e 15 minutos de meditação em desagravo ao Imaculado Coração de Maria.",
+    link: "devocionario/rosario",
+    color: "#1565C0",
   },
   NOVENA: {
     title: "🙏 Novena",
@@ -312,6 +324,48 @@ export function SettingsProvider({ children }: React.PropsWithChildren) {
               },
             },
             identifier,
+          );
+        }
+
+        const devotionDate = new Date(
+          date.getFullYear(),
+          date.getMonth(),
+          date.getDate(),
+          NOTIFICATIONS.MASS.times.hour,
+          NOTIFICATIONS.MASS.times.minute,
+        );
+        if (devotionDate <= today) continue;
+        if (isFirstFriday(date)) {
+          await scheduleNotification(
+            {
+              content: {
+                title: NOTIFICATIONS.FIRST_FRIDAY.title,
+                body: NOTIFICATIONS.FIRST_FRIDAY.body,
+                data: { url: NOTIFICATIONS.FIRST_FRIDAY.link },
+                color: NOTIFICATIONS.FIRST_FRIDAY.color,
+              },
+              trigger: {
+                type: Notifications.SchedulableTriggerInputTypes.DATE,
+                date: devotionDate,
+              },
+            },
+            `first-friday-${yyyyMMDD(date)}`,
+          );
+        } else if (isFirstSaturday(date)) {
+          await scheduleNotification(
+            {
+              content: {
+                title: NOTIFICATIONS.FIRST_SATURDAY.title,
+                body: NOTIFICATIONS.FIRST_SATURDAY.body,
+                data: { url: NOTIFICATIONS.FIRST_SATURDAY.link },
+                color: NOTIFICATIONS.FIRST_SATURDAY.color,
+              },
+              trigger: {
+                type: Notifications.SchedulableTriggerInputTypes.DATE,
+                date: devotionDate,
+              },
+            },
+            `first-saturday-${yyyyMMDD(date)}`,
           );
         }
       }
