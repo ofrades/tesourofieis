@@ -194,14 +194,14 @@ export default function PageRender() {
             ))}
             {isFirstFriday(date) && (
               <LinkCard
-                href="/devocionario/oracoes/consagracaosagradocoracaojesus"
+                href="missal/votivas/coracaojesus"
                 title="❤️ Primeira Sexta-feira — Sagrado Coração de Jesus"
                 description="Missa e Comunhão reparadora"
               />
             )}
             {isFirstSaturday(date) && (
               <LinkCard
-                href="/devocionario/rosario"
+                href="missal/santos/08-22"
                 title="💙 Primeiro Sábado — Imaculado Coração de Maria"
                 description="Rosário e Comunhão reparadora"
               />
@@ -210,7 +210,7 @@ export default function PageRender() {
               <LinkCard
                 href="/devocionario/oracoes/coroasaomiguel"
                 title="⚔️ Quaresma de São Miguel"
-                description={`Dia ${lentDay} de 40 · Coroa de São Miguel`}
+                description="Coroa de São Miguel"
               />
             )}
           </View>

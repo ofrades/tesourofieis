@@ -66,6 +66,8 @@ interface ParsedContentSegment {
   index: number;
   level?: number;
   length?: number;
+  /** Explicit `id` prop on the heading tag, mirroring useHeadingId. */
+  explicitId?: string;
 }
 
 function extractTextFromNestedTags(content: string): string[] {
@@ -130,6 +132,7 @@ function parseRawContentToSegments(rawContent: string): ParsedContentSegment[] {
       return [...rawContent.matchAll(regex)].map((match) => ({
         type: "heading" as const,
         content: match[2].trim(),
+        explicitId: match[0].match(/id\s*=\s*(["'])(.*?)\1/)?.[2]?.trim() || undefined,
         index: match.index!,
         length: match[0].length,
         level: parseInt(tag.substring(1), 10),
@@ -247,7 +250,7 @@ function buildDocumentContent(rawContent: string): Docs["content"] {
         lastHeading.excerpt = createExcerpt(fullBody, 15);
       }
 
-      const baseId = slugify(segment.content);
+      const baseId = segment.explicitId ?? slugify(segment.content);
       const uniqueId =
         baseId +
         (content.headings.filter((h) => h.id.startsWith(baseId)).length > 0

@@ -16,7 +16,7 @@ export default function Page0822() {
 
       {showFirstSaturday && (
         <LinkCard
-          href="/devocionario/rosario"
+          href="/devocionario/rosario?anchor=meditacoes-do-rosario"
           title="Primeiro Sábado — Desagravo ao Imaculado Coração"
           description="Rosário · 15 min de meditação · Confissão e Comunhão reparadora"
         />

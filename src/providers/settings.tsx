@@ -489,7 +489,7 @@ export function SettingsProvider({ children }: React.PropsWithChildren) {
           {
             content: {
               title: NOTIFICATIONS.ST_MICHAEL_LENT.title,
-              body: `Dia ${lentDay} de 40 — Coroa de São Miguel e penitência`,
+              body: "Coroa de São Miguel e penitência diária",
               data: { url: NOTIFICATIONS.ST_MICHAEL_LENT.link },
               color: NOTIFICATIONS.ST_MICHAEL_LENT.color,
             },

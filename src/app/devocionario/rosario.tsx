@@ -85,7 +85,7 @@ export default function PageRosario() {
           socorrei principalmente as que mais precisarem.
         </Typography>
       </Language>
-      <H2 text="Meditações do Rosário" />
+      <H2 text="Meditações do Rosário" id="meditacoes-do-rosario" />
       <H3 text="Mistérios Gozosos" />
       <Typography className="aside">Segunda-feira e Quinta-feira</Typography>
       <Typography className="bold">Primeiro mistério:</Typography>
