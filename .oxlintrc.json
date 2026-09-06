@@ -83,7 +83,7 @@
   },
   "overrides": [
     {
-      "files": ["metro.config.js"],
+      "files": ["metro.config.cjs"],
       "rules": { "typescript/no-require-imports": "off" }
     }
   ]
