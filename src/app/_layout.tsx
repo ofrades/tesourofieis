@@ -106,6 +106,7 @@ export default function PageRootLayout() {
 
 function RootLayoutNav() {
   const isWeb = Platform.OS === "web";
+  const { colors } = useAppTheme();
 
   if (isWeb) {
     return (
@@ -116,8 +117,12 @@ function RootLayoutNav() {
     );
   }
 
+  // Inline style instead of className: NativeWind style application on the
+  // codegen-based SafeAreaView silently drops every class in this
+  // toolchain (flex-1 included), collapsing the whole app subtree to
+  // zero height — a blank screen on launch. Inline styles are immune.
   return (
-    <SafeAreaView className="flex-1 bg-sepia-200 dark:bg-sepia-800">
+    <SafeAreaView style={{ flex: 1, backgroundColor: colors.shell }}>
       <UpdateAwareDrawer />
       <StatusBar hidden />
     </SafeAreaView>
