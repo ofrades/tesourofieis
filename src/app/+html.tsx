@@ -21,7 +21,6 @@ export default function PageRoot({ children }: PropsWithChildren) {
         <meta property="og:site_name" content="Tesouro dos Fiéis" />
         <link rel="canonical" href="https://tesourofieis.com/" />
         <link rel="sitemap" href="/sitemap.xml" />
-        <link rel="manifest" href="/manifest.json" />
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         <meta property="og:image" content="https://tesourofieis.com/og.png" />
         <meta property="twitter:image" content="https://tesourofieis.com/og.png" />
