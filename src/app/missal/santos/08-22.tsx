@@ -21,7 +21,7 @@ export default function Page0822() {
           description="Rosário · 15 min de meditação · Confissão e Comunhão reparadora"
         />
       )}
-      <aside>
+      <Typography className="aside">
         Depois de ter em plena guerra consagrado o género humano ao Imaculado Coração de Maria para
         o colocar por este modo debaixo da particular protecção da Mãe do Salvador, Pio XII decretou
         em 1944 que todos os anos se celebrasse doravante na Igreja inteira uma festa especial em
@@ -33,7 +33,7 @@ export default function Page0822() {
         transferiu-a para 22 de agosto e designou-lhe como principal intenção pedir, por intercessão
         da Santíssima Virgem, a "paz para os povos, a liberdade da Igreja, a conversão dos
         pecadores, o amor da pureza e prática da virtude"
-      </aside>
+      </Typography>
 
       <H3 text="Intróito" />
 
