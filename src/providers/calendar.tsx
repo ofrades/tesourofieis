@@ -1,8 +1,7 @@
 import type { Day } from "~/lib/calendar";
 import { getCalendar, getCalendarDay, getSeason } from "~/lib/getCalendar";
-import type { CalendarEdition } from "~/lib/domain";
+import type { CalendarEdition, LiturgicalSeason, Mass } from "~/lib/domain";
 import { useCalendarEdition } from "~/providers/edition";
-import type { LiturgicalSeason, Mass } from "~/lib/domain";
 import { Season } from "~/lib/domain";
 import { yyyyMMDD } from "~/lib/utils";
 import { addDays, getMonth, getYear, isWithinInterval, parseISO } from "date-fns";

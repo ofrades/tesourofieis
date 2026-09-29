@@ -155,7 +155,7 @@ export interface RankDivergence {
   /** Fixed date, "MM-DD". */
   date: string;
   feast: string;
-  variants: Array<{ rubrics: string; name: string; precedence: number }>;
+  variants: { rubrics: string; name: string; precedence: number }[];
 }
 
 export const RANK_DIVERGENCES: RankDivergence[] = [

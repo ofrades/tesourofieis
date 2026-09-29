@@ -70,7 +70,7 @@ describe("divinum-officium full-calendar audit", () => {
         const topIsSancti = top?.flexibility === "santos";
 
         const sCore = doDay.s ? coreOf(doDay.s) : null;
-        const isVigilFile = /t$/.test(doDay.s);
+        const isVigilFile = doDay.s.endsWith("t");
         const omittedVigil = isVigilFile && dow === 0;
 
         if (sCore && !omittedVigil) {
@@ -95,7 +95,7 @@ describe("divinum-officium full-calendar audit", () => {
         }
 
         for (const c of doDay.com ?? []) {
-          if (/^Tempora/.test(c)) continue;
+          if (c.startsWith("Tempora")) continue;
           const cCore = coreOf(c);
           if (cCore && !cores.has(cCore)) {
             problems.push(`${iso} DO commemoration ${c} absent (${edition})`);
