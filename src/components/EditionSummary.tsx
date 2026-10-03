@@ -48,7 +48,7 @@ export function EditionSummary({
       {notes.map((n) => (
         <Typography
           key={n.label}
-          className="font-display-italic"
+          className="font-italic"
           style={{
             fontSize: 11,
             letterSpacing: 0.6,

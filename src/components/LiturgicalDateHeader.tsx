@@ -52,7 +52,7 @@ export function LiturgicalDateHeader({
       }}
     >
       <Typography
-        className="font-ui-medium"
+        className="font-ui"
         style={{
           fontSize: 10,
           letterSpacing: 0.8,
@@ -103,9 +103,9 @@ export function LiturgicalDateHeader({
 
       {subtitle ? (
         <Typography
-          className="font-display-italic"
+          className="font-italic"
           style={{
-            fontSize: subtitleSize,
+            fontSize: subtitleSize + 1,
             color: colors.textMuted,
           }}
         >
