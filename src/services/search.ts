@@ -1,7 +1,7 @@
 import MiniSearch, { type SearchResult as MiniSearchResult } from "minisearch";
 import type { Docs, SubHeading } from "../../lib/documents";
 import { tokenize } from "../../lib/search-tokenizer";
-import searchIndexData from "../../assets/search-index.json";
+import searchIndexJSON from "../../assets/search-index";
 import rawDocsData from "../../assets/docs.json";
 
 const allDocs: Docs[] = rawDocsData as Docs[];
@@ -11,7 +11,7 @@ let miniSearch: Promise<MiniSearch> | undefined;
 
 function getSearchIndex(): Promise<MiniSearch> {
   if (!miniSearch) {
-    miniSearch = MiniSearch.loadJSAsync(searchIndexData, {
+    miniSearch = MiniSearch.loadJSONAsync(searchIndexJSON, {
       fields: ["title", "section", "headingTitles", "introduction", "bodyText"],
       storeFields: ["id", "title", "url", "section", "bodyText"], // bodyText stored for snippets
       tokenize,

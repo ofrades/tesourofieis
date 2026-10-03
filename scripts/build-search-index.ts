@@ -377,7 +377,7 @@ function buildJsonDocs(): void {
   const targetDirs: string[] = ["canticos", "devocionario", "fe", "missal", "ritual"];
   const baseDir: string = "src/app";
   const jsonFilePath: string = path.resolve("./assets/docs.json");
-  const searchIndexPath: string = path.resolve("./assets/search-index.json");
+  const searchIndexPath: string = path.resolve("./assets/search-index.ts");
 
   // Statistics tracking
   const sectionCounts: Record<string, number> = {};
@@ -474,7 +474,12 @@ function buildJsonDocs(): void {
 
   try {
     // Save MiniSearch index
-    fs.writeFileSync(searchIndexPath, JSON.stringify(miniSearch.toJSON()), "utf-8");
+    // Keep the serialized form so runtime loading does not stringify a second object tree.
+    fs.writeFileSync(
+      searchIndexPath,
+      `export default ${JSON.stringify(JSON.stringify(miniSearch.toJSON()))};\n`,
+      "utf-8",
+    );
     const indexSize = fs.statSync(searchIndexPath).size;
     console.log(
       `✅ Índice MiniSearch salvo: ${searchIndexPath} (${(indexSize / 1024).toFixed(1)}KB)`,
