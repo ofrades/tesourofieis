@@ -1,5 +1,11 @@
 import type { LiturgicalSeason } from "~/lib/domain";
 
+/*
+ * These are restrained UI accents derived from the traditional 1962 colors.
+ * They are not replacements for the color of an individual Mass, which is
+ * carried by the observance data and rendered on the Mass card.
+ */
+
 export type SeasonPalette = {
   accent: string;
   accentStrong: string;
@@ -85,30 +91,30 @@ const SEASON_PALETTES = {
   },
   Paixão: {
     light: {
-      accent: "#9b3d3f",
-      accentStrong: "#7d2d30",
-      accentSoft: "#f4e0e1",
-      accentBorder: "#d48385",
+      accent: "#6f4b8a",
+      accentStrong: "#593b70",
+      accentSoft: "#eee7f3",
+      accentBorder: "#b9a2cd",
     },
     dark: {
-      accent: "#d48385",
-      accentStrong: "#e8b5b6",
-      accentSoft: "#4a1a1c",
-      accentBorder: "#9b3d3f",
+      accent: "#c8a9dc",
+      accentStrong: "#ddc5eb",
+      accentSoft: "#3e3049",
+      accentBorder: "#8966a4",
     },
   },
   "Semana Santa": {
     light: {
-      accent: "#9b3d3f",
-      accentStrong: "#7d2d30",
-      accentSoft: "#f4e0e1",
-      accentBorder: "#d48385",
+      accent: "#6f4b8a",
+      accentStrong: "#593b70",
+      accentSoft: "#eee7f3",
+      accentBorder: "#b9a2cd",
     },
     dark: {
-      accent: "#d48385",
-      accentStrong: "#e8b5b6",
-      accentSoft: "#4a1a1c",
-      accentBorder: "#9b3d3f",
+      accent: "#c8a9dc",
+      accentStrong: "#ddc5eb",
+      accentSoft: "#3e3049",
+      accentBorder: "#8966a4",
     },
   },
   Páscoa: {
@@ -127,16 +133,16 @@ const SEASON_PALETTES = {
   },
   Pentecostes: {
     light: {
-      accent: "#9b3d3f",
-      accentStrong: "#7d2d30",
-      accentSoft: "#f4e0e1",
-      accentBorder: "#d48385",
+      accent: "#3a7d50",
+      accentStrong: "#2d6240",
+      accentSoft: "#e5f0e7",
+      accentBorder: "#99c6a5",
     },
     dark: {
-      accent: "#d48385",
-      accentStrong: "#e8b5b6",
-      accentSoft: "#4a1a1c",
-      accentBorder: "#9b3d3f",
+      accent: "#82bd92",
+      accentStrong: "#a5d2b0",
+      accentSoft: "#293c2d",
+      accentBorder: "#4f8b5f",
     },
   },
 } satisfies Record<LiturgicalSeason, SeasonPalettePair>;
