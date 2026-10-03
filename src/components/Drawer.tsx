@@ -170,9 +170,7 @@ const TreeItem = React.memo(
         <Text
           numberOfLines={1}
           className={`${isActive ? activeText : itemText}`}
-          style={
-            isActive ? { color: colors.accent, letterSpacing: 0.05 } : { letterSpacing: 0.05 }
-          }
+          style={isActive ? { color: colors.accent, letterSpacing: 0.05 } : { letterSpacing: 0.05 }}
         >
           {doc.title}
         </Text>
