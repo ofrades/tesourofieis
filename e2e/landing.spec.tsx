@@ -30,6 +30,7 @@ test("Angelus appears at midday and night prayer appears in the evening", async 
 });
 
 test("search shortcut opens and closes repeatedly", async ({ page }) => {
+  await expect(page.getByRole("button", { name: "Selecionar data" })).toBeVisible();
   const input = page.getByRole("textbox", { name: "Pesquisar no Tesouro dos Fiéis" });
   for (let cycle = 0; cycle < 4; cycle++) {
     await page.keyboard.press("Control+k");
@@ -61,7 +62,9 @@ test("phone reading honors the language preference and permits switching", async
   await expect(page.getByText("Angelus Dómini nuntiávit Maríæ.", { exact: true })).toHaveCount(0);
   await page.getByRole("button", { name: "Latim", exact: true }).click();
   await expect(page.getByText("Angelus Dómini nuntiávit Maríæ.", { exact: true })).toBeVisible();
-  await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toHaveCount(0);
+  await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toHaveCount(
+    0,
+  );
   await page.getByRole("button", { name: "Português", exact: true }).click();
   await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
   await page.setViewportSize({ width: 1280, height: 800 });

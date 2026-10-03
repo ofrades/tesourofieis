@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { globSync } from "glob";
 import MiniSearch from "minisearch";
-import type { Docs } from "../src/components/Drawer";
+import type { Docs, DirectoryEntry } from "../lib/documents";
 import { STOP_WORDS, tokenize } from "../lib/search-tokenizer";
 
 function slugify(text: string): string {
@@ -496,6 +496,22 @@ function buildJsonDocs(): void {
     }));
 
     fs.writeFileSync(jsonFilePath, JSON.stringify(lightDocs), "utf-8");
+    const navigation: DirectoryEntry[] = lightDocs.map((doc) => ({
+      id: doc.id,
+      title: doc.title,
+      url: doc.url,
+      level: doc.level,
+      section: doc.section,
+      parent: doc.parent,
+      hasChildren: doc.hasChildren,
+      description: (
+        doc.content.comment ??
+        doc.content.introduction ??
+        doc.content.headings.find((heading) => heading.body.length)?.body ??
+        ""
+      ).slice(0, 200),
+    }));
+    fs.writeFileSync(path.resolve("./assets/navigation.json"), JSON.stringify(navigation), "utf-8");
     const docsSize = fs.statSync(jsonFilePath).size;
     console.log(
       `✅ ${processedDocs.length} documentos salvos em: ${jsonFilePath} (${(docsSize / 1024 / 1024).toFixed(2)}MB)`,

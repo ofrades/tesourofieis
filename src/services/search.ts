@@ -1,5 +1,5 @@
 import MiniSearch, { type SearchResult as MiniSearchResult } from "minisearch";
-import type { Docs, SubHeading } from "~/components/Drawer";
+import type { Docs, SubHeading } from "../../lib/documents";
 import { tokenize } from "../../lib/search-tokenizer";
 import searchIndexData from "../../assets/search-index.json";
 import rawDocsData from "../../assets/docs.json";
@@ -7,14 +7,17 @@ import rawDocsData from "../../assets/docs.json";
 const allDocs: Docs[] = rawDocsData as Docs[];
 const docsById = new Map(allDocs.map((d) => [d.id, d]));
 
-let miniSearch: MiniSearch | null = null;
+let miniSearch: Promise<MiniSearch> | undefined;
 
-function getSearchIndex(): MiniSearch {
+function getSearchIndex(): Promise<MiniSearch> {
   if (!miniSearch) {
-    miniSearch = MiniSearch.loadJSON(JSON.stringify(searchIndexData), {
+    miniSearch = MiniSearch.loadJSAsync(searchIndexData, {
       fields: ["title", "section", "headingTitles", "introduction", "bodyText"],
       storeFields: ["id", "title", "url", "section", "bodyText"], // bodyText stored for snippets
       tokenize,
+    }).catch((error: Error) => {
+      miniSearch = undefined;
+      throw error;
     });
   }
   return miniSearch;
@@ -135,11 +138,15 @@ function extractContextualSnippet(
   return snippet;
 }
 
-export function search(query: string, limit = 15, filters?: SearchFilters): SearchResult[] {
+export async function search(
+  query: string,
+  limit = 15,
+  filters?: SearchFilters,
+): Promise<SearchResult[]> {
   const trimmedQuery = query.trim();
-  if (!trimmedQuery) return [];
+  if (!trimmedQuery || limit <= 0) return [];
 
-  const ms = getSearchIndex();
+  const ms = await getSearchIndex();
 
   const results = ms.search(trimmedQuery, {
     prefix: true,
@@ -153,7 +160,7 @@ export function search(query: string, limit = 15, filters?: SearchFilters): Sear
   const searchResults: SearchResult[] = [];
   const normalizedQuery = normalizeForComparison(trimmedQuery);
 
-  for (const result of results.slice(0, limit)) {
+  for (const result of results) {
     const doc = docsById.get(result.id);
     if (!doc) continue;
 
@@ -208,69 +215,8 @@ export function search(query: string, limit = 15, filters?: SearchFilters): Sear
       highlightedTitle: highlightMatches(doc.title, result.match),
       relevanceScore: result.score,
     });
+    if (searchResults.length >= limit) break;
   }
 
   return searchResults;
-}
-
-export function findBySlug(slug: string): Docs[] {
-  if (!slug.trim()) return [];
-
-  const targetUrlPrefix = `/${slug}`;
-
-  const results = allDocs.filter((doc: Docs) => {
-    const docUrlNormalized = doc.url.startsWith("/") ? doc.url : `/${doc.url}`;
-    const targetUrlNormalized = targetUrlPrefix.startsWith("/")
-      ? targetUrlPrefix
-      : `/${targetUrlPrefix}`;
-
-    if (docUrlNormalized === targetUrlNormalized) {
-      return true;
-    }
-
-    if (docUrlNormalized.startsWith(`${targetUrlNormalized}/`)) {
-      const pathAfterSlug = docUrlNormalized.substring(`${targetUrlNormalized}/`.length);
-      const segments = pathAfterSlug.split("/").filter(Boolean);
-      return segments.length === 1;
-    }
-    return false;
-  });
-
-  results.sort((a, b) => a.title.localeCompare(b.title));
-
-  return results;
-}
-
-export function getAllTopLevelDocs(): Docs[] {
-  const results = allDocs.filter((doc) => doc.level === 0);
-  results.sort((a, b) => a.title.localeCompare(b.title));
-  return results;
-}
-
-export function getChildren(parent: string): Docs[] {
-  const results = allDocs.filter((doc) => doc.parent === parent);
-  results.sort((a, b) => a.title.localeCompare(b.title));
-  return results;
-}
-
-export function getAvailableSections(): string[] {
-  const sections = new Set<string>();
-  allDocs.forEach((doc) => {
-    if (doc.section) {
-      sections.add(doc.section);
-    }
-  });
-  return Array.from(sections).sort();
-}
-
-const SECTION_DISPLAY_NAMES = new Map<string, string>([
-  ["canticos", "Cânticos"],
-  ["devocionario", "Devocionário"],
-  ["fe", "Fé"],
-  ["missal", "Missal"],
-  ["ritual", "Ritual"],
-]);
-
-export function getSectionDisplayName(section: string): string {
-  return SECTION_DISPLAY_NAMES.get(section) ?? section;
 }

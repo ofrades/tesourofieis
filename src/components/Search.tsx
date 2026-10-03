@@ -31,13 +31,11 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Typography } from "~/components/typography";
 import { COLORS } from "~/constants/Colors";
+import type { SearchResult, SearchFilters } from "~/services/search";
 import {
-  type SearchResult,
-  type SearchFilters,
-  search,
   getAvailableSections,
   getSectionDisplayName,
-} from "~/services/search";
+} from "~/services/documents";
 import { H5 } from "./Headings";
 import { useAppTheme } from "~/theme";
 
@@ -430,57 +428,37 @@ function SearchResults({
 function useSearch(searchQuery: string, selectedSections: string[]) {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isSearching, setIsSearching] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const performSearch = useCallback((query: string, sections: string[]) => {
-    if (!query.trim()) {
-      setResults([]);
-      setIsSearching(false);
-      return;
-    }
-
-    setIsSearching(true);
-
-    try {
-      const filters: SearchFilters = {};
-      if (sections.length > 0) {
-        filters.sections = sections;
-      }
-      const searchResults = search(query, 20, filters);
-      setResults(searchResults);
-    } catch (err) {
-      console.error("Search error:", err);
-      setResults([]);
-    } finally {
-      setIsSearching(false);
-    }
-  }, []);
-
   useEffect(() => {
-    if (!searchQuery.trim()) {
-      void Promise.resolve().then(() => {
-        setResults([]);
-        setIsSearching(false);
-      });
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-        timeoutRef.current = null;
+    let cancelled = false;
+    const performSearch = async () => {
+      if (!searchQuery.trim()) {
+        if (!cancelled) {
+          setResults([]);
+          setIsSearching(false);
+        }
+        return;
       }
-      return;
-    }
-
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => {
-      performSearch(searchQuery, selectedSections);
-    }, 100);
-
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-        timeoutRef.current = null;
+      setIsSearching(true);
+      try {
+        const filters: SearchFilters = {};
+        if (selectedSections.length > 0) filters.sections = selectedSections;
+        const { search } = await import("~/services/search");
+        const matches = await search(searchQuery, 20, filters);
+        if (!cancelled) setResults(matches);
+      } catch (error) {
+        console.error("Search error:", error);
+        if (!cancelled) setResults([]);
+      } finally {
+        if (!cancelled) setIsSearching(false);
       }
     };
-  }, [searchQuery, selectedSections, performSearch]);
+    const timeout = setTimeout(() => void performSearch(), searchQuery.trim() ? 100 : 0);
+
+    return () => {
+      cancelled = true;
+      clearTimeout(timeout);
+    };
+  }, [searchQuery, selectedSections]);
 
   return { results, isSearching };
 }

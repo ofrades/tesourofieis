@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { ActivityIndicator, View } from "react-native";
-import { findBySlug } from "~/services/search";
-import type { Docs } from "./Drawer";
+import { findBySlug } from "~/services/documents";
+import type { DirectoryEntry } from "~/lib/documents";
 import PageLinkCard from "./LinkCard";
 import { Typography } from "./typography";
 
 const DirectoryList = ({ slug }: { slug: string }) => {
-  const [searchResults, setSearchResults] = useState<Docs[]>([]);
+  const [searchResults, setSearchResults] = useState<DirectoryEntry[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -67,12 +67,7 @@ const DirectoryList = ({ slug }: { slug: string }) => {
           href={page.url}
           title={page.title}
           hasChildren={page.hasChildren}
-          description={
-            page.content.comment ??
-            page.content.introduction ??
-            [...page.content.headings].sort((a, b) => a.level - b.level).find((i) => i.body.length)
-              ?.body
-          }
+          description={page.description}
         />
       ))}
     </View>

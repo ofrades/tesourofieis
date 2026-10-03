@@ -9,7 +9,8 @@ import {
 import { usePathname, useRouter } from "expo-router";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ActivityIndicator, FlatList, Text, TouchableOpacity, View } from "react-native";
-import { getAllTopLevelDocs, getChildren } from "~/services/search";
+import { getAllTopLevelDocs, getChildren } from "~/services/documents";
+import type { DirectoryEntry } from "~/lib/documents";
 import { useSearchModal } from "~/components/Search";
 import { useFontContext } from "~/providers/fonts";
 import { useAppTheme } from "~/theme";
@@ -18,31 +19,6 @@ interface CustomDrawerContentProps {
   navigation: {
     closeDrawer: () => void;
   };
-}
-
-export interface SubHeading {
-  title: string;
-  id: string;
-  level: number;
-  body: string;
-  excerpt?: string; // Short snippet for search results
-}
-
-export interface Docs {
-  id: string;
-  title: string;
-  url: string;
-  level: number;
-  levels: string[];
-  section?: string | null;
-  parent?: string | null;
-  content: {
-    introduction?: string;
-    headings: SubHeading[];
-    comment?: string | null;
-  };
-  keywords: string[]; // Minimal keyword array instead of searchBlob
-  hasChildren: boolean;
 }
 
 function normalizePathForMatching(path: string): string {
@@ -90,15 +66,15 @@ const TreeItem = React.memo(
     closeDrawer,
     flattenedDocs: _flattenedDocs,
   }: {
-    doc: Docs;
+    doc: DirectoryEntry;
     level: number;
     expanded: Record<string, boolean>;
     toggleExpand: (id: string, children: boolean) => void;
     currentPathname: string;
     loadingIds: string[];
-    childrenMap: Record<string, Docs[]>;
+    childrenMap: Record<string, DirectoryEntry[]>;
     closeDrawer: () => void;
-    flattenedDocs: Docs[];
+    flattenedDocs: DirectoryEntry[];
   }) => {
     const router = useRouter();
     const children = doc.hasChildren;
@@ -187,7 +163,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
   const { colors } = useAppTheme();
 
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
-  const [allDocs, setAllDocs] = useState<Docs[]>([]);
+  const [allDocs, setAllDocs] = useState<DirectoryEntry[]>([]);
   const [loadingIds, setLoadingIds] = useState<string[]>([]);
 
   const flatListRef = React.useRef<FlatList>(null);
@@ -208,7 +184,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
   }, [allDocs.length]);
 
   const childrenMap = useMemo(() => {
-    return allDocs.reduce<Record<string, Docs[]>>((map, doc) => {
+    return allDocs.reduce<Record<string, DirectoryEntry[]>>((map, doc) => {
       if (doc.parent) {
         const list = map[doc.parent] || [];
         list.push(doc);
@@ -219,8 +195,8 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
   }, [allDocs]);
 
   const flattenedDocs = useMemo(() => {
-    const flatten = (docs: Docs[], level: number = 0): Docs[] => {
-      const result: Docs[] = [];
+    const flatten = (docs: DirectoryEntry[], level: number = 0): DirectoryEntry[] => {
+      const result: DirectoryEntry[] = [];
       for (const doc of docs) {
         result.push(doc);
         if (expanded[doc.id] && childrenMap[doc.id]) {
@@ -387,7 +363,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
   const isLoadingInitialDocs = allDocs.length === 0;
 
   const getItemLevel = useCallback(
-    (doc: Docs) => {
+    (doc: DirectoryEntry) => {
       let level = 0;
       let currentParent = doc.parent;
       while (currentParent) {
