@@ -32,10 +32,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Typography } from "~/components/typography";
 import { COLORS } from "~/constants/Colors";
 import type { SearchResult, SearchFilters } from "~/services/search";
-import {
-  getAvailableSections,
-  getSectionDisplayName,
-} from "~/services/documents";
+import { getAvailableSections, getSectionDisplayName } from "~/services/documents";
 import { H5 } from "./Headings";
 import { useAppTheme } from "~/theme";
 
@@ -505,7 +502,10 @@ const SearchBottomSheet = React.forwardRef<
   const [selectedSections, setSelectedSections] = useState<string[]>([]);
   const inputRef = useRef<any>(null);
   const availableSections = useMemo(() => getAvailableSections(), []);
-  const { results, isSearching, searchError, retrySearch } = useSearch(searchQuery, selectedSections);
+  const { results, isSearching, searchError, retrySearch } = useSearch(
+    searchQuery,
+    selectedSections,
+  );
 
   const handleNavigate = useCallback(
     (url: string, headingId?: string) => {
@@ -670,7 +670,10 @@ function SearchModal({
   const [selectedSections, setSelectedSections] = useState<string[]>([]);
   const inputRef = useRef<TextInput>(null);
   const availableSections = useMemo(() => getAvailableSections(), []);
-  const { results, isSearching, searchError, retrySearch } = useSearch(searchQuery, selectedSections);
+  const { results, isSearching, searchError, retrySearch } = useSearch(
+    searchQuery,
+    selectedSections,
+  );
 
   useEffect(() => {
     if (visible) {

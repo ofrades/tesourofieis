@@ -32,6 +32,11 @@ test("Angelus appears at midday and night prayer appears in the evening", async 
 test("search shortcut opens and closes repeatedly", async ({ page }) => {
   await expect(page.getByRole("button", { name: "Selecionar data" })).toBeVisible();
   const input = page.getByRole("textbox", { name: "Pesquisar no Tesouro dos Fiéis" });
+  // A rendered static header can precede hydration; first establish an interactive search.
+  await page.getByRole("button", { name: "Pesquisar", exact: true }).last().click();
+  await expect(input).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(input).toBeHidden();
   for (let cycle = 0; cycle < 4; cycle++) {
     await page.keyboard.press("Control+k");
     await expect(input).toBeVisible();
@@ -70,4 +75,24 @@ test("phone reading honors the language preference and permits switching", async
   await page.setViewportSize({ width: 1280, height: 800 });
   await expect(page.getByText("Angelus Dómini nuntiávit Maríæ.", { exact: true })).toBeVisible();
   await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
+});
+
+test("prayers remain readable when fonts fail", async ({ page }) => {
+  await page.route(/\.ttf(?:\?|$)/, (route) => route.abort());
+  await page.goto("/devocionario/dia/angelus");
+  await expect(page.getByRole("heading", { level: 1, name: "Angelus", exact: true })).toBeVisible();
+  await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
+});
+
+test("exported prayers are readable before JavaScript loads", async ({ browser }) => {
+  test.skip(!process.env.E2E_BASE_URL, "Requires the production static export");
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  try {
+    const page = await context.newPage();
+    await page.goto(`${process.env.E2E_BASE_URL}/devocionario/dia/angelus`);
+    await expect(page.getByRole("heading", { level: 1, name: "Angelus", exact: true })).toBeVisible();
+    await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
+  } finally {
+    await context.close();
+  }
 });

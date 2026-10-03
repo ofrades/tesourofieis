@@ -70,10 +70,7 @@ export function CalendarProvider({ children }: PropsWithChildren) {
   );
 
   const dateKey = yyyyMMDD(date);
-  const day = useMemo(
-    () => getCalendarDay(dateKey, selection),
-    [dateKey, selection],
-  );
+  const day = useMemo(() => getCalendarDay(dateKey, selection), [dateKey, selection]);
   const novenas = useMemo(() => {
     const endDate = shiftLocalDate(dateKey, 9);
     const novenaObservances: Mass[] = [];
