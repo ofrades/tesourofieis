@@ -50,9 +50,9 @@ function normalizePathForMatching(path: string): string {
 }
 
 const TOP_LEVEL_TEXT = {
-  small: "font-ui-bold text-xs",
-  medium: "font-ui-bold text-sm",
-  large: "font-ui-bold text-base",
+  small: "font-ui-medium text-xs",
+  medium: "font-ui-medium text-sm",
+  large: "font-ui-medium text-base",
 } as const;
 
 const CHILD_TEXT = {
@@ -136,12 +136,12 @@ const TreeItem = React.memo(
         style={{
           flexDirection: "row",
           alignItems: "center",
-          paddingVertical: 5,
+          paddingVertical: 7,
           paddingHorizontal: 8,
           paddingLeft: 8 + indent,
-          marginHorizontal: 4,
-          borderRadius: 8,
-          borderLeftWidth: isActive ? 3 : 0,
+          marginHorizontal: 6,
+          borderRadius: 7,
+          borderLeftWidth: isActive ? 2 : 0,
           borderLeftColor: isActive ? colors.accent : "transparent",
         }}
         className={isActive ? "bg-sepia-200 dark:bg-sepia-800" : "bg-transparent"}
@@ -170,7 +170,9 @@ const TreeItem = React.memo(
         <Text
           numberOfLines={1}
           className={`${isActive ? activeText : itemText}`}
-          style={isActive ? { color: colors.accent } : undefined}
+          style={
+            isActive ? { color: colors.accent, letterSpacing: 0.05 } : { letterSpacing: 0.05 }
+          }
         >
           {doc.title}
         </Text>
@@ -411,8 +413,8 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
           }}
           style={{
             paddingHorizontal: 16,
-            paddingTop: 20,
-            paddingBottom: 14,
+            paddingTop: 22,
+            paddingBottom: 18,
             flexDirection: "row",
             alignItems: "center",
             gap: 10,
@@ -420,8 +422,11 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
           accessibilityRole="link"
           accessibilityLabel="Início"
         >
-          <BookPlus size={20} color={colors.accent} />
-          <Text className="font-display text-xl text-sepia-800 dark:text-sepia-200">
+          <BookPlus size={19} color={colors.accent} strokeWidth={1.8} />
+          <Text
+            className="font-display text-xl text-sepia-800 dark:text-sepia-200"
+            style={{ letterSpacing: -0.2 }}
+          >
             Tesouro dos Fiéis
           </Text>
         </TouchableOpacity>
@@ -430,7 +435,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
         <View
           style={{
             paddingHorizontal: 4,
-            paddingBottom: 4,
+            paddingBottom: 8,
             borderBottomWidth: 1,
           }}
           className="border-sepia-300 dark:border-sepia-700"
@@ -441,7 +446,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
               flexDirection: "row",
               alignItems: "center",
               gap: 8,
-              paddingVertical: 5,
+              paddingVertical: 6,
               paddingHorizontal: 8,
               marginHorizontal: 4,
               borderRadius: 6,
@@ -465,7 +470,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
               flexDirection: "row",
               alignItems: "center",
               gap: 8,
-              paddingVertical: 5,
+              paddingVertical: 6,
               paddingHorizontal: 8,
               marginHorizontal: 4,
               borderRadius: 6,
@@ -496,6 +501,14 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
         </View>
 
         {/* Document tree */}
+        <View style={{ paddingHorizontal: 14, paddingTop: 15, paddingBottom: 7 }}>
+          <Text
+            className="font-ui-medium text-sepia-500 dark:text-sepia-400"
+            style={{ fontSize: 10, letterSpacing: 1.1, textTransform: "uppercase" }}
+          >
+            Biblioteca
+          </Text>
+        </View>
         {isLoadingInitialDocs ? (
           <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
             <ActivityIndicator size="large" />
@@ -528,7 +541,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
         style={{
           borderTopWidth: 1,
           paddingHorizontal: 4,
-          paddingVertical: 8,
+          paddingVertical: 10,
         }}
         className="border-sepia-300 dark:border-sepia-700"
       >
@@ -541,7 +554,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
             flexDirection: "row",
             alignItems: "center",
             gap: 8,
-            paddingVertical: 5,
+            paddingVertical: 6,
             paddingHorizontal: 8,
             marginHorizontal: 4,
             borderRadius: 6,

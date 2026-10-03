@@ -36,7 +36,7 @@ export const FONT_FAMILIES = {
   display: "DMSerifDisplay_400Regular",
   displayItalic: "DMSerifDisplay_400Regular_Italic",
   ui: "Inter_700Bold",
-  uiMedium: "Inter_700Bold",
+  uiMedium: "Inter_600SemiBold",
   uiBold: "Inter_700Bold",
 } as const;
 
