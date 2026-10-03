@@ -166,7 +166,6 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  border: 1px solid;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;

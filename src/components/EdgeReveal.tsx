@@ -71,7 +71,7 @@ export default function EdgeReveal({ edge, label, children }: EdgeRevealProps) {
         id={id}
         className="edge-reveal-panel"
         inert={!open}
-        style={{ backgroundColor: colors.screen, borderColor: colors.accentBorder }}
+        style={{ backgroundColor: colors.screen }}
         onFocus={() => setFocused(true)}
         onBlur={(event) => {
           if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);

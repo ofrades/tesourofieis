@@ -316,8 +316,6 @@ export const Header = ({
           className="flex-row items-center justify-between px-5 py-1 gap-4 w-full"
           style={{
             backgroundColor: colors.screen,
-            borderBottomWidth: 1,
-            borderBottomColor: colors.accentBorder,
           }}
         >
           <View className="flex-row items-center gap-3 flex-1 min-w-0">
