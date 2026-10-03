@@ -114,14 +114,14 @@ export default function ExternalLinks() {
               <View className={cardBase(pressed)}>
                 <View className="flex flex-row justify-between items-center gap-1 mr-2">
                   <View className="flex-1">
-                    <View className="flex text-pretty font-ui-medium flex-row items-center gap-2">
+                    <View className="flex text-pretty flex-row items-center gap-2">
                       {(() => {
                         const IconComponent = getIconComponent(link.icon);
                         return (
                           <IconComponent size={15} color={isDark ? COLORS["200"] : COLORS["800"]} />
                         );
                       })()}
-                      <Typography className="text-lg font-display text-sepia-600 dark:text-sepia-300">
+                      <Typography className="font-reading text-base text-sepia-600 dark:text-sepia-300">
                         {link.title}
                       </Typography>
                     </View>

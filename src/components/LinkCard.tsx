@@ -175,7 +175,7 @@ function IndulgenceContent({
             <Sparkles size={15} color="#FFD700" />
             <Typography
               numberOfLines={1}
-              className="font-display text-sepia-600 dark:text-sepia-200"
+              className="font-ui text-xs text-sepia-600 dark:text-sepia-200"
             >
               {description || "Indulgência Plenária"}
             </Typography>
@@ -285,7 +285,7 @@ export default function PageLinkCard({
                         {mass.local && (
                           <View className="flex-row items-center gap-1">
                             <MapPin size={12} color={colors.textSubtle} />
-                            <Typography className="font-ui-medium text-xs text-sepia-500">
+                            <Typography className="font-ui text-xs text-sepia-500">
                               {String(mass.local)}
                             </Typography>
                           </View>
@@ -293,7 +293,7 @@ export default function PageLinkCard({
                         {mass.outro && (
                           <View className="flex-row items-center gap-1">
                             <Users size={12} color={colors.textSubtle} />
-                            <Typography className="text-xs text-sepia-500">Alt.</Typography>
+                            <Typography className="font-ui text-xs text-sepia-500">Alt.</Typography>
                           </View>
                         )}
                       </View>
