@@ -74,6 +74,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       "expo-router",
       {
+        asyncRoutes: { web: true },
         sitemap: true,
         origin: "https://tesourofieis.com",
       },

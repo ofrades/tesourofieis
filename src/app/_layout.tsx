@@ -46,7 +46,7 @@ export default function PageRootLayout() {
   }, [loaded, error]);
 
   // Font failures should leave the prayer content available with system fallback fonts.
-  if (!loaded && !error) {
+  if (!loaded && !error && Platform.OS !== "web") {
     return null;
   }
 

@@ -16,7 +16,7 @@ export default function PageAngelus() {
         source={require("../../../../assets/images/angelus.jpg")}
         contentFit="contain"
         accessibilityLabel="Anunciação do Anjo à Virgem Maria"
-        style={{ height: width < 768 ? Math.min(240, height * 0.25) : 400 }}
+        style={{ height: width < 768 ? Math.min(240, (height || 844) * 0.25) : 400 }}
       />
 
       <Typography className="aside">

@@ -193,7 +193,9 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
           <View
             style={{ flex: 1, width: containerWidth }}
             accessibilityElementsHidden={currentLang !== "vernacular"}
-            importantForAccessibility={currentLang === "vernacular" ? "auto" : "no-hide-descendants"}
+            importantForAccessibility={
+              currentLang === "vernacular" ? "auto" : "no-hide-descendants"
+            }
           >
             <GestureScrollView
               scrollEnabled

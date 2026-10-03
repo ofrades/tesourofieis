@@ -36,8 +36,15 @@ describe("offline search and navigation", () => {
   test("the navigation catalog preserves every document's parent relationship", () => {
     const parents = new Set(docs.map((doc) => doc.parent ?? ""));
     for (const parent of parents) {
-      const expected = docs.filter((doc) => (doc.parent ?? "") === parent).map((doc) => doc.id).sort();
-      expect(getChildren(parent).map((doc) => doc.id).sort()).toEqual(expected);
+      const expected = docs
+        .filter((doc) => (doc.parent ?? "") === parent)
+        .map((doc) => doc.id)
+        .sort();
+      expect(
+        getChildren(parent)
+          .map((doc) => doc.id)
+          .sort(),
+      ).toEqual(expected);
     }
     expect(getAllTopLevelDocs()).toHaveLength(5);
     expect(findBySlug("/devocionario/dia/").map((doc) => doc.id)).toEqual(

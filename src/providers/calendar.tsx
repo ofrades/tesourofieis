@@ -14,7 +14,7 @@ import {
   useMemo,
   useState,
 } from "react";
-import { ActivityIndicator, View } from "react-native";
+import { ActivityIndicator, Platform, View } from "react-native";
 
 const CalendarContext = createContext<
   | {
@@ -53,12 +53,7 @@ export function CalendarProvider({ children }: PropsWithChildren) {
     // Preserve the current clock time — only the calendar date changes
     const withTime = new Date(d);
     const now = new Date();
-    withTime.setHours(
-      now.getHours(),
-      now.getMinutes(),
-      now.getSeconds(),
-      now.getMilliseconds(),
-    );
+    withTime.setHours(now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds());
     setUserDate(withTime);
   }, []);
   const resetToToday = useCallback(() => setUserDate(null), []);
@@ -76,8 +71,8 @@ export function CalendarProvider({ children }: PropsWithChildren) {
 
   const dateKey = yyyyMMDD(date);
   const day = useMemo(
-    () => (editionLoading ? undefined : getCalendarDay(dateKey, selection)),
-    [dateKey, selection, editionLoading],
+    () => getCalendarDay(dateKey, selection),
+    [dateKey, selection],
   );
   const novenas = useMemo(() => {
     const endDate = shiftLocalDate(dateKey, 9);
@@ -95,16 +90,27 @@ export function CalendarProvider({ children }: PropsWithChildren) {
   }, [calendar, dateKey]);
 
   const season = useMemo(
-    () => (editionLoading ? undefined : getSeason(dateKey, selection)) || Season.ADVENT,
-    [dateKey, selection, editionLoading],
+    () => getSeason(dateKey, selection) || Season.ADVENT,
+    [dateKey, selection],
   );
 
   const value = useMemo(
-    () => day && { mass: day.mass, day, calendar, novenas, date, season, isCustomDate, setDate, resetToToday },
+    () =>
+      day && {
+        mass: day.mass,
+        day,
+        calendar,
+        novenas,
+        date,
+        season,
+        isCustomDate,
+        setDate,
+        resetToToday,
+      },
     [day, calendar, novenas, date, season, isCustomDate, setDate, resetToToday],
   );
 
-  if (!calendar || !day) {
+  if (!day || (editionLoading && Platform.OS !== "web")) {
     return (
       <View className="flex-auto justify-center items-center bg-sepia-200 dark:bg-sepia-900">
         <ActivityIndicator className="text-red-500" />

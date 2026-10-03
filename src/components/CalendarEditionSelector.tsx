@@ -9,7 +9,10 @@ export function CalendarEditionSelector() {
   const { colors } = useAppTheme();
   const { edition, setEdition, isLoading } = useCalendarEdition();
   return (
-    <SettingsSection icon={<CalendarDays size={15} color={colors.textPrimary} />} title="Calendário">
+    <SettingsSection
+      icon={<CalendarDays size={15} color={colors.textPrimary} />}
+      title="Calendário"
+    >
       {isLoading ? (
         <View className="h-12 soft-background rounded-lg" />
       ) : (

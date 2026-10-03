@@ -44,8 +44,6 @@ const SearchModalContext = createContext<{
   closeSearch: () => void;
   toggleSearch: () => void;
   isSearchOpen: boolean;
-  searchQuery: string;
-  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
 } | null>(null);
 
 export const useSearchModal = () => {
@@ -126,17 +124,13 @@ export function SearchModalProvider({ children }: { children: React.ReactNode })
     [router],
   );
 
+  const value = useMemo(
+    () => ({ openSearch, closeSearch, toggleSearch, isSearchOpen }),
+    [openSearch, closeSearch, toggleSearch, isSearchOpen],
+  );
+
   return (
-    <SearchModalContext.Provider
-      value={{
-        openSearch,
-        closeSearch,
-        toggleSearch,
-        isSearchOpen,
-        searchQuery,
-        setSearchQuery,
-      }}
-    >
+    <SearchModalContext.Provider value={value}>
       {children}
       {Platform.OS === "web" ? (
         <SearchModal
@@ -349,6 +343,8 @@ function SearchFiltersBar({
 function SearchResults({
   results,
   isSearching,
+  searchError,
+  retrySearch,
   searchQuery,
   selectedSections,
   setSelectedSections,
@@ -357,6 +353,8 @@ function SearchResults({
 }: {
   results: SearchResult[];
   isSearching: boolean;
+  searchError: boolean;
+  retrySearch: () => void;
   searchQuery: string;
   selectedSections: string[];
   setSelectedSections: React.Dispatch<React.SetStateAction<string[]>>;
@@ -364,6 +362,8 @@ function SearchResults({
   ListComponent?: typeof FlatList | typeof BottomSheetFlatList;
 }) {
   const { colors: themeColors } = useAppTheme();
+
+  if (searchError) return <SearchError onRetry={retrySearch} />;
 
   if (isSearching) {
     return (
@@ -428,6 +428,9 @@ function SearchResults({
 function useSearch(searchQuery: string, selectedSections: string[]) {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isSearching, setIsSearching] = useState(false);
+  const [searchError, setSearchError] = useState(false);
+  const [attempt, setAttempt] = useState(0);
+  const retrySearch = useCallback(() => setAttempt((previous) => previous + 1), []);
   useEffect(() => {
     let cancelled = false;
     const performSearch = async () => {
@@ -435,10 +438,12 @@ function useSearch(searchQuery: string, selectedSections: string[]) {
         if (!cancelled) {
           setResults([]);
           setIsSearching(false);
+          setSearchError(false);
         }
         return;
       }
       setIsSearching(true);
+      setSearchError(false);
       try {
         const filters: SearchFilters = {};
         if (selectedSections.length > 0) filters.sections = selectedSections;
@@ -447,7 +452,10 @@ function useSearch(searchQuery: string, selectedSections: string[]) {
         if (!cancelled) setResults(matches);
       } catch (error) {
         console.error("Search error:", error);
-        if (!cancelled) setResults([]);
+        if (!cancelled) {
+          setResults([]);
+          setSearchError(true);
+        }
       } finally {
         if (!cancelled) setIsSearching(false);
       }
@@ -458,9 +466,28 @@ function useSearch(searchQuery: string, selectedSections: string[]) {
       cancelled = true;
       clearTimeout(timeout);
     };
-  }, [searchQuery, selectedSections]);
+  }, [searchQuery, selectedSections, attempt]);
 
-  return { results, isSearching };
+  return { results, isSearching, searchError, retrySearch };
+}
+
+interface SearchErrorProps {
+  onRetry: () => void;
+}
+
+function SearchError({ onRetry }: SearchErrorProps) {
+  return (
+    <View className="items-center p-6 gap-3">
+      <Typography accessibilityRole="alert">Não foi possível pesquisar.</Typography>
+      <Pressable
+        onPress={onRetry}
+        accessibilityRole="button"
+        className="min-h-11 justify-center px-4 rounded-lg soft-background"
+      >
+        <Typography>Tentar novamente</Typography>
+      </Pressable>
+    </View>
+  );
 }
 
 const SearchBottomSheet = React.forwardRef<
@@ -478,7 +505,7 @@ const SearchBottomSheet = React.forwardRef<
   const [selectedSections, setSelectedSections] = useState<string[]>([]);
   const inputRef = useRef<any>(null);
   const availableSections = useMemo(() => getAvailableSections(), []);
-  const { results, isSearching } = useSearch(searchQuery, selectedSections);
+  const { results, isSearching, searchError, retrySearch } = useSearch(searchQuery, selectedSections);
 
   const handleNavigate = useCallback(
     (url: string, headingId?: string) => {
@@ -607,7 +634,8 @@ const SearchBottomSheet = React.forwardRef<
             </View>
           )}
 
-          {searchQuery.trim() && !isSearching && results.length === 0 && (
+          {searchError && <SearchError onRetry={retrySearch} />}
+          {searchQuery.trim() && !isSearching && !searchError && results.length === 0 && (
             <View className="py-8 items-center">
               <Typography className="text-sepia-500 dark:text-sepia-400 text-center">
                 Nenhum resultado encontrado
@@ -642,7 +670,7 @@ function SearchModal({
   const [selectedSections, setSelectedSections] = useState<string[]>([]);
   const inputRef = useRef<TextInput>(null);
   const availableSections = useMemo(() => getAvailableSections(), []);
-  const { results, isSearching } = useSearch(searchQuery, selectedSections);
+  const { results, isSearching, searchError, retrySearch } = useSearch(searchQuery, selectedSections);
 
   useEffect(() => {
     if (visible) {
@@ -749,6 +777,8 @@ function SearchModal({
               <SearchResults
                 results={results}
                 isSearching={isSearching}
+                searchError={searchError}
+                retrySearch={retrySearch}
                 searchQuery={searchQuery}
                 selectedSections={selectedSections}
                 setSelectedSections={setSelectedSections}
