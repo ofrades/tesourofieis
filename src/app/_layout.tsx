@@ -14,6 +14,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import CustomDrawer from "~/components/Drawer";
+import EdgeReveal from "~/components/EdgeReveal";
 import { SearchModalProvider, useSearchModal } from "~/components/Search";
 import { COLORS } from "~/constants/Colors";
 import { CalendarProvider } from "~/providers/calendar";
@@ -93,12 +94,18 @@ export default function PageRootLayout() {
 
 function RootLayoutNav() {
   const isWeb = Platform.OS === "web";
+  const isWebDesktop = useWebDesktop();
   const { colors } = useAppTheme();
 
   if (isWeb) {
     return (
       <View className="flex-1 bg-sepia-50 dark:bg-sepia-900">
         <View className="web-reading-frame flex-1 bg-sepia-200 dark:bg-sepia-800">
+          {isWebDesktop && (
+            <EdgeReveal edge="left" label="Mostrar ou fixar a biblioteca">
+              <CustomDrawer navigation={{ closeDrawer: () => {} }} />
+            </EdgeReveal>
+          )}
           <UpdateAwareDrawer />
         </View>
         <StatusBar hidden />
@@ -153,7 +160,8 @@ function UpdateAwareDrawer() {
           backgroundColor: "var(--theme-screen)",
           borderRightWidth: 1,
           borderRightColor: "var(--theme-divider)",
-          width: 250,
+          width: isWebDesktop ? 0 : 250,
+          display: isWebDesktop ? "none" : "flex",
         },
         drawerInactiveTintColor: COLORS["700"],
         drawerActiveTintColor: colors.accent,
@@ -303,6 +311,7 @@ export const Header = ({
   // A quiet running head keeps desktop navigation within the reading frame.
   if (isWebDesktop) {
     return (
+      <EdgeReveal edge="top" label="Mostrar ou fixar a navegação">
       <View
         className="flex-row items-center justify-between px-5 py-1 gap-4 w-full"
         style={{
@@ -345,6 +354,7 @@ export const Header = ({
           </Typography>
         </Pressable>
       </View>
+      </EdgeReveal>
     );
   }
 

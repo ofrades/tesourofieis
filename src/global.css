@@ -94,9 +94,123 @@
 @media (min-width: 768px) {
   .web-reading-frame {
     width: calc(100% - 48px);
-    max-width: 1200px;
-    margin: 24px auto;
-    overflow: hidden;
+    max-width: 900px;
+    margin: 88px auto 24px;
+  }
+}
+
+/* Navigation unfolds beside the page; the text and its double rule never move. */
+.edge-reveal {
+  position: absolute;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.edge-reveal-left {
+  inset: 0;
+}
+
+.edge-reveal-top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.edge-reveal-trigger {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.edge-reveal-trigger span {
+  border: 1px solid;
+  font-size: 14px;
+  line-height: 1;
+  padding: 8px 5px;
+}
+
+.edge-reveal-trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.edge-reveal-left > .edge-reveal-trigger {
+  left: -12px;
+  top: 8px;
+  bottom: 8px;
+  width: 24px;
+}
+
+.edge-reveal-top > .edge-reveal-trigger {
+  left: 8px;
+  right: 8px;
+  top: -16px;
+  height: 24px;
+}
+
+.edge-reveal-top > .edge-reveal-trigger span {
+  padding: 1px 12px;
+  font-size: 22px;
+}
+
+.edge-reveal-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1), opacity 450ms ease,
+    visibility 650ms;
+}
+
+.edge-reveal-left > .edge-reveal-panel {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  transform: translateX(-24px);
+  box-shadow: 12px 0 32px #00000018;
+}
+
+.edge-reveal-top > .edge-reveal-panel {
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  transform: translateY(16px);
+  box-shadow: 0 12px 32px #00000018;
+}
+
+.edge-reveal[data-open="true"] > .edge-reveal-panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(0, 0);
+}
+
+@media (min-width: 1440px) {
+  .edge-reveal-left > .edge-reveal-panel {
+    left: -260px;
+    box-shadow: none;
+    transform: translateX(24px);
+  }
+
+  .edge-reveal-left[data-open="true"] > .edge-reveal-panel {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edge-reveal-panel {
+    transition: none;
   }
 }
 
