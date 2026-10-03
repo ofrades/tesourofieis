@@ -98,6 +98,7 @@ export default function PageRender() {
 
   return (
     <ScrollView
+      nativeID="reading-content"
       contentContainerStyle={{ flexGrow: 1 }}
       showsVerticalScrollIndicator={Platform.OS !== "web"}
     >

@@ -129,6 +129,132 @@
 }
 
 /* Navigation unfolds beside the page; the text and its double rule never move. */
+.reading-print-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 4px;
+  border: 0;
+  background: transparent;
+  font-family: var(--font-family-reading);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.reading-print-action:hover {
+  background: var(--theme-card);
+}
+
+.reading-print-action:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+#a4-print {
+  display: none;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 22mm 20mm;
+}
+
+@media print {
+  html,
+  body {
+    height: auto !important;
+    overflow: visible !important;
+    background: white !important;
+  }
+
+  body:has(> #a4-print) > :not(#a4-print) {
+    display: none !important;
+  }
+
+  #a4-print {
+    display: block;
+    color: #222;
+    font-family: var(--font-family-reading);
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Fixed rules repeat on each sheet, outside the text area. */
+  #a4-print::before,
+  #a4-print::after {
+    content: "";
+    position: fixed;
+    border-style: solid;
+    border-color: #9b3d3f;
+    pointer-events: none;
+  }
+
+  #a4-print::before {
+    inset: -6mm;
+    border-width: 2px;
+  }
+
+  #a4-print::after {
+    inset: calc(-6mm + 5px);
+    border-width: 1px;
+  }
+
+  #a4-print * {
+    color: #222 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  #a4-print #reading-content,
+  #a4-print #reading-content > div {
+    display: block !important;
+    position: static !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    overflow: visible !important;
+    flex: none !important;
+  }
+
+  #a4-print button:not([aria-label="Selecionar data"]),
+  #a4-print [role="button"]:not([aria-label="Selecionar data"]) {
+    display: none !important;
+  }
+
+  #a4-print [role="heading"] {
+    color: #9b3d3f !important;
+    break-after: avoid;
+  }
+
+  #a4-print .response,
+  #a4-print .versicle,
+  #a4-print .cross,
+  #a4-print .link {
+    color: #9b3d3f !important;
+  }
+
+  #a4-print p,
+  #a4-print img,
+  #a4-print .print-language-pair,
+  #a4-print .aside {
+    break-inside: avoid;
+    orphans: 3;
+    widows: 3;
+  }
+
+  #a4-print img {
+    max-width: 100%;
+  }
+
+  #a4-print div:has(> div > img) {
+    height: 70mm !important;
+    break-inside: avoid;
+  }
+}
+
 .edge-reveal {
   position: absolute;
   pointer-events: none;
@@ -160,9 +286,11 @@
 
 .edge-reveal-trigger span {
   border: 1px solid;
-  font-size: 14px;
-  line-height: 1;
-  padding: 8px 5px;
+  width: 24px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .edge-reveal-trigger:focus-visible {
@@ -180,15 +308,8 @@
 .edge-reveal-top > .edge-reveal-trigger {
   left: 8px;
   right: 8px;
-  top: -16px;
+  top: -12px;
   height: 24px;
-}
-
-.edge-reveal-top > .edge-reveal-trigger span {
-  padding: 5px 12px;
-  font-family: var(--font-family-reading);
-  font-size: 12px;
-  letter-spacing: 0.04em;
 }
 
 .edge-reveal-panel {

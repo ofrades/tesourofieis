@@ -162,7 +162,7 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
     return (
       <View>
         {pairs.map((pair, index) => (
-          <View key={index} className="flex-row gap-4">
+          <View key={index} className="flex-row gap-4 print-language-pair">
             <View className="flex-1">{pair.latin}</View>
             <View className="flex-1">{pair.vernacular}</View>
           </View>

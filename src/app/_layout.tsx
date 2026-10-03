@@ -15,6 +15,7 @@ import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import CustomDrawer from "~/components/Drawer";
 import EdgeReveal from "~/components/EdgeReveal";
+import PrintPage from "~/components/PrintPage";
 import { SearchModalProvider, useSearchModal } from "~/components/Search";
 import { COLORS } from "~/constants/Colors";
 import { CalendarProvider } from "~/providers/calendar";
@@ -343,17 +344,20 @@ export const Header = ({
             )}
           </View>
 
-          <Pressable
-            onPress={toggleSearch}
-            className="flex-row items-center justify-center gap-2 min-h-11 px-1 shrink-0 active:bg-sepia-200 dark:active:bg-sepia-800"
-            accessibilityRole="button"
-            accessibilityLabel="Pesquisar"
-          >
-            <Search size={15} color={colors.accent} strokeWidth={1.5} />
-            <Typography className="font-reading text-sm" style={{ color: colors.accent }}>
-              Pesquisar
-            </Typography>
-          </Pressable>
+          <View className="flex-row items-center gap-3 shrink-0">
+            <PrintPage />
+            <Pressable
+              onPress={toggleSearch}
+              className="flex-row items-center justify-center gap-2 min-h-11 px-1 shrink-0 active:bg-sepia-200 dark:active:bg-sepia-800"
+              accessibilityRole="button"
+              accessibilityLabel="Pesquisar"
+            >
+              <Search size={15} color={colors.accent} strokeWidth={1.5} />
+              <Typography className="font-reading text-sm" style={{ color: colors.accent }}>
+                Pesquisar
+              </Typography>
+            </Pressable>
+          </View>
         </View>
       </EdgeReveal>
     );

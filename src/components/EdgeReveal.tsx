@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
+import { Menu } from "lucide-react-native";
 import { useAppTheme } from "~/theme";
 
 interface EdgeRevealProps {
@@ -64,7 +65,7 @@ export default function EdgeReveal({ edge, label, children }: EdgeRevealProps) {
         onClick={() => setPinned(!pinned)}
       >
         <span style={{ backgroundColor: colors.screen, borderColor: colors.accentBorder }}>
-          {edge === "left" ? "☰" : "Navegação"}
+          <Menu size={14} strokeWidth={1.5} color={colors.accent} />
         </span>
       </button>
       <div

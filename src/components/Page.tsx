@@ -84,6 +84,7 @@ export default function PageWrapper({ children }: PageWrapperProps) {
   return (
     <PageProvider>
       <ScrollComponent
+        nativeID="reading-content"
         scrollEnabled
         ref={scrollViewRef}
         style={{ flex: 1 }}
