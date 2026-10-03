@@ -176,20 +176,20 @@
 }
 
 .edge-reveal-left > .edge-reveal-panel {
-  left: 0;
-  top: 0;
-  bottom: 0;
+  left: 6px;
+  top: 6px;
+  bottom: 6px;
   width: 250px;
-  transform: translateX(-24px);
+  transform: translateX(24px);
   box-shadow: 12px 0 32px #00000018;
+  clip-path: inset(0 -40px 0 0);
 }
 
 .edge-reveal-top > .edge-reveal-panel {
   bottom: 8px;
   left: 0;
   right: 0;
-  transform: translateY(16px);
-  box-shadow: 0 12px 32px #00000018;
+  transform: translateY(-16px);
 }
 
 .edge-reveal[data-open="true"] > .edge-reveal-panel {
@@ -202,8 +202,10 @@
 @media (min-width: 1440px) {
   .edge-reveal-left > .edge-reveal-panel {
     left: -260px;
+    top: 0;
+    bottom: 0;
     box-shadow: none;
-    transform: translateX(24px);
+    transform: translateX(-24px);
   }
 
   .edge-reveal-left[data-open="true"] > .edge-reveal-panel {
