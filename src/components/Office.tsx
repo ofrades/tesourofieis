@@ -1,8 +1,10 @@
 import { getCurrentOffice } from "~/lib/office";
+import { useCalendar } from "~/providers/calendar";
 import LinkCard from "./LinkCard";
 
 export default function PageOffice() {
-  const office = getCurrentOffice();
+  const { date } = useCalendar();
+  const office = getCurrentOffice(date);
 
   if (office) {
     return (

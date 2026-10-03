@@ -1,11 +1,17 @@
 import { ScrollViewStyleReset } from "expo-router/html";
 import type { PropsWithChildren } from "react";
 import { FONT_FAMILIES } from "~/theme/typography";
+import { initialCalendarDate } from "~/providers/initialDate";
 
 export default function PageRoot({ children }: PropsWithChildren) {
   return (
     <html lang="pt">
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `globalThis.__tesouroInitialDate=${JSON.stringify(initialCalendarDate)};`,
+          }}
+        />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Tesouro dos Fiéis</title>

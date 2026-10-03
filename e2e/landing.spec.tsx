@@ -1,8 +1,17 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
+
+const browserErrors = new WeakMap<Page, Error[]>();
 
 test.beforeEach(async ({ page }) => {
+  const errors: Error[] = [];
+  browserErrors.set(page, errors);
+  page.on("pageerror", (error) => errors.push(error));
   await page.clock.setFixedTime(new Date("2026-10-03T07:00:00"));
   await page.goto("/");
+});
+
+test.afterEach(async ({ page }) => {
+  expect(browserErrors.get(page)).toEqual([]);
 });
 
 test("home shows the selected day, Mass, rosary, and morning prayer", async ({ page }) => {
@@ -90,9 +99,31 @@ test("exported prayers are readable before JavaScript loads", async ({ browser }
   try {
     const page = await context.newPage();
     await page.goto(`${process.env.E2E_BASE_URL}/devocionario/dia/angelus`);
-    await expect(page.getByRole("heading", { level: 1, name: "Angelus", exact: true })).toBeVisible();
-    await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
+    await expect(
+      page.getByRole("heading", { level: 1, name: "Angelus", exact: true }),
+    ).toBeVisible();
+    await expect(
+      page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true }),
+    ).toBeVisible();
   } finally {
     await context.close();
   }
+});
+
+test("failed search chunk loading can be retried", async ({ page }) => {
+  test.skip(!process.env.E2E_BASE_URL, "Requires production search chunks");
+  let failNext = true;
+  await page.route("**/_expo/static/js/web/search-*.js", async (route) => {
+    if (failNext) {
+      failNext = false;
+      await route.abort();
+    } else {
+      await route.continue();
+    }
+  });
+  await page.getByRole("button", { name: "Pesquisar", exact: true }).last().click();
+  await page.getByRole("textbox", { name: "Pesquisar no Tesouro dos Fiéis" }).fill("Angelus");
+  await expect(page.getByText("Não foi possível pesquisar.", { exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "Tentar novamente" }).click();
+  await expect(page.getByRole("heading", { name: "Angelus", exact: true })).toBeVisible();
 });

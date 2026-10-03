@@ -15,6 +15,7 @@ import {
   useState,
 } from "react";
 import { ActivityIndicator, Platform, View } from "react-native";
+import { getInitialCalendarDate } from "./initialDate";
 
 const CalendarContext = createContext<
   | {
@@ -36,17 +37,21 @@ const CalendarDayContext = createContext<Day | undefined>(undefined);
 
 export function CalendarProvider({ children }: PropsWithChildren) {
   const { edition: selection, isLoading: editionLoading } = useCalendarEdition();
-  const [autoDate, setAutoDate] = useState(new Date());
+  const [autoDate, setAutoDate] = useState(getInitialCalendarDate);
   const [userDate, setUserDate] = useState<Date | null>(null);
 
   const date = userDate ?? autoDate;
   const isCustomDate = userDate !== null;
 
   useEffect(() => {
+    const refresh = setTimeout(() => setAutoDate(new Date()), 0);
     const timer = setInterval(() => {
       setAutoDate(new Date());
     }, 60000);
-    return () => clearInterval(timer);
+    return () => {
+      clearTimeout(refresh);
+      clearInterval(timer);
+    };
   }, []);
 
   const setDate = useCallback((d: Date) => {

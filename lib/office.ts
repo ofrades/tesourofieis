@@ -6,8 +6,7 @@ export interface OfficeItem {
   description: string;
 }
 
-export function getCurrentOffice(): OfficeItem | null {
-  const date = new Date();
+export function getCurrentOffice(date = new Date()): OfficeItem | null {
   const hour = getHours(date);
 
   if (hour >= 0 && hour < 3) {

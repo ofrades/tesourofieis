@@ -19,9 +19,11 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"] },
     },
   ],
-  webServer: externalServer ? undefined : {
-    command: "bunx expo start --web",
-    url: "http://localhost:8081",
-    reuseExistingServer: !process.env.CI,
-  },
+  webServer: externalServer
+    ? undefined
+    : {
+        command: "bunx expo start --web",
+        url: "http://localhost:8081",
+        reuseExistingServer: !process.env.CI,
+      },
 });
