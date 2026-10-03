@@ -135,9 +135,14 @@ function UpdateAwareDrawer() {
           const isRootScreen = ["index", "configurar"].includes(route.name);
           return <Header withBC={!isRootScreen} isWebDesktop={isWebDesktop} />;
         },
-        sceneStyle: {
-          backgroundColor: "transparent",
-        },
+        sceneStyle: isWebDesktop
+          ? {
+              backgroundColor: "transparent",
+              margin: 12,
+              borderWidth: 1,
+              borderColor: "var(--color-burgundy-500)",
+            }
+          : { backgroundColor: "transparent" },
         drawerType: isWebDesktop ? "permanent" : "slide",
         drawerStyle: {
           backgroundColor: "var(--theme-screen)",
