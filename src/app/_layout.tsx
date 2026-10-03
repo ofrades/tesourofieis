@@ -138,7 +138,8 @@ function UpdateAwareDrawer() {
         sceneStyle: isWebDesktop
           ? {
               backgroundColor: "transparent",
-              margin: 12,
+              // Reserve only the outline and its gap, placing the outer rule at the panel edge.
+              margin: 5,
               borderWidth: 1,
               borderColor: "var(--color-burgundy-500)",
               outlineWidth: 2,
