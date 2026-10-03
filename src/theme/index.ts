@@ -33,8 +33,8 @@ export const FONT_FAMILIES = {
   strong: "Cardo_700Bold",
   display: "DMSerifDisplay_400Regular",
   displayItalic: "DMSerifDisplay_400Regular_Italic",
-  ui: "Inter_400Regular",
-  uiMedium: "Inter_600SemiBold",
+  ui: "Inter_700Bold",
+  uiMedium: "Inter_700Bold",
   uiBold: "Inter_700Bold",
 } as const;
 
