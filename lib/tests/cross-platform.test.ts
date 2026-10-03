@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
+import ts from "typescript";
 
 /**
  * Cross-platform guard: React Native has no lowercase intrinsic elements.
@@ -73,7 +74,22 @@ const DOM_ONLY_TAGS = [
   "summary",
 ];
 
-const DOM_TAG_PATTERN = new RegExp(`</?(${DOM_ONLY_TAGS.join("|")})(?=[\\s/>])`);
+function findHtmlElements(file: string, source: string): string[] {
+  const parsed = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+  const offenders: string[] = [];
+  function visit(node: ts.Node): void {
+    if (ts.isJsxOpeningElement(node) || ts.isJsxSelfClosingElement(node)) {
+      const tag = node.tagName.getText(parsed);
+      if (DOM_ONLY_TAGS.includes(tag)) {
+        const { line } = parsed.getLineAndCharacterOfPosition(node.getStart(parsed));
+        offenders.push(`${file}:${line + 1}  <${tag}>`);
+      }
+    }
+    ts.forEachChild(node, visit);
+  }
+  visit(parsed);
+  return offenders;
+}
 
 function collectTsx(dir: string, into: string[]): void {
   for (const entry of readdirSync(dir)) {
@@ -87,22 +103,22 @@ function collectTsx(dir: string, into: string[]): void {
 }
 
 describe("cross-platform rendering", () => {
-  test("no raw HTML elements outside the web-only html shell", () => {
+  test("distinguishes native JSX from printable HTML strings", () => {
+    expect(findHtmlElements("native.tsx", 'const html = `<img src="image" />`;')).toEqual([]);
+    expect(findHtmlElements("native.tsx", "const view = <div />;")).toEqual([
+      "native.tsx:1  <div>",
+    ]);
+  });
+
+  test("no raw HTML elements outside web-only modules", () => {
     const offenders: string[] = [];
     const files: string[] = [];
     collectTsx(SRC, files);
 
     for (const file of files) {
       // `+html.tsx` is the web static-rendering shell; raw HTML is its job.
-      if (file.includes("+html")) continue;
-
-      const lines = readFileSync(file, "utf8").split("\n");
-      lines.forEach((line, index) => {
-        const match = DOM_TAG_PATTERN.exec(line);
-        if (match) {
-          offenders.push(`${relative(SRC, file)}:${index + 1}  ${match[0]}`);
-        }
-      });
+      if (file.includes("+html") || file.endsWith(".web.tsx")) continue;
+      offenders.push(...findHtmlElements(relative(SRC, file), readFileSync(file, "utf8")));
     }
 
     if (offenders.length) {
