@@ -389,15 +389,18 @@ export const Header = ({
             </Pressable>
             <Breadcrumbs />
           </View>
-          <Pressable
-            onPress={toggleSearch}
-            className="flex items-center justify-center w-9 h-9 rounded-xl active:bg-sepia-400 dark:active:bg-sepia-700 soft-background"
-            accessibilityRole="button"
-            accessibilityLabel="Pesquisar"
-            hitSlop={6}
-          >
-            <Search size={18} color={colors.accent} />
-          </Pressable>
+          <View className="flex-row items-center gap-1 shrink-0">
+            <PrintPage iconOnly />
+            <Pressable
+              onPress={toggleSearch}
+              className="flex items-center justify-center w-9 h-9 rounded-xl active:bg-sepia-400 dark:active:bg-sepia-700 soft-background"
+              accessibilityRole="button"
+              accessibilityLabel="Pesquisar"
+              hitSlop={6}
+            >
+              <Search size={18} color={colors.accent} />
+            </Pressable>
+          </View>
         </View>
       </View>
     );
@@ -431,17 +434,20 @@ export const Header = ({
           <BookPlus size={18} color={colors.accent} />
         </Pressable>
       </View>
-      <Pressable
-        onPress={toggleSearch}
-        accessibilityRole="button"
-        accessibilityLabel="Pesquisar"
-        hitSlop={6}
-        className={`flex items-center justify-center w-9 h-9 rounded-xl dark:active:bg-sepia-700 soft-background ${
-          isWebDesktop ? "active:bg-sepia-400" : "active:bg-sepia-100"
-        }`}
-      >
-        <Search size={18} color={colors.accent} />
-      </Pressable>
+      <View className="flex-row items-center gap-1 shrink-0">
+        <PrintPage iconOnly />
+        <Pressable
+          onPress={toggleSearch}
+          accessibilityRole="button"
+          accessibilityLabel="Pesquisar"
+          hitSlop={6}
+          className={`flex items-center justify-center w-9 h-9 rounded-xl dark:active:bg-sepia-700 soft-background ${
+            isWebDesktop ? "active:bg-sepia-400" : "active:bg-sepia-100"
+          }`}
+        >
+          <Search size={18} color={colors.accent} />
+        </Pressable>
+      </View>
     </View>
   );
 };

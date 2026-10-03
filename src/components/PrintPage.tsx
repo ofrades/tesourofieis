@@ -27,7 +27,11 @@ function finishPrint() {
   document.getElementById("a4-print")?.remove();
 }
 
-export default function PrintPage() {
+interface PrintPageProps {
+  iconOnly?: boolean;
+}
+
+export default function PrintPage({ iconOnly = false }: PrintPageProps) {
   const { colors } = useAppTheme();
 
   useEffect(() => {
@@ -48,13 +52,13 @@ export default function PrintPage() {
   return (
     <button
       type="button"
-      className="reading-print-action"
+      className={`reading-print-action${iconOnly ? " reading-print-action-icon" : ""}`}
       style={{ color: colors.accent }}
       aria-label="Imprimir ou guardar PDF em A4"
       onClick={print}
     >
-      <Printer size={15} strokeWidth={1.5} color={colors.accent} />
-      <span>Imprimir A4</span>
+      <Printer size={iconOnly ? 18 : 15} strokeWidth={1.5} color={colors.accent} />
+      {!iconOnly && <span>Imprimir A4</span>}
     </button>
   );
 }
