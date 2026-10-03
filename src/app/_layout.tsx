@@ -100,7 +100,10 @@ function RootLayoutNav() {
   if (isWeb) {
     return (
       <View className="flex-1 bg-sepia-50 dark:bg-sepia-900">
-        <View className="web-reading-frame flex-1 bg-sepia-200 dark:bg-sepia-800">
+        <View
+          className="web-reading-frame flex-1 bg-sepia-200 dark:bg-sepia-800"
+          style={{ borderColor: colors.accent }}
+        >
           {isWebDesktop && (
             <EdgeReveal edge="left" label="Mostrar ou fixar a biblioteca">
               <CustomDrawer navigation={{ closeDrawer: () => {} }} />
@@ -148,10 +151,10 @@ function UpdateAwareDrawer() {
               // Reserve only the outline and its gap, placing the outer rule at the panel edge.
               margin: 5,
               borderWidth: 1,
-              borderColor: colors.accent,
+              borderColor: "transparent",
               outlineWidth: 2,
               outlineStyle: "solid",
-              outlineColor: colors.accent,
+              outlineColor: "transparent",
               outlineOffset: 3,
             }
           : { backgroundColor: "transparent" },

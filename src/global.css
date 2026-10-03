@@ -97,6 +97,35 @@
     max-width: 900px;
     margin: 88px auto 24px;
   }
+
+  .web-reading-frame::before,
+  .web-reading-frame::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 650ms ease;
+    z-index: 10;
+  }
+
+  .web-reading-frame::before {
+    inset: 0;
+    border-width: 2px;
+  }
+
+  .web-reading-frame::after {
+    inset: 5px;
+    border-width: 1px;
+  }
+
+  .web-reading-frame:hover::before,
+  .web-reading-frame:hover::after,
+  .web-reading-frame:focus-within::before,
+  .web-reading-frame:focus-within::after {
+    opacity: 1;
+  }
 }
 
 /* Navigation unfolds beside the page; the text and its double rule never move. */
@@ -214,6 +243,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .web-reading-frame::before,
+  .web-reading-frame::after,
   .edge-reveal-panel {
     transition: none;
   }
