@@ -97,8 +97,12 @@ test("prayers remain readable when fonts fail", async ({ browser, baseURL }) => 
     });
     await page.goto(`${baseURL}/devocionario/dia/angelus`);
     await expect.poll(() => failedRequests).toBeGreaterThan(0);
-    await expect(page.getByRole("heading", { level: 1, name: "Angelus", exact: true })).toBeVisible();
-    await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
+    await expect(
+      page.getByRole("heading", { level: 1, name: "Angelus", exact: true }),
+    ).toBeVisible();
+    await expect(
+      page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true }),
+    ).toBeVisible();
   } finally {
     await context.close();
   }
