@@ -1,7 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react-native";
 import { addDays, format, getYear, isWithinInterval } from "date-fns";
 import { pt } from "date-fns/locale";
-import { Pressable, ScrollView, useWindowDimensions, View } from "react-native";
+import { Platform, Pressable, ScrollView, useWindowDimensions, View } from "react-native";
 import { useEffect, useState } from "react";
 import LandingCard from "~/components/LandingCard";
 import ExternalLinks from "~/components/External";
@@ -97,7 +97,10 @@ export default function PageRender() {
   }
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+    <ScrollView
+      contentContainerStyle={{ flexGrow: 1 }}
+      showsVerticalScrollIndicator={Platform.OS !== "web"}
+    >
       <View className="extreme-background w-full">
         <View
           className="flex-1 w-full web:lg:max-w-3xl web:lg:mx-auto py-5 px-3"

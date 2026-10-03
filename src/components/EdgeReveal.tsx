@@ -64,7 +64,7 @@ export default function EdgeReveal({ edge, label, children }: EdgeRevealProps) {
         onClick={() => setPinned(!pinned)}
       >
         <span style={{ backgroundColor: colors.screen, borderColor: colors.accentBorder }}>
-          {edge === "left" ? "☰" : "⋯"}
+          {edge === "left" ? "☰" : "Navegação"}
         </span>
       </button>
       <div

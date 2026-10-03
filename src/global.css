@@ -156,8 +156,10 @@
 }
 
 .edge-reveal-top > .edge-reveal-trigger span {
-  padding: 1px 12px;
-  font-size: 22px;
+  padding: 5px 12px;
+  font-family: var(--font-family-reading);
+  font-size: 12px;
+  letter-spacing: 0.04em;
 }
 
 .edge-reveal-panel {
