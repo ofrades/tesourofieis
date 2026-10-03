@@ -48,8 +48,7 @@
 
   /* Keep font names aligned with FONT_FAMILIES in src/theme/index.ts. */
   --font-family-reading: "Cardo_400Regular", Georgia, "Times New Roman", Times, serif;
-  --font-family-reading-italic:
-    "Cardo_400Regular_Italic", Georgia, "Times New Roman", Times, serif;
+  --font-family-reading-italic: "Cardo_400Regular_Italic", Georgia, "Times New Roman", Times, serif;
   --font-family-strong: "Cardo_700Bold", Georgia, "Times New Roman", Times, serif;
   --font-family-display: "DMSerifDisplay_400Regular", Georgia, "Times New Roman", Times, serif;
   --font-family-display-italic:
