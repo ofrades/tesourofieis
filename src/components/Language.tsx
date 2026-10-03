@@ -14,6 +14,8 @@ import Animated, {
 } from "react-native-reanimated";
 import { useDefaultLanguage } from "~/providers/language";
 import { Typography } from "./typography";
+import { PrintInlineProvider, usePrintBlock } from "~/providers/printing";
+import { printBilingual } from "~/printing/markup";
 
 type LanguageToggleProps = {
   children: React.ReactNode;
@@ -56,6 +58,8 @@ const styles = StyleSheet.create({
 
 export default function LanguageToggle({ children }: LanguageToggleProps) {
   const defaultLanguage = useDefaultLanguage();
+  const printRef = useRef<View>(null);
+  usePrintBlock(printRef, () => printBilingual(children));
   const { width: windowWidth } = useWindowDimensions();
   const [containerWidth, setContainerWidth] = useState(0);
   const widthRef = useRef(0);
@@ -172,45 +176,49 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
   }
 
   return (
-    <View onLayout={onContainerLayout} style={styles.container}>
-      <GestureDetector gesture={panGesture}>
-        <Animated.View
-          style={[contentStyle, { width: containerWidth * 2 }, styles.animatedContainer]}
-        >
-          <View
-            style={{ flex: 1, width: containerWidth }}
-            accessibilityElementsHidden={currentLang !== "latin"}
-            importantForAccessibility={currentLang === "latin" ? "auto" : "no-hide-descendants"}
+    <View ref={printRef} onLayout={onContainerLayout} style={styles.container}>
+      <PrintInlineProvider>
+        <GestureDetector gesture={panGesture}>
+          <Animated.View
+            style={[contentStyle, { width: containerWidth * 2 }, styles.animatedContainer]}
           >
-            <GestureScrollView
-              scrollEnabled
-              style={{ flex: 1 }}
-              contentContainerStyle={{ flexGrow: 1 }}
+            <View
+              style={{ flex: 1, width: containerWidth }}
+              accessibilityElementsHidden={currentLang !== "latin"}
+              importantForAccessibility={currentLang === "latin" ? "auto" : "no-hide-descendants"}
             >
-              {latinContent}
-            </GestureScrollView>
-          </View>
-          <View
-            style={{ flex: 1, width: containerWidth }}
-            accessibilityElementsHidden={currentLang !== "vernacular"}
-            importantForAccessibility={
-              currentLang === "vernacular" ? "auto" : "no-hide-descendants"
-            }
-          >
-            <GestureScrollView
-              scrollEnabled
-              style={{ flex: 1 }}
-              contentContainerStyle={{ flexGrow: 1 }}
+              <GestureScrollView
+                scrollEnabled
+                removeClippedSubviews={false}
+                style={{ flex: 1 }}
+                contentContainerStyle={{ flexGrow: 1 }}
+              >
+                {latinContent}
+              </GestureScrollView>
+            </View>
+            <View
+              style={{ flex: 1, width: containerWidth }}
+              accessibilityElementsHidden={currentLang !== "vernacular"}
+              importantForAccessibility={
+                currentLang === "vernacular" ? "auto" : "no-hide-descendants"
+              }
             >
-              {vernacularContent}
-            </GestureScrollView>
-          </View>
-        </Animated.View>
-      </GestureDetector>
-      <LanguageSelector
-        selected={currentLang}
-        onChange={(language) => setLanguage(language === "vernacular")}
-      />
+              <GestureScrollView
+                scrollEnabled
+                removeClippedSubviews={false}
+                style={{ flex: 1 }}
+                contentContainerStyle={{ flexGrow: 1 }}
+              >
+                {vernacularContent}
+              </GestureScrollView>
+            </View>
+          </Animated.View>
+        </GestureDetector>
+        <LanguageSelector
+          selected={currentLang}
+          onChange={(language) => setLanguage(language === "vernacular")}
+        />
+      </PrintInlineProvider>
     </View>
   );
 }

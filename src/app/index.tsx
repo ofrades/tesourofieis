@@ -19,8 +19,17 @@ import { useCalendarEdition } from "~/providers/edition";
 import { useTodaysIndulgences } from "~/hooks/useTodaysIndulgences";
 import { isFirstFriday, isFirstSaturday, stMichaelLentDay, yyyyMMDD } from "~/lib/utils";
 import { useAppTheme } from "~/theme";
+import { PrintablePage } from "~/providers/printing";
 
 export default function PageRender() {
+  return (
+    <PrintablePage>
+      <LandingPage />
+    </PrintablePage>
+  );
+}
+
+function LandingPage() {
   const [animateEntrance, setAnimateEntrance] = useState(true);
   useEffect(() => {
     // Only the first render enters; later date/clock changes remain immediate.

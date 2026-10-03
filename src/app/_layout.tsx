@@ -22,6 +22,7 @@ import { CalendarProvider } from "~/providers/calendar";
 import { EditionProvider } from "~/providers/edition";
 import { FontProvider } from "~/providers/fonts";
 import { SettingsProvider } from "~/providers/settings";
+import { PrintingProvider } from "~/providers/printing";
 import { PostHogProvider } from "posthog-react-native";
 import { LanguageProvider } from "~/providers/language";
 import { useAppTheme } from "~/theme";
@@ -78,7 +79,9 @@ export default function PageRootLayout() {
                     <SettingsProvider>
                       <BottomSheetModalProvider>
                         <SearchModalProvider>
-                          <RootLayoutNav />
+                          <PrintingProvider>
+                            <RootLayoutNav />
+                          </PrintingProvider>
                         </SearchModalProvider>
                       </BottomSheetModalProvider>
                     </SettingsProvider>

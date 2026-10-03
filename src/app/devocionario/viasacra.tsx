@@ -1,4 +1,4 @@
-import { Image } from "expo-image";
+import { Image } from "~/components/ReadingImage";
 import { MissalRefLink as Link } from "~/components/MissalRefLink";
 import { H1, H2, H3 } from "~/components/Headings";
 import Language from "~/components/Language";

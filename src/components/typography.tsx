@@ -1,4 +1,7 @@
 import { Text, type TextProps } from "react-native";
+import { useRef } from "react";
+import { PrintInlineProvider, usePrintBlock } from "~/providers/printing";
+import { printInline } from "~/printing/markup";
 import { useFontContext } from "~/providers/fonts";
 import { TYPE_SCALE } from "~/theme/typography";
 
@@ -14,12 +17,15 @@ type PProps = TextProps & {
 export function Typography({ children, className = "", ...props }: PProps) {
   const { fontSize } = useFontContext();
   const fontClassName = FONT_FAMILY_CLASS.test(className) ? "" : "font-reading";
+  const ref = useRef<Text>(null);
+  usePrintBlock(ref, () => `<p>${printInline(children)}</p>`);
   return (
     <Text
       className={`${fontClassName} text-sepia ${TYPE_SCALE.body[fontSize]} ${className}`}
       {...props}
+      ref={ref}
     >
-      {children}
+      <PrintInlineProvider>{children}</PrintInlineProvider>
     </Text>
   );
 }

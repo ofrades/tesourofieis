@@ -1,4 +1,4 @@
-import { Image } from "expo-image";
+import { Image } from "~/components/ReadingImage";
 import { useWindowDimensions } from "react-native";
 import { MissalRefLink as Link } from "~/components/MissalRefLink";
 import { H1 } from "~/components/Headings";

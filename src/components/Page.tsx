@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { Platform, ScrollView, View } from "react-native";
 import { ScrollView as GestureScrollView } from "react-native-gesture-handler";
 import { PageProvider, useIsNested } from "~/providers/page";
+import { PrintablePage } from "~/providers/printing";
 
 type PageWrapperProps = {
   children: React.ReactNode;
@@ -82,16 +83,19 @@ export default function PageWrapper({ children }: PageWrapperProps) {
   );
 
   return (
-    <PageProvider>
-      <ScrollComponent
-        nativeID="reading-content"
-        scrollEnabled
-        ref={scrollViewRef}
-        style={{ flex: 1 }}
-        contentContainerStyle={{ flexGrow: 1 }}
-      >
-        {scrollContent}
-      </ScrollComponent>
-    </PageProvider>
+    <PrintablePage>
+      <PageProvider>
+        <ScrollComponent
+          nativeID="reading-content"
+          scrollEnabled
+          removeClippedSubviews={false}
+          ref={scrollViewRef}
+          style={{ flex: 1 }}
+          contentContainerStyle={{ flexGrow: 1 }}
+        >
+          {scrollContent}
+        </ScrollComponent>
+      </PageProvider>
+    </PrintablePage>
   );
 }
