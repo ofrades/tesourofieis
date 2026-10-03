@@ -86,11 +86,22 @@ test("phone reading honors the language preference and permits switching", async
   await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
 });
 
-test("prayers remain readable when fonts fail", async ({ page }) => {
-  await page.route(/\.ttf(?:\?|$)/, (route) => route.abort());
-  await page.goto("/devocionario/dia/angelus");
-  await expect(page.getByRole("heading", { level: 1, name: "Angelus", exact: true })).toBeVisible();
-  await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
+test("prayers remain readable when fonts fail", async ({ browser, baseURL }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  let failedRequests = 0;
+  try {
+    const page = await context.newPage();
+    await page.route(/\.ttf(?:\?|$)/, async (route) => {
+      failedRequests++;
+      await route.abort();
+    });
+    await page.goto(`${baseURL}/devocionario/dia/angelus`);
+    await expect.poll(() => failedRequests).toBeGreaterThan(0);
+    await expect(page.getByRole("heading", { level: 1, name: "Angelus", exact: true })).toBeVisible();
+    await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
+  } finally {
+    await context.close();
+  }
 });
 
 test("exported prayers are readable before JavaScript loads", async ({ browser }) => {

@@ -86,3 +86,22 @@ Calendar benchmark medians: **5.066 ms** for the simulated app workload (two yea
 3. Add narrow-width language selection, responsive illustration sizing, and desktop card sizing.
 4. Separate clock/day contexts and remove module cycles; profile before larger rendering changes.
 5. Update UI tests and establish production/native performance baselines.
+
+## Remediation completed on 2026-10-03
+
+The prioritized implementation work above is now committed locally:
+
+- Search keyboard listeners use matching capture options. Menu/search/filter/clear actions have accessible names; shared headings expose heading roles and levels. Hidden native language content is excluded from accessibility traversal.
+- Navigation uses a generated 304 KB catalog with indexed parent relationships. Full document/search data loads on demand. The index ships serialized and uses MiniSearch's supported `loadJSONAsync` API, yielding between restoration batches. Pending queries are cancelled when superseded, and failed chunk loading offers a tested retry action. This preserves bundled offline native search.
+- Phone-width web reading honors the language preference and offers labeled Latim/Português buttons, with approximately 336 px text columns at the inspected viewport. Desktop retains paired columns. The Angelus illustration is shorter on phones, and desktop secondary cards now occupy two columns.
+- Web renders readable fallback text while fonts load, and font failure no longer replaces the application with a restart message. Native still waits for the normal font load but continues if it fails.
+- Theme subscribers use a stable day context, so minute clock changes no longer invalidate them through the calendar context. Upcoming novena scans use date keys instead of parsing a whole year's dates every minute. Edition settings UI and typography tokens were separated from provider dependencies to remove the observed module cycles.
+- Web route splitting is enabled. The intermediate export after search isolation still had a 15 MB full-route entry bundle; the final homepage loads approximately **8.47 MB of initial JavaScript total**, including shared/runtime/layout/route chunks. The **5.16 MB search chunk** is separate. Figures are uncompressed exported bytes, not network transfer sizes or measured launch-time gains. This uses the platform-specific route splitting supported by [Expo Router](https://docs.expo.dev/versions/v55.0.0/sdk/router/).
+- Static exports now contain the actual prayer text. The initial browser calendar clock matches the exported clock snapshot, then refreshes after hydration. The office recommendation uses the same clock, preventing time-dependent hydration errors. The snapshot preserves local clock fields for consistent initial rendering across browser timezones.
+- Directory rendering no longer sorts shared heading arrays. UI tests now require expected content rather than skipping assertions when it is absent.
+
+Validation: **131 core tests**, including all calendar snapshots, and **9 production browser tests** pass. Browser tests cover navigation, repeated shortcuts, language switching, genuinely blocked font requests in a fresh browser context, JavaScript-disabled reading, and failed-search-chunk retry. The normal browser flows also assert that no uncaught page errors occur. Type checking passes. Web and Android bundle exports succeed. The web export remains free of native bundles and source maps.
+
+The asynchronous search change improves scheduling rather than promising a shorter total wait: a fresh Bun measurement completed in approximately 212 ms with 16 timer ticks during restoration; the longest measured timer gap was about 92 ms. Parsing/batch work still has room for improvement on lower-end devices. Initial JavaScript remains substantial at 8.47 MB, so further shared-bundle profiling is warranted.
+
+Native interaction verification remains incomplete: the available Android emulator failed to boot on two attempts, and iOS simulators are unavailable on this Linux host. Android export verifies bundling, not device behavior. Low-end release profiling, longest-document rendering, telemetry overhead/sampling, and comprehensive contrast checks remain follow-up work requiring measurements. Telemetry configuration was preserved. Nothing was deployed.
