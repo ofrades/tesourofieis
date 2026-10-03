@@ -1,7 +1,6 @@
 import type { CalendarTheme } from "@marceloterreiro/flash-calendar";
 import { Calendar, toDateId } from "@marceloterreiro/flash-calendar";
 import { BottomSheetBackdrop, BottomSheetModal, BottomSheetView } from "@gorhom/bottom-sheet";
-import { burgundy } from "config";
 import { addMonths, format, parseISO, startOfMonth, subMonths } from "date-fns";
 import { pt } from "date-fns/locale";
 import { ChevronLeft, ChevronRight } from "lucide-react-native";
@@ -44,7 +43,7 @@ export function DatePicker({ date, onDateChange, children }: DatePickerProps) {
   const textMuted = COLORS["500"];
   const hoverBg = colors.divider;
   const todayBg = colors.divider;
-  const activeBg = burgundy[isDark ? 600 : 500];
+  const activeBg = colors.accent;
 
   const theme = useMemo<CalendarTheme>(
     () => ({

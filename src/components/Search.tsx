@@ -1,5 +1,4 @@
 import { BookPlus, Search, X, Filter, Tag, CircleDot } from "lucide-react-native";
-import { burgundy } from "config";
 import { useRouter } from "expo-router";
 import React, {
   createContext,
@@ -204,6 +203,7 @@ const SearchResultItem = React.memo(
     item: SearchResult;
     onPress: (url: string, headingId?: string) => void;
   }) => {
+    const { colors } = useAppTheme();
     const handlePress = useCallback(
       (headingId?: string) => {
         onPress(item.url, headingId);
@@ -259,7 +259,13 @@ const SearchResultItem = React.memo(
             {item.section && (
               <View className="flex-row items-center gap-1">
                 <Tag size={10} color={COLORS["500"]} />
-                <Typography className="text-ellipsis text-burgundy-600 dark:text-burgundy-300 text-xs px-2 py-1 rounded-full bg-burgundy-100 dark:bg-burgundy-900">
+                <Typography
+                  className="text-ellipsis text-xs px-2 py-1 rounded-full"
+                  style={{
+                    color: colors.accentStrong,
+                    backgroundColor: colors.accentSoft,
+                  }}
+                >
                   {getSectionDisplayName(item.section)}
                 </Typography>
               </View>
@@ -298,6 +304,8 @@ function SearchFiltersBar({
   setSelectedSections: React.Dispatch<React.SetStateAction<string[]>>;
   availableSections: string[];
 }) {
+  const { colors } = useAppTheme();
+
   if (!showFilters) return null;
 
   return (
@@ -310,9 +318,12 @@ function SearchFiltersBar({
           {selectedSections.length > 0 && (
             <TouchableOpacity
               onPress={() => setSelectedSections([])}
-              className="px-3 py-1 rounded-full bg-red-200 dark:bg-red-700"
+              className="px-3 py-1 rounded-full"
+              style={{ backgroundColor: colors.accentSoft }}
             >
-              <Typography className="text-xs text-red-700 dark:text-red-200">Limpar</Typography>
+              <Typography className="text-xs" style={{ color: colors.accentStrong }}>
+                Limpar
+              </Typography>
             </TouchableOpacity>
           )}
           {availableSections.map((section) => {
@@ -327,18 +338,15 @@ function SearchFiltersBar({
                     setSelectedSections((prev) => [...prev, section]);
                   }
                 }}
-                className={`px-3 py-1 rounded-full border ${
-                  isSelected
-                    ? "bg-burgundy-200 dark:bg-burgundy-700 border-burgundy-400"
-                    : "bg-sepia-200 dark:bg-sepia-700 border-sepia-400"
-                }`}
+                className="px-3 py-1 rounded-full border"
+                style={{
+                  backgroundColor: isSelected ? colors.accentSoft : colors.panel,
+                  borderColor: isSelected ? colors.accentBorder : colors.divider,
+                }}
               >
                 <Typography
-                  className={`text-xs ${
-                    isSelected
-                      ? "text-burgundy-700 dark:text-burgundy-200"
-                      : "text-sepia-500 dark:text-sepia-300"
-                  }`}
+                  className="text-xs"
+                  style={{ color: isSelected ? colors.accentStrong : colors.textMuted }}
                 >
                   {getSectionDisplayName(section)}
                 </Typography>
@@ -587,7 +595,7 @@ const SearchBottomSheet = React.forwardRef<
             <TouchableOpacity onPress={() => setShowFilters(!showFilters)} className="ml-2 p-1">
               <Filter
                 size={15}
-                color={selectedSections.length > 0 ? burgundy[500] : colors.placeholder}
+                color={selectedSections.length > 0 ? themeColors.accent : colors.placeholder}
               />
             </TouchableOpacity>
             {!!searchQuery && (
@@ -648,6 +656,7 @@ function SearchModal({
   onClose: () => void;
   onNavigate: (url: string, headingId?: string) => void;
 }) {
+  const { colors: themeColors } = useAppTheme();
   const [showFilters, setShowFilters] = useState(false);
   const [selectedSections, setSelectedSections] = useState<string[]>([]);
   const inputRef = useRef<TextInput>(null);
@@ -704,7 +713,7 @@ function SearchModal({
           >
             <View className="px-5 pt-4 pb-3 medium-background">
               <View className="flex-row justify-center items-center pb-3">
-                <BookPlus size={15} color={burgundy[500]} />
+                <BookPlus size={15} color={themeColors.accent} />
               </View>
               <View className="flex-row px-5 py-1 items-center rounded-xl border border-sepia extreme-background">
                 <Search size={15} color={colors.placeholder} />
@@ -723,7 +732,7 @@ function SearchModal({
                 <TouchableOpacity onPress={() => setShowFilters(!showFilters)} className="ml-2 p-1">
                   <Filter
                     size={15}
-                    color={selectedSections.length > 0 ? burgundy[500] : colors.placeholder}
+                    color={selectedSections.length > 0 ? themeColors.accent : colors.placeholder}
                   />
                 </TouchableOpacity>
                 {!!searchQuery && (

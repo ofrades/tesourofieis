@@ -7,7 +7,6 @@ import { useAppTheme } from "~/theme";
 import { useCalendar } from "~/providers/calendar";
 import PageLinkCard from "./LinkCard";
 import { Typography } from "./typography";
-import { getSeasonPalette } from "~/theme/seasons";
 
 type Prayer = {
   title: string;
@@ -385,9 +384,8 @@ const getIconComponent = (iconName: string) => {
 };
 
 export default function LiturgicalSeason() {
-  const { isDark } = useAppTheme();
+  const { colors } = useAppTheme();
   const { season } = useCalendar();
-  const seasonPalette = getSeasonPalette(season, isDark);
 
   const prayers = TEMPORAS_PRAYERS[season] || [];
 
@@ -395,7 +393,7 @@ export default function LiturgicalSeason() {
     return null;
   }
 
-  const iconColor = seasonPalette.accent;
+  const iconColor = colors.accent;
   const iconElement = createElement(getIconComponent(CATEGORY_ICONS[season]), {
     size: 18,
     color: iconColor,
@@ -405,7 +403,7 @@ export default function LiturgicalSeason() {
     <View className="mt-2 gap-3 flex-1">
       <View className="flex-row items-center gap-2">
         {iconElement}
-        <Typography className="font-display text-xl" style={{ color: seasonPalette.accent }}>
+        <Typography className="font-display text-xl" style={{ color: colors.accent }}>
           {season}
         </Typography>
       </View>

@@ -1,5 +1,4 @@
 import { ChevronLeft, ChevronRight } from "lucide-react-native";
-import { burgundy } from "config";
 import { yyyyMMDD } from "~/lib/utils";
 import { addWeeks, eachDayOfInterval, endOfWeek, format, startOfWeek } from "date-fns";
 import { pt } from "date-fns/locale";
@@ -19,7 +18,7 @@ export default function CalendarMasterpiece() {
   const todayRef = useRef<View>(null);
   const { calendar, date } = useCalendar();
   const { edition } = useCalendarEdition();
-  const { isDark, colors } = useAppTheme();
+  const { colors } = useAppTheme();
 
   const todayString = yyyyMMDD(date);
   const [currentDate, setCurrentDate] = useState<Date>(date);
@@ -80,11 +79,7 @@ export default function CalendarMasterpiece() {
               const dayString = yyyyMMDD(dayDate);
               const dayData = calendar.find((i) => i.date === dayString);
               const isToday = dayString === todayString;
-              const weekdayColor = isToday
-                ? isDark
-                  ? burgundy[400]
-                  : burgundy[500]
-                : colors.textMuted;
+              const weekdayColor = isToday ? colors.accent : colors.textMuted;
               const dateColor = isToday ? colors.textPrimary : colors.textSecondary;
 
               return (

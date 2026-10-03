@@ -17,13 +17,11 @@ import { useCalendarEdition } from "~/providers/edition";
 import { useTodaysIndulgences } from "~/hooks/useTodaysIndulgences";
 import { isFirstFriday, isFirstSaturday, stMichaelLentDay, yyyyMMDD } from "~/lib/utils";
 import { useAppTheme } from "~/theme";
-import { getSeasonPalette } from "~/theme/seasons";
 
 export default function PageRender() {
-  const { day, date, season, setDate, resetToToday, isCustomDate } = useCalendar();
+  const { day, date, setDate, resetToToday, isCustomDate } = useCalendar();
   const { edition } = useCalendarEdition();
   const { isDark, colors } = useAppTheme();
-  const seasonPalette = getSeasonPalette(season, isDark);
   const todaysIndulgences = useTodaysIndulgences();
 
   function getPrayer(date: Date) {
@@ -44,9 +42,9 @@ export default function PageRender() {
   const headerPaddingTop = isCompactLayout ? 6 : 8;
   const headerPaddingBottom = isCompactLayout ? 8 : 10;
   const dateFontSize = isCompactLayout ? 28 : 32;
-  const dateTextColor = isCustomDate ? seasonPalette.accentStrong : colors.textSecondary;
+  const dateTextColor = isCustomDate ? colors.accentStrong : colors.textSecondary;
   const chevronColor = isDark ? colors.textMuted : COLORS["500"];
-  const sectionLabelColor = seasonPalette.accent;
+  const sectionLabelColor = colors.accent;
 
   const stepDay = (delta: number) => () => setDate(addDays(date, delta));
 
@@ -103,7 +101,6 @@ export default function PageRender() {
             paddingTop={headerPaddingTop}
             paddingBottom={headerPaddingBottom}
             titleSize={dateFontSize}
-            accentColor={seasonPalette.accent}
             leftControl={
               <Pressable
                 onPress={stepDay(-1)}
@@ -165,7 +162,7 @@ export default function PageRender() {
                 <Pressable onPress={resetToToday} accessibilityLabel="Voltar a hoje">
                   <Typography
                     className="font-italic"
-                    style={{ fontSize: 11, marginTop: 6, color: seasonPalette.accent }}
+                    style={{ fontSize: 11, marginTop: 6, color: colors.accent }}
                   >
                     † voltar ao dia de hoje
                   </Typography>

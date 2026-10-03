@@ -131,7 +131,7 @@ function RootLayoutNav() {
 }
 
 function UpdateAwareDrawer() {
-  const { isDark } = useAppTheme();
+  const { colors } = useAppTheme();
   const isWebDesktop = useWebDesktop();
 
   // Backgrounds are CSS-driven (dark: classes) so the statically exported
@@ -158,7 +158,7 @@ function UpdateAwareDrawer() {
           width: 250,
         },
         drawerInactiveTintColor: COLORS["700"],
-        drawerActiveTintColor: isDark ? burgundy["300"] : COLORS["700"],
+        drawerActiveTintColor: colors.accent,
       }}
     />
   );
@@ -168,6 +168,7 @@ const Breadcrumbs = () => {
   const pathname = usePathname();
   const router = useRouter();
   const isWebDesktop = useWebDesktop();
+  const { colors } = useAppTheme();
 
   const segments = pathname.split("/").filter((segment) => segment && segment !== "(tabs)");
 
@@ -250,10 +251,14 @@ const Breadcrumbs = () => {
         return (
           <View className="flex-row items-center gap-1 flex-shrink" key={`${segment}-${index}`}>
             {index !== 0 && (
-              <ChevronRight size={8} color={burgundy[500]} className="flex-shrink-0" />
+              <ChevronRight size={8} color={colors.accent} className="flex-shrink-0" />
             )}
             {index === displaySegments.length - 1 ? (
-              <Typography className="font-display text-sm text-red-500" numberOfLines={1}>
+              <Typography
+                className="font-display text-sm"
+                style={{ color: colors.accent }}
+                numberOfLines={1}
+              >
                 {formatSegmentName(segment)}
               </Typography>
             ) : (
@@ -286,6 +291,7 @@ export const Header = ({
   const router = useRouter();
   const navigation = useNavigation();
   const { toggleSearch } = useSearchModal();
+  const { colors } = useAppTheme();
 
   // On web desktop sub-pages keep the app header visible with breadcrumbs and search.
   if (isWebDesktop && withBC) {
@@ -298,7 +304,7 @@ export const Header = ({
             accessibilityRole="button"
             accessibilityLabel="Ir para Início"
           >
-            <BookPlus size={18} color={burgundy[500]} />
+            <BookPlus size={18} color={colors.accent} />
           </Pressable>
           <Breadcrumbs />
         </View>
@@ -309,7 +315,7 @@ export const Header = ({
           accessibilityRole="button"
           accessibilityLabel="Pesquisar"
         >
-          <Search size={18} color={burgundy[500]} />
+          <Search size={18} color={colors.accent} />
         </Pressable>
       </View>
     );
@@ -325,7 +331,7 @@ export const Header = ({
               // @ts-expect-error
               onPress={() => navigation.openDrawer()}
             >
-              <Menu size={18} color={burgundy[500]} />
+              <Menu size={18} color={colors.accent} />
             </Pressable>
 
             <Pressable
@@ -334,7 +340,7 @@ export const Header = ({
               accessibilityRole="button"
               accessibilityLabel="Ir para Início"
             >
-              <BookPlus size={18} color={burgundy[500]} />
+              <BookPlus size={18} color={colors.accent} />
             </Pressable>
             <Breadcrumbs />
           </View>
@@ -342,7 +348,7 @@ export const Header = ({
             onPress={toggleSearch}
             className="flex items-center justify-center w-9 h-9 rounded-xl active:bg-sepia-400 dark:active:bg-sepia-700 soft-background"
           >
-            <Search size={18} color={burgundy[500]} />
+            <Search size={18} color={colors.accent} />
           </Pressable>
         </View>
       </View>
@@ -362,7 +368,7 @@ export const Header = ({
             // @ts-expect-error
             onPress={() => navigation.openDrawer()}
           >
-            <Menu size={18} color={burgundy[500]} />
+            <Menu size={18} color={colors.accent} />
           </Pressable>
         )}
         <Pressable
@@ -371,7 +377,7 @@ export const Header = ({
           accessibilityRole="button"
           accessibilityLabel="Ir para Início"
         >
-          <BookPlus size={18} color={burgundy[500]} />
+          <BookPlus size={18} color={colors.accent} />
         </Pressable>
       </View>
       <Pressable
@@ -380,7 +386,7 @@ export const Header = ({
           isWebDesktop ? "active:bg-sepia-400" : "active:bg-sepia-100"
         }`}
       >
-        <Search size={18} color={burgundy[500]} />
+        <Search size={18} color={colors.accent} />
       </Pressable>
     </View>
   );

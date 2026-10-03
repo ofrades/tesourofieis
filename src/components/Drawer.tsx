@@ -6,13 +6,13 @@ import {
   BookPlus,
   CalendarDays,
 } from "lucide-react-native";
-import { burgundy } from "config";
 import { usePathname, useRouter } from "expo-router";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ActivityIndicator, FlatList, Text, TouchableOpacity, View } from "react-native";
 import { getAllTopLevelDocs, getChildren } from "~/services/search";
 import { useSearchModal } from "~/components/Search";
 import { useFontContext } from "~/providers/fonts";
+import { useAppTheme } from "~/theme";
 
 interface CustomDrawerContentProps {
   navigation: {
@@ -125,9 +125,10 @@ const TreeItem = React.memo(
     // UI chrome follows the user's font-size setting, one notch below the
     // reading scale (see Typography's PAGE_FONT_SIZE_CLASS).
     const { fontSize } = useFontContext();
+    const { colors } = useAppTheme();
     const uiTextClass = isTopLevel ? TOP_LEVEL_TEXT[fontSize] : CHILD_TEXT[fontSize];
     const itemText = `text-sepia-700 dark:text-sepia-300 ${uiTextClass} flex-1`;
-    const activeText = `${uiTextClass} text-burgundy-600 dark:text-burgundy-300 font-ui-bold`;
+    const activeText = `${uiTextClass} font-ui-bold`;
 
     return (
       <TouchableOpacity
@@ -141,7 +142,7 @@ const TreeItem = React.memo(
           marginHorizontal: 4,
           borderRadius: 8,
           borderLeftWidth: isActive ? 3 : 0,
-          borderLeftColor: isActive ? burgundy[500] : "transparent",
+          borderLeftColor: isActive ? colors.accent : "transparent",
         }}
         className={isActive ? "bg-sepia-200 dark:bg-sepia-800" : "bg-transparent"}
         accessibilityRole="button"
@@ -155,26 +156,22 @@ const TreeItem = React.memo(
             ) : isOpen ? (
               <ChevronDown
                 size={chevronSize}
-                className={
-                  isActive
-                    ? "text-burgundy-600 dark:text-burgundy-300"
-                    : "text-sepia-700 dark:text-sepia-300"
-                }
+                color={isActive ? colors.accent : colors.textSecondary}
               />
             ) : (
               <ChevronRight
                 size={chevronSize}
-                className={
-                  isActive
-                    ? "text-burgundy-600 dark:text-burgundy-300"
-                    : "text-sepia-700 dark:text-sepia-300"
-                }
+                color={isActive ? colors.accent : colors.textSecondary}
               />
             )
           ) : null}
         </View>
 
-        <Text numberOfLines={1} className={`${isActive ? activeText : itemText}`}>
+        <Text
+          numberOfLines={1}
+          className={`${isActive ? activeText : itemText}`}
+          style={isActive ? { color: colors.accent } : undefined}
+        >
           {doc.title}
         </Text>
       </TouchableOpacity>
@@ -187,6 +184,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
   const pathname = usePathname();
   const { toggleSearch } = useSearchModal();
   const actionText = ACTION_TEXT[useFontContext().fontSize];
+  const { colors } = useAppTheme();
 
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const [allDocs, setAllDocs] = useState<Docs[]>([]);
@@ -422,7 +420,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
           accessibilityRole="link"
           accessibilityLabel="Início"
         >
-          <BookPlus size={20} color={burgundy[500]} />
+          <BookPlus size={20} color={colors.accent} />
           <Text className="font-display text-xl text-sepia-800 dark:text-sepia-200">
             Tesouro dos Fiéis
           </Text>
@@ -472,7 +470,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
               marginHorizontal: 4,
               borderRadius: 6,
               borderLeftWidth: pathname === "/calendario" ? 3 : 0,
-              borderLeftColor: pathname === "/calendario" ? burgundy[500] : "transparent",
+              borderLeftColor: pathname === "/calendario" ? colors.accent : "transparent",
             }}
             className={
               pathname === "/calendario" ? "bg-sepia-200 dark:bg-sepia-800" : "bg-transparent"
@@ -483,19 +481,14 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
             <View style={{ width: 20, alignItems: "center" }}>
               <CalendarDays
                 size={14}
-                className={
-                  pathname === "/calendario"
-                    ? "text-burgundy-600 dark:text-burgundy-300"
-                    : "text-sepia-700 dark:text-sepia-300"
-                }
+                color={pathname === "/calendario" ? colors.accent : colors.textSecondary}
               />
             </View>
             <Text
               className={`${actionText} ${
-                pathname === "/calendario"
-                  ? "text-burgundy-600 dark:text-burgundy-300 font-ui-bold"
-                  : "text-sepia-700 dark:text-sepia-300"
+                pathname === "/calendario" ? "font-ui-bold" : "text-sepia-700 dark:text-sepia-300"
               }`}
+              style={pathname === "/calendario" ? { color: colors.accent } : undefined}
             >
               Calendário
             </Text>

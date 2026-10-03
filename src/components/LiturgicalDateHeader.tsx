@@ -19,7 +19,6 @@ interface LiturgicalDateHeaderProps {
   subtitleSize?: number;
   centeredTitle?: boolean;
   bottomSpacing?: number;
-  accentColor?: string;
 }
 
 export function LiturgicalDateHeader({
@@ -37,9 +36,8 @@ export function LiturgicalDateHeader({
   subtitleSize = 12,
   centeredTitle = false,
   bottomSpacing = 6,
-  accentColor,
 }: LiturgicalDateHeaderProps) {
-  const { isDark, colors } = useAppTheme();
+  const { colors } = useAppTheme();
 
   return (
     <View
@@ -57,7 +55,7 @@ export function LiturgicalDateHeader({
         style={{
           fontSize: 10,
           letterSpacing: 0.8,
-          color: accentColor ?? (isDark ? colors.accent : colors.accentStrong),
+          color: colors.accent,
           marginBottom: 6,
         }}
       >

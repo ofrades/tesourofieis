@@ -2,6 +2,8 @@ import { burgundy, sepia } from "config";
 import { useColorScheme } from "nativewind";
 import { Platform } from "react-native";
 import { useSyncExternalStore } from "react";
+import { useCalendar } from "~/providers/calendar";
+import { getLiturgicalPalette } from "~/theme/liturgical";
 
 const emptySubscribe = () => () => {};
 
@@ -62,7 +64,7 @@ const isWeb = Platform.OS === "web";
  * theme-dependent chrome is dark from first paint — before the JS bundle
  * loads. On native there is no CSS, so the JS values are used directly.
  */
-const semanticColors = (isDark: boolean) =>
+const semanticColors = (isDark: boolean, accent: ReturnType<typeof getLiturgicalPalette>) =>
   isWeb
     ? {
         shell: "var(--theme-shell)",
@@ -76,8 +78,10 @@ const semanticColors = (isDark: boolean) =>
         textMuted: "var(--theme-text-muted)",
         textSubtle: sepia[500],
         icon: "var(--theme-icon)",
-        accent: "var(--theme-accent)",
-        accentStrong: "var(--theme-accent-strong)",
+        accent: accent.accent,
+        accentStrong: accent.accentStrong,
+        accentSoft: accent.accentSoft,
+        accentBorder: accent.accentBorder,
         selectedBg: "var(--theme-selected-bg)",
         selectedText: "var(--theme-selected-text)",
       }
@@ -93,8 +97,10 @@ const semanticColors = (isDark: boolean) =>
         textMuted: isDark ? sepia[300] : sepia[600],
         textSubtle: sepia[500],
         icon: isDark ? sepia[300] : sepia[700],
-        accent: isDark ? burgundy[300] : burgundy[500],
-        accentStrong: isDark ? burgundy[400] : burgundy[600],
+        accent: accent.accent,
+        accentStrong: accent.accentStrong,
+        accentSoft: accent.accentSoft,
+        accentBorder: accent.accentBorder,
         selectedBg: isDark ? sepia[200] : sepia[800],
         selectedText: isDark ? sepia[800] : sepia[200],
       };
@@ -103,6 +109,8 @@ export function useAppTheme() {
   const { setColorScheme, toggleColorScheme } = useColorScheme();
   const resolvedColorScheme = useHydratedColorScheme();
   const isDark = resolvedColorScheme === "dark";
+  const { day } = useCalendar();
+  const accent = getLiturgicalPalette(day.mass[0]?.color, isDark);
 
   return {
     colorScheme: resolvedColorScheme,
@@ -111,7 +119,7 @@ export function useAppTheme() {
     toggleColorScheme,
     colors: {
       ...THEME_COLORS,
-      ...semanticColors(isDark),
+      ...semanticColors(isDark, accent),
     },
   };
 }

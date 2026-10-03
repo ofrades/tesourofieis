@@ -1,5 +1,4 @@
 import { ChevronRight, ChevronDown, MapPin, Sparkles, Users } from "lucide-react-native";
-import { burgundy } from "config";
 import type React from "react";
 import type { Mass } from "~/lib/domain";
 import { Link } from "expo-router";
@@ -8,6 +7,7 @@ import { useAppTheme } from "~/theme";
 import { gradeLabel } from "~/lib/calendars/grade";
 import { PRECEDENCE } from "~/lib/calendars/precedence";
 import { Typography } from "./typography";
+import { getLiturgicalPalette } from "~/theme/liturgical";
 
 function massNameClass(precedence: number): string {
   if (precedence >= PRECEDENCE.DUPLEX_I_CLASSIS) return "text-sepia-800 dark:text-sepia-100";
@@ -15,23 +15,8 @@ function massNameClass(precedence: number): string {
   return "text-sepia-600 dark:text-sepia-400";
 }
 
-function getBorderColor(color?: string) {
-  switch (color) {
-    case "w":
-      return "#d8d8cc";
-    case "r":
-      return burgundy[500];
-    case "g":
-      return "#3a7d50";
-    case "v":
-      return "#7a4d8a";
-    case "vw":
-      return "#9b6faa";
-    case "b":
-      return "#555550";
-    default:
-      return "#7c6f64";
-  }
+function getBorderColor(color: Mass["color"], isDark: boolean) {
+  return getLiturgicalPalette(color, isDark).accent;
 }
 
 type LinkCardVariant = "default" | "featured";
@@ -120,18 +105,18 @@ function Badge({
   important?: boolean;
   featured?: boolean;
 }) {
+  const { colors } = useAppTheme();
+
   return (
     <View
       className={`${featured ? "px-2.5 py-1" : "px-2 py-0.5"} rounded-full flex-shrink-0 ${
-        important ? "bg-burgundy-100 dark:bg-burgundy-900" : "bg-sepia-200 dark:bg-sepia-700"
+        important ? "" : "bg-sepia-200 dark:bg-sepia-700"
       }`}
+      style={important ? { backgroundColor: colors.accentSoft } : undefined}
     >
       <Typography
-        className={`font-ui ${featured ? "text-[10px]" : "text-[9px]"} tracking-wide ${
-          important
-            ? "text-burgundy-700 dark:text-burgundy-200"
-            : "text-sepia-500 dark:text-sepia-400"
-        }`}
+        className={`font-ui ${featured ? "text-[10px]" : "text-[9px]"} tracking-wide`}
+        style={{ color: important ? colors.accentStrong : colors.textSubtle }}
         numberOfLines={1}
       >
         {children}
@@ -223,7 +208,7 @@ export default function PageLinkCard({
   variant?: LinkCardVariant;
 }) {
   const isFeatured = variant === "featured";
-  const { colors } = useAppTheme();
+  const { colors, isDark } = useAppTheme();
 
   if (oratio) {
     return (
@@ -250,7 +235,7 @@ export default function PageLinkCard({
               <CardShell
                 pressed={pressed}
                 variant={variant}
-                accentColor={getBorderColor(mass.color)}
+                accentColor={getBorderColor(mass.color, isDark)}
               >
                 <View
                   className={`flex-row justify-between ${isFeatured ? "items-start gap-3" : "items-center gap-2"}`}
