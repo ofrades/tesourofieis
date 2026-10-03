@@ -96,7 +96,6 @@
     width: calc(100% - 48px);
     max-width: 1200px;
     margin: 24px auto;
-    border: 1px solid var(--theme-divider);
     overflow: hidden;
   }
 }

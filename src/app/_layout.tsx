@@ -141,10 +141,10 @@ function UpdateAwareDrawer() {
               // Reserve only the outline and its gap, placing the outer rule at the panel edge.
               margin: 5,
               borderWidth: 1,
-              borderColor: "var(--color-burgundy-500)",
+              borderColor: colors.accent,
               outlineWidth: 2,
               outlineStyle: "solid",
-              outlineColor: "var(--color-burgundy-500)",
+              outlineColor: colors.accent,
               outlineOffset: 3,
             }
           : { backgroundColor: "transparent" },
