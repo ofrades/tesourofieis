@@ -49,7 +49,7 @@ const PALETTES = {
       accentBorder: "#d48385",
     },
     dark: {
-      accent: "#d48385",
+      accent: "#9b3d3f",
       accentStrong: "#e8b5b6",
       accentSoft: "#4a1a1c",
       accentBorder: "#9b3d3f",
