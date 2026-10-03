@@ -85,6 +85,22 @@
   --theme-selected-text: #f2ddc7;
 }
 
+/* Keep the library and reading panel together within the page margins. */
+.web-reading-frame {
+  width: 100%;
+  min-height: 0;
+}
+
+@media (min-width: 768px) {
+  .web-reading-frame {
+    width: calc(100% - 48px);
+    max-width: 1200px;
+    margin: 24px auto;
+    border: 1px solid var(--theme-divider);
+    overflow: hidden;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --theme-screen: #262624;
