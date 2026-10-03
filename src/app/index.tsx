@@ -225,15 +225,15 @@ export default function PageRender() {
 
           <View className="flex flex-col pt-6 pb-4" style={{ paddingHorizontal: sectionInset }}>
             <Typography
-              className="font-reading"
+              className="font-ui"
               style={{
                 fontSize: 11,
-                letterSpacing: 3.2,
+                letterSpacing: 1.2,
                 color: sectionLabelColor,
                 marginBottom: 14,
               }}
             >
-              {`${format(date, "HH:mm", { locale: pt })} · ORAÇÕES`}
+              {`${format(date, "HH:mm", { locale: pt })} · Orações`}
             </Typography>
 
             <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -6 }}>
