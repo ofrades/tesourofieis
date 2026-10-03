@@ -621,10 +621,10 @@
   @apply m-2 text-pretty rounded-xl p-4 my-4 border-l-4 border-sepia-500 bg-sepia-200 text-sepia-700 dark:bg-sepia-800 dark:text-sepia-300;
 }
 
-/* Editorial comment — rubric-style note with burgundy accent */
+/* Editorial comment — Typography supplies the liturgical day's border colour. */
 @utility comment {
   font-family: var(--font-family-reading-italic);
-  @apply m-2 text-pretty rounded-xl p-4 my-4 border-l-4 border-burgundy-500 bg-sepia-300 text-sepia-800 dark:border-burgundy-700 dark:bg-sepia-700 dark:text-sepia-200;
+  @apply m-2 text-pretty rounded-xl p-4 my-4 border-l-4 bg-sepia-300 text-sepia-800 dark:bg-sepia-700 dark:text-sepia-200;
 }
 
 /* Scripture citation — keep this inline-safe for nested <Text> on mobile. */
