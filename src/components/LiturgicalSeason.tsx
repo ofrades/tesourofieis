@@ -7,6 +7,7 @@ import { useAppTheme } from "~/theme";
 import { useCalendar } from "~/providers/calendar";
 import PageLinkCard from "./LinkCard";
 import { Typography } from "./typography";
+import { getSeasonPalette } from "~/theme/seasons";
 
 type Prayer = {
   title: string;
@@ -383,69 +384,10 @@ const getIconComponent = (iconName: string) => {
   }
 };
 
-const SEASON_COLORS = {
-  Advento: {
-    bg: "bg-violet-100 dark:bg-violet-900/30",
-    border: "border-violet-300 dark:border-violet-700",
-    accent: "text-violet-700 dark:text-violet-300",
-  },
-  Natal: {
-    bg: "bg-amber-50 dark:bg-amber-900/20",
-    border: "border-amber-300 dark:border-amber-700",
-    accent: "text-amber-700 dark:text-amber-300",
-  },
-  Epifania: {
-    bg: "bg-yellow-50 dark:bg-yellow-900/20",
-    border: "border-yellow-300 dark:border-yellow-700",
-    accent: "text-yellow-700 dark:text-yellow-300",
-  },
-  Septuagésima: {
-    bg: "bg-green-50 dark:bg-green-900/20",
-    border: "border-green-300 dark:border-green-700",
-    accent: "text-green-700 dark:text-green-300",
-  },
-  Quaresma: {
-    bg: "bg-purple-50 dark:bg-purple-900/20",
-    border: "border-purple-300 dark:border-purple-700",
-    accent: "text-purple-700 dark:text-purple-300",
-  },
-  "Semana Santa": {
-    bg: "bg-purple-50 dark:bg-purple-900/20",
-    border: "border-purple-300 dark:border-purple-700",
-    accent: "text-purple-700 dark:text-purple-300",
-  },
-  Paixão: {
-    bg: "bg-red-50 dark:bg-red-900/20",
-    border: "border-red-500 dark:border-red-700",
-    accent: "text-red-700 dark:text-red-500",
-  },
-  Páscoa: {
-    bg: "bg-white dark:bg-white/5",
-    border: "border-gray-300 dark:border-gray-700",
-    accent: "text-gray-700 dark:text-gray-300",
-  },
-  Pentecostes: {
-    bg: "bg-red-50 dark:bg-red-900/20",
-    border: "border-red-500 dark:border-red-700",
-    accent: "text-red-700 dark:text-red-500",
-  },
-} satisfies Record<Season, { bg: string; border: string; accent: string }>;
-
-const SEASON_NOTES = {
-  Advento: "Maranatha · Vem, Senhor Jesus",
-  Natal: "Gloria in Excelsis Deo",
-  Epifania: "Manifestação do Senhor aos Gentios",
-  Septuagésima: "Preparação para a Santa Quaresma",
-  Quaresma: "Jejum, Oração e Penitência",
-  Paixão: "Contemplação da Cruz de Cristo",
-  "Semana Santa": "Paixão, Morte e Sepultura de Cristo",
-  Páscoa: "Alleluia · Cristo Ressuscitou",
-  Pentecostes: "Veni Sancte Spiritus",
-} satisfies Record<Season, string>;
-
 export default function LiturgicalSeason() {
-  const { colors } = useAppTheme();
+  const { isDark } = useAppTheme();
   const { season } = useCalendar();
+  const seasonPalette = getSeasonPalette(season, isDark);
 
   const prayers = TEMPORAS_PRAYERS[season] || [];
 
@@ -453,8 +395,7 @@ export default function LiturgicalSeason() {
     return null;
   }
 
-  const seasonColors = SEASON_COLORS[season];
-  const iconColor = colors.icon;
+  const iconColor = seasonPalette.accent;
   const iconElement = createElement(getIconComponent(CATEGORY_ICONS[season]), {
     size: 18,
     color: iconColor,
@@ -464,7 +405,9 @@ export default function LiturgicalSeason() {
     <View className="mt-2 gap-3 flex-1">
       <View className="flex-row items-center gap-2">
         {iconElement}
-        <Typography className={`font-display text-xl ${seasonColors.accent}`}>{season}</Typography>
+        <Typography className="font-display text-xl" style={{ color: seasonPalette.accent }}>
+          {season}
+        </Typography>
       </View>
 
       <View className="gap-2">

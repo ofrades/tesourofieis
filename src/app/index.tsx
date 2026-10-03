@@ -1,5 +1,4 @@
 import { ChevronLeft, ChevronRight } from "lucide-react-native";
-import { burgundy } from "config";
 import { addDays, format, getYear, isWithinInterval } from "date-fns";
 import { pt } from "date-fns/locale";
 import { Pressable, ScrollView, useWindowDimensions, View } from "react-native";
@@ -18,11 +17,13 @@ import { useCalendarEdition } from "~/providers/edition";
 import { useTodaysIndulgences } from "~/hooks/useTodaysIndulgences";
 import { isFirstFriday, isFirstSaturday, stMichaelLentDay, yyyyMMDD } from "~/lib/utils";
 import { useAppTheme } from "~/theme";
+import { getSeasonPalette } from "~/theme/seasons";
 
 export default function PageRender() {
-  const { day, date, setDate, resetToToday, isCustomDate } = useCalendar();
+  const { day, date, season, setDate, resetToToday, isCustomDate } = useCalendar();
   const { edition } = useCalendarEdition();
   const { isDark, colors } = useAppTheme();
+  const seasonPalette = getSeasonPalette(season, isDark);
   const todaysIndulgences = useTodaysIndulgences();
 
   function getPrayer(date: Date) {
@@ -43,13 +44,9 @@ export default function PageRender() {
   const headerPaddingTop = isCompactLayout ? 6 : 8;
   const headerPaddingBottom = isCompactLayout ? 8 : 10;
   const dateFontSize = isCompactLayout ? 28 : 32;
-  const dateTextColor = isCustomDate
-    ? isDark
-      ? burgundy[400]
-      : burgundy[600]
-    : colors.textSecondary;
+  const dateTextColor = isCustomDate ? seasonPalette.accentStrong : colors.textSecondary;
   const chevronColor = isDark ? colors.textMuted : COLORS["500"];
-  const sectionLabelColor = isDark ? burgundy[400] : burgundy[500];
+  const sectionLabelColor = seasonPalette.accent;
 
   const stepDay = (delta: number) => () => setDate(addDays(date, delta));
 
@@ -106,6 +103,7 @@ export default function PageRender() {
             paddingTop={headerPaddingTop}
             paddingBottom={headerPaddingBottom}
             titleSize={dateFontSize}
+            accentColor={seasonPalette.accent}
             leftControl={
               <Pressable
                 onPress={stepDay(-1)}
@@ -129,11 +127,7 @@ export default function PageRender() {
               <DatePicker date={date} onDateChange={setDate}>
                 <View style={{ flexShrink: 1 }}>
                   <Typography
-                    className={`font-display leading-none ${
-                      isCustomDate
-                        ? "text-burgundy-600 dark:text-burgundy-400"
-                        : "text-sepia-800 dark:text-sepia-100"
-                    }`}
+                    className="font-display leading-none"
                     style={{
                       fontSize: dateFontSize,
                       color: dateTextColor,
@@ -170,8 +164,8 @@ export default function PageRender() {
               isCustomDate ? (
                 <Pressable onPress={resetToToday} accessibilityLabel="Voltar a hoje">
                   <Typography
-                    className="font-italic text-burgundy-500 dark:text-burgundy-400"
-                    style={{ fontSize: 11, marginTop: 6 }}
+                    className="font-italic"
+                    style={{ fontSize: 11, marginTop: 6, color: seasonPalette.accent }}
                   >
                     † voltar ao dia de hoje
                   </Typography>

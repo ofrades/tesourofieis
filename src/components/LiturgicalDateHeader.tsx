@@ -1,4 +1,3 @@
-import { burgundy } from "config";
 import { View } from "react-native";
 import { Typography } from "~/components/typography";
 import { useAppTheme } from "~/theme";
@@ -20,6 +19,7 @@ interface LiturgicalDateHeaderProps {
   subtitleSize?: number;
   centeredTitle?: boolean;
   bottomSpacing?: number;
+  accentColor?: string;
 }
 
 export function LiturgicalDateHeader({
@@ -37,6 +37,7 @@ export function LiturgicalDateHeader({
   subtitleSize = 12,
   centeredTitle = false,
   bottomSpacing = 6,
+  accentColor,
 }: LiturgicalDateHeaderProps) {
   const { isDark, colors } = useAppTheme();
 
@@ -56,7 +57,7 @@ export function LiturgicalDateHeader({
         style={{
           fontSize: 10,
           letterSpacing: 0.8,
-          color: isDark ? burgundy[400] : burgundy[500],
+          color: accentColor ?? (isDark ? colors.accent : colors.accentStrong),
           marginBottom: 6,
         }}
       >
