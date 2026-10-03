@@ -1,4 +1,4 @@
-import { Coffee, Bitcoin, Mail, Copy } from "lucide-react-native";
+import { Coffee, Mail, Copy } from "lucide-react-native";
 import { burgundy } from "config";
 import * as Clipboard from "expo-clipboard";
 import * as WebBrowser from "expo-web-browser";
@@ -44,14 +44,6 @@ const externalLinks: ExternalLink[] = [
     desc: "Ajude a manter o Tesouro dos Fiéis com uma doação.",
   },
   {
-    name: "Bitcoin",
-    url: "bitcoin:bc1qh0sjg9m26ejhg7qxqevs5rldyysy0yc7mdpve5",
-    icon: "bitcoin",
-    title: "Doar Bitcoin",
-    desc: "Ajude-nos com uma doação em Bitcoin.",
-    copyValue: "BC1QAJM5VN255SEU2UGSSVNN3APXX7TQLEW4E0J7CV",
-  },
-  {
     name: "Email",
     url: "mailto:info@tesourofieis.com",
     icon: "mail",
@@ -64,12 +56,8 @@ const getIconComponent = (iconName: string) => {
   switch (iconName) {
     case "coffee":
       return Coffee;
-    case "bitcoin":
-      return Bitcoin;
     case "mail":
       return Mail;
-    case "copy":
-      return Copy;
     default:
       return Coffee;
   }
