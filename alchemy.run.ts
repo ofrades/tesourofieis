@@ -27,6 +27,9 @@ export default Alchemy.Stack(
     const site = yield* Cloudflare.Website.StaticSite("Website", {
       command: "npm run prebuild && npm run build:web && node scripts/prune-sourcemaps.mjs",
       outdir: "dist",
+      // The build command also removes native bundles and source maps from
+      // dist/. Do not reuse a memoized directory that may predate that prune.
+      memo: false,
       main: "./infra/site-worker.ts",
       ...customDomain,
       assets: {
