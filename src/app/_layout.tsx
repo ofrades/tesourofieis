@@ -232,7 +232,13 @@ const Breadcrumbs = () => {
   };
 
   return (
-    <View className="flex-row items-center px-2 py-1 rounded-lg soft-background flex-shrink">
+    <View
+      className={
+        isWebDesktop
+          ? "flex-row items-center gap-2 flex-shrink min-w-0"
+          : "flex-row items-center px-2 py-1 rounded-lg soft-background flex-shrink"
+      }
+    >
       {displaySegments.map((segment, index) => {
         const isEllipsis = segment === "...";
 
@@ -268,7 +274,7 @@ const Breadcrumbs = () => {
                 onPress={() => handleBreadcrumbPress(targetPath, isEllipsis)}
               >
                 <Typography
-                  className={`bold text-sm text-sepia-600 dark:text-sepia-400 ${!isEllipsis ? "underline" : ""}`}
+                  className={`${isWebDesktop ? "font-reading" : "bold"} text-sm text-sepia-600 dark:text-sepia-400 ${!isEllipsis ? "underline" : ""}`}
                   numberOfLines={1}
                 >
                   {formatSegmentName(segment)}
@@ -294,29 +300,49 @@ export const Header = ({
   const { toggleSearch } = useSearchModal();
   const { colors } = useAppTheme();
 
-  // On web desktop sub-pages keep the app header visible with breadcrumbs and search.
-  if (isWebDesktop && withBC) {
+  // A quiet running head keeps desktop navigation within the reading frame.
+  if (isWebDesktop) {
     return (
-      <View className="flex-row items-center justify-between px-5 py-2.5 gap-3 border-b border-sepia-200 dark:border-sepia-700 medium-background w-full">
+      <View
+        className="flex-row items-center justify-between px-5 py-1 gap-4 w-full"
+        style={{
+          backgroundColor: colors.screen,
+          borderBottomWidth: 1,
+          borderBottomColor: colors.accentBorder,
+        }}
+      >
         <View className="flex-row items-center gap-3 flex-1 min-w-0">
           <Pressable
-            className="flex items-center justify-center w-9 h-9 rounded-xl active:bg-sepia-200 dark:active:bg-sepia-700"
+            className="flex-row items-center justify-center gap-2 min-h-11 px-1 shrink-0 active:bg-sepia-200 dark:active:bg-sepia-800"
             onPress={() => router.navigate("/")}
             accessibilityRole="button"
             accessibilityLabel="Ir para Início"
           >
-            <BookPlus size={18} color={colors.accent} />
+            <BookPlus size={15} color={colors.accent} strokeWidth={1.5} />
+            <Typography className="font-reading text-sm" style={{ color: colors.accent }}>
+              Início
+            </Typography>
           </Pressable>
-          <Breadcrumbs />
+          {withBC && (
+            <>
+              <View
+                style={{ height: 14, borderLeftWidth: 1, borderLeftColor: colors.accentBorder }}
+              />
+              <Breadcrumbs />
+            </>
+          )}
         </View>
 
         <Pressable
           onPress={toggleSearch}
-          className="flex items-center justify-center w-9 h-9 rounded-xl active:bg-sepia-400 dark:active:bg-sepia-700 soft-background"
+          className="flex-row items-center justify-center gap-2 min-h-11 px-1 shrink-0 active:bg-sepia-200 dark:active:bg-sepia-800"
           accessibilityRole="button"
           accessibilityLabel="Pesquisar"
         >
-          <Search size={18} color={colors.accent} />
+          <Search size={15} color={colors.accent} strokeWidth={1.5} />
+          <Typography className="font-reading text-sm" style={{ color: colors.accent }}>
+            Pesquisar
+          </Typography>
         </Pressable>
       </View>
     );
