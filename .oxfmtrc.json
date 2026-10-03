@@ -9,7 +9,8 @@
     "android",
     "ios",
     "assets/docs.json",
-    "assets/search-index.json",
+    "assets/search-index.ts",
+    "assets/navigation.json",
     "public",
     "coverage",
     ".agents"

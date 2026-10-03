@@ -1,13 +1,14 @@
 import type { Day } from "~/lib/calendar";
 import { getCalendar, getCalendarDay, getSeason } from "~/lib/getCalendar";
-import type { CalendarEdition, LiturgicalSeason, Mass } from "~/lib/domain";
+import type { LiturgicalSeason, Mass } from "~/lib/domain";
 import { useCalendarEdition } from "~/providers/edition";
 import { Season } from "~/lib/domain";
-import { yyyyMMDD } from "~/lib/utils";
-import { addDays, getMonth, getYear, isWithinInterval, parseISO } from "date-fns";
+import { shiftLocalDate, yyyyMMDD } from "~/lib/utils";
+import { getMonth, getYear } from "date-fns";
 import {
   createContext,
   type PropsWithChildren,
+  useCallback,
   useContext,
   useEffect,
   useMemo,
@@ -30,6 +31,9 @@ const CalendarContext = createContext<
   | undefined
 >(undefined);
 
+// Theme subscribers only need the liturgical day, not the minute-by-minute clock.
+const CalendarDayContext = createContext<Day | undefined>(undefined);
+
 export function CalendarProvider({ children }: PropsWithChildren) {
   const { edition: selection, isLoading: editionLoading } = useCalendarEdition();
   const [autoDate, setAutoDate] = useState(new Date());
@@ -45,18 +49,19 @@ export function CalendarProvider({ children }: PropsWithChildren) {
     return () => clearInterval(timer);
   }, []);
 
-  const setDate = (d: Date) => {
+  const setDate = useCallback((d: Date) => {
     // Preserve the current clock time — only the calendar date changes
     const withTime = new Date(d);
+    const now = new Date();
     withTime.setHours(
-      autoDate.getHours(),
-      autoDate.getMinutes(),
-      autoDate.getSeconds(),
-      autoDate.getMilliseconds(),
+      now.getHours(),
+      now.getMinutes(),
+      now.getSeconds(),
+      now.getMilliseconds(),
     );
     setUserDate(withTime);
-  };
-  const resetToToday = () => setUserDate(null);
+  }, []);
+  const resetToToday = useCallback(() => setUserDate(null), []);
 
   const currentYear = getYear(date);
   const currentMonth = getMonth(date);
@@ -74,26 +79,29 @@ export function CalendarProvider({ children }: PropsWithChildren) {
     () => (editionLoading ? undefined : getCalendarDay(dateKey, selection)),
     [dateKey, selection, editionLoading],
   );
-  const mass = day?.mass || [];
-
   const novenas = useMemo(() => {
-    const endDate = addDays(date, 9);
+    const endDate = shiftLocalDate(dateKey, 9);
     const novenaObservances: Mass[] = [];
     for (const calDay of calendar) {
-      const dayDate = parseISO(calDay.date);
-      if (isWithinInterval(dayDate, { start: date, end: endDate })) {
+      // Upcoming feasts in the next nine days; no clock-dependent date parsing.
+      if (calDay.date > dateKey && calDay.date <= endDate) {
         const dayNovenas = calDay.mass
           .filter((mass) => mass.novena)
-          .map((i) => ({ ...i, date: yyyyMMDD(dayDate) }));
+          .map((i) => ({ ...i, date: calDay.date }));
         novenaObservances.push(...dayNovenas);
       }
     }
     return novenaObservances;
-  }, [calendar, date]);
+  }, [calendar, dateKey]);
 
   const season = useMemo(
     () => (editionLoading ? undefined : getSeason(dateKey, selection)) || Season.ADVENT,
     [dateKey, selection, editionLoading],
+  );
+
+  const value = useMemo(
+    () => day && { mass: day.mass, day, calendar, novenas, date, season, isCustomDate, setDate, resetToToday },
+    [day, calendar, novenas, date, season, isCustomDate, setDate, resetToToday],
   );
 
   if (!calendar || !day) {
@@ -105,10 +113,8 @@ export function CalendarProvider({ children }: PropsWithChildren) {
   }
 
   return (
-    <CalendarContext.Provider
-      value={{ mass, day, calendar, novenas, date, season, isCustomDate, setDate, resetToToday }}
-    >
-      {children}
+    <CalendarContext.Provider value={value}>
+      <CalendarDayContext.Provider value={day}>{children}</CalendarDayContext.Provider>
     </CalendarContext.Provider>
   );
 }
@@ -119,4 +125,10 @@ export const useCalendar = () => {
     throw new Error("useCalendar must be used within a CalendarProvider");
   }
   return context;
+};
+
+export const useCalendarDay = () => {
+  const day = useContext(CalendarDayContext);
+  if (!day) throw new Error("useCalendarDay must be used within CalendarProvider");
+  return day;
 };

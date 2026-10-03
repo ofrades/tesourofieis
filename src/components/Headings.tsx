@@ -1,6 +1,6 @@
 import { Platform, Text } from "react-native";
 import { useFontContext } from "~/providers/fonts";
-import { TYPE_SCALE } from "~/theme";
+import { TYPE_SCALE } from "~/theme/typography";
 
 type HeadingProps = {
   text: string;

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 /* eslint-disable react-hooks/immutability, react-hooks/set-state-in-effect */
 import { Platform, Pressable, StyleSheet, useWindowDimensions, View } from "react-native";
 import {
@@ -58,6 +58,7 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
   const defaultLanguage = useDefaultLanguage();
   const { width: windowWidth } = useWindowDimensions();
   const [containerWidth, setContainerWidth] = useState(0);
+  const widthRef = useRef(0);
   const [currentLang, setCurrentLang] = useState<"latin" | "vernacular">(defaultLanguage);
 
   const currentLanguage = useSharedValue<"latin" | "vernacular">(defaultLanguage);
@@ -66,10 +67,10 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
   useEffect(() => {
     setCurrentLang(defaultLanguage);
     currentLanguage.value = defaultLanguage;
-    if (containerWidth > 0) {
-      translateX.value = defaultLanguage === "vernacular" ? -containerWidth : 0;
+    if (widthRef.current > 0) {
+      translateX.value = defaultLanguage === "vernacular" ? -widthRef.current : 0;
     }
-  }, [defaultLanguage]);
+  }, [defaultLanguage, currentLanguage, translateX]);
 
   const setLanguage = (vernacular: boolean) => {
     if (containerWidth === 0) return;
@@ -131,6 +132,7 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
   const onContainerLayout = (event: any) => {
     const { width } = event.nativeEvent.layout;
     if (width > 0 && width !== containerWidth) {
+      widthRef.current = width;
       setContainerWidth(width);
       const isVernacular = currentLanguage.value === "vernacular";
       translateX.value = isVernacular ? -width : 0;
@@ -175,7 +177,11 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
         <Animated.View
           style={[contentStyle, { width: containerWidth * 2 }, styles.animatedContainer]}
         >
-          <View style={{ flex: 1, width: containerWidth }}>
+          <View
+            style={{ flex: 1, width: containerWidth }}
+            accessibilityElementsHidden={currentLang !== "latin"}
+            importantForAccessibility={currentLang === "latin" ? "auto" : "no-hide-descendants"}
+          >
             <GestureScrollView
               scrollEnabled
               style={{ flex: 1 }}
@@ -184,7 +190,11 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
               {latinContent}
             </GestureScrollView>
           </View>
-          <View style={{ flex: 1, width: containerWidth }}>
+          <View
+            style={{ flex: 1, width: containerWidth }}
+            accessibilityElementsHidden={currentLang !== "vernacular"}
+            importantForAccessibility={currentLang === "vernacular" ? "auto" : "no-hide-descendants"}
+          >
             <GestureScrollView
               scrollEnabled
               style={{ flex: 1 }}

@@ -1,11 +1,8 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { CalendarDays } from "lucide-react-native";
-import { SegmentedOption, SettingsSection } from "~/components/SettingsControls";
 import type { CalendarEdition } from "~/lib/domain";
 import { CALENDARS } from "~/lib/calendars";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import { Platform, View } from "react-native";
-import { useAppTheme } from "~/theme";
+import { Platform } from "react-native";
 
 const STORAGE_KEY = "calendar_edition";
 
@@ -77,36 +74,4 @@ export const useCalendarEdition = () => {
     throw new Error("useCalendarEdition must be used within EditionProvider");
   }
   return context;
-};
-
-export const CalendarEditionSelector = () => {
-  const { colors } = useAppTheme();
-  const { edition, setEdition, isLoading } = useCalendarEdition();
-
-  if (isLoading) {
-    return (
-      <SettingsSection
-        icon={<CalendarDays size={15} color={colors.textPrimary} />}
-        title="Calendário"
-      >
-        <View className="h-12 soft-background rounded-lg" />
-      </SettingsSection>
-    );
-  }
-
-  return (
-    <SettingsSection
-      icon={<CalendarDays size={15} color={colors.textPrimary} />}
-      title="Calendário"
-    >
-      <SegmentedOption
-        value={edition}
-        onChange={setEdition}
-        options={Object.values(CALENDARS).map((definition) => ({
-          label: definition.label,
-          value: definition.id,
-        }))}
-      />
-    </SettingsSection>
-  );
 };

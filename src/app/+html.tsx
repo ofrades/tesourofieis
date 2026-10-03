@@ -1,6 +1,6 @@
 import { ScrollViewStyleReset } from "expo-router/html";
 import type { PropsWithChildren } from "react";
-import { FONT_FAMILIES } from "~/theme";
+import { FONT_FAMILIES } from "~/theme/typography";
 
 export default function PageRoot({ children }: PropsWithChildren) {
   return (

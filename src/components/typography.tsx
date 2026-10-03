@@ -1,6 +1,6 @@
 import { Text, type TextProps } from "react-native";
 import { useFontContext } from "~/providers/fonts";
-import { TYPE_SCALE } from "~/theme";
+import { TYPE_SCALE } from "~/theme/typography";
 
 /* Tailwind sorts utilities by name, so family-specific classes must not
  * compete with Typography's default reading face. */
