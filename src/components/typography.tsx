@@ -5,7 +5,7 @@ import { TYPE_SCALE } from "~/theme";
 /* Tailwind sorts utilities by name, so family-specific classes must not
  * compete with Typography's default reading face. */
 const FONT_FAMILY_CLASS =
-  /\b(?:font-(?:display(?:-italic)?|italic|reading|strong|ui(?:-(?:medium|bold))?)|aside|bold|comment|em|latin|response|versicle|vernacular)\b/;
+  /\b(?:font-(?:display(?:-italic)?|italic|mono|reading|strong|ui(?:-(?:medium|bold))?)|aside|bold|comment|em|latin|response|versicle|vernacular)\b/;
 
 type PProps = TextProps & {
   className?: string;
