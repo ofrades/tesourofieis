@@ -12,13 +12,14 @@ const FONT_FAMILY_CLASS =
 
 type PProps = TextProps & {
   className?: string;
+  printable?: boolean;
 };
 
-export function Typography({ children, className = "", ...props }: PProps) {
+export function Typography({ children, className = "", printable = true, ...props }: PProps) {
   const { fontSize } = useFontContext();
   const fontClassName = FONT_FAMILY_CLASS.test(className) ? "" : "font-reading";
   const ref = useRef<Text>(null);
-  usePrintBlock(ref, () => `<p>${printInline(children)}</p>`);
+  usePrintBlock(ref, () => (printable ? `<p>${printInline(children)}</p>` : ""));
   return (
     <Text
       className={`${fontClassName} text-sepia ${TYPE_SCALE.body[fontSize]} ${className}`}

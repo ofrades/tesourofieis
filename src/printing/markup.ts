@@ -40,10 +40,11 @@ export function printBilingual(children: ReactNode) {
   ).join("")}</tbody></table>`;
 }
 
-export function printDocument(content: string) {
+export function printDocument(content: string, fontData?: string) {
   return `<!DOCTYPE html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+    ${fontData ? `@font-face { font-family:Cardo; src:url(data:font/ttf;base64,${fontData}) format('truetype'); }` : ""}
     @page { size:A4 portrait; margin:22mm 20mm; }
-    body { margin:0; color:#222; font:12pt/1.5 Georgia,"Times New Roman",serif; }
+    body { margin:0; color:#222; font:12pt/1.5 Cardo,Georgia,"Times New Roman",serif; }
     .frame { position:fixed; inset:0; border:2px solid #9b3d3f; pointer-events:none; }
     .frame::after { content:""; position:absolute; inset:3px; border:1px solid #9b3d3f; }
     .page { width:100%; border-collapse:collapse; table-layout:fixed; }

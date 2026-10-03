@@ -1,8 +1,10 @@
 import { printAsync, printToFileAsync } from "expo-print";
+import { Asset } from "expo-asset";
+import { File } from "expo-file-system";
 import { Printer } from "lucide-react-native";
 import { useRef, useState } from "react";
 import { ActivityIndicator, Alert, Pressable } from "react-native";
-import { useCollectPrint } from "~/providers/printing.native";
+import { useCollectPrint, usePrintingAvailable } from "~/providers/printing.native";
 import { printDocument } from "~/printing/markup";
 import { useAppTheme } from "~/theme";
 
@@ -10,9 +12,18 @@ interface PrintPageProps {
   iconOnly?: boolean;
 }
 
+async function loadPrintFont() {
+  const asset = await Asset.fromModule(
+    require("../../assets/fonts/Cardo_400Regular.ttf"),
+  ).downloadAsync();
+  if (!asset.localUri) throw new Error("A fonte não está disponível.");
+  return new File(asset.localUri).base64();
+}
+
 export default function PrintPage(_props: PrintPageProps) {
   const { colors } = useAppTheme();
   const collect = useCollectPrint();
+  const available = usePrintingAvailable();
   const printing = useRef(false);
   const [busy, setBusy] = useState(false);
   const print = async () => {
@@ -20,7 +31,8 @@ export default function PrintPage(_props: PrintPageProps) {
     printing.current = true;
     setBusy(true);
     try {
-      const html = printDocument(await collect());
+      const [content, font] = await Promise.all([collect(), loadPrintFont()]);
+      const html = printDocument(content, font);
       const { uri } = await printToFileAsync({ html, width: 595.28, height: 841.89 });
       await printAsync({ uri });
     } catch (error) {
@@ -39,6 +51,7 @@ export default function PrintPage(_props: PrintPageProps) {
       setBusy(false);
     }
   };
+  if (!available) return null;
   return (
     <Pressable
       onPress={print}

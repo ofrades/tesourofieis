@@ -7,8 +7,11 @@ import {
   useId,
   useMemo,
   useRef,
+  useState,
   type PropsWithChildren,
   type RefObject,
+  type Dispatch,
+  type SetStateAction,
 } from "react";
 
 export interface PrintMeasure {
@@ -23,16 +26,23 @@ interface PrintBlock {
 type CollectPrint = () => Promise<string>;
 interface PrintingState {
   active: RefObject<CollectPrint | null>;
+  setAvailable: Dispatch<SetStateAction<boolean>>;
 }
 
 const PrintingContext = createContext<PrintingState | null>(null);
 const PrintBlocksContext = createContext<Map<string, PrintBlock> | null>(null);
 const PrintInlineContext = createContext(false);
+const PrintingAvailableContext = createContext(false);
 
 export function PrintingProvider({ children }: PropsWithChildren) {
   const active = useRef<CollectPrint | null>(null);
-  const value = useMemo(() => ({ active }), []);
-  return <PrintingContext value={value}>{children}</PrintingContext>;
+  const [available, setAvailable] = useState(false);
+  const value = useMemo(() => ({ active, setAvailable }), []);
+  return (
+    <PrintingContext value={value}>
+      <PrintingAvailableContext value={available}>{children}</PrintingAvailableContext>
+    </PrintingContext>
+  );
 }
 
 function measureBlock(block: PrintBlock): Promise<number> {
@@ -70,8 +80,12 @@ export function PrintablePage({ children }: PropsWithChildren) {
     useCallback(() => {
       if (!printing) return;
       printing.active.current = collect;
+      printing.setAvailable(true);
       return () => {
-        if (printing.active.current === collect) printing.active.current = null;
+        if (printing.active.current === collect) {
+          printing.active.current = null;
+          printing.setAvailable(false);
+        }
       };
     }, [printing, collect]),
   );
@@ -106,4 +120,8 @@ export function useCollectPrint() {
     if (!content) throw new Error("Esta página não tem conteúdo para imprimir.");
     return content;
   };
+}
+
+export function usePrintingAvailable() {
+  return useContext(PrintingAvailableContext);
 }

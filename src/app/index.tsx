@@ -184,6 +184,7 @@ function LandingPage() {
               isCustomDate ? (
                 <Pressable onPress={resetToToday} accessibilityLabel="Voltar a hoje">
                   <Typography
+                    printable={false}
                     className="font-italic"
                     style={{ fontSize: 11, marginTop: 6, color: colors.accent }}
                   >
