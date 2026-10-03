@@ -20,7 +20,7 @@ import { isFirstFriday, isFirstSaturday, stMichaelLentDay, yyyyMMDD } from "~/li
 import { useAppTheme } from "~/theme";
 
 export default function PageRender() {
-  const { day, date, season, setDate, resetToToday, isCustomDate } = useCalendar();
+  const { day, date, setDate, resetToToday, isCustomDate } = useCalendar();
   const { edition } = useCalendarEdition();
   const { isDark, colors } = useAppTheme();
   const todaysIndulgences = useTodaysIndulgences();
@@ -43,7 +43,6 @@ export default function PageRender() {
   const headerPaddingTop = isCompactLayout ? 6 : 8;
   const headerPaddingBottom = isCompactLayout ? 8 : 10;
   const dateFontSize = isCompactLayout ? 28 : 32;
-  const seasonFontSize = isCompactLayout ? 12 : 12;
   const dateTextColor = isCustomDate
     ? isDark
       ? burgundy[400]
@@ -107,8 +106,6 @@ export default function PageRender() {
             paddingTop={headerPaddingTop}
             paddingBottom={headerPaddingBottom}
             titleSize={dateFontSize}
-            subtitleSize={seasonFontSize}
-            subtitle={season}
             leftControl={
               <Pressable
                 onPress={stepDay(-1)}
