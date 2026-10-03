@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 /* eslint-disable react-hooks/immutability, react-hooks/set-state-in-effect */
-import { Platform, Pressable, StyleSheet, View } from "react-native";
+import { Platform, Pressable, StyleSheet, useWindowDimensions, View } from "react-native";
 import {
   Gesture,
   GestureDetector,
@@ -13,6 +13,7 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import { useDefaultLanguage } from "~/providers/language";
+import { Typography } from "./typography";
 
 type LanguageToggleProps = {
   children: React.ReactNode;
@@ -32,7 +33,6 @@ function isClassedElement(child: React.ReactNode): child is ClassedElement {
   return false;
 }
 
-const toggleWidth = 20;
 const springConfig = {
   damping: 20,
   stiffness: 150,
@@ -56,12 +56,12 @@ const styles = StyleSheet.create({
 
 export default function LanguageToggle({ children }: LanguageToggleProps) {
   const defaultLanguage = useDefaultLanguage();
+  const { width: windowWidth } = useWindowDimensions();
   const [containerWidth, setContainerWidth] = useState(0);
   const [currentLang, setCurrentLang] = useState<"latin" | "vernacular">(defaultLanguage);
 
   const currentLanguage = useSharedValue<"latin" | "vernacular">(defaultLanguage);
   const translateX = useSharedValue(defaultLanguage === "vernacular" ? -1000 : 0);
-  const translateXToggle = useSharedValue(defaultLanguage === "vernacular" ? toggleWidth : 0);
 
   useEffect(() => {
     setCurrentLang(defaultLanguage);
@@ -78,12 +78,6 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
     currentLanguage.value = newLang;
     const targetContent = vernacular ? -containerWidth : 0;
     translateX.value = withSpring(targetContent, springConfig);
-    translateXToggle.value = withSpring(vernacular ? toggleWidth : 0, springConfig);
-  };
-
-  const toggle = () => {
-    const toVernacular = currentLanguage.value === "latin";
-    setLanguage(toVernacular);
   };
 
   const startTranslate = useSharedValue(0);
@@ -101,8 +95,6 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
         -containerWidth,
         Math.min(0, startTranslate.value + event.translationX),
       );
-      const toggleProgress = -translateX.value / containerWidth;
-      translateXToggle.value = Math.max(0, Math.min(toggleWidth, toggleProgress * toggleWidth));
     })
     .onEnd((event) => {
       if (containerWidth === 0) return;
@@ -148,6 +140,14 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
   const isWeb = Platform.OS === "web";
 
   if (isWeb) {
+    if (windowWidth < 768) {
+      return (
+        <View>
+          <LanguageSelector selected={currentLang} onChange={setCurrentLang} />
+          <View>{currentLang === "latin" ? latinContent : vernacularContent}</View>
+        </View>
+      );
+    }
     const latinArray = React.Children.toArray(latinContent);
     const vernacularArray = React.Children.toArray(vernacularContent);
     const maxLength = Math.max(latinArray.length, vernacularArray.length);
@@ -195,28 +195,36 @@ export default function LanguageToggle({ children }: LanguageToggleProps) {
           </View>
         </Animated.View>
       </GestureDetector>
-      <View className="flex-row justify-center mt-2">
+      <LanguageSelector
+        selected={currentLang}
+        onChange={(language) => setLanguage(language === "vernacular")}
+      />
+    </View>
+  );
+}
+
+interface LanguageSelectorProps {
+  selected: "latin" | "vernacular";
+  onChange: (language: "latin" | "vernacular") => void;
+}
+
+function LanguageSelector({ selected, onChange }: LanguageSelectorProps) {
+  return (
+    <View className="flex-row justify-center gap-2 my-2">
+      {(["latin", "vernacular"] as const).map((language) => (
         <Pressable
-          onPress={toggle}
-          accessibilityLabel={`Toggle Language. Current language: ${
-            currentLang === "latin" ? "Latin" : "Vernacular"
-          }`}
-          accessibilityHint="Swipe or tap to switch between Latin and Vernacular"
+          key={language}
           accessibilityRole="button"
-          className="flex-row gap-1 px-2 py-1 justify-center extreme-background border border-sepia rounded-xl shadow-sm"
+          accessibilityLabel={language === "latin" ? "Latim" : "Português"}
+          accessibilityState={{ selected: selected === language }}
+          onPress={() => onChange(language)}
+          className={`min-h-11 items-center justify-center px-4 rounded-lg border border-sepia ${selected === language ? "soft-background" : "extreme-background"}`}
         >
-          <View
-            className={`w-2 h-2 rounded-full transition-colors ${
-              currentLang === "vernacular" ? "soft-background" : "bg-sepia-700 dark:bg-sepia-300"
-            }`}
-          />
-          <View
-            className={`w-2 h-2 rounded-full transition-colors ${
-              currentLang === "latin" ? "soft-background" : "bg-sepia-700 dark:bg-sepia-300"
-            }`}
-          />
+          <Typography className="font-ui-medium text-sm">
+            {language === "latin" ? "Latim" : "Português"}
+          </Typography>
         </Pressable>
-      </View>
+      ))}
     </View>
   );
 }

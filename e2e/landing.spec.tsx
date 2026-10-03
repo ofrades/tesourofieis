@@ -52,3 +52,19 @@ test("phone header exposes menu and search actions", async ({ page }) => {
   await expect(page.getByRole("textbox", { name: "Pesquisar no Tesouro dos Fiéis" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Filtros de pesquisa" })).toBeVisible();
 });
+
+test("phone reading honors the language preference and permits switching", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/devocionario/dia/angelus");
+  await expect(page.getByRole("heading", { level: 1, name: "Angelus", exact: true })).toBeVisible();
+  await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
+  await expect(page.getByText("Angelus Dómini nuntiávit Maríæ.", { exact: true })).toHaveCount(0);
+  await page.getByRole("button", { name: "Latim", exact: true }).click();
+  await expect(page.getByText("Angelus Dómini nuntiávit Maríæ.", { exact: true })).toBeVisible();
+  await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toHaveCount(0);
+  await page.getByRole("button", { name: "Português", exact: true }).click();
+  await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await expect(page.getByText("Angelus Dómini nuntiávit Maríæ.", { exact: true })).toBeVisible();
+  await expect(page.getByText("O Anjo do Senhor anunciou a Maria.", { exact: true })).toBeVisible();
+});

@@ -90,7 +90,7 @@ export default function PageRender() {
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
       <View className="extreme-background w-full">
         <View
-          className="flex-1 w-full web:lg:max-w-1/2 web:lg:mx-auto py-5 px-3"
+          className="flex-1 w-full web:lg:max-w-3xl web:lg:mx-auto py-5 px-3"
           style={{
             backgroundColor: colors.screen,
           }}
@@ -228,8 +228,8 @@ export default function PageRender() {
               {prayerItems.map((item) => (
                 <View
                   key={item.key}
-                  style={{ width: "100%", paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
-                  className="md:w-1/2"
+                  style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
+                  className="w-full web:md:w-1/2"
                 >
                   <LinkCard
                     oratio={{
@@ -244,14 +244,14 @@ export default function PageRender() {
 
             <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -6 }}>
               <View
-                style={{ width: "100%", paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
-                className="md:w-1/2"
+                style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
+                className="w-full web:md:w-1/2"
               >
                 <Office />
               </View>
               <View
-                style={{ width: "100%", paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
-                className="md:w-1/2"
+                style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
+                className="w-full web:md:w-1/2"
               >
                 <Novenas />
               </View>
@@ -261,8 +261,8 @@ export default function PageRender() {
               {todaysIndulgences.map((indulgence, index) => (
                 <View
                   key={`indulgence-${index}`}
-                  style={{ width: "100%", paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
-                  className="md:w-1/2"
+                  style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
+                  className="w-full web:md:w-1/2"
                 >
                   <LinkCard
                     indulgence={{

@@ -1,4 +1,5 @@
 import { Image } from "expo-image";
+import { useWindowDimensions } from "react-native";
 import { MissalRefLink as Link } from "~/components/MissalRefLink";
 import { H1 } from "~/components/Headings";
 import Language from "~/components/Language";
@@ -6,6 +7,7 @@ import PageWrapper from "~/components/Page";
 import { Typography } from "~/components/typography";
 
 export default function PageAngelus() {
+  const { height, width } = useWindowDimensions();
   return (
     <PageWrapper>
       <H1 text="Angelus" />
@@ -13,7 +15,8 @@ export default function PageAngelus() {
       <Image
         source={require("../../../../assets/images/angelus.jpg")}
         contentFit="contain"
-        style={{ height: 400 }}
+        accessibilityLabel="Anunciação do Anjo à Virgem Maria"
+        style={{ height: width < 768 ? Math.min(240, height * 0.25) : 400 }}
       />
 
       <Typography className="aside">
