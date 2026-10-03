@@ -14,7 +14,11 @@ type HeadingProps = {
 
 function usePrintHeading(text: string, level: number) {
   const ref = useRef<Text>(null);
-  usePrintBlock(ref, () => `<h${level}>${escapePrintText(text)}</h${level}>`);
+  usePrintBlock(
+    ref,
+    () => `<h${level}>${escapePrintText(text)}</h${level}>`,
+    level === 1 ? text : undefined,
+  );
   return ref;
 }
 

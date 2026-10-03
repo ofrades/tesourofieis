@@ -1,8 +1,20 @@
 import { describe, expect, test } from "bun:test";
 import { createElement } from "react";
-import { printBilingual, printDocument, printInline } from "../../src/printing/markup";
+import {
+  printBilingual,
+  printDocument,
+  printFileName,
+  printInline,
+} from "../../src/printing/markup";
 
 describe("native print content", () => {
+  test("uses a safe page title for the PDF filename and metadata", () => {
+    expect(printFileName('Oração / São José: "Protetor"')).toBe("Oração São José Protetor");
+    expect(printFileName("   ")).toBe("Tesouro dos Fiéis");
+    expect(printDocument("<p>Amen.</p>", undefined, "Ave & <Maria>")).toContain(
+      "<title>Ave &amp; &lt;Maria&gt;</title>",
+    );
+  });
   test("preserves nested rubrics and escapes content rather than injecting HTML", () => {
     const paragraph = createElement(
       "span",

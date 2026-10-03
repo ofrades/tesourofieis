@@ -19,14 +19,9 @@ import { useCalendarEdition } from "~/providers/edition";
 import { useTodaysIndulgences } from "~/hooks/useTodaysIndulgences";
 import { isFirstFriday, isFirstSaturday, stMichaelLentDay, yyyyMMDD } from "~/lib/utils";
 import { useAppTheme } from "~/theme";
-import { PrintablePage } from "~/providers/printing";
 
 export default function PageRender() {
-  return (
-    <PrintablePage>
-      <LandingPage />
-    </PrintablePage>
-  );
+  return <LandingPage />;
 }
 
 function LandingPage() {

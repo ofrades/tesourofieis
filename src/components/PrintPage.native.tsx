@@ -5,7 +5,7 @@ import { Printer } from "lucide-react-native";
 import { useRef, useState } from "react";
 import { ActivityIndicator, Alert, Pressable } from "react-native";
 import { useCollectPrint, usePrintingAvailable } from "~/providers/printing.native";
-import { printDocument } from "~/printing/markup";
+import { printDocument, printFileName } from "~/printing/markup";
 import { useAppTheme } from "~/theme";
 
 interface PrintPageProps {
@@ -31,10 +31,14 @@ export default function PrintPage(_props: PrintPageProps) {
     printing.current = true;
     setBusy(true);
     try {
-      const [content, font] = await Promise.all([collect(), loadPrintFont()]);
-      const html = printDocument(content, font);
+      const [page, font] = await Promise.all([collect(), loadPrintFont()]);
+      const html = printDocument(page.content, font, page.title);
       const { uri } = await printToFileAsync({ html, width: 595.28, height: 841.89 });
-      await printAsync({ uri });
+      const file = new File(uri);
+      const namedFile = new File(file.parentDirectory, `${printFileName(page.title)}.pdf`);
+      if (namedFile.exists) namedFile.delete();
+      file.move(namedFile);
+      await printAsync({ uri: namedFile.uri });
     } catch (error) {
       if (
         error instanceof Error &&

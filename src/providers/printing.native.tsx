@@ -21,9 +21,10 @@ export interface PrintMeasure {
 interface PrintBlock {
   ref: RefObject<PrintMeasure | null>;
   html: () => string | Promise<string>;
+  title?: string;
 }
 
-type CollectPrint = () => Promise<string>;
+type CollectPrint = () => Promise<{ content: string; title: string }>;
 interface PrintingState {
   active: RefObject<CollectPrint | null>;
   setAvailable: Dispatch<SetStateAction<boolean>>;
@@ -69,12 +70,14 @@ export function PrintablePage({ children }: PropsWithChildren) {
         y: await measureBlock(block),
         order,
         html: await block.html(),
+        title: block.title,
       })),
     );
-    return measured
-      .sort((a, b) => a.y - b.y || a.order - b.order)
-      .map((block) => block.html)
-      .join("");
+    measured.sort((a, b) => a.y - b.y || a.order - b.order);
+    return {
+      content: measured.map((block) => block.html).join(""),
+      title: measured.find((block) => block.title)?.title ?? "Tesouro dos Fiéis",
+    };
   }, [blocks]);
   useFocusEffect(
     useCallback(() => {
@@ -99,17 +102,18 @@ export function PrintInlineProvider({ children }: PropsWithChildren) {
 export function usePrintBlock(
   ref: RefObject<PrintMeasure | null>,
   html: () => string | Promise<string>,
+  title?: string,
 ) {
   const blocks = useContext(PrintBlocksContext);
   const inline = useContext(PrintInlineContext);
   const id = useId();
   useEffect(() => {
     if (!blocks || inline) return;
-    blocks.set(id, { ref, html });
+    blocks.set(id, { ref, html, title });
     return () => {
       blocks.delete(id);
     };
-  }, [blocks, inline, id, ref, html]);
+  }, [blocks, inline, id, ref, html, title]);
 }
 
 export function useCollectPrint() {
@@ -117,7 +121,7 @@ export function useCollectPrint() {
   return async () => {
     if (!printing?.active.current) throw new Error("Esta página não tem conteúdo para imprimir.");
     const content = await printing.active.current();
-    if (!content) throw new Error("Esta página não tem conteúdo para imprimir.");
+    if (!content.content) throw new Error("Esta página não tem conteúdo para imprimir.");
     return content;
   };
 }

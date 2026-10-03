@@ -4,7 +4,7 @@ import PageWrapper from "~/components/Page";
 
 export default function PageIndex() {
   return (
-    <PageWrapper>
+    <PageWrapper printable={false}>
       <H1 text="Pentecostes" />
 
       <DirectoryList slug="missal/pentecostes" />

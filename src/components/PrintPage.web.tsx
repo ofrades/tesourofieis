@@ -1,6 +1,9 @@
 import { Printer } from "lucide-react-native";
 import { useEffect } from "react";
 import { useAppTheme } from "~/theme";
+import { usePrintingAvailable } from "~/providers/printing";
+
+let previousTitle: string | null = null;
 
 function preparePrint() {
   if (document.getElementById("a4-print")) return;
@@ -8,6 +11,11 @@ function preparePrint() {
     (element) => element.getClientRects().length > 0 && !element.closest('[aria-hidden="true"]'),
   );
   if (!content) return;
+  const title = content.querySelector('h1, [aria-level="1"]')?.textContent?.trim();
+  if (title) {
+    previousTitle = document.title;
+    document.title = title;
+  }
 
   // Isolate the visible page from the navigator's clipped and cached screens.
   const page = document.createElement("main");
@@ -25,6 +33,10 @@ function preparePrint() {
 
 function finishPrint() {
   document.getElementById("a4-print")?.remove();
+  if (previousTitle !== null) {
+    document.title = previousTitle;
+    previousTitle = null;
+  }
 }
 
 interface PrintPageProps {
@@ -33,15 +45,18 @@ interface PrintPageProps {
 
 export default function PrintPage({ iconOnly = false }: PrintPageProps) {
   const { colors } = useAppTheme();
+  const available = usePrintingAvailable();
 
   useEffect(() => {
+    if (!available) return;
     window.addEventListener("beforeprint", preparePrint);
     window.addEventListener("afterprint", finishPrint);
     return () => {
       window.removeEventListener("beforeprint", preparePrint);
       window.removeEventListener("afterprint", finishPrint);
+      finishPrint();
     };
-  }, []);
+  }, [available]);
 
   const print = () => {
     finishPrint();
@@ -49,6 +64,7 @@ export default function PrintPage({ iconOnly = false }: PrintPageProps) {
     window.print();
   };
 
+  if (!available) return null;
   return (
     <button
       type="button"

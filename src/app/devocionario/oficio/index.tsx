@@ -5,7 +5,7 @@ import { Typography } from "~/components/typography";
 
 export default function PageIndex() {
   return (
-    <PageWrapper>
+    <PageWrapper printable={false}>
       <H1 text="Pequeno Ofício de Nossa Senhora" />
 
       <Typography className="aside">

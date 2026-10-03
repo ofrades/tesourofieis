@@ -40,8 +40,19 @@ export function printBilingual(children: ReactNode) {
   ).join("")}</tbody></table>`;
 }
 
-export function printDocument(content: string, fontData?: string) {
-  return `<!DOCTYPE html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+export function printFileName(title: string) {
+  return (
+    title
+      // oxlint-disable-next-line eslint/no-control-regex -- Strip control characters that are invalid in filenames.
+      .replace(/[\\/:*?"<>|\u0000-\u001f]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, 120) || "Tesouro dos Fiéis"
+  );
+}
+
+export function printDocument(content: string, fontData?: string, title = "Tesouro dos Fiéis") {
+  return `<!DOCTYPE html><html lang="pt"><head><meta charset="utf-8"><title>${escapePrintText(title)}</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>
     ${fontData ? `@font-face { font-family:Cardo; src:url(data:font/ttf;base64,${fontData}) format('truetype'); }` : ""}
     @page { size:A4 portrait; margin:22mm 20mm; }
     body { margin:0; color:#222; font:12pt/1.5 Cardo,Georgia,"Times New Roman",serif; }

@@ -8,9 +8,10 @@ import { PrintablePage } from "~/providers/printing";
 
 type PageWrapperProps = {
   children: React.ReactNode;
+  printable?: boolean;
 };
 
-export default function PageWrapper({ children }: PageWrapperProps) {
+export default function PageWrapper({ children, printable = true }: PageWrapperProps) {
   const isNested = useIsNested();
   const isWeb = Platform.OS === "web";
   const scrollViewRef = useRef<any>(null);
@@ -82,20 +83,19 @@ export default function PageWrapper({ children }: PageWrapperProps) {
     </View>
   );
 
-  return (
-    <PrintablePage>
-      <PageProvider>
-        <ScrollComponent
-          nativeID="reading-content"
-          scrollEnabled
-          removeClippedSubviews={false}
-          ref={scrollViewRef}
-          style={{ flex: 1 }}
-          contentContainerStyle={{ flexGrow: 1 }}
-        >
-          {scrollContent}
-        </ScrollComponent>
-      </PageProvider>
-    </PrintablePage>
+  const page = (
+    <PageProvider>
+      <ScrollComponent
+        nativeID="reading-content"
+        scrollEnabled
+        removeClippedSubviews={false}
+        ref={scrollViewRef}
+        style={{ flex: 1 }}
+        contentContainerStyle={{ flexGrow: 1 }}
+      >
+        {scrollContent}
+      </ScrollComponent>
+    </PageProvider>
   );
+  return printable ? <PrintablePage>{page}</PrintablePage> : page;
 }
