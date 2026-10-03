@@ -109,7 +109,7 @@ function RootLayoutNav() {
           style={{ borderColor: colors.accent }}
         >
           {isWebDesktop && (
-            <EdgeReveal edge="left" label="Mostrar ou fixar a biblioteca">
+            <EdgeReveal edge="left" label="Mostrar ou ocultar a biblioteca">
               <CustomDrawer navigation={{ closeDrawer: () => {} }} />
             </EdgeReveal>
           )}
@@ -318,7 +318,7 @@ export const Header = ({
   // A quiet running head keeps desktop navigation within the reading frame.
   if (isWebDesktop) {
     return (
-      <EdgeReveal edge="top" label="Mostrar ou fixar a navegação">
+      <EdgeReveal edge="top" label="Mostrar ou ocultar a navegação">
         <View
           className="flex-row items-center justify-between px-5 py-1 gap-4 w-full"
           style={{

@@ -13,13 +13,14 @@ interface EdgeRevealProps {
 export default function EdgeReveal({ edge, label, children }: EdgeRevealProps) {
   const { colors } = useAppTheme();
   const id = useId();
-  const [pinned, setPinned] = useState(false);
+  const [activated, setActivated] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const trigger = useRef<HTMLButtonElement>(null);
+  const pointerFocus = useRef(false);
   const [host, setHost] = useState<Element | null>(null);
-  const open = pinned || hovered || focused;
+  const open = activated || hovered || focused;
 
   useEffect(() => {
     if (edge === "top") setHost(trigger.current?.closest(".web-reading-frame") ?? null);
@@ -34,7 +35,13 @@ export default function EdgeReveal({ edge, label, children }: EdgeRevealProps) {
 
   const scheduleHover = (next: boolean) => {
     if (timer.current) clearTimeout(timer.current);
-    timer.current = setTimeout(() => setHovered(next), next ? 180 : 400);
+    timer.current = setTimeout(
+      () => {
+        setHovered(next);
+        if (!next) setActivated(false);
+      },
+      next ? 180 : 400,
+    );
   };
 
   const content = (
@@ -43,11 +50,31 @@ export default function EdgeReveal({ edge, label, children }: EdgeRevealProps) {
       data-open={open}
       onMouseEnter={() => scheduleHover(true)}
       onMouseLeave={() => scheduleHover(false)}
+      onPointerDownCapture={() => {
+        pointerFocus.current = true;
+        setFocused(false);
+      }}
+      onFocus={(event) => {
+        if (
+          !trigger.current?.contains(event.target) &&
+          !pointerFocus.current &&
+          event.target.matches(":focus-visible")
+        )
+          setFocused(true);
+      }}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          setFocused(false);
+          pointerFocus.current = false;
+        }
+      }}
       onKeyDown={(event) => {
+        pointerFocus.current = false;
+        if (event.target !== trigger.current && event.key !== "Escape") setFocused(true);
         if (event.key !== "Escape") return;
         event.stopPropagation();
         if (timer.current) clearTimeout(timer.current);
-        setPinned(false);
+        setActivated(false);
         setHovered(false);
         setFocused(false);
         trigger.current?.focus();
@@ -61,8 +88,12 @@ export default function EdgeReveal({ edge, label, children }: EdgeRevealProps) {
         aria-label={label}
         aria-controls={id}
         aria-expanded={open}
-        aria-pressed={pinned}
-        onClick={() => setPinned(!pinned)}
+        onClick={(event) => {
+          if (timer.current) clearTimeout(timer.current);
+          setHovered(false);
+          setActivated(event.detail !== 0 && !open);
+          setFocused(event.detail === 0 && !open);
+        }}
       >
         <span style={{ backgroundColor: colors.screen, borderColor: colors.accentBorder }}>
           <Menu size={14} strokeWidth={1.5} color={colors.accent} />
@@ -73,10 +104,6 @@ export default function EdgeReveal({ edge, label, children }: EdgeRevealProps) {
         className="edge-reveal-panel"
         inert={!open}
         style={{ backgroundColor: colors.screen }}
-        onFocus={() => setFocused(true)}
-        onBlur={(event) => {
-          if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
-        }}
       >
         {children}
       </div>
