@@ -180,7 +180,7 @@
     line-height: 1.5;
   }
 
-  /* Fixed rules repeat on each sheet, outside the text area. */
+  /* Stay inside the page area: browsers clip fixed boxes beyond its edges. */
   #a4-print::before,
   #a4-print::after {
     content: "";
@@ -191,13 +191,38 @@
   }
 
   #a4-print::before {
-    inset: -6mm;
+    inset: 0;
     border-width: 2px;
   }
 
   #a4-print::after {
-    inset: calc(-6mm + 5px);
+    inset: 5px;
     border-width: 1px;
+  }
+
+  .print-page-content {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .print-page-content > thead {
+    display: table-header-group;
+  }
+
+  .print-page-content > tfoot {
+    display: table-footer-group;
+  }
+
+  .print-page-content > thead > tr > td,
+  .print-page-content > tfoot > tr > td {
+    height: 6mm;
+    padding: 0;
+  }
+
+  .print-page-content > tbody > tr > td {
+    padding: 0 6mm;
+    vertical-align: top;
   }
 
   #a4-print * {

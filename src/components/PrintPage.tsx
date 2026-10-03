@@ -12,7 +12,14 @@ function preparePrint() {
   // Isolate the visible page from the navigator's clipped and cached screens.
   const page = document.createElement("main");
   page.id = "a4-print";
-  page.append(content.cloneNode(true));
+  const table = document.createElement("table");
+  table.className = "print-page-content";
+  // Repeated table headers/footers reserve space inside the rule on every sheet.
+  for (const section of [table.createTHead(), table.createTFoot()]) {
+    section.insertRow().insertCell();
+  }
+  table.createTBody().insertRow().insertCell().append(content.cloneNode(true));
+  page.append(table);
   document.body.append(page);
 }
 
