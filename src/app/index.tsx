@@ -3,7 +3,7 @@ import { addDays, format, getYear, isWithinInterval } from "date-fns";
 import { pt } from "date-fns/locale";
 import { Pressable, ScrollView, useWindowDimensions, View } from "react-native";
 import { useEffect, useState } from "react";
-import Animated, { FadeInDown, ReduceMotion } from "react-native-reanimated";
+import LandingCard from "~/components/LandingCard";
 import ExternalLinks from "~/components/External";
 import { DatePicker } from "~/components/DatePicker";
 import { EditionSummary } from "~/components/EditionSummary";
@@ -20,13 +20,6 @@ import { useTodaysIndulgences } from "~/hooks/useTodaysIndulgences";
 import { isFirstFriday, isFirstSaturday, stMichaelLentDay, yyyyMMDD } from "~/lib/utils";
 import { useAppTheme } from "~/theme";
 
-const cardEntrances = Array.from({ length: 5 }, (_, index) =>
-  FadeInDown.duration(240)
-    .delay(index * 40)
-    .withInitialValues({ opacity: 0, transform: [{ translateY: 10 }] })
-    .reduceMotion(ReduceMotion.System),
-);
-
 export default function PageRender() {
   const [animateEntrance, setAnimateEntrance] = useState(true);
   useEffect(() => {
@@ -34,8 +27,7 @@ export default function PageRender() {
     const timer = setTimeout(() => setAnimateEntrance(false), 500);
     return () => clearTimeout(timer);
   }, []);
-  const cardEntrance = (order: number) =>
-    animateEntrance ? cardEntrances[Math.min(order, cardEntrances.length - 1)] : undefined;
+  const cardEntrance = (order: number) => (animateEntrance ? order : undefined);
 
   const { day, date, setDate, resetToToday, isCustomDate } = useCalendar();
   const { edition } = useCalendarEdition();
@@ -193,41 +185,41 @@ export default function PageRender() {
           <View className="pt-2 pb-4 gap-3" style={{ paddingHorizontal: sectionInset }}>
             <EditionSummary date={yyyyMMDD(date)} edition={edition} />
             {day.mass?.map((item, index) => (
-              <Animated.View key={item.id} entering={cardEntrance(index)}>
+              <LandingCard key={item.id} entranceOrder={cardEntrance(index)}>
                 <LinkCard mass={item} variant="featured" />
-              </Animated.View>
+              </LandingCard>
             ))}
             {day.alternatives?.map((item, index) => (
-              <Animated.View key={item.id} entering={cardEntrance(day.mass.length + index)}>
+              <LandingCard key={item.id} entranceOrder={cardEntrance(day.mass.length + index)}>
                 <LinkCard mass={item} variant="featured" />
-              </Animated.View>
+              </LandingCard>
             ))}
             {isFirstFriday(date) && (
-              <Animated.View entering={cardEntrance(2)}>
+              <LandingCard entranceOrder={cardEntrance(2)}>
                 <LinkCard
                   href="missal/votivas/coracaojesus"
                   title="❤️ Primeira Sexta-feira — Sagrado Coração de Jesus"
                   description="Missa e Comunhão reparadora"
                 />
-              </Animated.View>
+              </LandingCard>
             )}
             {isFirstSaturday(date) && (
-              <Animated.View entering={cardEntrance(2)}>
+              <LandingCard entranceOrder={cardEntrance(2)}>
                 <LinkCard
                   href="missal/santos/08-22"
                   title="💙 Primeiro Sábado — Imaculado Coração de Maria"
                   description="Rosário e Comunhão reparadora"
                 />
-              </Animated.View>
+              </LandingCard>
             )}
             {lentDay !== null && (
-              <Animated.View entering={cardEntrance(3)}>
+              <LandingCard entranceOrder={cardEntrance(3)}>
                 <LinkCard
                   href="/devocionario/oracoes/coroasaomiguel"
                   title="⚔️ Quaresma de São Miguel"
                   description="Coroa de São Miguel"
                 />
-              </Animated.View>
+              </LandingCard>
             )}
           </View>
 
@@ -254,9 +246,9 @@ export default function PageRender() {
 
             <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -6 }}>
               {prayerItems.map((item, index) => (
-                <Animated.View
+                <LandingCard
                   key={item.key}
-                  entering={cardEntrance(index + 2)}
+                  entranceOrder={cardEntrance(index + 2)}
                   style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
                   className="w-full web:md:w-1/2"
                 >
@@ -267,32 +259,32 @@ export default function PageRender() {
                     }}
                     description={item.description}
                   />
-                </Animated.View>
+                </LandingCard>
               ))}
             </View>
 
             <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -6 }}>
-              <Animated.View
-                entering={cardEntrance(3)}
+              <LandingCard
+                entranceOrder={cardEntrance(3)}
                 style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
                 className="w-full web:md:w-1/2"
               >
                 <Office />
-              </Animated.View>
-              <Animated.View
-                entering={cardEntrance(4)}
+              </LandingCard>
+              <LandingCard
+                entranceOrder={cardEntrance(4)}
                 style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
                 className="w-full web:md:w-1/2"
               >
                 <Novenas />
-              </Animated.View>
+              </LandingCard>
             </View>
 
             <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -6 }}>
               {todaysIndulgences.map((indulgence, index) => (
-                <Animated.View
+                <LandingCard
                   key={`indulgence-${index}`}
-                  entering={cardEntrance(4)}
+                  entranceOrder={cardEntrance(4)}
                   style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
                   className="w-full web:md:w-1/2"
                 >
@@ -304,7 +296,7 @@ export default function PageRender() {
                     }}
                     description="Indulgência Plenária"
                   />
-                </Animated.View>
+                </LandingCard>
               ))}
             </View>
 
@@ -312,13 +304,13 @@ export default function PageRender() {
               start: new Date(getYear(date), 11, 17),
               end: new Date(getYear(date), 11, 23),
             }) && (
-              <Animated.View entering={cardEntrance(4)}>
+              <LandingCard entranceOrder={cardEntrance(4)}>
                 <LinkCard
                   href="/devocionario/oracoes/antifonasdoo"
                   title="Nossa Senhora do Ó"
                   description="Antifonas"
                 />
-              </Animated.View>
+              </LandingCard>
             )}
           </View>
 
