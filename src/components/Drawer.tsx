@@ -429,7 +429,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
             accessibilityLabel="Pesquisar"
           >
             <View style={{ width: 20, alignItems: "center" }}>
-              <Search size={14} className="text-sepia-700 dark:text-sepia-300" />
+              <Search size={14} color={colors.textSecondary} />
             </View>
             <Text className={`${actionText} text-sepia-700 dark:text-sepia-300`}>Pesquisar</Text>
           </TouchableOpacity>
@@ -537,7 +537,7 @@ export default function CustomDrawerContent({ navigation }: CustomDrawerContentP
           accessibilityLabel="Configurações"
         >
           <View style={{ width: 20, alignItems: "center" }}>
-            <Settings size={14} className="text-sepia-700 dark:text-sepia-300" />
+            <Settings size={14} color={colors.textSecondary} />
           </View>
           <Text className={`${actionText} text-sepia-700 dark:text-sepia-300`}>Configurações</Text>
         </TouchableOpacity>

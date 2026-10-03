@@ -70,19 +70,19 @@ export default function PageRootLayout() {
         <FontProvider>
           <SafeAreaProvider>
             <GestureHandlerRootView style={{ flex: 1 }}>
-              <BottomSheetModalProvider>
-                <EditionProvider>
-                  <CalendarProvider>
-                    <LanguageProvider>
-                      <SettingsProvider>
+              <EditionProvider>
+                <CalendarProvider>
+                  <LanguageProvider>
+                    <SettingsProvider>
+                      <BottomSheetModalProvider>
                         <SearchModalProvider>
                           <RootLayoutNav />
                         </SearchModalProvider>
-                      </SettingsProvider>
-                    </LanguageProvider>
-                  </CalendarProvider>
-                </EditionProvider>
-              </BottomSheetModalProvider>
+                      </BottomSheetModalProvider>
+                    </SettingsProvider>
+                  </LanguageProvider>
+                </CalendarProvider>
+              </EditionProvider>
             </GestureHandlerRootView>
           </SafeAreaProvider>
         </FontProvider>
