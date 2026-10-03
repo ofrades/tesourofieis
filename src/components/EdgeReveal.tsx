@@ -24,9 +24,12 @@ export default function EdgeReveal({ edge, label, children }: EdgeRevealProps) {
     if (edge === "top") setHost(trigger.current?.closest(".web-reading-frame") ?? null);
   }, [edge]);
 
-  useEffect(() => () => {
-    if (timer.current) clearTimeout(timer.current);
-  }, []);
+  useEffect(
+    () => () => {
+      if (timer.current) clearTimeout(timer.current);
+    },
+    [],
+  );
 
   const scheduleHover = (next: boolean) => {
     if (timer.current) clearTimeout(timer.current);

@@ -134,7 +134,7 @@ function UpdateAwareDrawer() {
   // transparent and let the themed layers beneath them paint.
   return (
     <Drawer
-      drawerContent={(props) => <CustomDrawer {...props} />}
+      drawerContent={(props) => (isWebDesktop ? null : <CustomDrawer {...props} />)}
       screenOptions={{
         headerShown: true,
         freezeOnBlur: true,
@@ -312,48 +312,48 @@ export const Header = ({
   if (isWebDesktop) {
     return (
       <EdgeReveal edge="top" label="Mostrar ou fixar a navegação">
-      <View
-        className="flex-row items-center justify-between px-5 py-1 gap-4 w-full"
-        style={{
-          backgroundColor: colors.screen,
-          borderBottomWidth: 1,
-          borderBottomColor: colors.accentBorder,
-        }}
-      >
-        <View className="flex-row items-center gap-3 flex-1 min-w-0">
+        <View
+          className="flex-row items-center justify-between px-5 py-1 gap-4 w-full"
+          style={{
+            backgroundColor: colors.screen,
+            borderBottomWidth: 1,
+            borderBottomColor: colors.accentBorder,
+          }}
+        >
+          <View className="flex-row items-center gap-3 flex-1 min-w-0">
+            <Pressable
+              className="flex-row items-center justify-center gap-2 min-h-11 px-1 shrink-0 active:bg-sepia-200 dark:active:bg-sepia-800"
+              onPress={() => router.navigate("/")}
+              accessibilityRole="button"
+              accessibilityLabel="Ir para Início"
+            >
+              <BookPlus size={15} color={colors.accent} strokeWidth={1.5} />
+              <Typography className="font-reading text-sm" style={{ color: colors.accent }}>
+                Início
+              </Typography>
+            </Pressable>
+            {withBC && (
+              <>
+                <View
+                  style={{ height: 14, borderLeftWidth: 1, borderLeftColor: colors.accentBorder }}
+                />
+                <Breadcrumbs />
+              </>
+            )}
+          </View>
+
           <Pressable
+            onPress={toggleSearch}
             className="flex-row items-center justify-center gap-2 min-h-11 px-1 shrink-0 active:bg-sepia-200 dark:active:bg-sepia-800"
-            onPress={() => router.navigate("/")}
             accessibilityRole="button"
-            accessibilityLabel="Ir para Início"
+            accessibilityLabel="Pesquisar"
           >
-            <BookPlus size={15} color={colors.accent} strokeWidth={1.5} />
+            <Search size={15} color={colors.accent} strokeWidth={1.5} />
             <Typography className="font-reading text-sm" style={{ color: colors.accent }}>
-              Início
+              Pesquisar
             </Typography>
           </Pressable>
-          {withBC && (
-            <>
-              <View
-                style={{ height: 14, borderLeftWidth: 1, borderLeftColor: colors.accentBorder }}
-              />
-              <Breadcrumbs />
-            </>
-          )}
         </View>
-
-        <Pressable
-          onPress={toggleSearch}
-          className="flex-row items-center justify-center gap-2 min-h-11 px-1 shrink-0 active:bg-sepia-200 dark:active:bg-sepia-800"
-          accessibilityRole="button"
-          accessibilityLabel="Pesquisar"
-        >
-          <Search size={15} color={colors.accent} strokeWidth={1.5} />
-          <Typography className="font-reading text-sm" style={{ color: colors.accent }}>
-            Pesquisar
-          </Typography>
-        </Pressable>
-      </View>
       </EdgeReveal>
     );
   }

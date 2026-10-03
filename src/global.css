@@ -168,7 +168,9 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1), opacity 450ms ease,
+  transition:
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 450ms ease,
     visibility 650ms;
 }
 
