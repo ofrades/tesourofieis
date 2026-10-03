@@ -2,6 +2,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react-native";
 import { addDays, format, getYear, isWithinInterval } from "date-fns";
 import { pt } from "date-fns/locale";
 import { Pressable, ScrollView, useWindowDimensions, View } from "react-native";
+import { useEffect, useState } from "react";
+import Animated, { FadeInDown, ReduceMotion } from "react-native-reanimated";
 import ExternalLinks from "~/components/External";
 import { DatePicker } from "~/components/DatePicker";
 import { EditionSummary } from "~/components/EditionSummary";
@@ -18,7 +20,23 @@ import { useTodaysIndulgences } from "~/hooks/useTodaysIndulgences";
 import { isFirstFriday, isFirstSaturday, stMichaelLentDay, yyyyMMDD } from "~/lib/utils";
 import { useAppTheme } from "~/theme";
 
+const cardEntrances = Array.from({ length: 5 }, (_, index) =>
+  FadeInDown.duration(240)
+    .delay(index * 40)
+    .withInitialValues({ opacity: 0, transform: [{ translateY: 10 }] })
+    .reduceMotion(ReduceMotion.System),
+);
+
 export default function PageRender() {
+  const [animateEntrance, setAnimateEntrance] = useState(true);
+  useEffect(() => {
+    // Only the first render enters; later date/clock changes remain immediate.
+    const timer = setTimeout(() => setAnimateEntrance(false), 500);
+    return () => clearTimeout(timer);
+  }, []);
+  const cardEntrance = (order: number) =>
+    animateEntrance ? cardEntrances[Math.min(order, cardEntrances.length - 1)] : undefined;
+
   const { day, date, setDate, resetToToday, isCustomDate } = useCalendar();
   const { edition } = useCalendarEdition();
   const { isDark, colors } = useAppTheme();
@@ -171,35 +189,45 @@ export default function PageRender() {
             }
           />
 
-          {/* Mass cards — sit directly below the day header, inside the animated container */}
+          {/* Only landing-page cards enter; the date controls stay still. */}
           <View className="pt-2 pb-4 gap-3" style={{ paddingHorizontal: sectionInset }}>
             <EditionSummary date={yyyyMMDD(date)} edition={edition} />
-            {day.mass?.map((item) => (
-              <LinkCard key={item.id} mass={item} variant="featured" />
+            {day.mass?.map((item, index) => (
+              <Animated.View key={item.id} entering={cardEntrance(index)}>
+                <LinkCard mass={item} variant="featured" />
+              </Animated.View>
             ))}
-            {day.alternatives?.map((item) => (
-              <LinkCard key={item.id} mass={item} variant="featured" />
+            {day.alternatives?.map((item, index) => (
+              <Animated.View key={item.id} entering={cardEntrance(day.mass.length + index)}>
+                <LinkCard mass={item} variant="featured" />
+              </Animated.View>
             ))}
             {isFirstFriday(date) && (
-              <LinkCard
-                href="missal/votivas/coracaojesus"
-                title="❤️ Primeira Sexta-feira — Sagrado Coração de Jesus"
-                description="Missa e Comunhão reparadora"
-              />
+              <Animated.View entering={cardEntrance(2)}>
+                <LinkCard
+                  href="missal/votivas/coracaojesus"
+                  title="❤️ Primeira Sexta-feira — Sagrado Coração de Jesus"
+                  description="Missa e Comunhão reparadora"
+                />
+              </Animated.View>
             )}
             {isFirstSaturday(date) && (
-              <LinkCard
-                href="missal/santos/08-22"
-                title="💙 Primeiro Sábado — Imaculado Coração de Maria"
-                description="Rosário e Comunhão reparadora"
-              />
+              <Animated.View entering={cardEntrance(2)}>
+                <LinkCard
+                  href="missal/santos/08-22"
+                  title="💙 Primeiro Sábado — Imaculado Coração de Maria"
+                  description="Rosário e Comunhão reparadora"
+                />
+              </Animated.View>
             )}
             {lentDay !== null && (
-              <LinkCard
-                href="/devocionario/oracoes/coroasaomiguel"
-                title="⚔️ Quaresma de São Miguel"
-                description="Coroa de São Miguel"
-              />
+              <Animated.View entering={cardEntrance(3)}>
+                <LinkCard
+                  href="/devocionario/oracoes/coroasaomiguel"
+                  title="⚔️ Quaresma de São Miguel"
+                  description="Coroa de São Miguel"
+                />
+              </Animated.View>
             )}
           </View>
 
@@ -225,9 +253,10 @@ export default function PageRender() {
             </Typography>
 
             <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -6 }}>
-              {prayerItems.map((item) => (
-                <View
+              {prayerItems.map((item, index) => (
+                <Animated.View
                   key={item.key}
+                  entering={cardEntrance(index + 2)}
                   style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
                   className="w-full web:md:w-1/2"
                 >
@@ -238,29 +267,32 @@ export default function PageRender() {
                     }}
                     description={item.description}
                   />
-                </View>
+                </Animated.View>
               ))}
             </View>
 
             <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -6 }}>
-              <View
+              <Animated.View
+                entering={cardEntrance(3)}
                 style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
                 className="w-full web:md:w-1/2"
               >
                 <Office />
-              </View>
-              <View
+              </Animated.View>
+              <Animated.View
+                entering={cardEntrance(4)}
                 style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
                 className="w-full web:md:w-1/2"
               >
                 <Novenas />
-              </View>
+              </Animated.View>
             </View>
 
             <View style={{ flexDirection: "row", flexWrap: "wrap", marginHorizontal: -6 }}>
               {todaysIndulgences.map((indulgence, index) => (
-                <View
+                <Animated.View
                   key={`indulgence-${index}`}
+                  entering={cardEntrance(4)}
                   style={{ paddingHorizontal: 6, marginBottom: 12, minWidth: 0 }}
                   className="w-full web:md:w-1/2"
                 >
@@ -272,7 +304,7 @@ export default function PageRender() {
                     }}
                     description="Indulgência Plenária"
                   />
-                </View>
+                </Animated.View>
               ))}
             </View>
 
@@ -280,11 +312,13 @@ export default function PageRender() {
               start: new Date(getYear(date), 11, 17),
               end: new Date(getYear(date), 11, 23),
             }) && (
-              <LinkCard
-                href="/devocionario/oracoes/antifonasdoo"
-                title="Nossa Senhora do Ó"
-                description="Antifonas"
-              />
+              <Animated.View entering={cardEntrance(4)}>
+                <LinkCard
+                  href="/devocionario/oracoes/antifonasdoo"
+                  title="Nossa Senhora do Ó"
+                  description="Antifonas"
+                />
+              </Animated.View>
             )}
           </View>
 
