@@ -13,6 +13,7 @@
     "android": "APP_VARIANT=development expo prebuild --platform android --clean && APP_VARIANT=development expo run:android",
     "ios": "expo run:ios",
     "build:web": "expo export --platform web && node scripts/prune-sourcemaps.mjs",
+    "build:web:release": "bun run prebuild && bun run build:web",
     "lint": "oxlint . && oxfmt --check .",
     "lint:fix": "oxlint --fix . && oxfmt .",
     "format": "oxfmt --write .",

@@ -25,7 +25,7 @@ export default Alchemy.Stack(
     // - unmatched paths fall through to main worker, which serves +not-found.html with a 404
     // - www→apex and trailing-slash 301s live in infra/site-worker.ts
     const site = yield* Cloudflare.Website.StaticSite("Website", {
-      command: "npm run prebuild && npm run build:web && node scripts/prune-sourcemaps.mjs",
+      command: "bun run build:web:release",
       outdir: "dist",
       // The build command also removes native bundles and source maps from
       // dist/. Do not reuse a memoized directory that may predate that prune.
