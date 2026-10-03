@@ -1,5 +1,6 @@
 import { ScrollViewStyleReset } from "expo-router/html";
 import type { PropsWithChildren } from "react";
+import { FONT_FAMILIES } from "~/theme";
 
 export default function PageRoot({ children }: PropsWithChildren) {
   return (
@@ -42,7 +43,7 @@ export default function PageRoot({ children }: PropsWithChildren) {
         <style>
           {`
             body {
-              font-family: 'Cardo_400Regular', Georgia, 'Times New Roman', Times, serif;
+              font-family: '${FONT_FAMILIES.reading}', Georgia, 'Times New Roman', Times, serif;
               background-color: #eee6d9;
               color: #262624;
             }

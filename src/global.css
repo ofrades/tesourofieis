@@ -46,10 +46,13 @@
   --color-red-800: var(--color-burgundy-800);
   --color-red-900: var(--color-burgundy-900);
 
+  /* Keep font names aligned with FONT_FAMILIES in src/theme/index.ts. */
   --font-family-reading: "Cardo_400Regular", Georgia, "Times New Roman", Times, serif;
+  --font-family-reading-italic:
+    "Cardo_400Regular_Italic", Georgia, "Times New Roman", Times, serif;
+  --font-family-strong: "Cardo_700Bold", Georgia, "Times New Roman", Times, serif;
   --font-family-display: "DMSerifDisplay_400Regular", Georgia, "Times New Roman", Times, serif;
-  --font-family-bold: "Cardo_700Bold", Georgia, "Times New Roman", Times, serif;
-  --font-family-italic:
+  --font-family-display-italic:
     "DMSerifDisplay_400Regular_Italic", Georgia, "Times New Roman", Times, serif;
   --font-family-ui: "Inter_400Regular", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-family-ui-medium:
@@ -171,7 +174,7 @@
 }
 
 @utility font-display-italic {
-  font-family: var(--font-family-italic);
+  font-family: var(--font-family-display-italic);
 }
 
 @utility font-reading {
@@ -179,7 +182,7 @@
 }
 
 @utility font-strong {
-  font-family: var(--font-family-bold);
+  font-family: var(--font-family-strong);
 }
 
 /* UI chrome — buttons, lists, tabs, labels. Sans-serif for contrast
@@ -217,7 +220,7 @@
 }
 
 @utility bold {
-  font-family: var(--font-family-bold);
+  font-family: var(--font-family-strong);
   @apply text-sepia;
 }
 
@@ -250,7 +253,7 @@
 }
 
 @utility font-italic {
-  font-family: var(--font-family-italic);
+  font-family: var(--font-family-reading-italic);
 }
 
 /* Liturgical cross mark ✅ */
@@ -275,13 +278,13 @@
 }
 
 @utility response {
-  font-family: var(--font-family-bold);
+  font-family: var(--font-family-strong);
   @apply text-burgundy-500;
 }
 
 /* ℣ Versicle — call marker. Burgundy like response — they’re a pair. */
 @utility versicle {
-  font-family: var(--font-family-bold);
+  font-family: var(--font-family-strong);
   @apply text-burgundy-500;
 }
 
@@ -297,19 +300,19 @@
 
 /* Liturgical aside — meditational annotation, e.g. Matinas sidebar */
 @utility aside {
-  font-family: var(--font-family-italic);
+  font-family: var(--font-family-reading-italic);
   @apply m-2 text-pretty rounded-xl p-4 my-4 border-l-4 border-sepia-500 bg-sepia-200 text-sepia-700 dark:bg-sepia-800 dark:text-sepia-300;
 }
 
 /* Editorial comment — rubric-style note with burgundy accent */
 @utility comment {
-  font-family: var(--font-family-italic);
+  font-family: var(--font-family-reading-italic);
   @apply m-2 text-pretty rounded-xl p-4 my-4 border-l-4 border-burgundy-500 bg-sepia-300 text-sepia-800 dark:border-burgundy-700 dark:bg-sepia-700 dark:text-sepia-200;
 }
 
 /* Scripture citation — keep this inline-safe for nested <Text> on mobile. */
 @utility em {
-  font-family: var(--font-family-italic);
+  font-family: var(--font-family-reading-italic);
   @apply text-sepia-500 dark:text-sepia-400;
   letter-spacing: 0.02em;
 }

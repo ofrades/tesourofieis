@@ -155,7 +155,7 @@ export default function ExternalLinks() {
                         >
                           <View className="flex-row p-3 gap-3 items-center text-xs text-sepia bg-sepia-200 dark:bg-sepia-900 rounded-xl">
                             <Typography
-                              className="font-mono text-xs"
+                              className="font-ui text-xs"
                               numberOfLines={1}
                               ellipsizeMode="middle"
                             >

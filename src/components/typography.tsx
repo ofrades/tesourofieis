@@ -1,11 +1,6 @@
 import { Text, type TextProps } from "react-native";
 import { useFontContext } from "~/providers/fonts";
-
-const PAGE_FONT_SIZE_CLASS = {
-  small: "text-sm",
-  medium: "text-base",
-  large: "text-lg",
-};
+import { TYPE_SCALE } from "~/theme";
 
 type PProps = TextProps & {
   className?: string;
@@ -15,7 +10,7 @@ export function Typography({ children, className = "", ...props }: PProps) {
   const { fontSize } = useFontContext();
   return (
     <Text
-      className={`font-reading text-sepia ${PAGE_FONT_SIZE_CLASS[fontSize]} ${className}`}
+      className={`font-reading text-sepia ${TYPE_SCALE.body[fontSize]} ${className}`}
       {...props}
     >
       {children}
