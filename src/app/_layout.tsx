@@ -141,6 +141,10 @@ function UpdateAwareDrawer() {
               margin: 12,
               borderWidth: 1,
               borderColor: "var(--color-burgundy-500)",
+              outlineWidth: 2,
+              outlineStyle: "solid",
+              outlineColor: "var(--color-burgundy-500)",
+              outlineOffset: 3,
             }
           : { backgroundColor: "transparent" },
         drawerType: isWebDesktop ? "permanent" : "slide",
