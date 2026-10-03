@@ -99,37 +99,23 @@ export function SearchModalProvider({ children }: { children: React.ReactNode })
   useEffect(() => {
     if (Platform.OS !== "web") return;
 
-    const globalWindow = globalThis as {
-      addEventListener?: (type: string, listener: (event: any) => void) => void;
-      removeEventListener?: (type: string, listener: (event: any) => void) => void;
-    };
-
-    if (!globalWindow.addEventListener || !globalWindow.removeEventListener) return;
-
-    const handleKeyDown = (event: {
-      key?: string;
-      ctrlKey?: boolean;
-      metaKey?: boolean;
-      preventDefault?: () => void;
-    }) => {
-      const key = event.key?.toLowerCase();
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const key = event.key.toLowerCase();
 
       if (key === "escape" && isSearchOpen) {
-        event.preventDefault?.();
+        event.preventDefault();
         closeSearch();
         return;
       }
 
       if ((event.ctrlKey || event.metaKey) && key === "k") {
-        event.preventDefault?.();
+        event.preventDefault();
         toggleSearch();
       }
     };
 
-    (globalWindow.addEventListener as any)?.("keydown", handleKeyDown, {
-      capture: true,
-    });
-    return () => globalWindow.removeEventListener?.("keydown", handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown, true);
+    return () => window.removeEventListener("keydown", handleKeyDown, true);
   }, [closeSearch, isSearchOpen, toggleSearch]);
 
   const handleNavigate = useCallback(
@@ -331,6 +317,9 @@ function SearchFiltersBar({
             return (
               <TouchableOpacity
                 key={section}
+                accessibilityRole="button"
+                accessibilityLabel={getSectionDisplayName(section)}
+                accessibilityState={{ selected: isSelected }}
                 onPress={() => {
                   if (isSelected) {
                     setSelectedSections((prev) => prev.filter((s) => s !== section));
@@ -576,6 +565,7 @@ const SearchBottomSheet = React.forwardRef<
           <View className="flex-row px-3 py-1 items-center rounded-lg border border-sepia-300 dark:border-sepia-700 extreme-background">
             <Search size={16} color={colors.placeholder} />
             <BottomSheetTextInput
+              accessibilityLabel="Pesquisar no Tesouro dos Fiéis"
               ref={inputRef}
               placeholder="Procurar..."
               placeholderTextColor={colors.placeholder}
@@ -592,14 +582,27 @@ const SearchBottomSheet = React.forwardRef<
                 color: themeColors.textPrimary,
               }}
             />
-            <TouchableOpacity onPress={() => setShowFilters(!showFilters)} className="ml-2 p-1">
+            <TouchableOpacity
+              onPress={() => setShowFilters(!showFilters)}
+              className="ml-2 p-1"
+              accessibilityRole="button"
+              accessibilityLabel="Filtros de pesquisa"
+              accessibilityState={{ expanded: showFilters }}
+              hitSlop={10}
+            >
               <Filter
                 size={15}
                 color={selectedSections.length > 0 ? themeColors.accent : colors.placeholder}
               />
             </TouchableOpacity>
             {!!searchQuery && (
-              <TouchableOpacity onPress={() => setSearchQuery("")} className="ml-1 p-1">
+              <TouchableOpacity
+                onPress={() => setSearchQuery("")}
+                className="ml-1 p-1"
+                accessibilityRole="button"
+                accessibilityLabel="Limpar pesquisa"
+                hitSlop={10}
+              >
                 <X size={16} color={colors.placeholder} />
               </TouchableOpacity>
             )}
@@ -718,6 +721,7 @@ function SearchModal({
               <View className="flex-row px-5 py-1 items-center rounded-xl border border-sepia extreme-background">
                 <Search size={15} color={colors.placeholder} />
                 <TextInput
+                  accessibilityLabel="Pesquisar no Tesouro dos Fiéis"
                   ref={inputRef}
                   placeholder="Procurar..."
                   placeholderTextColor={colors.placeholder}
@@ -729,14 +733,27 @@ function SearchModal({
                   className="flex-1 py-3 ml-2 text-sepia-900 dark:text-sepia-100"
                   style={Platform.OS === "web" ? ({ outlineStyle: "none" } as any) : undefined}
                 />
-                <TouchableOpacity onPress={() => setShowFilters(!showFilters)} className="ml-2 p-1">
+                <TouchableOpacity
+                  onPress={() => setShowFilters(!showFilters)}
+                  className="ml-2 p-1"
+                  accessibilityRole="button"
+                  accessibilityLabel="Filtros de pesquisa"
+                  accessibilityState={{ expanded: showFilters }}
+                  hitSlop={10}
+                >
                   <Filter
                     size={15}
                     color={selectedSections.length > 0 ? themeColors.accent : colors.placeholder}
                   />
                 </TouchableOpacity>
                 {!!searchQuery && (
-                  <TouchableOpacity onPress={() => setSearchQuery("")} className="ml-2">
+                  <TouchableOpacity
+                    onPress={() => setSearchQuery("")}
+                    className="ml-2"
+                    accessibilityRole="button"
+                    accessibilityLabel="Limpar pesquisa"
+                    hitSlop={10}
+                  >
                     <X size={15} color={colors.placeholder} />
                   </TouchableOpacity>
                 )}

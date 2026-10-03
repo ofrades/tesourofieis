@@ -70,7 +70,8 @@ const DirectoryList = ({ slug }: { slug: string }) => {
           description={
             page.content.comment ??
             page.content.introduction ??
-            page.content.headings.sort((a, b) => a.level - b.level).find((i) => i.body.length)?.body
+            [...page.content.headings].sort((a, b) => a.level - b.level).find((i) => i.body.length)
+              ?.body
           }
         />
       ))}

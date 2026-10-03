@@ -264,6 +264,9 @@ const Breadcrumbs = () => {
             ) : (
               <Pressable
                 className={`rounded px-1 py-0.5 flex-shrink ${!isEllipsis ? "active:bg-sepia-200 dark:active:bg-sepia-800" : ""}`}
+                accessibilityRole="link"
+                accessibilityLabel={formatSegmentName(segment)}
+                disabled={isEllipsis}
                 onPress={() => handleBreadcrumbPress(targetPath, isEllipsis)}
               >
                 <Typography
@@ -328,6 +331,9 @@ export const Header = ({
           <View className="flex-row gap-3 items-center shrink">
             <Pressable
               className="flex items-center justify-center w-9 h-9 rounded-xl active:bg-sepia-400 dark:active:bg-sepia-700 soft-background"
+              accessibilityRole="button"
+              accessibilityLabel="Abrir menu"
+              hitSlop={6}
               // @ts-expect-error
               onPress={() => navigation.openDrawer()}
             >
@@ -347,6 +353,9 @@ export const Header = ({
           <Pressable
             onPress={toggleSearch}
             className="flex items-center justify-center w-9 h-9 rounded-xl active:bg-sepia-400 dark:active:bg-sepia-700 soft-background"
+            accessibilityRole="button"
+            accessibilityLabel="Pesquisar"
+            hitSlop={6}
           >
             <Search size={18} color={colors.accent} />
           </Pressable>
@@ -365,6 +374,9 @@ export const Header = ({
         {isWebDesktop ? null : (
           <Pressable
             className="flex items-center justify-center w-9 h-9 rounded-xl active:bg-sepia-400 dark:active:bg-sepia-700 soft-background"
+            accessibilityRole="button"
+            accessibilityLabel="Abrir menu"
+            hitSlop={6}
             // @ts-expect-error
             onPress={() => navigation.openDrawer()}
           >
@@ -382,6 +394,9 @@ export const Header = ({
       </View>
       <Pressable
         onPress={toggleSearch}
+        accessibilityRole="button"
+        accessibilityLabel="Pesquisar"
+        hitSlop={6}
         className={`flex items-center justify-center w-9 h-9 rounded-xl dark:active:bg-sepia-700 soft-background ${
           isWebDesktop ? "active:bg-sepia-400" : "active:bg-sepia-100"
         }`}
