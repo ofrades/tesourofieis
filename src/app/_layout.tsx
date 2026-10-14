@@ -62,7 +62,6 @@ export default function PageRootLayout() {
         apiKey="phc_Ng6Rsd9u1mXEatvYAJUwiLLd6Sl5uMX8Y6PgOrtPC9W"
         options={{
           host: "https://eu.i.posthog.com",
-          enableSessionReplay: true,
         }}
         autocapture={{
           captureScreens: false, // expo-router requires this to be false and capture screens manually
