@@ -483,7 +483,7 @@ function buildJsonDocs(): void {
       `✅ Índice MiniSearch salvo: ${searchIndexPath} (${(indexSize / 1024).toFixed(1)}KB)`,
     );
 
-    // Save optimized docs.json (with truncated body for display)
+    // Save the optimized corpus (with truncated body for display)
     const lightDocs = processedDocs.map((doc) => ({
       ...doc,
       content: {
