@@ -1,4 +1,4 @@
-import { Star, Flame, Sprout, Cross, Bird, Baby, Heart } from "lucide-react-native";
+import { Star, Flame, Sprout, Cross, Bird, Baby, Heart } from "~/components/icons";
 import { createElement } from "react";
 import type { LiturgicalSeason as Season } from "~/lib/domain";
 

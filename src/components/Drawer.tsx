@@ -5,7 +5,7 @@ import {
   ChevronRight,
   BookPlus,
   CalendarDays,
-} from "lucide-react-native";
+} from "~/components/icons";
 import { usePathname, useRouter } from "expo-router";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ActivityIndicator, FlatList, Text, TouchableOpacity, View } from "react-native";

@@ -1,4 +1,4 @@
-import { BookPlus, Search, X, Filter, Tag, CircleDot } from "lucide-react-native";
+import { BookPlus, Search, X, Filter, Tag, CircleDot } from "~/components/icons";
 import { useRouter } from "expo-router";
 import React, {
   createContext,

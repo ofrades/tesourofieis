@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
-import { Menu } from "lucide-react-native";
+import { Menu } from "~/components/icons";
 import { useAppTheme } from "~/theme";
 
 interface EdgeRevealProps {

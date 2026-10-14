@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight } from "lucide-react-native";
+import { ChevronLeft, ChevronRight } from "~/components/icons";
 import { addDays, format, getYear, isWithinInterval } from "date-fns";
 import { pt } from "date-fns/locale";
 import { Platform, Pressable, ScrollView, useWindowDimensions, View } from "react-native";

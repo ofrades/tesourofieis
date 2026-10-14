@@ -1,4 +1,4 @@
-import { Type } from "lucide-react-native";
+import { Type } from "~/components/icons";
 import { useFontContext } from "~/providers/fonts";
 import { SegmentedOption, SettingsSection } from "./SettingsControls";
 import { useAppTheme } from "~/theme";

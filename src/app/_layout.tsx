@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { Platform, Pressable, View } from "react-native";
 import { Typography } from "~/components/typography";
 import "../global.css";
-import { BookPlus, ChevronRight, Search, Menu } from "lucide-react-native";
+import { BookPlus, ChevronRight, Search, Menu } from "~/components/icons";
 import { useNavigation, usePathname, useRouter } from "expo-router";
 
 import Drawer from "expo-router/drawer";

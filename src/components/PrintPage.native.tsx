@@ -1,7 +1,7 @@
 import { printAsync, printToFileAsync } from "expo-print";
 import { Asset } from "expo-asset";
 import { File } from "expo-file-system";
-import { Printer } from "lucide-react-native";
+import { Printer } from "~/components/icons";
 import { useRef, useState } from "react";
 import { ActivityIndicator, Alert, Pressable } from "react-native";
 import { useCollectPrint, usePrintingAvailable } from "~/providers/printing.native";

@@ -1,4 +1,4 @@
-import { Settings, Bell, Calendar, Circle, BookPlus, Sparkles } from "lucide-react-native";
+import { Settings, Bell, Calendar, Circle, BookPlus, Sparkles } from "~/components/icons";
 import { useState } from "react";
 import { Platform, Pressable, ScrollView, Switch, TouchableOpacity, View } from "react-native";
 import { H6 } from "~/components/Headings";

@@ -1,4 +1,4 @@
-import { Printer } from "lucide-react-native";
+import { Printer } from "~/components/icons";
 import { useEffect } from "react";
 import { useAppTheme } from "~/theme";
 import { usePrintingAvailable } from "~/providers/printing";

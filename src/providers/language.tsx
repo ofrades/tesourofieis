@@ -1,5 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Languages } from "lucide-react-native";
+import { Languages } from "~/components/icons";
 import { SegmentedOption, SettingsSection } from "~/components/SettingsControls";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { Platform, View } from "react-native";

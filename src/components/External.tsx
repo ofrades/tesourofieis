@@ -1,4 +1,4 @@
-import { Coffee, Mail, Copy } from "lucide-react-native";
+import { Coffee, Mail, Copy } from "~/components/icons";
 import { burgundy } from "config";
 import * as Clipboard from "expo-clipboard";
 import * as WebBrowser from "expo-web-browser";

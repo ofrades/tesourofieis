@@ -1,4 +1,4 @@
-import { CalendarDays } from "lucide-react-native";
+import { CalendarDays } from "~/components/icons";
 import { View } from "react-native";
 import { CALENDARS } from "~/lib/calendars";
 import { useCalendarEdition } from "~/providers/edition";

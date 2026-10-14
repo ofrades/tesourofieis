@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight } from "lucide-react-native";
+import { ChevronLeft, ChevronRight } from "~/components/icons";
 import { yyyyMMDD } from "~/lib/utils";
 import { addWeeks, eachDayOfInterval, endOfWeek, format, startOfWeek } from "date-fns";
 import { pt } from "date-fns/locale";

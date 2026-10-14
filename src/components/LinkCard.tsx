@@ -1,4 +1,4 @@
-import { ChevronRight, ChevronDown, MapPin, Sparkles, Users } from "lucide-react-native";
+import { ChevronRight, ChevronDown, MapPin, Sparkles, Users } from "~/components/icons";
 import type React from "react";
 import type { Mass } from "~/lib/domain";
 import { Link } from "expo-router";

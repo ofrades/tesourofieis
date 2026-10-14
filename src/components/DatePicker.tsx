@@ -3,7 +3,7 @@ import { Calendar, toDateId } from "@marceloterreiro/flash-calendar";
 import { BottomSheetBackdrop, BottomSheetModal, BottomSheetView } from "@gorhom/bottom-sheet";
 import { addMonths, format, parseISO, startOfMonth, subMonths } from "date-fns";
 import { pt } from "date-fns/locale";
-import { ChevronLeft, ChevronRight } from "lucide-react-native";
+import { ChevronLeft, ChevronRight } from "~/components/icons";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import { COLORS } from "~/constants/Colors";
