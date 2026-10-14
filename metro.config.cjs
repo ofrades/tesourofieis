@@ -5,6 +5,10 @@ const { withNativewind } = require("nativewind/metro");
 /** @type {import('expo/metro-config').MetroConfig} */
 const config = withNativewind(getDefaultConfig(__dirname));
 
+// The offline search corpus ships as an asset (`assets/*.searchdata`) so it is
+// read on demand instead of being parsed into the launch bundle.
+config.resolver.assetExts.push("searchdata");
+
 // `lucide-react-native`'s package `exports` map exposes only the full barrel,
 // and Metro does not tree-shake it, so importing the package root bundles all
 // ~1,700 icons. Resolve per-icon subpaths straight to the ESM files instead so

@@ -376,8 +376,10 @@ function buildJsonDocs(): void {
 
   const targetDirs: string[] = ["canticos", "devocionario", "fe", "missal", "ritual"];
   const baseDir: string = "src/app";
-  const jsonFilePath: string = path.resolve("./assets/docs.json");
-  const searchIndexPath: string = path.resolve("./assets/search-index.ts");
+  // The corpus ships as Metro asset files (`.searchdata`), not JS modules, so it
+  // stays out of the launch bytecode and is read only when search first opens.
+  const docsPath: string = path.resolve("./assets/docs.searchdata");
+  const searchIndexPath: string = path.resolve("./assets/search-index.searchdata");
 
   // Statistics tracking
   const sectionCounts: Record<string, number> = {};
@@ -395,9 +397,9 @@ function buildJsonDocs(): void {
     fs.mkdirSync(outDir, { recursive: true });
   }
 
-  if (fs.existsSync(jsonFilePath)) {
-    fs.unlinkSync(jsonFilePath);
-    console.log(`🗑 Removido arquivo JSON existente: ${jsonFilePath}`);
+  if (fs.existsSync(docsPath)) {
+    fs.unlinkSync(docsPath);
+    console.log(`🗑 Removido arquivo JSON existente: ${docsPath}`);
   }
 
   if (fs.existsSync(searchIndexPath)) {
@@ -475,11 +477,7 @@ function buildJsonDocs(): void {
   try {
     // Save MiniSearch index
     // Keep the serialized form so runtime loading does not stringify a second object tree.
-    fs.writeFileSync(
-      searchIndexPath,
-      `export default ${JSON.stringify(JSON.stringify(miniSearch.toJSON()))};\n`,
-      "utf-8",
-    );
+    fs.writeFileSync(searchIndexPath, JSON.stringify(miniSearch.toJSON()), "utf-8");
     const indexSize = fs.statSync(searchIndexPath).size;
     console.log(
       `✅ Índice MiniSearch salvo: ${searchIndexPath} (${(indexSize / 1024).toFixed(1)}KB)`,
@@ -500,7 +498,7 @@ function buildJsonDocs(): void {
       keywords: [],
     }));
 
-    fs.writeFileSync(jsonFilePath, JSON.stringify(lightDocs), "utf-8");
+    fs.writeFileSync(docsPath, JSON.stringify(lightDocs), "utf-8");
     const navigation: DirectoryEntry[] = lightDocs.map((doc) => ({
       id: doc.id,
       title: doc.title,
@@ -517,9 +515,9 @@ function buildJsonDocs(): void {
       ).slice(0, 200),
     }));
     fs.writeFileSync(path.resolve("./assets/navigation.json"), JSON.stringify(navigation), "utf-8");
-    const docsSize = fs.statSync(jsonFilePath).size;
+    const docsSize = fs.statSync(docsPath).size;
     console.log(
-      `✅ ${processedDocs.length} documentos salvos em: ${jsonFilePath} (${(docsSize / 1024 / 1024).toFixed(2)}MB)`,
+      `✅ ${processedDocs.length} documentos salvos em: ${docsPath} (${(docsSize / 1024 / 1024).toFixed(2)}MB)`,
     );
 
     // Print detailed statistics

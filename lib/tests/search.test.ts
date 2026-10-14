@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { search } from "../../src/services/search";
 import { getAllTopLevelDocs, getChildren, findBySlug } from "../../src/services/documents";
-import docs from "../../assets/docs.json";
+import { loadSearchCorpus } from "../../src/services/search-corpus";
 
 describe("offline search and navigation", () => {
   test("cold search yields while restoring the index and concurrent queries share it", async () => {
@@ -33,7 +33,8 @@ describe("offline search and navigation", () => {
     expect(await search("Maria", 0)).toEqual([]);
   });
 
-  test("the navigation catalog preserves every document's parent relationship", () => {
+  test("the navigation catalog preserves every document's parent relationship", async () => {
+    const { docs } = await loadSearchCorpus();
     const parents = new Set(docs.map((doc) => doc.parent ?? ""));
     for (const parent of parents) {
       const expected = docs

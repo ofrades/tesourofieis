@@ -1,26 +1,37 @@
 import MiniSearch, { type SearchResult as MiniSearchResult } from "minisearch";
 import type { Docs, SubHeading } from "../../lib/documents";
 import { tokenize } from "../../lib/search-tokenizer";
-import searchIndexJSON from "../../assets/search-index";
-import rawDocsData from "../../assets/docs.json";
+import { loadSearchCorpus } from "./search-corpus";
 
-const allDocs: Docs[] = rawDocsData as Docs[];
-const docsById = new Map(allDocs.map((d) => [d.id, d]));
+interface SearchIndex {
+  docsById: Map<string, Docs>;
+  miniSearch: MiniSearch;
+}
 
-let miniSearch: Promise<MiniSearch> | undefined;
+let searchIndex: Promise<SearchIndex> | undefined;
 
-function getSearchIndex(): Promise<MiniSearch> {
-  if (!miniSearch) {
-    miniSearch = MiniSearch.loadJSONAsync(searchIndexJSON, {
-      fields: ["title", "section", "headingTitles", "introduction", "bodyText"],
-      storeFields: ["id", "title", "url", "section", "bodyText"], // bodyText stored for snippets
-      tokenize,
-    }).catch((error: Error) => {
-      miniSearch = undefined;
+/**
+ * The corpus is a bundled asset read from disk on first use, so it never enters
+ * the launch bundle. Concurrent callers share the one in-flight load, and a
+ * failed load is retried on the next query.
+ */
+function getSearchIndex(): Promise<SearchIndex> {
+  if (!searchIndex) {
+    searchIndex = (async () => {
+      const { index, docs } = await loadSearchCorpus();
+      const docsById = new Map(docs.map((doc) => [doc.id, doc]));
+      const miniSearch = await MiniSearch.loadJSONAsync(index, {
+        fields: ["title", "section", "headingTitles", "introduction", "bodyText"],
+        storeFields: ["id", "title", "url", "section", "bodyText"], // bodyText stored for snippets
+        tokenize,
+      });
+      return { docsById, miniSearch };
+    })().catch((error: Error) => {
+      searchIndex = undefined;
       throw error;
     });
   }
-  return miniSearch;
+  return searchIndex;
 }
 
 export interface SearchResult extends Docs {
@@ -146,7 +157,7 @@ export async function search(
   const trimmedQuery = query.trim();
   if (!trimmedQuery || limit <= 0) return [];
 
-  const ms = await getSearchIndex();
+  const { docsById, miniSearch: ms } = await getSearchIndex();
 
   const results = ms.search(trimmedQuery, {
     prefix: true,
