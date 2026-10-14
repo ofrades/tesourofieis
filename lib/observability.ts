@@ -1,4 +1,4 @@
-import { type Exit, Layer, Logger, References, Tracer } from "effect";
+import { type Exit, Layer, Logger, References, Tracer } from "./effect";
 
 /**
  * Console-backed observability for Effect programs (logger + tracer).

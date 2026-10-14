@@ -1,4 +1,4 @@
-import { Context, Effect, Layer } from "effect";
+import { Context, Effect, Layer } from "./effect";
 import type { CalendarEdition, LiturgicalSeason, Mass } from "./domain";
 import { Calendar } from "./calendar";
 import { getCalendarDefinition } from "./calendars";

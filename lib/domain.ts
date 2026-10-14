@@ -1,4 +1,4 @@
-import { Schema } from "effect";
+import { Schema } from "./effect";
 
 /**
  * Domain model for the liturgical calendar, expressed as Effect Schemas.

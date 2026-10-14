@@ -1,5 +1,5 @@
 import type { NotificationResponse } from "expo-notifications";
-import { Option, Schema } from "effect";
+import { Option, Schema } from "~/lib/effect";
 
 export interface NotificationNavigationSource {
   DEFAULT_ACTION_IDENTIFIER: string;

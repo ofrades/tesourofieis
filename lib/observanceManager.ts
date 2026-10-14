@@ -1,4 +1,4 @@
-import { Context, Layer, Schema } from "effect";
+import { Context, Layer, Schema } from "./effect";
 import { type CalendarEdition, Mass } from "./domain";
 import { legacyToPrecedence, PRECEDENCE } from "./calendars/precedence";
 import { computePrecedenceFor, computeRankFor, getCalendarDefinition } from "./calendars";
