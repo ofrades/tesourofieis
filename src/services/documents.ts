@@ -9,8 +9,24 @@ const childrenByParent = new Map<string, DirectoryEntry[]>();
  * "pt")` rebuilds a collator on every call, which made this module-load sort
  * the single largest cost of app startup (measured: ~2.3s on device vs ~15ms
  * on a JS engine that caches it).
+ *
+ * Built defensively: this module is imported by the root layout's tree, so a
+ * throw here would take down app startup. An engine without Intl keeps the
+ * previous (slower) comparison instead.
  */
-const titleCollator = new Intl.Collator("pt");
+function createTitleCollator(): Intl.Collator | undefined {
+  try {
+    return new Intl.Collator("pt");
+  } catch {
+    return undefined;
+  }
+}
+
+const titleCollator = createTitleCollator();
+
+function compareTitles(a: string, b: string): number {
+  return titleCollator ? titleCollator.compare(a, b) : a.localeCompare(b, "pt");
+}
 
 for (const entry of entries) {
   const parent = entry.parent ?? "";
@@ -19,7 +35,7 @@ for (const entry of entries) {
   childrenByParent.set(parent, siblings);
 }
 for (const siblings of childrenByParent.values()) {
-  siblings.sort((a, b) => titleCollator.compare(a.title, b.title));
+  siblings.sort((a, b) => compareTitles(a.title, b.title));
 }
 
 export function findBySlug(slug: string): DirectoryEntry[] {
