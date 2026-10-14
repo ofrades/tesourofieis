@@ -42,12 +42,6 @@ export default function PageRootLayout() {
     Inter_700Bold: require("~/assets/fonts/Inter_700Bold.ttf"),
   });
 
-  useEffect(() => {
-    if (loaded || error) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded, error]);
-
   // Font failures should leave the prayer content available with system fallback fonts.
   if (!loaded && !error && Platform.OS !== "web") {
     return null;
@@ -99,6 +93,14 @@ function RootLayoutNav() {
   const isWeb = Platform.OS === "web";
   const isWebDesktop = useWebDesktop();
   const { colors } = useAppTheme();
+
+  // The splash stays up until this point rather than until fonts load. This
+  // component only mounts once the calendar edition has loaded, so hiding the
+  // splash here goes straight from the splash to real content — otherwise the
+  // calendar's spinner flashes between the two.
+  useEffect(() => {
+    SplashScreen.hideAsync();
+  }, []);
 
   if (isWeb) {
     return (
