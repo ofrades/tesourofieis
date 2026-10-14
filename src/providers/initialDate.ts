@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format } from "~/lib/date";
 
 // Local clock fields ensure the first render also matches across browser timezones.
 export const initialCalendarDate = format(new Date(), "yyyy-MM-dd'T'HH:mm:ss.SSS");

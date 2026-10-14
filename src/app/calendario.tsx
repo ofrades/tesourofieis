@@ -1,7 +1,6 @@
 import { ChevronLeft, ChevronRight } from "~/components/icons";
 import { yyyyMMDD } from "~/lib/utils";
-import { addWeeks, eachDayOfInterval, endOfWeek, format, startOfWeek } from "date-fns";
-import { pt } from "date-fns/locale";
+import { addWeeks, eachDayOfInterval, endOfWeek, format, pt, startOfWeek } from "~/lib/date";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Pressable, ScrollView, View } from "react-native";
 import { LiturgicalDateHeader } from "~/components/LiturgicalDateHeader";

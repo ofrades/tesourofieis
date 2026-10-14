@@ -1,6 +1,5 @@
 import { ChevronLeft, ChevronRight } from "~/components/icons";
-import { addDays, format, getYear, isWithinInterval } from "date-fns";
-import { pt } from "date-fns/locale";
+import { addDays, format, getYear, isWithinInterval, pt } from "~/lib/date";
 import { Platform, Pressable, ScrollView, useWindowDimensions, View } from "react-native";
 import { useEffect, useState } from "react";
 import LandingCard from "~/components/LandingCard";

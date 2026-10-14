@@ -1,6 +1,6 @@
 import { getCalendar, getNovenas } from "~/lib/getCalendar";
 import { yyyyMMDD } from "~/lib/utils";
-import { getYear } from "date-fns";
+import { getYear } from "~/lib/date";
 import { Link } from "expo-router";
 import { useMemo } from "react";
 import { View } from "react-native";

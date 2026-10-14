@@ -4,7 +4,7 @@ import type { LiturgicalSeason, Mass } from "~/lib/domain";
 import { useCalendarEdition } from "~/providers/edition";
 import { Season } from "~/lib/domain";
 import { shiftLocalDate, yyyyMMDD } from "~/lib/utils";
-import { getMonth, getYear } from "date-fns";
+import { getMonth, getYear } from "~/lib/date";
 import {
   createContext,
   type PropsWithChildren,

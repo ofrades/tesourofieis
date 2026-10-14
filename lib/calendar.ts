@@ -7,7 +7,7 @@ import {
   previousSaturday,
   previousSunday,
   subDays,
-} from "date-fns";
+} from "./date";
 import { Effect } from "effect";
 import { type LiturgicalSeason, type Mass, Season, UnsupportedYearError } from "./domain";
 import {

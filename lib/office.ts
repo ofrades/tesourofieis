@@ -1,4 +1,4 @@
-import { getHours } from "date-fns";
+import { getHours } from "./date";
 
 export interface OfficeItem {
   link: string;

@@ -1,4 +1,4 @@
-import { addDays, isAfter, isBefore, isLeapYear, isSaturday, isSunday } from "date-fns";
+import { addDays, isAfter, isBefore, isLeapYear, isSaturday, isSunday } from "../date";
 import type { Mass } from "../domain";
 import type { MassIndex } from "../observanceManager";
 import { parseLocalDate, shiftLocalDate, yyyyMMDD } from "../utils";
