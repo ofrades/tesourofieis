@@ -240,3 +240,32 @@ Commit proactively - do not wait to be asked:
 
 Stage only files related to the work at hand; never commit unrelated
 dirty files.
+
+## Work tracking
+
+Open work lives in the Obsidian vault tracker at
+`~/Work/ofrades/notes/tesourofieis/issues/` — one markdown file per issue, with
+status, priority, dependencies and blockers in its frontmatter. Claim an issue
+before editing it, work one at a time, and hand implementation off through
+`review`; owner review is not an agent completion claim. The operating
+conventions are in
+[docs/agents/issue-tracker.md](docs/agents/issue-tracker.md), and the human guide
+is the vault's `tesourofieis/tesourofieis.md`.
+
+GitHub Issues is enabled on this repository but is not the tracker; do not open
+issues there. If someone files one, copy it into the vault and close the GitHub
+issue with a pointer.
+
+## Agent skills
+
+### Issue tracker
+
+Issues live in the Obsidian vault at
+`~/Work/ofrades/notes/tesourofieis/issues/`. See
+`docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Triage roles are tracker status values (`needs-triage`, `needs-info`,
+`ready-for-agent`, `ready-for-human`, `wontfix`). See
+`docs/agents/triage-labels.md`.
