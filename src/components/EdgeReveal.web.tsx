@@ -20,10 +20,48 @@ export default function EdgeReveal({ edge, label, children }: EdgeRevealProps) {
   const trigger = useRef<HTMLButtonElement>(null);
   const pointerFocus = useRef(false);
   const [host, setHost] = useState<Element | null>(null);
+  const [near, setNear] = useState(false);
   const open = activated || hovered || focused;
 
   useEffect(() => {
     if (edge === "top") setHost(trigger.current?.closest(".web-reading-frame") ?? null);
+  }, [edge]);
+
+  /**
+   * The handles live on the frame's edges; reveal them only while the pointer
+   * is near their edge, so the reading text stays clear of chrome. Document
+   * level, because the trigger can sit a few pixels outside the frame box and
+   * the open panel receives pointer events of its own.
+   */
+  useEffect(() => {
+    const threshold = 48;
+    let raf: number | null = null;
+    const onPointerMove = (event: PointerEvent) => {
+      if (raf !== null) return;
+      raf = requestAnimationFrame(() => {
+        raf = null;
+        const frame = trigger.current?.closest(".web-reading-frame");
+        if (!frame) return;
+        const rect = frame.getBoundingClientRect();
+        const insideVertical = event.clientY >= rect.top - 24 && event.clientY <= rect.bottom + 24;
+        const insideHorizontal =
+          event.clientX >= rect.left - 24 && event.clientX <= rect.right + 24;
+        if (!insideVertical || !insideHorizontal) {
+          setNear(false);
+          return;
+        }
+        setNear(
+          edge === "left"
+            ? event.clientX <= rect.left + threshold
+            : event.clientY <= rect.top + threshold,
+        );
+      });
+    };
+    document.addEventListener("pointermove", onPointerMove);
+    return () => {
+      document.removeEventListener("pointermove", onPointerMove);
+      if (raf !== null) cancelAnimationFrame(raf);
+    };
   }, [edge]);
 
   useEffect(
@@ -48,6 +86,7 @@ export default function EdgeReveal({ edge, label, children }: EdgeRevealProps) {
     <div
       className={`edge-reveal edge-reveal-${edge}`}
       data-open={open}
+      data-near={near || open}
       onMouseEnter={() => scheduleHover(true)}
       onMouseLeave={() => scheduleHover(false)}
       onPointerDownCapture={() => {

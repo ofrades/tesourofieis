@@ -306,6 +306,13 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.edge-reveal[data-near="true"] > .edge-reveal-trigger,
+.edge-reveal-trigger:focus-visible {
+  opacity: 1;
 }
 
 .edge-reveal-trigger span {
