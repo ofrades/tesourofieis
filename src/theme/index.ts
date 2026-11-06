@@ -67,7 +67,7 @@ const semanticColors = (isDark: boolean, accent: ReturnType<typeof getLiturgical
         selectedText: "var(--theme-selected-text)",
       }
     : {
-        shell: isDark ? sepia[800] : sepia[200],
+        shell: isDark ? sepia[900] : sepia[50],
         screen: isDark ? sepia[900] : sepia[50],
         panel: isDark ? sepia[800] : sepia[200],
         card: isDark ? sepia[800] : sepia[100],
