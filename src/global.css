@@ -105,8 +105,7 @@
     border-style: solid;
     border-color: inherit;
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 650ms ease;
+    opacity: 1;
     z-index: 10;
   }
 
@@ -118,13 +117,6 @@
   .web-reading-frame::after {
     inset: 5px;
     border-width: 1px;
-  }
-
-  .web-reading-frame:hover::before,
-  .web-reading-frame:hover::after,
-  .web-reading-frame:focus-within::before,
-  .web-reading-frame:focus-within::after {
-    opacity: 1;
   }
 }
 
