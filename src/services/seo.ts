@@ -108,6 +108,23 @@ function findDuplicateTitles(): Set<string> {
 
 const duplicateTitles = findDuplicateTitles();
 
+function findDuplicateDescriptions(): Set<string> {
+  const counts = new Map<string, number>();
+  for (const entry of navigationEntries) {
+    const description = compact(entry.description);
+    if (description.length === 0) continue;
+    counts.set(description, (counts.get(description) ?? 0) + 1);
+  }
+
+  const duplicates = new Set<string>();
+  for (const [description, count] of counts) {
+    if (count > 1) duplicates.add(description);
+  }
+  return duplicates;
+}
+
+const duplicateDescriptions = findDuplicateDescriptions();
+
 function normalizePath(pathname: string): string {
   const withoutQuery = pathname.split(/[?#]/)[0] ?? "/";
   const trimmed = withoutQuery.replace(/\/+$/, "");
@@ -155,12 +172,16 @@ function breadcrumbsFor(path: string): Breadcrumb[] {
   return crumbs;
 }
 
-function contentTitle(entry: DirectoryEntry): string {
+function displayTitle(entry: DirectoryEntry): string {
   const topLevel = entry.level === 0 && entry.section !== null && entry.section !== undefined;
   const sectionTitle = topLevel ? SECTION_TITLES.get(entry.section ?? "") : undefined;
   const baseTitle = sectionTitle ?? entry.title;
   const suffix = duplicateTitles.has(entry.title) ? duplicateSuffix(entry) : "";
-  return `${baseTitle}${suffix} — ${SITE_NAME}`;
+  return `${baseTitle}${suffix}`;
+}
+
+function contentTitle(entry: DirectoryEntry): string {
+  return `${displayTitle(entry)} — ${SITE_NAME}`;
 }
 
 function formularyNumber(value: number): string | undefined {
@@ -232,9 +253,9 @@ function contentDescription(entry: DirectoryEntry): string {
 
   let description = extracted;
   if (description.length === 0) {
-    description = entry.level === 0 ? fallback : compact(`${entry.title}. ${fallback}`);
-  } else if (description.length < 70) {
-    description = compact(`${entry.title}. ${description}`);
+    description = entry.level === 0 ? fallback : compact(`${displayTitle(entry)}. ${fallback}`);
+  } else if (description.length < 70 || duplicateDescriptions.has(extracted)) {
+    description = compact(`${displayTitle(entry)}. ${description}`);
   }
   if (description.length < 70) {
     description = compact(`${description} ${SITE_DESCRIPTION}`);
