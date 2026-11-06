@@ -105,7 +105,7 @@ function LandingPage() {
       contentContainerStyle={{ flexGrow: 1 }}
       showsVerticalScrollIndicator={Platform.OS !== "web"}
     >
-      <View className="extreme-background w-full">
+      <View className="bg-sepia-50 dark:bg-sepia-900 w-full">
         <View
           className="flex-1 w-full web:lg:max-w-3xl web:lg:mx-auto py-5 px-3"
           style={{

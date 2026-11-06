@@ -104,7 +104,7 @@ function RootLayoutNav() {
     return (
       <View className="flex-1 bg-sepia-50 dark:bg-sepia-900">
         <View
-          className="web-reading-frame flex-1 bg-sepia-200 dark:bg-sepia-800"
+          className="web-reading-frame flex-1 bg-sepia-50 dark:bg-sepia-900"
           style={{ borderColor: colors.accent }}
         >
           {isWebDesktop && (
