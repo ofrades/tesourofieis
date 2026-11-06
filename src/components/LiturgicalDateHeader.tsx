@@ -6,6 +6,8 @@ interface LiturgicalDateHeaderProps {
   overline: string;
   /** Plain-text title rendered with the header typography. */
   title?: string;
+  /** Render the overline as the page's `h1` instead of decorative text. */
+  overlineAsHeading?: boolean;
   /** Custom title content rendered in place of `title`. */
   titleContent?: React.ReactNode;
   subtitle?: React.ReactNode;
@@ -24,6 +26,7 @@ interface LiturgicalDateHeaderProps {
 export function LiturgicalDateHeader({
   overline,
   title,
+  overlineAsHeading = false,
   titleContent,
   subtitle,
   leftControl,
@@ -52,6 +55,8 @@ export function LiturgicalDateHeader({
     >
       <Typography
         className="font-ui"
+        accessibilityRole={overlineAsHeading ? "header" : undefined}
+        aria-level={overlineAsHeading ? 1 : undefined}
         style={{
           fontSize: 10,
           letterSpacing: 0.8,

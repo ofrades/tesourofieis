@@ -1,19 +1,21 @@
-import { readdirSync, statSync, writeFileSync } from "fs";
-import { join } from "path";
+import { execFileSync } from "node:child_process";
+import { readdirSync, statSync, writeFileSync } from "node:fs";
+import { join, relative } from "node:path";
 
 const baseUrl = "https://tesourofieis.com";
 const appDir = join(process.cwd(), "src/app");
 const publicDir = join(process.cwd(), "public");
 
-type RouteConfig = {
-  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-  priority?: number;
-};
+/** Pages that should not be indexed: settings has no search value. */
+const EXCLUDED_ROUTES = new Set(["/configurar"]);
 
-const routeConfigs = new Map<string, RouteConfig>([["/", { changefreq: "daily", priority: 1.0 }]]);
+interface RouteFile {
+  route: string;
+  file: string;
+}
 
-function getRoutes(dir: string, base = ""): string[] {
-  const routes: string[] = [];
+function getRoutes(dir: string, base = ""): RouteFile[] {
+  const routes: RouteFile[] = [];
   const files = readdirSync(dir);
 
   for (const file of files) {
@@ -23,36 +25,82 @@ function getRoutes(dir: string, base = ""): string[] {
     if (stat.isDirectory() && !file.startsWith("_") && !file.startsWith("[")) {
       routes.push(...getRoutes(fullPath, `${base}/${file}`));
     } else if (file === "index.tsx" || file === "index.ts") {
-      routes.push(base || "/");
+      routes.push({ route: base || "/", file: fullPath });
     } else if (
       (file.endsWith(".tsx") || file.endsWith(".ts")) &&
       !file.startsWith("_") &&
       !file.startsWith("[") &&
       !file.startsWith("+")
     ) {
-      const route = `${base}/${file.replace(/\.(tsx|ts)$/, "")}`;
-      routes.push(route);
+      routes.push({
+        route: `${base}/${file.replace(/\.(tsx|ts)$/, "")}`,
+        file: fullPath,
+      });
     }
   }
 
   return routes;
 }
 
-function generateSitemap(routes: string[]): string {
-  const lastmod = new Date().toISOString().split("T")[0];
+/**
+ * Latest commit date for every file under `src/app`, newest first. Using git
+ * history instead of the build clock keeps `<lastmod>` meaningful: Google
+ * discounts a sitemap where every URL claims to have changed on build day.
+ */
+function getLastModifiedDates(): Map<string, string> {
+  try {
+    const output = execFileSync("git", ["log", "--format=%cs", "--name-only", "--", "src/app"], {
+      cwd: process.cwd(),
+      encoding: "utf8",
+      maxBuffer: 32 * 1024 * 1024,
+    });
 
+    const dates = new Map<string, string>();
+    let currentDate = "";
+
+    for (const rawLine of output.split("\n")) {
+      const line = rawLine.trim();
+      if (line.length === 0) continue;
+
+      if (/^\d{4}-\d{2}-\d{2}$/.test(line)) {
+        currentDate = line;
+      } else if (currentDate.length > 0 && !dates.has(line)) {
+        dates.set(line, currentDate);
+      }
+    }
+
+    return dates;
+  } catch {
+    return new Map<string, string>();
+  }
+}
+
+function lastModifiedFor(file: string, dates: Map<string, string>, fallback: string): string {
+  const repoPath = relative(process.cwd(), file).split("\\").join("/");
+  const fromGit = dates.get(repoPath);
+  if (fromGit !== undefined) return fromGit;
+
+  try {
+    return statSync(file).mtime.toISOString().slice(0, 10);
+  } catch {
+    return fallback;
+  }
+}
+
+function generateSitemap(
+  routes: RouteFile[],
+  dates: Map<string, string>,
+  buildDate: string,
+): string {
   const urls = routes
-    .map((route) => {
-      const config = routeConfigs.get(route) ?? {
-        changefreq: "weekly",
-        priority: 0.7,
-      };
+    .map(({ route, file }) => {
+      // The homepage is rebuilt around today's liturgy on every deploy, so its
+      // real modification date is the build date rather than the file's commit.
+      const lastmod = route === "/" ? buildDate : lastModifiedFor(file, dates, buildDate);
 
       return `  <url>
     <loc>${baseUrl}${route}</loc>
     <lastmod>${lastmod}</lastmod>
-    <changefreq>${config.changefreq}</changefreq>
-    <priority>${config.priority}</priority>
   </url>`;
     })
     .join("\n");
@@ -60,11 +108,17 @@ function generateSitemap(routes: string[]): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls}
-</urlset>`;
+</urlset>
+`;
 }
 
-const routes = getRoutes(appDir).sort();
-const sitemap = generateSitemap(routes);
+const buildDate = new Date().toISOString().slice(0, 10);
+const dates = getLastModifiedDates();
+const routes = getRoutes(appDir)
+  .filter(({ route }) => !EXCLUDED_ROUTES.has(route))
+  .sort((a, b) => a.route.localeCompare(b.route));
+
+const sitemap = generateSitemap(routes, dates, buildDate);
 const outputPath = join(publicDir, "sitemap.xml");
 
 writeFileSync(outputPath, sitemap, "utf-8");
@@ -72,5 +126,5 @@ console.log(`Generated sitemap.xml with ${routes.length} routes at ${outputPath}
 
 if (routes.length < 50) {
   console.log("\nRoutes:");
-  routes.forEach((r) => console.log(`  ${baseUrl}${r}`));
+  routes.forEach(({ route }) => console.log(`  ${baseUrl}${route}`));
 }

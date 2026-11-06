@@ -113,7 +113,8 @@ function LandingPage() {
           }}
         >
           <LiturgicalDateHeader
-            overline={format(date, "EEEE", { locale: pt })}
+            overline={`Liturgia de hoje · ${format(date, "EEEE", { locale: pt })}`}
+            overlineAsHeading
             paddingHorizontal={sectionInset}
             paddingTop={headerPaddingTop}
             paddingBottom={headerPaddingBottom}

@@ -1,10 +1,10 @@
 import { useFonts } from "expo-font";
-import Head from "expo-router/head";
 import { useEffect } from "react";
 import { Platform, Pressable, View } from "react-native";
 import { Typography } from "~/components/typography";
 import "../global.css";
 import { BookPlus, ChevronRight, Search, Menu } from "~/components/icons";
+import { Seo } from "~/components/Seo";
 import { useNavigation, usePathname, useRouter } from "expo-router";
 
 import Drawer from "expo-router/drawer";
@@ -49,9 +49,7 @@ export default function PageRootLayout() {
 
   return (
     <>
-      <Head>
-        <title>Tesouro dos Fiéis</title>
-      </Head>
+      <Seo />
       <PostHogProvider
         apiKey="phc_Ng6Rsd9u1mXEatvYAJUwiLLd6Sl5uMX8Y6PgOrtPC9W"
         options={{

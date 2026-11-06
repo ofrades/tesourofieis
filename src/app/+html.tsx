@@ -3,9 +3,13 @@ import type { PropsWithChildren } from "react";
 import { FONT_FAMILIES } from "~/theme/typography";
 import { initialCalendarDate } from "~/providers/initialDate";
 
+/**
+ * Document shell shared by every static route. Route-specific metadata lives in
+ * `src/components/Seo.tsx`; only tags that never change per route belong here.
+ */
 export default function PageRoot({ children }: PropsWithChildren) {
   return (
-    <html lang="pt">
+    <html lang="pt-PT">
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -14,36 +18,9 @@ export default function PageRoot({ children }: PropsWithChildren) {
         />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Tesouro dos Fiéis</title>
-        <meta
-          name="description"
-          content="Espaço dedicado à oração, exposição e preservação das santas tradições da Igreja."
-        />
-        <meta property="og:title" content="Tesouro dos Fiéis" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:description"
-          content="Espaço dedicado à oração, exposição e preservação das santas tradições da Igreja."
-        />
-        <meta property="og:site_name" content="Tesouro dos Fiéis" />
-        <link rel="canonical" href="https://tesourofieis.com/" />
         <link rel="sitemap" href="/sitemap.xml" />
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-        <meta property="og:image" content="https://tesourofieis.com/og.png" />
-        <meta property="twitter:image" content="https://tesourofieis.com/og.png" />
-        <meta name="og:url" property="og:url" content="https://tesourofieis.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tesouro dos Fiéis" />
-        <meta name="twitter:image:alt" content="Tesouro dos Fiéis" />
-        <meta name="twitter:site" content="@tesourofieis" />
-        <meta name="twitter:creator" content="@tesourofieis" />
-        <meta name="twitter:domain" content="https://tesourofieis.com" />
-        <meta
-          name="keywords"
-          content="Espaço dedicado à oração, exposição e preservação das santas tradições da Igreja"
-        />
-        <meta name="author" content="Tesouro dos Fiéis" />
-        <meta name="robots" content="index, follow" />
+        <link rel="apple-touch-icon" href="/logo.png" />
         <meta name="theme-color" content="#32302f" />
 
         <style>
