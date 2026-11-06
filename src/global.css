@@ -428,9 +428,9 @@
   }
 
   html {
-    @apply bg-sepia-200 dark:bg-sepia-800;
+    @apply bg-sepia-50 dark:bg-sepia-900;
     font-family: var(--font-family-reading);
-    --scrollbar-track: theme(colors.sepia.200);
+    --scrollbar-track: theme(colors.sepia.50);
     --scrollbar-thumb: theme(colors.sepia.500);
     --scrollbar-thumb-hover: theme(colors.sepia.600);
     width: 100%;
@@ -440,7 +440,7 @@
 
   @media (prefers-color-scheme: dark) {
     html {
-      --scrollbar-track: theme(colors.sepia.800);
+      --scrollbar-track: theme(colors.sepia.900);
       --scrollbar-thumb: theme(colors.sepia.500);
       --scrollbar-thumb-hover: theme(colors.sepia.400);
     }
