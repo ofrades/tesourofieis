@@ -8,6 +8,13 @@ export default function PageQuad62() {
     <PageWrapper>
       <H1 text="Terça-Feira Santa" />
 
+      <Typography className="comment">
+        Na Terça-feira Santa, a Igreja continua a meditar a Paixão do Senhor. O Evangelho mostra
+        Jesus a anunciar a sua morte e a denunciar a traição de Judas. O Servo de Isaías entrega as
+        suas costas aos que o ferem e não esconde o rosto às afrontas. Sigamos o Mestre com fé e
+        coragem.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Gl. 6, 14</Typography>

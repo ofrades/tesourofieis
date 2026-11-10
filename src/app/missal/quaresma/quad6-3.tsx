@@ -8,6 +8,13 @@ export default function PageQuad63() {
     <PageWrapper>
       <H1 text="Quarta-Feira Santa" />
 
+      <Typography className="comment">
+        Na Quarta-feira Santa, a Igreja recorda a traição de Judas. O Evangelho narra a ceia em
+        Betânia e o pacto de Judas com os príncipes dos sacerdotes. «O Filho do Homem vai, como está
+        escrito dele, mas ai daquele por quem o Filho do Homem é traído!» Peçamos a graça de nunca
+        trair o Senhor com o pecado.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Fl. 2, 10, 8 & 11</Typography>

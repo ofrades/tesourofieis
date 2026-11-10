@@ -8,6 +8,13 @@ export default function PageQuad61() {
     <PageWrapper>
       <H1 text="Segunda-Feira Santa" />
 
+      <Typography className="comment">
+        A Semana Santa é o coração do ano litúrgico. A Igreja acompanha Jesus na sua Paixão, desde a
+        entrada triunfal em Jerusalém até à Cruz. Na Segunda-feira Santa, a liturgia apresenta-nos o
+        Servo sofredor de Isaías e a unção de Betânia: Maria Madalena unge os pés de Jesus para a
+        sua sepultura, enquanto Judas o vende. Preparemo-nos para os santos mistérios da Paixão.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 34, 1-2</Typography>

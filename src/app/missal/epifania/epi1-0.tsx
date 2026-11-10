@@ -8,6 +8,13 @@ export default function PageEpi10() {
     <PageWrapper>
       <H1 text="Domingo dentro do Oitavário da Epifania" />
 
+      <Typography className="comment">
+        Este Domingo, dentro do Oitavário da Epifania, mostra-nos o Menino Jesus no Templo, entre os
+        doutores, ouvindo-os e interrogando-os, e a Virgem Mãe dizendo-lhe: «Filho, porque nos
+        fizeste isto?» A liturgia celebra a manifestação da sabedoria divina do Salvador e
+        convida-nos a procurá-lo, como Maria e José, com solicitude e humildade.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Language>
