@@ -8,6 +8,14 @@ export default function PagePent190() {
     <PageWrapper>
       <H1 text="Décimo Nono Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A Igreja celebra hoje a dedicação de uma igreja, imagem da Jerusalém celeste. Todos os
+        cânticos se referem à consagração de um templo. «Alegrei-me quando se me disse: iremos para
+        a casa do Senhor.» A dedicação de um templo material recorda-nos que as nossas almas são
+        templos vivos do Espírito Santo e que devemos conservá-las puras para o dia da vinda do
+        Senhor.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Language>

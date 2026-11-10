@@ -8,6 +8,15 @@ export default function PagePent210() {
     <PageWrapper>
       <H1 text="Vigésimo Primeiro Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        «Senhor, todas as coisas estão sujeitas à vossa vontade, porque vós sois o Criador e Senhor
+        do universo» (Intr.). A Igreja pede a Deus que guarde sempre em sua misericórdia a sua
+        família, a fim de que, por sua protecção, seja liberta de toda adversidade e, pela prática
+        das boas obras, se aplique a glorificar o seu nome. O povo antigo e o povo actual têm um
+        mesmo fim, que é a glorificação de Deus, e os mesmos adversários, os demónios e seus
+        sequazes. Confiemos na protecção divina.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Est. 13, 9 & 10-11</Typography>

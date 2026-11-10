@@ -8,6 +8,14 @@ export default function PagePent200() {
     <PageWrapper>
       <H1 text="Vigésimo Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia deste Domingo recorda-nos a parábola do banquete nupcial. O rei entrou para ver
+        os convidados e encontrou um homem não revestido da veste nupcial: «Amigo, como entraste
+        aqui sem a veste nupcial?» A veste nupcial é a caridade e a graça santificante, sem a qual
+        não podemos tomar parte no banquete celeste. A Igreja exorta-nos a corresponder ao convite
+        de Deus com uma vida digna do Evangelho.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Dn. 3, 31, 29 & 35</Typography>

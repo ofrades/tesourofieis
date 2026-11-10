@@ -8,6 +8,15 @@ export default function PagePent140() {
     <PageWrapper>
       <H1 text="Décimo Quarto Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia deste Domingo ensina-nos a não pôr o coração nos bens perecíveis, mas nos
+        eternos. As leituras do Ofício são muitas vezes tiradas do livro do Eclesiástico ou do livro
+        de Job. «Há homens entregues completamente à paixão dos bens efémeros, ignorando ou
+        desprezando os eternos», diz S. Gregório. O Evangelho exorta-nos a servir a Deus e não às
+        riquezas, e a confiar na Providência, que veste os lírios do campo e alimenta as aves do
+        céu.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 83, 10-11</Typography>

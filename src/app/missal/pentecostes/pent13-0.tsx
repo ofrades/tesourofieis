@@ -8,6 +8,15 @@ export default function PagePent130() {
     <PageWrapper>
       <H1 text="Décimo Terceiro Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia deste Domingo exorta-nos à unidade da fé e à gratidão. Os dez leprosos foram
+        curados por Jesus, mas só um, e estrangeiro, voltou para lhe dar graças. A lepra representa
+        o pecado mortal e sobretudo o mais contagioso, a heresia. Esta narração evangélica anuncia
+        também a rejeição dos Judeus, que foram ingratos para com Aquele que viera curá-los, ao
+        passo que os Gentios lhe foram fiéis. Peçamos a Deus o dom da perseverança e da acção de
+        graças.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 73, 20,19 & 23</Typography>

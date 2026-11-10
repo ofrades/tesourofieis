@@ -8,6 +8,15 @@ export default function PagePent230() {
     <PageWrapper>
       <H1 text="Vigésimo Terceiro Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia deste Domingo adverte-nos de que o fim está próximo. O profeta Ezequiel anuncia o
+        castigo de Deus sobre os que persistem no mal, mas também a sua misericórdia para com o que
+        se converte: «Eu não quero a morte do ímpio, mas que deixe o mau caminho e viva». Em visão,
+        Deus mostrou ao profeta, sobre uma montanha elevada, o futuro Templo e o culto perfeito que
+        esperava do seu povo. A Igreja exorta-nos à conversão e à esperança, enquanto aguardamos a
+        vinda do Senhor.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Jr. 29,11,12 & 14</Typography>

@@ -8,6 +8,14 @@ export default function PagePent170() {
     <PageWrapper>
       <H1 text="Décimo Sétimo Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia deste Domingo inculca-nos a confiança na protecção divina. O justo, ainda que
+        provado, não é abandonado por Deus, que o guarda como a menina dos seus olhos e o sustenta
+        com a sua graça. O Evangelho mostra Jesus a ensinar a humildade e a escolher para si o
+        último lugar, exortando-nos a não buscar a glória dos homens, mas a recompensa do Pai
+        celeste.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 118, 137 & 124</Typography>

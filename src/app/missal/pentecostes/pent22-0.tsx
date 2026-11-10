@@ -8,6 +8,14 @@ export default function PagePent220() {
     <PageWrapper>
       <H1 text="Vigésimo Segundo Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia deste Domingo ensina-nos a confiar em Deus e a perdoar as ofensas. «Vinde em meu
+        auxílio, Senhor meu Deus», diz o Salmista; «os iníquos me perseguiram, mas vós me
+        ajudastes». O Evangelho recorda a parábola do servo que, perdoado pelo seu senhor, não quis
+        perdoar ao seu companheiro, e por isso foi entregue aos verdugos. Assim também o Pai celeste
+        nos perdoará, se perdoarmos de coração aos nossos irmãos.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 129, 3-4</Typography>

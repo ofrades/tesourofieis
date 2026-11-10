@@ -8,6 +8,15 @@ export default function PagePent180() {
     <PageWrapper>
       <H1 text="Décimo Oitavo Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia deste Domingo celebra a dedicação da igreja, figura do céu ao qual todas as
+        nações hão de afluir no fim dos tempos. «Alegrei-me quando se me disse: iremos para a casa
+        do Senhor» (Intr. e Grad.). «Moisés consagrou um altar ao Senhor», diz o Ofertório. «Entrai
+        nos átrios do Senhor e adorai-o no seu santo templo», acrescenta a Comunhão. A festa dos
+        Tabernáculos, celebrada pelos Judeus, e o dia das Expiações, recordados no Breviário,
+        prefiguram a consagração da Igreja e a purificação das almas.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Ecl. 36, 18</Typography>

@@ -8,6 +8,17 @@ export default function PagePent240() {
     <PageWrapper>
       <H1 text="Vigésimo Quarto Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        O ciclo litúrgico termina com a última semana do ano eclesiástico e, com ele, a história do
+        mundo, por ele narrada desde a origem, no Tempo do Advento, até ao termo final, no 24.º
+        Domingo depois de Pentecostes. Eis o motivo de mandar a Igreja ler, neste Domingo, no
+        Breviário, o livro do profeta Miqueias, contemporâneo de Oseias e Isaías, comentado por S.
+        Basílio no Tratado sobre o Juízo Final, e, no Missal, o Evangelho da vinda do Juiz divino.
+        «Eis, diz Miqueias, que o Senhor sairá do seu lugar, e as montanhas serão consumidas sob
+        seus pés, os vales abrir-se-ão, desaparecendo como a cera diante do fogo.» Vigiemos e
+        oremos, para que sejamos encontrados vigilantes no dia do Senhor.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Jr. 29, 11, 12 & 14</Typography>

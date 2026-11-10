@@ -8,6 +8,13 @@ export default function PagePent150() {
     <PageWrapper>
       <H1 text="Décimo Quinto Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia deste Domingo pede a Deus que purifique e fortaleça continuamente a sua Igreja,
+        pois sem Ele não pode subsistir. O Evangelho fala da viúva de Naim, cujo filho Jesus
+        ressuscitou: figura da alma morta pelo pecado, que a graça restitui à vida. A Igreja, como
+        mãe compassiva, apresenta a Deus os seus filhos e implora a sua misericórdia.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 85, 1 & 2-3</Typography>

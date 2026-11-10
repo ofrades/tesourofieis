@@ -8,6 +8,17 @@ export default function PagePent160() {
     <PageWrapper>
       <H1 text="Décimo Sexto Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        Job é a figura do homem justo que a soberba do demónio procura humilhar profundamente, a fim
+        de revoltá-lo contra Deus. «Deixa-me experimentá-lo», declara Satanás ao Altíssimo, «e ele
+        vos há de blasfemar». E Jehovah lho permite, para fazer de Job o modelo da alma que proclama
+        o domínio de Deus e se sujeita inteiramente à vontade divina.
+        {"\n\n"}O ciúme do diabo desencadeou-se e fez suceder, em sábia gradação, todas as
+        calamidades. Job, porém, bendisse o Senhor e permaneceu fiel. A liturgia exorta-nos à
+        humildade e à confiança em Deus nas provações, certos de que Ele nunca abandona os que o
+        temem.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 85, 3 & 5</Typography>
