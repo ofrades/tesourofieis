@@ -8,6 +8,18 @@ export default function PageQuad14() {
     <PageWrapper>
       <H1 text="Quinta-feira da 1.ª Semana da Quaresma - Têmporas da Primavera" />
 
+      <Typography className="comment">
+        São Gregório II estabeleceu a Estação em Roma na antiga igreja de S. Lourenço em Panisperna,
+        erigida em honra do heroico diácono, no próprio lugar onde, segundo a tradição, ele sofreu o
+        martírio. A Igreja lembra aos catecúmenos que, desde a vinda de Jesus, já não é só a raça de
+        Israel que tem as promessas, mas que todos podem entrar na Igreja pelo baptismo e comer o
+        pão eucarístico dos filhos de Deus. Se o pagão abjura as más obras de seus pais e pratica a
+        lei cristã de penitência e caridade (Ep.), será ouvido, como foi a mulher pertencente à raça
+        maldita de Canaã (2), mas cuja fé era grande (Ev.). — Busquemos na Eucaristia as forças
+        necessárias para observarmos a Quaresma, pois é o nosso jejum unido ao sacrifício de Jesus
+        que nos há de alcançar a salvação (Secr., Comm. e Postcomm.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 95, 6</Typography>

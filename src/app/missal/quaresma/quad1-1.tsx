@@ -9,6 +9,21 @@ export default function PageQuad11() {
     <PageWrapper>
       <H1 text="Segunda-feira da l.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é numa das mais antigas basílicas romanas, construída pela imperatriz Eudóxia e na
+        qual se guardam as cadeias trazidas pelo príncipe dos Apóstolos, a quem Jesus confiou o seu
+        rebanho. Era essa, no século V, uma das 25 paróquias de Roma.
+        {"\n\n"}A Epístola, fazendo alusão aos penitentes que iam ser reconciliados na Páscoa e aos
+        catecúmenos que se preparavam para o baptismo, diz que o Senhor é o Pastor em busca das
+        ovelhas dispersas. E o Evangelho nos fala da separação que esse Pastor estabelecerá para
+        sempre entre as ovelhas e os bodes, ou entre os bons que fazem penitência e se exercitam nas
+        obras de caridade, e os pecadores (2). O representante deste Pastor sobre a terra é o
+        sucessor de S. Pedro, e na basílica deste Santo, que recebeu o poder de ligar e desligar na
+        Igreja, se faz hoje a Estação. — Peçamos a Deus que nos prepare pelo «jejum quaresmal» (Or.)
+        «a sermos libertados dos laços de nossos pecados» (Or. sobre o povo), em virtude do poder de
+        Pedro, outrora libertado de seus vínculos.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 122, 2</Typography>

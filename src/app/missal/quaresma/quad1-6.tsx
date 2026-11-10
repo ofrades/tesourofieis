@@ -9,6 +9,24 @@ export default function PageQuad15() {
     <PageWrapper>
       <H1 text="Sábado da 1.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        No Sábado das Têmporas a Estação é sempre na grande basílica erigida por Constantino e
+        reconstruída nos séculos XVI e XVII pelos Papas, sobre a colina do Vaticano, no lugar em que
+        S. Pedro foi crucificado e onde repousa. Daí a escolha do Evangelho da Transfiguração, da
+        qual São Pedro foi a principal testemunha. Nessa basílica faziam-se as ordenações,
+        precedidas, durante a noite, de 12 leituras, de que são vestígios as da missa. O versículo
+        do Introito alude à dita vigília nocturna: «Dia e noite, clamei a vós».
+        {"\n\n"}
+        Como os Apóstolos escolhidos para assistirem no monte Tabor (2) à manifestação da vida
+        divina de Jesus (Ev.), os novos padres subirão os degraus do altar para entrar em
+        comunicação com Deus; são eles que, em nome do Senhor, nos exortarão à oração, à paciência e
+        à caridade. Se, durante a Quaresma, nos abstivermos até mesmo da aparência do mal, a nossa
+        alma e o nosso corpo serão conservados sem mancha para o dia da Páscoa eterna, em que o
+        Cristo (Ep.) nos fará para sempre participar da glória de sua Transfiguração. — Peçamos a
+        Deus para fortificar-nos com a sua bênção, a fim de que, durante esta Quaresma, nem uma só
+        vez nos afastemos de sua santa vontade (Or. sobre o povo).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 87, 3</Typography>

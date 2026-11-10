@@ -8,6 +8,21 @@ export default function PageQuad12() {
     <PageWrapper>
       <H1 text="Terça-feira da l.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação tem lugar na antiga igreja que, no século IV, era a única paróquia do centro e dos
+        quarteirões ricos de Roma. Construída ao pé do Palatino, é consagrada a Santa Anastácia,
+        piedosa viúva romana que foi morta sob Diocleciano em Sirmium (Níria). A tradição diz que
+        este «título» mencionado num sínodo de 499 se refere à casa da Santa Mártir. Talvez se trate
+        de simples identidade de nome entre a fundadora da basílica e a santa titular.
+        {"\n\n"}A Quaresma é o momento em que «Deus está próximo de nós e pronto a perdoar-nos, se
+        deixarmos os nossos pensamentos injustos e o caminho da impiedade» (Ep.). Para isso, é
+        mister expulsarmos o pecado de nosso coração, como Jesus expulsou os vendedores do Templo
+        (Ev.), e recebermos os ensinamentos de Cristo com a simplicidade dos filhos de Deus (2).
+        Então ele poderá curar-nos as almas como curou os coxos e os cegos que dele se aproximavam.
+        — Repelindo a orgulhosa sabedoria do mundo, aproveitemos o santo Tempo da Quaresma para que,
+        «castigando-se com a mortificação, a nossa alma se encha de santos desejos» (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 89, 1 & 2</Typography>

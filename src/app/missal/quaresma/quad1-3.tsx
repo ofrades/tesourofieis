@@ -8,6 +8,24 @@ export default function PageQuad13() {
     <PageWrapper>
       <H1 text="Quarta-feira da 1.ª Semana da Quaresma - Têmporas da Primavera" />
 
+      <Typography className="comment">
+        As Têmporas da primavera coincidem com a primeira semana da Quaresma e foram instituídas
+        para consagrar a Deus a nova estação e atrair, pelo jejum e oração, as graças celestes sobre
+        os que têm de receber, no Sábado, o Sacramento da Ordem. A Estação da Quarta-feira das
+        Têmporas é sempre em Santa Maria Maior, a maior e a mais ilustre das igrejas consagradas à
+        Santíssima Virgem em Roma.
+        {"\n\n"}
+        Não convinha, neste dia em que se faziam os escrutínios para as ordenações, que se fizesse a
+        assembleia litúrgica na basílica consagrada àquela a quem Proclo de Constantinopla saúda
+        como «templo no qual Deus se fez sacerdote»? Também o Evangelho faz alusão à Santíssima
+        Virgem. As 2 leituras que servem de Epístola nos falam de Moisés e de Elias, os quais
+        jejuaram 40 dias e 40 noites antes de contemplar a glória do Senhor. Chamados a ocupar o
+        lugar dos Judeus rebeldes, façamos dignos frutos de penitência, como os Ninivitas que
+        escutaram a voz de Jonas e como a rainha de Sabá, vinda de seu país longínquo a fim de
+        conhecer a sabedoria de Salomão (Ev.); participaremos então da ressurreição do Salvador,
+        figurada pelo profeta, vomitado vivo depois de passar três dias no ventre da baleia.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 24, 6, 3 & 22</Typography>

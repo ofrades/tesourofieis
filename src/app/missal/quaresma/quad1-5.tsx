@@ -9,6 +9,26 @@ export default function PageQuad16() {
     <PageWrapper>
       <H1 text="Sexta-feira da 1.ª Semana da Quaresma - Têmporas da Primavera" />
 
+      <Typography className="comment">
+        Na Sexta-feira das Têmporas fazia-se a Estação para o segundo escrutínio dos ordenandos, na
+        igreja dos 12 Apóstolos, situada ao pé do Quirinal; ficavam assim os futuros sacerdotes e
+        diáconos colocados sob a protecção de todo o colégio apostólico. Esta basílica, uma das mais
+        antigas de Roma, foi construída logo depois de Constantino por Júlio I, por ocasião da
+        transladação dos corpos dos Apóstolos Filipe e Tiago o Menor, que aí repousam.
+        {"\n\n"}
+        Dirigindo-se aos penitentes públicos dos primeiros séculos cristãos, a Igreja lhes diz pela
+        boca de Ezequiel que Deus está pronto a perdoar-lhes se eles se arrependerem (Ep.). Como os
+        doentes que ficavam sob os pórticos da piscina situada ao norte do Templo de Jerusalém,
+        permaneciam eles às portas da igreja e, no grande dia do Sábado, festa da Páscoa, Jesus os
+        curava, como fez com o paralítico do Evangelho (2). — Nossas almas, outrora mergulhadas na
+        piscina do baptismo, tendo depois recaído no pecado, devem também expiar as suas faltas e,
+        por intermédio de seus padres, Jesus lhes perdoará no santo tribunal da Penitência. «Hominem
+        non habeo»: não temos esta desculpa a dar, pois, se ficamos paralisados no pecado, é que não
+        recorremos ao ministério sacerdotal, sempre à nossa disposição. Peçamos a Deus sustentar-nos
+        com o benéfico socorro de sua misericórdia (Or.), para que, apagando os nossos pecados pela
+        penitência (Postc.), a nossa alma contemple novamente a luz (Oração sobre o povo).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 24, 17 & 18</Typography>
