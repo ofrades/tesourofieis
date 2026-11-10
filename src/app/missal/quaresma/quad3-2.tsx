@@ -8,6 +8,20 @@ export default function PageQuad32() {
     <PageWrapper>
       <H1 text="Terça-feira da 3.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é no antiquíssimo santuário de Santa Pudenciana, erigido no lugar da casa de seu
+        avô, o senador Pudente, de quem S. Paulo fala em suas Epístolas. Santa Pudenciana aí morou
+        com a irmã Santa Praxedes; aí S. Pedro recebeu hospitalidade e os primeiros cristãos muitas
+        vezes se reuniam. É uma das 25 paróquias de Roma no século V.
+        {"\n\n"}
+        Convém ser aí lido o Evangelho em que S. Pedro interroga o Senhor a respeito do poder das
+        chaves. A clemência dos Judeus limitava-se a perdoar três vezes; Jesus, no Evangelho (2),
+        manda fazê-lo setenta vezes sete, isto é, sempre. A misericórdia, com os sacrifícios que
+        supõe, faz parte da penitência quaresmal. A Epístola, no mesmo sentido, exorta-nos a
+        revestir-nos de sentimentos de bondade e de perdão. — Peçamos ao Senhor que nos conceda o
+        espírito de caridade e de mansidão, sem o qual o jejum e a penitência de nada nos serviriam.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 16, 6 & 8</Typography>

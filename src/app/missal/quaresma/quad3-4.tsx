@@ -8,6 +8,29 @@ export default function PageQuad34() {
     <PageWrapper>
       <H1 text="Quinta-feira da 3.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação era no antigo templo de Rómulo, transformado em igreja, na qual repousam os corpos
+        dos Santos Mártires Cosme e Damião, condenados à morte sob a perseguição de Diocleciano. Os
+        doentes corriam em multidões a visitar o túmulo dos dois irmãos, médicos de profissão, dos
+        quais solicitavam a cura. Convinha, pois, ler aí o Evangelho que fala da cura da sogra de
+        Simão. É uma missa da dedicação das igrejas, assim como indicam as palavras da Epístola:
+        Templum Domini est.
+        {"\n\n"}
+        Os Judeus, que possuíam o magnífico templo de Jerusalém, haviam chegado ao ponto de crer que
+        o respeito à casa de Deus bastava para os santificar e dispensavam-se de observar o espírito
+        da lei. A Igreja, pois, nos adverte a não fazermos consistir a nossa Quaresma em orações e
+        jejuns que não sejam acompanhados do exercício da caridade e da justiça para com o próximo.
+        Devemos imitar o exemplo de Jesus e, durante toda a Quaresma, segui-lo com a santa liturgia
+        em seu ministério de redenção, a propagar o reino de Deus, curar os enfermos e expulsar os
+        demónios (Ev.) (2). De boa mente escutemos a palavra de Deus; ela há de curar as nossas
+        almas e afastar o demónio que procura nelas reinar. Os catecúmenos que se preparavam para o
+        baptismo ouviam essa palavra, especialmente nesta época do ano. Sobre eles também se fazia a
+        imposição das mãos, a fim de livrá-los dos maus espíritos e curar-lhes as almas. — Por
+        intercessão dos Santos médicos Cosme e Damião, em cuja igreja é celebrada a solenidade de
+        hoje, peçamos ao divino médico que a severa dieta do jejum quaresmal faça ceder a febre de
+        nossas paixões e nos assegure a salvação (Or., Ep., Postcomm.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Language>

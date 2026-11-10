@@ -9,6 +9,22 @@ export default function PageQuad31() {
     <PageWrapper>
       <H1 text="Segunda-feira da 3.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é em S. Marcos, antiga igreja paroquial de Roma, construída no século IV pelo Papa
+        S. Marcos, em honra do evangelista seu padroeiro. Os restos desse Papa aí se acham sob o
+        altar, com os corpos dos Santos Mártires Abdom e Sennen. Não se poderia fazer melhor escolha
+        para ler a narração do sírio Naamã do que este santuário de carácter oriental, pois São
+        Marcos é o fundador da sé patriarcal de Alexandria e Abdom e Sennen são Persas.
+        {"\n\n"}A Epístola e o Evangelho (3) falam de Naamã, valente general do exército do rei da
+        Síria. Naamã foi curado lavando-se no Jordão, embora não pertencesse à raça de Israel. Mais
+        tarde Jesus entraria nesse mesmo rio, comunicando à água uma virtude santificadora. Naamã
+        figura os pagãos, que a Igreja curou da lepra do pecado pelo baptismo. Pedro, diz
+        Tertuliano, baptizou no Tibre, e aqueles que aí foram lavados da lepra do pecado abandonaram
+        os rios de Damasco, isto é, a sua vida sensual. — Renovemo-nos no espírito de nosso
+        baptismo, purificando os nossos corações no banho salutar da penitência. Ela os há de curar
+        da lepra da alma que se chama pecado.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 55, 5</Typography>

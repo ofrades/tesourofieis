@@ -8,6 +8,20 @@ export default function PageQuad36() {
     <PageWrapper>
       <H1 text="Sábado da 3.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é na igreja de Santa Susana, virgem romana que sofreu o martírio sob o imperador
+        Diocleciano. Esse santuário é uma das 25 paróquias de Roma no século V (1). Escolheu-se para
+        aí se ler a narração da outra Susana, filha de Helcias, de que nos fala a Missa.
+        {"\n\n"}
+        Como muitas vezes acontece na liturgia da Quaresma, a Epístola e o Evangelho (2) expõem o
+        mesmo pensamento. Hoje trata-se, em ambos os casos, de uma acusação de adultério que reverte
+        contra os seus autores. A Epístola nos fala da casta Susana, que é inocente, e o Evangelho
+        trata de uma mulher culpada. Deus vinga os direitos da justiça a respeito da primeira,
+        recompensando-lhe a virtude, e abre os tesouros da sua misericórdia para a segunda,
+        perdoando à arrependida. — À aceitação das provas por Deus impostas aos justos corresponderá
+        a recompensa eterna, e à penitência que se impõem os culpados, a remissão de suas faltas.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 5, 2-3</Typography>

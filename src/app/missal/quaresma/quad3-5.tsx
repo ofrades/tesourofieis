@@ -9,6 +9,24 @@ export default function PageQuad35() {
     <PageWrapper>
       <H1 text="Sexta-feira da 3.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        É um dos numerosos santuários construídos em Roma em honra do diácono mártir. Aí é
+        conservada parte da grelha onde ele foi supliciado. Essa igreja, um dos 25 títulos ou
+        paróquias da capital cristã no século V, é hoje ainda titular do primeiro dos
+        cardeais-presbíteros (1).
+        {"\n\n"}
+        No correr dos 40 anos passados no deserto, Moisés e Aarão rogaram a Deus fizesse brotar do
+        rochedo (figura do Cristo) «uma fonte de água viva» para saciar a sede de todo o povo (Ep.).
+        No correr dos 40 dias da Quaresma, a Igreja suplica ao Cristo nos dê essa água viva, de que
+        Ele falou à Samaritana junto ao poço de Jacob, a qual extingue a sede para sempre (Ev.) (2).
+        Essa água é a nossa fé em Jesus, essa água é a graça, essa água é o sangue que brota das
+        chagas do Salvador e que, pelo Baptismo, a Penitência e os outros Sacramentos, purifica as
+        nossas almas e jorra até à vida eterna, da qual nos faz participar. É preciso notar o
+        paralelo que a arte cristã se compraz em estabelecer entre Moisés e S. Pedro. É este último
+        que tocava o rochedo donde brotava a água, símbolo do baptismo cristão, dado pela Igreja da
+        qual S. Pedro é o chefe.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 85, 17</Typography>

@@ -9,6 +9,22 @@ export default function PageQuad33() {
     <PageWrapper>
       <H1 text="Quarta-feira da 3.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é em S. Xisto (2), na via Appia, igreja paroquial de Roma no século V. A esse
+        santo Pontífice, e segundo alguns autores nesse mesmo lugar, é que S. Lourenço pediu a graça
+        de acompanhá-lo como seu ministro no sacrifício que ia fazer de si próprio.
+        {"\n\n"}
+        No Sinai havia Deus ordenado aos homens, dizem-nos a Epístola e o Evangelho (3), honrar os
+        pais e amar o próximo. Os fariseus ajuntaram a esses preceitos tradições humanas que
+        consistiam em formalidades puramente exteriores e às quais ligavam eles mais importância do
+        que à lei de Moisés. A Igreja deseja precaver-nos contra a observância de práticas
+        exteriores do culto, ou jejuns que não estiverem unidos a actos de caridade. Para ser aceite
+        por Deus, deve a nossa penitência proceder de coração transbordante de amor a Deus e ao
+        próximo; pois do coração procede a santidade ou a malícia dos homens. — Tenhamos grande
+        cuidado em juntar às mortificações corporais a prática das virtudes: sinceridade, justiça,
+        paciência, caridade ou, como diz a oração, imponhamos o jejum do corpo e da alma.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 30, 7-8</Typography>
