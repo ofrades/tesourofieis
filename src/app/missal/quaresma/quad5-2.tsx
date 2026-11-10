@@ -8,6 +8,30 @@ export default function PageQuad52() {
     <PageWrapper>
       <H1 text="Terça-feira da Semana da Paixão" />
 
+      <Typography className="comment">
+        A Estação fazia-se outrora na igreja do santo diácono S. Ciríaco, martirizado sob
+        Diocleciano às portas de Roma. Esse santuário, uma das 25 paróquias de Roma no século V,
+        tendo sido destruído, o corpo do santo mártir foi transportado para debaixo do altar-mor de
+        Santa Maria da via Lata, que se tornou o lugar de reunião para o presente dia (1). O Santo
+        Mártir nos mostra, no santo Tempo da Paixão, a generosidade com que é preciso sofrer para
+        servir os interesses de Cristo.
+        {"\n\n"}A Epístola e o Evangelho nos falam da próxima Paixão do Messias e da reprovação de
+        Israel, substituído na Igreja pelos Gentios. Uma legenda diz que este Santo exerceu
+        primeiramente o seu apostolado, como Daniel, na corte do persa Sapor; por isso se lê na
+        Epístola a história de Daniel. «Daniel, que partiu Bel e matou o dragão» (Ep.), é Jesus, que
+        denuncia os crimes e os pecados «do mundo» (Ev.). Os Babilónios procuram fazer desaparecer o
+        profeta, dando-o em pasto a leões famintos. Os Judeus «procuram também fazer morrer a Jesus»
+        (2), e para esse negro desígnio «a sua hora está sempre pronta». Ele, porém, como Daniel,
+        cheio de firmeza, espera o Senhor (Intr.), e Deus, que «não abandona os que o amam e o
+        buscam» (Ep., Off.), «livra-o dos homens injustos e de todos os males que o afligem» (Grad.,
+        Comm.). «Os que haviam querido perder Daniel foram lançados aos leões e devorados num
+        instante» (Ep.). Assim também o povo deicida recebeu o castigo de seu crime. Quarenta anos
+        mais tarde, um milhão de Judeus, surpreendidos em Jerusalém, foram exterminados por legiões
+        romanas, após cinco longos meses de fome. — Temendo os castigos da justiça divina,
+        perseveremos na prática expiatória do jejum, a fim de nos tornarmos dignos da recompensa
+        eterna dos justos (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 26, 14</Typography>

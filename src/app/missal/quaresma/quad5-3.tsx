@@ -9,6 +9,28 @@ export default function PageQuad53() {
     <PageWrapper>
       <H1 text="Quarta-feira da Semana da Paixão" />
 
+      <Typography className="comment">
+        A igreja de S. Marcelo, onde se fazia a Estação de hoje, era uma das 25 paróquias de Roma no
+        século V. Primitivamente habitação da santa dama Lucina, que aí recebeu S. Marcelo, foi por
+        ela transformada em santuário dedicado a esse santo Papa, cujo corpo descansa sob o
+        altar-mor (1). Como nos dias precedentes, a Igreja gosta, neste santo Tempo da Paixão, de
+        reunir seus filhos em torno do túmulo de um mártir que rendeu testemunho ao Rei dos
+        Mártires.
+        {"\n\n"}A Missa deste dia nos mostra a obstinação dos Judeus em rejeitar a Jesus, como já
+        haviam rejeitado a seu Pai. A lei divina, dada por Aquele a quem a Epístola chama por 6
+        vezes «o Senhor» e «cuja palavra é estável», declarava «que não se podia derramar o sangue
+        do próximo, nem ter ódio no coração contra seu pai». Os membros do Sinédrio, porém, odeiam o
+        Cristo e procuram apedrejá-lo (Ev.). Infiéis a Deus, «que manda guardar as suas leis» (Ep.),
+        eles se queixam de Jesus, «enviado pelo Pai» e Filho de Deus: «O Pai e eu somos um. Os
+        milagres que eu fiz vêm de meu Pai» (2). Rejeitando o legítimo pastor de suas almas, «já não
+        são suas ovelhas», e serão substituídos pelos Gentios que, baptizados ou reconciliados nas
+        festas da Páscoa, são «as ovelhas que ouvem a sua voz e às quais ele dá a vida eterna»
+        (Ev.). — Sejamos fiéis a Jesus e peçamos a Deus que «se digne santificar o nosso jejum e
+        iluminar os nossos corações» (Or.), para que, libertados do abismo onde os pecados nos
+        haviam feito cair (Grad.), «lavemos as mãos na inocência e publiquemos as maravilhas de
+        Deus» (Comm.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 17, 48-49</Typography>

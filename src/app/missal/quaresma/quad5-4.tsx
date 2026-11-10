@@ -8,6 +8,28 @@ export default function PageQuad54() {
     <PageWrapper>
       <H1 text="Quinta-feira da Semana da Paixão" />
 
+      <Typography className="comment">
+        A Estação é na igreja construída cerca do ano 780 pelo Papa Adriano I, sobre as ruínas de um
+        antigo templo, em honra do santo mártir Apolinário, discípulo de Pedro e arcebispo de Ravena
+        (1). O Santo Mártir nos diz, neste santo Tempo da Paixão, que devemos sofrer com coragem,
+        como ele, por Jesus Cristo.
+        {"\n\n"}
+        Daniel lembra a humilhação de Israel, que foi entregue aos inimigos «devido aos seus
+        pecados» (Intr. e Ep.). A Igreja também chora pelos maus cristãos e pelos pagãos, escravos
+        de Satanás e de suas paixões. Com Azarias, pede ela ao Senhor que «sejam confundidos os que
+        maltratam os seus servos, pois é com o coração contrito e humilhado que eles se voltam para
+        Deus» (Ep.). Espera que, fiel ao antigo e solene juramento, ele há-de multiplicar o seu povo
+        como as estrelas do firmamento e como a areia da praia (Id.). Já entrevé, cheia de
+        felicidade, a noite pascal, em que, na fonte baptismal, lhe nascerão numerosos filhos.
+        Excita os penitentes ao verdadeiro arrependimento e à esperança com a narração da conversão
+        de Madalena, a pecadora (2), que se lança aos pés de Jesus, derramando lágrimas de
+        arrependimento, enquanto os Judeus, representados por Simão o fariseu, ficam insensíveis. —
+        Fazendo parte do povo de Deus pelo Baptismo, devemos humildemente, como Madalena, chorar os
+        nossos pecados e expiá-los generosamente. Purifiquemos, portanto, os nossos corpos e as
+        nossas almas pela mortificação e pela penitência, pois é «pela abstinência que devemos curar
+        as nossas feridas feitas pela intemperança» (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Dn. 3, 31</Typography>

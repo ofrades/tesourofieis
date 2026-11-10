@@ -9,6 +9,25 @@ export default function PageQuad55() {
     <PageWrapper>
       <H1 text="Sexta-feira da Semana da Paixão" />
 
+      <Typography className="comment">
+        A Estação era na igreja de Santo Estêvão no monte Célio, dita Santo Estêvão o Redondo devido
+        à sua forma circular. Foi dedicada no século V ao primeiro dos mártires, cujas relíquias
+        tinham sido justamente levadas para Roma (1). Este Santo foi o primeiro mártir ou testemunha
+        do Cristo. Ao morrer declarou que via Jesus no céu, à direita do Pai. Convinha, pois,
+        reunirem-se em sua basílica, no santo Tempo consagrado à lembrança da Paixão do Salvador, e
+        que nos prepara a celebrar o triunfo de Jesus na Páscoa.
+        {"\n\n"}O Evangelho de hoje menciona a reunião do Sinédrio, em que foi irrevogavelmente
+        decretada pelos sacerdotes judeus a morte de Jesus (2). O milagre da ressurreição de Lázaro,
+        dizem eles, vai, durante estas festas pascais em que as multidões se aglomeram em Jerusalém,
+        suscitar tal entusiasmo popular que os Romanos, inquietos por sua autoridade, destruirão
+        nossa cidade e nossa nação. É, portanto, preferível, concluiu Caifás, que um só desapareça e
+        a nação seja salva. Jeremias, na Epístola, e o Salmista, no Introito, Gradual, Ofertório e
+        Comunhão, exprimem as tristezas e angústias de Jesus ao sentir-se rodeado de inimigos tão
+        pérfidos e encarniçados em sua perda. — Participemos dos sentimentos de Cristo, que vai
+        breve expiar os nossos pecados pelos sofrimentos de sua Paixão, e, temendo os eternos
+        castigos, aceitemos as penas desta vida e as santas austeridades da Quaresma (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 30, 10, 16 & 18</Typography>

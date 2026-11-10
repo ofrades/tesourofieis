@@ -8,6 +8,27 @@ export default function PageQuad51() {
     <PageWrapper>
       <H1 text="Segunda-feira da Semana da Paixão" />
 
+      <Typography className="comment">
+        A Estação é em São Crisógono, no Trastevere. Sob o altar-mor da igreja, uma das 25 paróquias
+        de Roma no século V, repousa o corpo do santo mártir, vítima da perseguição de Diocleciano e
+        cujo nome é citado no Canon da missa (ver p. 89). A Igreja dá assim a seus filhos um modelo
+        a imitar no santo Tempo da Paixão. Como S. Crisógono, é preciso que sejamos generosas
+        testemunhas do Cristo. Essa igreja foi o título cardinalício de Leão XIII, antes de sua
+        elevação ao trono pontifical (1).
+        {"\n\n"}
+        Para animar os penitentes públicos, e também a nós, à perseverança nas austeridades da
+        Quaresma, a Igreja nos recorda na Epístola o perdão concedido aos Ninivitas que, abalados
+        pela palavra de Jonas, jejuaram e se cobriram de cinzas durante 40 dias. Quanto aos
+        catecúmenos, quão doce deve ser a sua esperança, ao ouvir no Evangelho (2) as promessas do
+        Divino Mestre. A fé vai fazer brotar de suas almas rios de água viva, cuja fonte será o
+        Espírito Santo introduzido neles pelo baptismo. Os Judeus, pelo contrário, longe de escutar
+        aquele de quem Jonas era apenas uma figura, procuram apoderar-se de Jesus, que em breve
+        farão perecer. Jesus lho prediz e anuncia o seu próprio triunfo e a reprovação deles: «ainda
+        um pouco e eu vou para o Pai, e vós não podereis lá chegar». Peçamos «a Deus que se digne
+        santificar os nossos jejuns e conceder-nos em sua bondade o perdão de nossos pecados» (Or.),
+        para gozarmos sempre «da saúde do corpo e da alma» (Or. sobre o povo).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 55, 2</Typography>
