@@ -9,6 +9,13 @@ export default function PagePent176() {
     <PageWrapper>
       <H1 text="Sábado das Têmporas de Setembro" />
 
+      <Typography className="comment">
+        O Sábado das Têmporas de Setembro era outrora o dia das ordenações. A Igreja pede a Deus que
+        santifique os seus ministros e renove a face da terra, reunindo todos os povos na unidade da
+        fé. As numerosas leituras desta Missa recordam as promessas divinas e preparam os fiéis para
+        a vinda do Senhor.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl 94:6-7</Typography>

@@ -8,6 +8,13 @@ export default function PagePent175() {
     <PageWrapper>
       <H1 text="Sexta-feira das Têmporas de Setembro" />
 
+      <Typography className="comment">
+        A Igreja continua as Têmporas de Setembro, implorando a misericórdia divina e a graça das
+        ordenações. O jejum e a oração dispõem os fiéis para receberem os frutos da Redenção, e a
+        liturgia exorta-nos a oferecer a Deus um coração contrito e humilhado, que Ele nunca
+        despreza.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl 104:3-4</Typography>

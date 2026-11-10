@@ -8,6 +8,13 @@ export default function PagePent173() {
     <PageWrapper>
       <H1 text="Quarta-feira das Têmporas de Setembro" />
 
+      <Typography className="comment">
+        As Têmporas de Setembro, como as do Advento, da Quaresma e de Pentecostes, consagram a Deus
+        a nova estação e preparam, pelo jejum e pela oração, os que vão receber as Ordens sagradas.
+        A Igreja pede a graça de mortificar a carne e de santificar as almas, para que os ministros
+        do altar sejam dignos do seu ministério e todo o povo cresça na virtude.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl 80:2-5</Typography>
