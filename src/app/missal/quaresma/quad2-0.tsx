@@ -8,6 +8,71 @@ export default function PageQuad20() {
     <PageWrapper>
       <H1 text="Segundo Domingo da Quaresma" />
 
+      <Typography className="comment">
+        A Estação em Roma é feita na igreja de Santa Maria in Dominica, assim chamada porque os
+        cristãos aí se reuniam outrora ao Domingo, na casa do Senhor (Dominicum). — Dizem ter sido
+        aí que S. Lourenço distribuiu os bens da Igreja aos pobres. Era uma das paróquias romanas no
+        século V.
+        {"\n\n"}
+        Como nos Domingos da Septuagesima, Sexagesima e Quinquagesima, os textos do Ofício divino
+        formam o teor das missas da 2.ª, 3.ª e 5.ª Domingos da Quaresma, de modo que os séculos
+        passados ainda trabalham e, ilustrando-nos o mistério pascal, nos preparam para a grande
+        solenidade. Os Patriarcas, antepassados de Cristo, são a figura de Cristo e de sua Igreja. O
+        Breviário fala hoje do Patriarca Jacob, modelo da mais absoluta confiança em Deus no meio de
+        todas as adversidades. Com frequência a Escritura Sagrada chama ao Senhor o Deus de Jacob ou
+        Israel, designando-o como protector; «Deus de Israel, diz o Introito, livrai-nos de todos os
+        nossos males». É, pois, ao Deus de Jacob, isto é, ao Deus que protege aqueles que o servem,
+        que a Igreja se dirige hoje. O Versículo do Introito diz «aquele que puser sua confiança em
+        Deus não se há de arrepender». A Oração manda-nos pedir a Deus «conservar-nos interior e
+        exteriormente, a fim de sermos preservados de toda adversidade». O Gradual e o Tracto
+        imploram ao Senhor «que nos livre de nossas angústias e tribulações» e «nos visite para
+        salvar-nos». Melhor não se poderia resumir a vida toda do patriarca Jacob, sempre auxiliado
+        por Deus nas angústias, e em quem, diz Santo Ambrósio, «devemos reconhecer uma coragem
+        singular e constante paciência nos trabalhos e dificuldades» (2).
+        {"\n\n"}
+        Jacob foi escolhido por Deus para ser o herdeiro de suas promessas, como outrora Isaac,
+        Abraão, Seth e Noé. Jacob, que significa «suplantador», realizou o seu nome comprando de
+        Esaú o direito de primogenitura por um prato de lentilhas, e obtendo por surpresa a bênção
+        do filho primogénito, destinada pelo pai ao filho Esaú. Isaac abençoou o filho mais moço
+        após haver-lhe tocado as mãos que Rebeca havia coberto de peles de cabrito, e disse-lhe:
+        «Prosternar-se-ão diante de ti as Nações, sê o senhor de teus irmãos». E, ao fugir Jacob
+        para evitar a vingança de Esaú, viu em sonho uma escada a elevar-se até ao céu e pela qual
+        os Anjos subiam e desciam. No cimo estava o Pai eterno, que lhe disse: «Todas as Nações
+        serão abençoadas n'Aquele que há-de nascer de ti. Serei o teu protector por toda a parte
+        onde fores e não te deixarei antes de haveres cumprido tudo o que tenho dito». Depois de 20
+        anos, voltou Jacob à sua casa e um anjo lutou a noite inteira contra ele, não conseguindo
+        vencê-lo. Pela manhã, disse-lhe o anjo: «Não serás mais chamado Jacob, porém Israel (o que
+        significa forte contra Deus), porque Deus está contigo e ninguém te poderá vencer» (1).
+        Jacob, com efeito, grangeou a confiança do irmão e reconciliaram-se.
+        {"\n\n"}
+        Tudo na história deste Patriarca é figurativo do Cristo e da Igreja no mistério pascal. «O
+        facto da bênção concedida por Isaac a Jacob, escreve Santo Agostinho, tem significação
+        simbólica, pois as peles de cabrito representam os pecados e Jacob revestido com essas peles
+        é a imagem d'Aquele que, não tendo pecados, carregou os alheios» (Matinas). Quando o
+        Pontífice calça as luvas, na missa pontifical, diz: «Jesus ofereceu-se por nós na semelhança
+        da carne do pecado». «Ele inclinou até à forma de escravo, explica S. Leão, a sua imutável
+        divindade para o resgate do género humano», e, por este motivo, o Salvador prometera em
+        termos formais e concisos que alguns de seus discípulos «não experimentariam a morte antes
+        de terem visto o Filho do homem vindo em seu reino», isto é, na glória real, pertencendo
+        espiritualmente à natureza humana assumida pelo Verbo; «glória que o Senhor quis tornar
+        visível aos seus três discípulos, porque, embora estes lhe reconhecessem a Majestade de
+        Deus, ainda ignoravam de que era capaz o corpo revestido pela divindade» (2). Sobre a
+        montanha santa, onde se transfigurou Jesus, fez-se ouvir uma voz dizendo: «Este é meu Filho
+        bem amado, no qual pus minhas complacências, escutai-o». Deus Pai abençoou o seu Filho
+        revestido com a nossa carne de pecado, como Isaac abençoara Jacob.
+        {"\n\n"}O Cristo, S. João (1, 51) aplica a si próprio a aparição da escada de Jacob para
+        mostrar que, no meio das perseguições contra as quais devia lutar, estava continuamente sob
+        a protecção de Deus e de seus Anjos. «Como Esaú, diz Santo Hipólito, cogita a morte de seu
+        irmão, o povo judaico conspira contra Jesus e contra a Igreja. Jacob viu-se obrigado a fugir
+        para longe; também o Cristo, repelido pela incredulidade dos seus, partiu para a Galileia,
+        onde a Igreja oriunda da raça dos Gentios lhe é dada como esposa.» No fim dos tempos, estes
+        dois povos se hão de reconciliar, como Esaú e Jacob. — A missa deste Domingo, combinada com
+        as leituras feitas no Breviário durante a semana, adquire sentido completo e faz-nos
+        compreender o que significa para nós o mistério pascal, que breve devemos celebrar. Jacob
+        viu o Deus da glória, os Apóstolos viram a Jesus transfigurado, a Igreja breve nos mostrará
+        o Salvador ressuscitado.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 24, 6, 3 & 22</Typography>

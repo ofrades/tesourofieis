@@ -8,6 +8,45 @@ export default function PageQuad10() {
     <PageWrapper>
       <H1 text="Primeiro Domingo da Quaresma" />
 
+      <Typography className="comment">
+        Este Domingo é o ponto de partida do ciclo quaresmal (Secr.) e, por essa razão, a assembleia
+        litúrgica realiza-se neste dia, desde o século IV, em S. João de Latrão, basílica patriarcal
+        do pontífice romano e cujo nome lembra a redenção operada por Jesus. A basílica também é
+        dedicada ao São Salvador, nome que faz pensar na redenção operada por Jesus.
+        {"\n\n"}
+        Imediatamente depois do baptismo, Jesus prepara-se para a sua vida pública por um jejum de
+        40 dias, no deserto montanhoso que se estende entre Jericó e os montes de Judá (2). Aí,
+        Satanás vem tentá-lo para saber se o filho de Maria é o Filho de Deus (Ev.). Como fizera com
+        Adão, dirige-se primeiramente aos sentidos. O Salvador tem fome e o tentador sugere-lhe
+        converter as pedras em pães. Do mesmo modo procura nestes 40 dias fazer-nos abandonar o
+        jejum e a mortificação. É a concupiscência da carne. O demónio prometera a nosso primeiro
+        pai fazê-lo semelhante a Deus; ele transporta Jesus sobre o pináculo do templo e diz-lhe que
+        se deixe levar através dos ares pelos Anjos para ser aclamado pelas multidões. Também a nós
+        tenta pelo orgulho, que é contrário ao espírito de oração e meditação da palavra de Deus. É
+        o orgulho da vida.
+        {"\n\n"}
+        Finalmente, como prometera a Adão uma ciência semelhante à de Deus, que lhe faria conhecer
+        todas as coisas, Satanás garante a Jesus dar-lhe o império sobre todas as coisas se, caindo
+        de joelhos, o adorasse (3). Da mesma forma procura o demónio apegar-nos aos bens
+        passageiros, quando é mister que, pela esmola e pelas obras de caridade, deles façamos
+        aproveitar o próximo. É a concupiscência dos olhos ou a avareza. Serviu-se do Salmo 80
+        contra Satanás. — É, pois, o gládio do espírito, a palavra de Deus (1) — esse Salmo
+        encontra-se em toda a missa de hoje, assim como no Ofício. «A verdade do Senhor cobrir-te-á
+        como um escudo», declara o Salmista. O Salmo aplica-se por excelência à Quaresma, tempo de
+        luta contra Satanás; por este motivo o versículo 11.º: «ordenou aos seus Anjos guardarem-te
+        em todos os teus caminhos», volta sempre como estribilho, durante este período, nas
+        Vésperas. Encontramos o Salmo inteiro no Tracto, o que relembra o antigo costume de cantar
+        os Salmos durante a primeira parte da missa. Alguns versículos constituem o Introito e o
+        Versículo, o Gradual, a Comunhão e o Ofertório. Neste último, na missa de hoje,
+        encontravam-se três versículos, em vez de um só, e esses três versículos seguiam a ordem da
+        tripla tentação narrada no Evangelho.
+        {"\n\n"}
+        Também a Epístola, que é certamente a mesma do tempo de São Leão, dá uma das notas
+        características da Quaresma. São Paulo serve-se de um texto de Isaías: «Em tempo favorável
+        eu te ouvi e no dia da salvação vim em teu socorro». «Eis, começa a dizer o Apóstolo: agora
+        é o tempo favorável, eis o dia de salvação» (Ep. e 1.º Noct.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 90, 15 & 16</Typography>

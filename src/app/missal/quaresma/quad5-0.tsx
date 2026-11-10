@@ -8,6 +8,27 @@ export default function PageQuad50() {
     <PageWrapper>
       <H1 text="Domingo da Paixão" />
 
+      <Typography className="comment">
+        «Não ignoramos, diz São Leão, que o mistério pascal ocupa o primeiro lugar entre todas as
+        solenidades religiosas. Nossa maneira de viver durante o ano deve, pela reforma de nossos
+        costumes, dispor-nos a celebrá-lo digna e convenientemente. Estes dias, porém, exigem mais
+        intensa devoção, pois sabemos que se aproxima o dia em que celebramos o sublimíssimo
+        mistério da misericórdia divina» (2.º Nocturno). Esse mistério é o da Paixão do Salvador,
+        cujo aniversário está perto.
+        {"\n\n"}
+        Pontífice e Medianeiro do Novo Testamento, Jesus há de em breve subir à Cruz, e o sangue que
+        derramará, ele o apresentará a seu Pai, entrando no verdadeiro Santo dos Santos, que é o Céu
+        (Ep.). «Eis que brilha, canta a Igreja, o mistério da Cruz, onde a Vida sofreu a morte e por
+        sua morte nos restituiu a vida» (Hino das Vésperas). A Eucaristia, memorial da Paixão, é
+        também o memorial da Ressurreição, e é pela Cruz que o Salvador atrai todos os homens a si.
+        {"\n\n"}A Estação é na basílica de S. Pedro, construída no lugar do Circo de Nero, onde o
+        príncipe dos Apóstolos morreu como seu Mestre, sobre a cruz. Ao recordarmos a Paixão de
+        Jesus, cujo aniversário se aproxima, lembremos que, para sentirmos os seus bemfazejos
+        efeitos, devemos, como o Mestre, saber sofrer perseguição pela justiça. E quando, membros da
+        «família de Deus», somos perseguidos com e como o Cristo, peçamos a Deus «que ele guarde os
+        nossos corpos e as nossas almas» (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 42, 1-2</Typography>

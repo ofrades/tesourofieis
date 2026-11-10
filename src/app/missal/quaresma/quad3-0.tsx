@@ -8,6 +8,41 @@ export default function PageQuad30() {
     <PageWrapper>
       <H1 text="Terceiro Domingo da Quaresma" />
 
+      <Typography className="comment">
+        A assembleia litúrgica tem hoje lugar em São Lourenço-fora-dos-muros, que é uma das cinco
+        basílicas patriarcais de Roma. Nessa igreja acham-se os corpos dos dois diáconos Lourenço e
+        Estêvão. A Oração do primeiro (10 de Agosto) nos faz pedir para extinguir-se em nós o ardor
+        dos vícios, assim como esse Santo superou as chamas de seus tormentos; a do segundo (26 de
+        Dezembro) nos incita a amar os nossos inimigos, como esse Santo, que orou por seus
+        perseguidores. Essas duas virtudes, castidade e caridade, foram especialmente praticadas
+        pelo patriarca José, cuja história a Igreja nos apresenta esta semana no Breviário. José
+        resistiu, com efeito, às más solicitações da mulher de Putifar e amou seus irmãos até
+        pagar-lhes o mal com o bem (1).
+        {"\n\n"}
+        Quando José narrou os seus sonhos, presságio de sua glória futura, aos irmãos, esses
+        conceberam ódio contra ele e, apresentando-se a ocasião, desembaraçaram-se dele, lançando-o
+        numa cisterna seca. Depois venderam-no a Israelitas que o levaram para o Egipto, onde o
+        venderam novamente a um nobre egípcio chamado Putifar. Aí é que ele resistiu energicamente
+        às solicitações da mulher de Putifar, tornando-se o modelo da pureza (2). «Hoje, diz Santo
+        Ambrósio, é a história do piedoso José que se oferece à nossa atenção. Se as suas virtudes
+        foram numerosas, ele brilhou, no entanto, de modo especial, por sua insigne castidade. É,
+        pois, justo que o santo Patriarca nos seja proposto como espelho de castidade» (Matinas).
+        José, acusado injustamente pela mulher de Putifar, foi encerrado na prisão. Dirigindo-se
+        então a Deus, pediu-lhe que o libertasse de suas cadeias. O Introito emprega termos análogos
+        aos da sua oração: «Meus olhos estão continuamente dirigidos para o Senhor, pois é ele que
+        há-de libertar os meus pés de seus laços». «Como os olhos dos servos estão fixos nas mãos de
+        seus senhores, continua o Tracto, assim eu dirijo ao Senhor meu Deus os meus olhares, até
+        que ele se compadeça de mim.» Então «o Deus omnipotente que considera os corações humildes
+        estendeu a dextra para protegê-lo» (Or.). Faraó fez José sair da prisão, assentou-o à sua
+        direita e confiou-lhe o governo de todo o seu reino. Quando, graças à sua providência, José
+        preveniu a fome que durou sete anos, Faraó o declarou «Salvador do povo» (3). Foi então que
+        os irmãos de José chegaram ao Egipto e que ele lhes disse: «Eu sou José, que vós vendestes.
+        Mas não receeis! Deus tudo encaminhou para que eu vos salvasse da morte». E foi imensa a
+        felicidade de Jacob ao rever o filho; ele permaneceu com seus filhos na terra de Gessen, que
+        lhes dera José. «A inveja dos irmãos de José, diz Santo Ambrósio, está na origem de todos os
+        factos que formam o seguimento da história sagrada.»
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 24, 15-16</Typography>

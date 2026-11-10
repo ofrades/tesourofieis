@@ -8,6 +8,30 @@ export default function PageQuad40() {
     <PageWrapper>
       <H1 text="Quarto Domingo da Quaresma" />
 
+      <Typography className="comment">
+        Nesta semana, a Igreja lê a história de Moisés no Ofício divino (1). Duas ideias a resumem.
+        Moisés retirou do cativeiro do Egipto o povo de Deus (2) e fê-lo atravessar o mar Vermelho
+        (3), alimentou-o com o maná no deserto (4); anunciou-lhe que Deus lhe enviaria «o Profeta»
+        (Ev.) que é o Messias; deu-lhe a lei do Sinai (5) e conduziu-o para a terra prometida, onde
+        correm o leite e o mel (6).
+        {"\n\n"}
+        Aí é que se erguerá um dia Jerusalém (Comm.) e seu Templo feito à imagem do Tabernáculo no
+        deserto, e onde as tribos de Israel subirão para cantar o que Deus fez por seu povo (Intr.,
+        Grad., Comm.). «Deixai partir o meu povo, a fim de que ele me honre no deserto», havia dito
+        Deus, pelo ministério de Moisés, ao Faraó. A missa de hoje mostra a realização dessas
+        figuras. O verdadeiro Moisés é o Cristo, que nos livrou do cativeiro do pecado; fez-nos
+        atravessar as águas do baptismo; alimentou-nos com a sua Eucaristia, da qual a multiplicação
+        dos pães (Ev.) é uma figura, e faz-nos entrar na verdadeira Jerusalém, isto é, na Igreja,
+        figura do céu, onde cantaremos para sempre «o cântico de Moisés e do Cordeiro» (Apocalipse),
+        para agradecer ao Senhor as suas bondades infinitas para connosco.
+        {"\n\n"}É natural, portanto, que a Estação se realize hoje em Roma em Santa Cruz de
+        Jerusalém. Santa Helena, mãe de Constantino, habitava no Monte Célio, palácio conhecido pelo
+        nome de casa sessoriana, o qual transformou, para aí depositar importantes relíquias da
+        verdadeira Cruz, num santuário a representar, em certo modo, Jerusalém em Roma (7). O
+        Introito, a Comunhão e o Tracto falam de Jerusalém, comparada por S. Paulo, na Epístola, com
+        o Monte Sinai.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Is. 66, 10 & 11</Typography>
