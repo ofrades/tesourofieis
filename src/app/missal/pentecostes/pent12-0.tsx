@@ -8,6 +8,15 @@ export default function PagePent120() {
     <PageWrapper>
       <H1 text="Décimo Segundo Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A Igreja inicia hoje a leitura das parábolas de Salomão no Ofício divino. «Estas parábolas
+        são úteis para conhecer a sabedoria e a disciplina, para compreender as palavras da
+        prudência, receber a instrução da doutrina, a justiça e a equidade» (1.ª Liç.). O Evangelho
+        do Bom Samaritano mostra-nos quem é o nosso próximo e como devemos amá-lo: o Samaritano,
+        movido de compaixão, socorreu o homem ferido, e Jesus diz-nos: «Vai e faz tu o mesmo». A
+        caridade, que nos une a Deus e aos irmãos, é o caminho da vida eterna.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 69, 2-3</Typography>

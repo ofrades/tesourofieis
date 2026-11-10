@@ -8,6 +8,18 @@ export default function PagePent100() {
     <PageWrapper>
       <H1 text="Décimo Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia deste Domingo inculca-nos a verdadeira noção da humildade, que consiste em
+        atribuir a nossa santidade à graça do Espírito Santo; os nossos actos, com efeito, não serão
+        sobrenaturais, isto é, santos, se não procederem do Espírito Santo, que Jesus enviou aos
+        Apóstolos no dia de Pentecostes e que nunca cessa de dar aos que lho pedem. Entregues,
+        portanto, a nós mesmos, não podemos levar a cabo a obra da própria santificação, visto que
+        somos incapazes e pecadores. É a Deus que devemos o não cometermos pecados, o afastarmo-nos
+        deles, o sermos perdoados e o praticarmos o bem, pois ninguém pode nem mesmo pronunciar o
+        Santo Nome de Jesus, por um acto de fé sobrenatural que afirme a sua realeza e divindade,
+        senão pelo Espírito Santo.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 54, 17, 18, 20 & 23</Typography>

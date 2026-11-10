@@ -8,6 +8,17 @@ export default function PagePent90() {
     <PageWrapper>
       <H1 text="Nono Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia deste Domingo recorda-nos o fim trágico de Jerusalém, figura do fim do mundo.
+        Jesus sempre assimilou este fim trágico às catástrofes que marcarão o fim dos tempos, quando
+        Deus vier julgar o mundo pelo fogo. Nesse momento, o divino Juiz há de operar a separação
+        dos bons e dos maus, recompensando os primeiros e afastando do reino de Deus todos os que o
+        tiverem renegado por sua incredulidade e seus pecados, como expulsou do Templo, figura da
+        Igreja terrestre e celeste, os vendedores que haviam transformado a casa de Deus em covil de
+        ladrões (Ev.). «Portanto, aquele que agora pensa estar de pé, que tome cuidado para não
+        cair», diz o Apóstolo (Ep.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 53, 6-7</Typography>

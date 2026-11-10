@@ -8,6 +8,19 @@ export default function PagePent70() {
     <PageWrapper>
       <H1 text="Sétimo Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        Dirigindo-se ao Espírito «dos sete dons», a Igreja dizia no dia de Pentecostes: «Dai aos
+        vossos fiéis que em vós confiam os sete dons sagrados». O primeiro destes dons é o temor de
+        Deus, fundamento de todos os outros; o sétimo é o dom da Sabedoria, que é uma iluminação do
+        Espírito Santo, graças à qual a nossa inteligência contempla as verdades da fé numa luz
+        magnífica e experimenta grande alegria.
+        {"\n\n"}O número sagrado de sete que marca este Domingo (7.º depois de Pentecostes) designa
+        ser o dom de Sabedoria o objecto da liturgia de hoje, o qual devemos pedir com a Igreja ao
+        Espírito Santo. Apropriadíssima é a leitura do Breviário nesta semana, que narra os últimos
+        dias de David e a história de seu filho Salomão, célebre entre todos os reis por sua
+        sabedoria.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 46, 2</Typography>

@@ -8,6 +8,16 @@ export default function PagePent110() {
     <PageWrapper>
       <H1 text="Décimo Primeiro Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A Igreja ensina, na liturgia de hoje, como Deus concede o seu divino socorro aos que lho
+        pedem com confiança. Graças à oração, escapou Ezequias de uma doença mortal e o seu povo
+        libertou-se dos inimigos; foi graças à oração sobre a cruz que Jesus ressuscitou d'entre os
+        mortos (Ep.) e ressuscita o seu povo a uma vida nova pelo baptismo, do qual a cura do
+        surdo-mudo, também devida à oração de Jesus, foi uma figura. E, como Jesus expulsou o
+        demónio do surdo-mudo pela virtude do Espírito Santo, também os sacerdotes expulsam o
+        demónio da alma dos baptizandos em nome de Cristo.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 67, 6-7 & 36 1</Typography>

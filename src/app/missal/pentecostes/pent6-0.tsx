@@ -8,6 +8,13 @@ export default function PagePent60() {
     <PageWrapper>
       <H1 text="Sexto Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        O pensamento dominante deste dia é: devemos matar em nós o pecado por uma contrição profunda
+        e pedir a Deus a força de nunca mais cometê-lo. A Eucaristia, que é o pão dos filhos de
+        Deus, fortalece-nos nessa luta. O Evangelho da multiplicação dos pães figura a Comunhão,
+        alimento das almas; a Epístola exorta-nos a morrer ao pecado e a viver para Deus.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 27, 8-9</Typography>

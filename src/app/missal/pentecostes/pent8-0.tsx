@@ -8,6 +8,20 @@ export default function PagePent80() {
     <PageWrapper>
       <H1 text="Oitavo Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        Por ocasião das festas de Pentecostes, a Igreja recebeu as efusões do Espírito Santo, cujas
+        felizes consequências nos mostra a liturgia de hoje. Este Espírito torna-nos filhos de Deus,
+        porque podemos dizer a Deus com toda a verdade: Padre nosso. Temos garantida a herança do
+        céu (Ep.). Mas, para tal, é preciso que, vivendo por Deus, vivamos para Deus (Or.),
+        deixando-nos conduzir em tudo pelo Espírito de Deus (Ep.), e assim Deus nos receberá um dia
+        nos eternos tabernáculos (Ev.).
+        {"\n\n"}
+        Esta é a verdadeira sabedoria que nos inculca a história de Salomão, cuja leitura é
+        continuada nesta semana no Breviário: aí se narra a grande obra a que o ilustre rei
+        consagrou toda a vida, o Templo do Senhor em Jerusalém, segundo a vontade de David seu pai,
+        que não pudera edificá-lo por causa das guerras incessantes de seus inimigos.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 47, 10-11</Typography>

@@ -8,6 +8,19 @@ export default function PagePent50() {
     <PageWrapper>
       <H1 text="Quinto Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia deste Domingo é consagrada ao perdão das injúrias e, como no último Domingo, para
+        este fim concorrem dois elementos: a leitura da história de David, que se continua no
+        Breviário, e a passagem de uma das Epístolas do Apóstolo São Pedro, cuja festa é celebrada
+        nesta época.
+        {"\n\n"}
+        Depois da vitória de David sobre Golias, Israel voltou triunfante às suas cidades, cantando
+        ao som dos pandeiros e triângulos: «Saul matou mil e David dez mil!» O rei Saul irritou-se e
+        a inveja mordeu-lhe o coração. Por duas vezes, ao tocar David a harpa para aplacar-lhe o
+        furor, lançou-lhe a sua lança; David, porém, poupou sempre a vida de Saul, perdoando ao
+        inimigo. A Igreja exorta-nos a perdoar as injúrias, para que Deus nos perdoe.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 26, 7 & 9</Typography>

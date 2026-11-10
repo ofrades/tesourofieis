@@ -8,6 +8,20 @@ export default function PagePent40() {
     <PageWrapper>
       <H1 text="Quarto Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A confiança em Deus no meio das lutas e sofrimentos desta vida é o pensamento dominante em
+        toda a liturgia deste dia, tirada para o Breviário da leitura da história de David e de um
+        episódio da vida de São Pedro, cuja festa se aproxima. Quando Deus rejeitou Saul por causa
+        de seu orgulho, disse a Samuel que ungisse como rei o filho mais moço de Jessé, que era
+        ainda criança; Samuel ungiu-o no meio de seus irmãos, e, desde esse dia, o Espírito de Deus
+        retirou-se de Saul e pousou sobre David.
+        {"\n\n"}
+        Os Filisteus, querendo recomeçar a guerra, reuniram o seu exército sobre o flanco da
+        montanha. Saiu do acampamento um gigante chamado Golias, com capacete de bronze, couraça de
+        escamas, botas e escudo de bronze. David, jovem e desarmado, confiando no Senhor, venceu-o.
+        Assim também nós, se confiarmos em Deus, venceremos os inimigos de nossa alma.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 26, 1 & 2</Typography>
