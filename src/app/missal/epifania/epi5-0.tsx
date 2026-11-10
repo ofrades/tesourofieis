@@ -8,6 +8,17 @@ export default function PageEpi50() {
     <PageWrapper>
       <H1 text="Quinto Domingo depois da Epifania" />
 
+      <Typography className="comment">
+        Nos Evangelhos dos Domingos precedentes, a divindade de Jesus manifesta-se por seus
+        milagres; hoje, afirma-se pela sua doutrina, que «encheu de admiração» os judeus de Nazaré
+        (Comm.). Jesus é nosso rei (Intr., All.), pois Ele é de Nazaré (Comm.). Jesus é rei (Intr.,
+        All.) e acolhe em seu reino não só os Judeus mas também os Gentios. Chamados por pura
+        misericórdia a fazer parte do corpo místico de Cristo, é preciso que, por nossa vez, usemos
+        de misericórdia para com o próximo (Ep.). Para isto é preciso exercer-nos na paciência,
+        pois, no reino de Deus, aqui na terra, há bons e maus e, somente quando Jesus vier para
+        julgar os homens é que os separará para sempre (Ev.). (Cf. Exposição, p. 313).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 96, 7-8</Typography>

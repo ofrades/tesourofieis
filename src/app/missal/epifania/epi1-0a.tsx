@@ -8,6 +8,30 @@ export default function PageEpi10A() {
     <PageWrapper>
       <H1 text="Sagrada Família" />
 
+      <Typography className="comment">
+        «Não convinha, diz Leão XIII, celebrar o nascimento real do Filho do Pai soberano, a casa de
+        David e os nomes gloriosos dessa linhagem antiga. É mais doce para nós lembrar a pequena
+        casa de Nazaré e a humilde existência que aí se leva; é mais doce celebrar a vida obscura de
+        Jesus. Aí o Menino divino aprende o humilde ofício de José e, na sombra, ele cresce em
+        idade, mostrando-se feliz de partilhar os trabalhos de carpinteiro. O suor, dizia ele, corra
+        sobre os meus membros antes que os inunde a efusão de meu sangue: esta pena do trabalho
+        serve também para expiação do género humano. Perto do divino Menino está sua terna Mãe;
+        junto do Esposo está a Esposa dedicada; ela é feliz de poder aliviar-lhe as penas e fadigas
+        com cuidados afectuosos. “Ó vós que não fostes isentos de trabalho e de cuidados e
+        conhecestes o infortúnio, assisti aos desgraçados oprimidos pela indigência e lutando contra
+        as dificuldades da vida” (Hino de Matinas).»
+        {"\n\n"}
+        Na humilde casa de Nazaré, Jesus, Maria e José consagraram, pelo exercício das virtudes
+        domésticas, a vida de família (Or.). Aí praticaram, diz a Epístola e o Evangelho, a
+        caridade, o auxílio mútuo, o respeito e a obediência (Ev.). Encontraram, no recolhimento e
+        oração em comum, a paz e a alegria. Possa a grande família cristã, possa cada lar cristão
+        praticar na terra as virtudes praticadas pela Sagrada Família, a fim de merecer viver em sua
+        santa companhia no céu (Or.). — Bento XV, querendo assegurar às almas o benefício da
+        meditação e imitação das virtudes da Sagrada Família, estendeu a festa à Igreja universal e
+        fixou-a para o Domingo na Oitava da Epifania, ou o Sábado que o precede, quando o dia da
+        Oitava cai em Domingo.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Pr. 23, 24 & 25</Typography>

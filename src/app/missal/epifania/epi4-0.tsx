@@ -8,6 +8,23 @@ export default function PageEpi40() {
     <PageWrapper>
       <H1 text="Quarto Domingo depois da Epifania" />
 
+      <Typography className="comment">
+        O santo Evangelho é tirado do mesmo capítulo de São Mateus, do Domingo passado. É a narração
+        de um novo milagre. Jesus manifesta a sua divindade, imperando a criaturas poderosas e
+        indomáveis, como o mar encapelado e os ventos desencadeados. O evangelista realça a
+        importância do prodígio, opondo «à grande agitação das vagas» «a grande calma sobrevinda»
+        (Ev.). Mas é na Igreja que se exerce a realeza divina de Jesus; por isso os Padres viram nos
+        ventos tempestuosos um símbolo dos demónios, cujo orgulho suscita os santos, e no mar
+        tumultuoso as paixões e a maldade dos homens, causa das transgressões dos mandamentos e das
+        discórdias entre irmãos. Na Igreja, ao contrário, é a grande lei da caridade que reina,
+        pois, se os três primeiros preceitos do Decálogo nos impõem o amor de Deus, os outros sete
+        nos obrigam, como consequência lógica, ao amor do próximo (Ep.), porque Deus está nela e,
+        pela graça, somos, de certo modo, para o Cristo, uma humanidade de acréscimo. É este todo o
+        mistério da Epifania. Jesus se manifesta como Filho de Deus, e os que, como tal, o aceitam
+        por Chefe e Cabeça tornam-se seu corpo místico e são todos um no Cristo. Assim, devem todos
+        se amar.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 96, 7-8</Typography>

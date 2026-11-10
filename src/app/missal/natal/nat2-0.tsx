@@ -8,6 +8,25 @@ export default function PageNat20() {
     <PageWrapper>
       <H1 text="Santíssimo Nome de Jesus" />
 
+      <Typography className="comment">
+        Depois de nos ter manifestado a Encarnação do Filho de Deus, a Igreja nos revela todas as
+        grandezas do seu nome.
+        {"\n\n"}
+        Por ocasião do rito da Circuncisão é que os Judeus impunham o nome aos filhos; por esse
+        motivo a Igreja toma hoje o mesmo Evangelho da festa da Circuncisão, insistindo na segunda
+        parte, na qual diz que «o Menino recebeu o nome de Jesus» (Ev.), «como Deus havia ordenado
+        que o chamassem» (Or.) (1). Esse nome significa Salvador, pois «nenhum outro nome foi dado
+        aos homens pelo qual devamos ser salvos» (Ep.).
+        {"\n\n"}
+        As primeiras origens desta festa remontam ao século XVI, em que é celebrada na Ordem de São
+        Francisco. Em 1721 a Igreja, governada por Inocêncio XIII, estendeu a solenidade ao mundo
+        inteiro. Se quisermos «alegrar-nos, vendo os nossos nomes escritos com o de Jesus no céu»
+        (Postc.), tenhamo-lo muitas vezes nos lábios durante esta vida. São concedidos vinte dias de
+        indulgência aos que inclinam a cabeça com respeito ao pronunciarem ou ouvirem pronunciar os
+        nomes de Jesus e Maria, e Pio X concedeu 300 dias aos que os invocarem piedosamente, com os
+        lábios ou pelo menos com o coração.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Fl. 2, 10-11</Typography>

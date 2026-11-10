@@ -8,6 +8,30 @@ export default function PageEpi60() {
     <PageWrapper>
       <H1 text="Sexto Domingo depois da Epifania" />
 
+      <Typography className="comment">
+        «Deus, diz São Paulo, no Ofício da noite, nos falou por seu Filho, ao qual estabeleceu
+        herdeiro de todas as coisas e, sendo Ele o esplendor de sua glória e a impressão de sua
+        substância, e sustentando todas as coisas pelo poder de sua palavra, depois de ter operado a
+        purificação dos pecados, está assentado à direita da Majestade, no mais alto dos céus. A que
+        Anjo Deus jamais disse: “Vós sois meu Filho, eu vos gerei hoje”? E quando novamente
+        introduziu seu Primogénito no mundo, Ele disse: “Que todos os Anjos de Deus o adorem”» (1.º
+        Noct., Intr.). O Apóstolo, exclama Santo Atanásio, diz que Jesus é superior aos Anjos, a fim
+        de indicar a diferença existente entre a natureza do Filho e das criaturas (2.º Noct.).
+        {"\n\n"}A Missa deste dia realça igualmente a divindade de Jesus. Ele é Deus porque revela
+        coisas ocultas em Deus e que o mundo ignora (Ev.). A sua palavra, por ele comparada à
+        pequena semente lançada no campo do mundo e a um pouco de fermento deitado na massa, é
+        divina, pois acalma as nossas paixões e produz em nosso coração as maravilhas de fé,
+        esperança e caridade de que fala a Epístola. A Igreja, portanto, suscitada pela palavra de
+        Cristo, é admiravelmente simbolizada pelas três medidas de farinha (1) que a força de
+        expansão do fermento fez «levedar completamente» (Ev.) e pela mostarda, a maior das
+        hortaliças, onde os pássaros do céu gostam de abrigar-se.
+        {"\n\n"}
+        Meditemos sempre na doutrina de Jesus (Or.), para que, como o fermento, ela penetre e
+        transforme as nossas almas e, como a mostarda, irradie na alma do próximo os seus frutos de
+        santidade, e assim se estenderá sempre mais o reino de Deus, do qual Jesus é o rei e ao qual
+        nos chamou.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 96, 7-8</Typography>

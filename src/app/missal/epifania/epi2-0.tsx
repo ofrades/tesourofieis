@@ -8,6 +8,30 @@ export default function PageEpi20() {
     <PageWrapper>
       <H1 text="Segundo Domingo depois da Epifania" />
 
+      <Typography className="comment">
+        Fiel à promessa feita a Abraão e aos seus descendentes, Deus enviou um Filho para salvar o
+        seu povo. Em sua misericórdia, quis também resgatar todos os pagãos. Jesus é o Rei que toda
+        a terra deve adorar e aclamar como Redentor (Intr. e Grad.). Morrendo sobre a Cruz, Jesus
+        tornou-se nosso Rei e, pela Eucaristia, memorial do Calvário, aplica às nossas almas os
+        méritos de sua redenção e exerce, portanto, sua realeza para connosco. É pelo milagre das
+        núpcias de Caná, figura da Eucaristia, que Jesus manifesta pela primeira vez, de modo
+        oficial, aos Apóstolos, a sua divindade, isto é, o seu carácter divino e real, e que «os
+        discípulos creram nele». A conversão de água em vinho é símbolo da transubstanciação,
+        denominada por Santo Tomás o maior de todos os milagres, e em virtude da qual o vinho
+        eucarístico se torna o sangue da aliança e da paz (Or.) que Deus estabeleceu com a sua
+        Igreja (1). Como o Rei divino quer esposar as nossas almas e, conforme Bossuet, é pela
+        Eucaristia que se consumará esse matrimónio místico (2), as núpcias de Caná figuram a união
+        do Verbo com a Igreja sua Esposa.
+        {"\n\n"}
+        «Tendo sido convidado às núpcias celebradas em Caná, diz Santo Agostinho, o Salvador aceitou
+        o convite para confirmar a castidade conjugal, por ser Ele o autor do Sacramento do
+        Matrimónio, e para nos revelar o mistério significado por essas núpcias: a união de Cristo
+        com a sua Igreja — pois mesmo os que votaram sua virgindade a Deus não são inuptos, porque
+        eles tomam parte com toda a Igreja nessas núpcias de que o Esposo é o Cristo; e na
+        circunstância actual, a pessoa de Nosso Senhor era figurada pelo esposo que conservou até ao
+        presente o bom vinho, isto é, o seu Evangelho» (3.º Noct.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 65, 4</Typography>

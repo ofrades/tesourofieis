@@ -8,7 +8,33 @@ export default function PageNat10() {
     <PageWrapper>
       <H1 text="Domingo dentro do Oitavário do Natal" />
 
+      <Typography className="comment">
+        A Missa nos diz que «o Verbo descido do céu durante a noite» do Natal (Intr.) é «o Filho de
+        Deus vindo para fazer-nos entrar em participação de sua herança, a título de filhos
+        adoptivos» (Ep.). Antes dele era efectivamente o homem como «o herdeiro que na sua
+        minoridade em nada difere do servo» (Ep.). Mas, agora que a nova lei o emancipou da tutela
+        da antiga, ele não é mais servo, porém filho (Ep.). Revelando-nos essa filiação sobrenatural
+        do Cristo, que, ainda mais especialmente no Tempo do Natal, toca as nossas almas, a liturgia
+        faz a Divindade resplandecer aos nossos olhos sob o aspecto da Paternidade. O culto dos
+        filhos de Deus resume-se, portanto, nesta palavra, dita com Jesus, por meio dos lábios e de
+        uma vida santa: «Pai» (Ep.).
+        {"\n\n"}O Evangelho também nos descobre qual será, no futuro, o grandioso papel desse
+        menino, cuja manifestação começa hoje no Templo, «É o Rei» (Grad.), «cujo reino» (Alel.)
+        «atingirá até ao íntimo dos corações» (Ev.). Será para todos pedra de toque, pedra de
+        tropeço para os que o perseguirem (Comm.), pedra angular «para um grande número em Israel»
+        (Ev.). O Introito alude à noite em que o Anjo de Deus feriu os primogénitos dos Egípcios
+        (1), preparando assim a libertação de Israel, imagem da noite sagrada em que a
+        Bem-aventurada Virgem Maria deu à luz o «Salvador» (2) que veio libertar a humanidade.
+      </Typography>
+
       <H3 text="Intróito" />
+
+      <Typography className="aside">
+        Estes dois versículos da Sabedoria aludem às pragas do Egipto. Executa-se a ordem divina e,
+        pela morte dos primogénitos dos Egípcios, o povo de Deus é libertado durante a noite. É
+        também durante a noite que Jesus, o Verbo, a palavra de Deus, nasce neste mundo para
+        libertar-nos.
+      </Typography>
 
       <Typography className="em">Sb. 18, 14-15</Typography>
 
@@ -102,6 +128,17 @@ export default function PageNat10() {
       </Language>
 
       <H3 text="Evangelho" />
+
+      <Typography className="aside">
+        Este Evangelho é a continuação do da festa da Apresentação (2 de Fevereiro). O velho Simeão
+        e a profetisa Ana (de idade de mais de 80 anos, que passava os dias no Templo) dão
+        testemunho de Jesus. Ele é o Messias e sua vinda implica necessariamente uma separação ou um
+        julgamento (ver a Exposição dogmática do Tempo do Advento, p. 195). Os pensamentos secretos
+        de cada homem em relação ao Cristo serão revelados no último dia, pois Ele escruta os rins e
+        os corações (8.ª Liç.). Os que em seu orgulho e covardia tiverem rejeitado o Filho de Deus
+        serão por sua vez rejeitados por Ele, e os que o tiverem acolhido participarão de sua
+        glória, pois é para salvar o seu povo que Jesus veio.
+      </Typography>
 
       <Typography className="em">Lc. 2, 33-40</Typography>
 

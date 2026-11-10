@@ -8,6 +8,39 @@ export default function PageEpi30() {
     <PageWrapper>
       <H1 text="Terceiro Domingo depois da Epifania" />
 
+      <Typography className="comment">
+        O 1.º, 3.º, 4.º e 6.º Domingo após a Epifania têm o mesmo Introito, Gradual, Ofertório e
+        Comunhão, os quais nos manifestam que Jesus é Deus, opera prodígios e deve ser por nós
+        adorado. A Igreja continua com efeito neste Tempo após a Epifania a manifestar a divindade
+        de Cristo e, por conseguinte, sua realeza sobre todos os homens. Ele é o rei dos Judeus e o
+        rei dos Gentios e, por isso, a Igreja escolhe em São Mateus a passagem do Evangelho que
+        narra o duplo milagre operado por Jesus, para provar a uns e outros que Ele é realmente o
+        Filho de Deus. O primeiro milagre em favor de um leproso, o segundo em favor do centurião. O
+        leproso pertence ao povo de Deus e deve submeter-se à lei de Moisés. O centurião, pelo
+        contrário, não é da raça de Israel, como declara o Salvador. Uma palavra de Jesus purifica o
+        leproso, cuja cura será constatada oficialmente pelos sacerdotes, «para lhes servir de
+        testemunho» da divindade de Cristo (Ev.).
+        {"\n\n"}
+        Quanto ao centurião (1), atesta por suas palavras de humildade e confiança que o Cristo é
+        Deus; demonstra-o ainda pela argumentação alusiva ao seu cargo, na qual declara que basta
+        uma ordem de Jesus e a doença cederá. A sua fé obtém o grande milagre implorado. Todas as
+        nações tomarão parte no banquete celeste, onde a divindade será o alimento das suas almas.
+        Como na sala do festim tudo é luz e calor, os suplícios do inferno, castigo dos negadores da
+        divindade de Cristo, são mui bem apropriadamente designados pelo frio e escuridão da noite,
+        pelas «trevas exteriores», enorme contraste com a viva claridade da sala das núpcias.
+        {"\n\n"}
+        Em seguida ao sermão da montanha «que enche de pasmo a multidão» (1), São Mateus coloca os
+        dois milagres citados no Evangelho. Eles confirmam ser verdadeiramente «da boca de um Deus
+        que sai essa doutrina, a qual havia causado já admiração» na sinagoga de Nazaré (Comm.).
+        Façamos actos de fé na divindade de Jesus e, para entrarmos em seu reino, acumulemos, pela
+        caridade, sobre as cabeças dos que nos odeiam carvões ardentes (Ep.), isto é, os sentimentos
+        de confusão oriundos da nossa grandeza de alma e que não os deixarão em repouso até haverem
+        feito reparação pelas suas culpas, e assim realizaremos em nós o mistério da Epifania, que é
+        o mistério da realeza de Jesus sobre todos os homens. Unidos por sua fé ao Cristo, eles
+        devem todos amar-se como irmãos. «A graça da fé em Jesus opera a caridade, diz Santo
+        Agostinho» (2.º Nocturno).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 96, 7-8</Typography>
