@@ -8,7 +8,59 @@ export default function PageAdv40() {
     <PageWrapper>
       <H1 text="Quarto Domingo do Advento" />
 
+      <Typography className="comment">
+        Como toda a liturgia desta época, a Missa do Quarto Domingo do Advento tem por fim
+        preparar-nos à dupla vinda do Cristo: vinda de misericórdia no Natal e de justiça no fim do
+        mundo. O Introito, Evangelho, Ofertório e Comunhão fazem alusão à primeira; a Epístola
+        refere-se à segunda; a Coleta, o Gradual e o Aleluia podem aplicar-se a ambas.
+        {"\n\n"}
+        As três grandes figuras que preocupam a Igreja durante o Advento acham-se nesta Missa:
+        Isaías, S. João Baptista e a Virgem Maria. O profeta Isaías anuncia a vinda de João
+        Baptista, que é «a voz que clama no deserto: preparai o caminho do Senhor, tornai rectos
+        todos os atalhos, pois toda a carne verá a salvação de Deus». E a palavra do Senhor se fez
+        ouvir a João no deserto, vindo ele em todo o país que fica nos arredores do Jordão a pregar
+        o baptismo de penitência (Ev.). «João, explica São Gregório, dizia aos que afluíam em
+        multidão para serem baptizados: «Raça de víboras, quem vos ensinou a fugir da cólera do
+        Senhor que vai chegar?» Ora, a cólera a chegar é o castigo final de que não poderá fugir o
+        pecador se agora não recorrer aos gemidos da penitência. O amigo do Esposo nos adverte a
+        fazer não só frutos de penitência, mas dignos frutos de penitência. Essas palavras são um
+        apelo à consciência de cada um, convidando a conquistar, pela penitência, um tesouro de boas
+        obras tanto maior quanto maiores os prejuízos que a si mesmo causou pelo pecado (3.º Noct.).
+        {"\n\n"}
+        «Deus, diz também S. Leão, nos ensina pelo profeta Isaías: Conduzirei os cegos a um caminho
+        que eles não conhecem, converterei em sua presença as trevas em luz e não os abandonarei. O
+        Apóstolo S. João nos explica de que modo este mistério se realiza, quando diz: Sabemos que o
+        Filho de Deus veio e nos deu a inteligência para conhecermos o verdadeiro Deus e o vermos em
+        seu verdadeiro Filho» (2.º Noct.). Por causa do grande amor que Deus nos testemunhou,
+        continua a liturgia, enviou à terra seu Filho Único, nascido da Virgem Maria. Esta Virgem
+        bendita é que nos deu Jesus; pelo que, na Comunhão, a Igreja nos lembra a profecia de
+        Isaías: «Eis que uma Virgem conceberá e dará à luz o Emanuel», e no Ofertório une numa só
+        saudação as palavras dirigidas pelo Arcanjo e por Santa Isabel à Maria, que igualmente
+        encontramos nos Evangelhos de Quarta e Sexta-feira precedentes. «Gabriel, que significa
+        força de Deus, é enviado a Maria, escreve S. Gregório, porque vinha anunciar o Messias, o
+        qual quis aparecer na humilhação e aniquilamento para domar todas as potências do ar. Era
+        preciso, pois, ser Gabriel, a força de Deus, quem anunciasse Aquele que vinha como o Senhor
+        das virtudes, o Todo-Poderoso, o Invencível nos combates, para esmagar as potências do ar»
+        (Serm. 35).
+        {"\n\n"}A oração alude a essa «grande força» do Senhor manifestada na primeira vinda, pois é
+        revestido de sua fraca e mortal humanidade que Jesus vence o demónio; ela nos fala também da
+        manifestação de seu «grande poder», que terá lugar na segunda vinda, quando, como Juiz
+        supremo, vier no esplendor da sua divina majestade retribuir a cada um segundo suas obras
+        (Ep.). Considerando que em ambas as vindas Jesus, nosso libertador, está próximo,
+        digamos-lhe com a Igreja: «Vinde, Senhor, não tardeis mais!»
+      </Typography>
+
       <H3 text="Intróito" />
+
+      <Typography className="aside">
+        Isaías anuncia o livramento de Israel pelo qual suspira. Por metáforas tiradas da natureza,
+        ele o compara à semente preciosa confiada à terra e que o orvalho e a chuva devem fecundar.
+        Essa terra cumulada de bênçãos divinas é Maria, e o fruto que germina nesse solo virgem é
+        Jesus. — O Versículo é um Salmo messiânico em que David amplifica a metáfora empregada por
+        Isaías. Os céus cantam a glória do Senhor, pois breve o sol divino, isto é, o Cristo, vai
+        como um gigante percorrer sua carreira, e nada se subtrairá à sua luz e calor (Sl. 18, 7; 3,
+        5 e 6).
+      </Typography>
 
       <Typography className="em">Is. 45, 8</Typography>
 
@@ -44,6 +96,16 @@ export default function PageAdv40() {
       </Language>
 
       <H3 text="Epístola" />
+
+      <Typography className="aside">
+        S. Paulo repreende aos cristãos a sua parcialidade a respeito dos pregadores que lhes
+        anunciam o Evangelho. Não são eles os dispensadores dos mistérios de Cristo? E que se exige
+        do administrador senão que seja fiel em distribuir a cada um o que lhe é necessário? Ora, o
+        julgamento sobre a fidelidade dos ministros de Cristo não pertence a tribunal nenhum; só o
+        soberano Juiz conhece os mais íntimos pensamentos dos homens e a Ele compete julgar-nos no
+        último dia. Não julguemos desfavoravelmente o próximo, se não queremos que o julgamento de
+        Deus nos seja desfavorável.
+      </Typography>
 
       <Typography className="em">1 Cor. 4, 1–5</Typography>
 
@@ -102,6 +164,12 @@ export default function PageAdv40() {
 
       <H3 text="Evangelho" />
 
+      <Typography className="aside">
+        O acontecimento capital da história do mundo vai ter lugar. Segundo a profecia de Isaías, S.
+        João Baptista vai apresentar ao mundo o Messias; importa determinar precisamente o momento
+        histórico em que isto aconteceu.
+      </Typography>
+
       <Typography className="em">Lc. 3, 1–6</Typography>
 
       <Language>
@@ -137,6 +205,11 @@ export default function PageAdv40() {
       </Language>
 
       <H3 text="Ofertório" />
+
+      <Typography className="aside">
+        Com o Anjo Gabriel e Santa Isabel saudemos a Virgem, esse vivo tabernáculo de Jesus por nós
+        esperado.
+      </Typography>
 
       <Typography className="em">Lc. 1, 28</Typography>
 

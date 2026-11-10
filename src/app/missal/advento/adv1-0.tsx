@@ -8,7 +8,35 @@ export default function PageAdv10() {
     <PageWrapper>
       <H1 text="Primeiro Domingo do Advento" />
 
+      <Typography className="comment">
+        No Natal, ao ser celebrado o aniversário de seu nascimento, Jesus nascerá em nossas almas e,
+        a pedido da Igreja sua Esposa, à qual Ele nada recusa, conceder-nos-á graças idênticas às
+        concedidas aos pastores e reis magos. O Cristo voltará no fim dos tempos para «condenar os
+        culpados ao fogo e, amorosamente, convidar os bons para o céu» (Hom. de Mat.). Toda a missa
+        deste dia nos prepara para essa vinda (adventus) de misericórdia e justiça.
+        {"\n\n"}
+        Algumas partes se relacionam indiferentemente com ambas (Intr., Col., Grad., All.); outras
+        fazem alusão ao nascimento de nosso divino Redentor na humildade (Comm., Postcomm.); enfim,
+        outras falam da sua vinda como Rei em todo o brilho do seu poder e majestade (Ep. e Ev.). O
+        acolhimento que fazemos a Jesus quando vem resgatar-nos será o que Ele nos fará quando vier
+        julgar-nos. Preparemo-nos, pois, para a festa do Natal por santas aspirações e reforma de
+        nossa vida, a fim de estarmos prontos para a audiência suprema da qual dependerá a sorte de
+        nossa alma por toda a eternidade.
+        {"\n\n"}
+        Tenhamos confiança, pois «os que esperam Jesus não serão confundidos» (Intr., Grad., Off.).
+        — É na Basílica de Santa Maria Maior que o povo estacionava outrora neste 1.º Domingo do
+        Advento para assistir à Missa solene, celebrada pelo Papa, auxiliado pelo seu clero.
+        Escolhia-se essa igreja por ser Maria quem nos deu Jesus e por se conservarem aí as
+        relíquias do presépio no qual a bendita Mãe colocou o seu divino Filho.
+      </Typography>
+
       <H3 text="Intróito" />
+
+      <Typography className="aside">
+        Jesus vem à terra para nos ensinar os caminhos que nos levam a Deus e que as trevas do
+        pecado nos impediam de ver (2.º Noct. do 1.º Dom.). Esperemos, pois, esse divino Guia e
+        seremos salvos.
+      </Typography>
 
       <Typography className="em">Sl. 24, 1–3</Typography>
 
@@ -31,6 +59,11 @@ export default function PageAdv10() {
 
       <H3 text="Oração" />
 
+      <Typography className="aside">
+        O Redentor mostra o seu poder, arrancando-nos ao príncipe das trevas e tornando-nos fortes
+        contra os seus ataques.
+      </Typography>
+
       <Language>
         <Typography className="latin">
           Excita, quǽsumus, Dómine, poténtiam tuam, et veni: ut ab imminéntibus peccatórum nostrórum
@@ -48,6 +81,14 @@ export default function PageAdv10() {
       </Language>
 
       <H3 text="Epístola" />
+
+      <Typography className="aside">
+        «Jesus vem das alturas celestes», diz S. Ambrósio. «A alma entorpecida desperta enfim e não
+        permanece mais deitada por terra: um astro novo (o sol divino) já resplandece para fazer
+        conhecer tudo o que prejudica o nosso bem» (Hino). «Convém, acrescenta S. Leão, que todo o
+        homem se prepare à vinda do Salvador, para que não seja encontrado entregue à gula ou
+        embaraçado nos negócios do século».
+      </Typography>
 
       <Typography className="em">Rm. 13, 11–14</Typography>
 
@@ -97,6 +138,15 @@ export default function PageAdv10() {
 
       <H3 text="Evangelho" />
 
+      <Typography className="aside">
+        «Vossa redenção está próxima», acrescenta o Evangelho; «o reino de Deus está perto». O
+        divino Juiz logo virá, pois a morte nos espreita e, diante de Deus, mil anos são como um
+        dia. Nessa segunda vinda, o Cristo retribuirá a cada um segundo as suas obras. A raça
+        judaica se perpetuará até ao fim do mundo, para disto ser testemunha e se converter.
+        Acabarão então os reinos terrestres e começará o celeste, que será eterno. Oxalá façamos nós
+        parte dele!
+      </Typography>
+
       <Typography className="em">Lc. 21, 25–33</Typography>
 
       <Language>
@@ -136,6 +186,11 @@ export default function PageAdv10() {
 
       <H3 text="Ofertório" />
 
+      <Typography className="aside">
+        «Levantai a cabeça, diz o Evangelho, porque está próxima a vossa redenção». O Salmista diz o
+        mesmo.
+      </Typography>
+
       <Typography className="em">Sl. 24, 1–3</Typography>
 
       <Language>
@@ -152,6 +207,8 @@ export default function PageAdv10() {
 
       <H3 text="Secreta" />
 
+      <Typography className="aside">O Advento é um tempo de purificação.</Typography>
+
       <Language>
         <Typography className="latin">
           Hæc sacra nos, Dómine, poténti virtúte mundátos ad suum fáciant purióres veníre
@@ -165,6 +222,11 @@ export default function PageAdv10() {
       </Language>
 
       <H3 text="Comúnio" />
+
+      <Typography className="aside">
+        Este Salmo é messiânico. A terra vai nos dar o seu fruto, isto é, Maria vai nos dar o seu
+        Filho Jesus.
+      </Typography>
 
       <Typography className="em">Sl. 84, 13</Typography>
 

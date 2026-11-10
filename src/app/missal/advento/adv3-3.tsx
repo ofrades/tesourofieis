@@ -8,6 +8,29 @@ export default function PageAdv33() {
     <PageWrapper>
       <H1 text="Quarta-feira das Têmporas do Inverno" />
 
+      <Typography className="comment">
+        As quatro estações do ano são inauguradas por Tempos litúrgicos chamados, por esse motivo,
+        Quatro Têmporas, cuja importância era muito grande na primitiva Igreja, e constam de três
+        dias de jejum — a Quarta, a Sexta e o Sábado — a fim de consagrar a Deus os diversos
+        períodos da cultura e preparar para as Ordenações pela penitência. O Evangelho é o da
+        Anunciação; a primeira palavra «Missus» serve para designar, entre os cristãos, a Missa
+        desse dia, à qual os viajantes têm especial devoção de assistir. Lembra a missão de Gabriel
+        junto a Maria para lhe anunciar que ela seria a Mãe de Deus. «Não era a boca de um homem,
+        porém a de um Anjo que devia expor o mistério de tal mensagem. Hoje, pela vez primeira,
+        ouve-se: O Espírito Santo descerá sobre vós. Ouve-se e acredita-se. Eis aqui, diz Maria, a
+        escrava do Senhor, faça-se em mim segundo a vossa palavra» (3.ª Liç.).
+        {"\n\n"}
+        Há sete séculos já Isaías anunciara esta virginal maternidade (Ep. e Comm.). — Há, na
+        liturgia, antiquíssimas relações entre a Anunciação e o Advento; em numerosas igrejas
+        celebra-se essa festa a 18 de Dezembro, em vez de 25 de Março, que frequentemente cai na
+        Quaresma. O primeiro dos mistérios gozosos da Virgem convém, aliás, ao espírito de alegria
+        que caracteriza especialmente a segunda metade do Advento, em que esperamos «o Senhor que
+        está perto» (2.º Grad.) e que, após a humildade de sua primeira vinda para nos salvar (Or.),
+        voltará «como rei cheio de glória» (1.º Grad.) para vingar-se de seus inimigos e livrar-nos
+        deles para sempre (Off.). A Estação tem lugar em Santa Maria Maior, onde se conservam as
+        relíquias do presépio.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Is. 45, 8</Typography>

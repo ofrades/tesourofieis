@@ -8,6 +8,17 @@ export default function PageAdv35() {
     <PageWrapper>
       <H1 text="Sexta-feira das Têmporas do Inverno" />
 
+      <Typography className="comment">
+        A missa de hoje resume perfeitamente todo o espírito do Advento, que é como o primeiro acto
+        do drama grandioso da Encarnação e que se poderia intitular: A espera do Cristo, e
+        representá-lo por um tríptico (ver a estampa, p. 194). À esquerda, os Profetas, sobretudo
+        Isaías, escrutando o horizonte e anunciando-nos a vinda do Cristo (Ep.), sol de justiça; à
+        direita, S. João, o Precursor, ainda no seio materno, saudando a Jesus (Ev.) e, amigo do
+        Esposo, apresentando-o como o Messias à Esposa, a Igreja; no centro, a Santíssima Virgem no
+        seu primeiro e segundo mistério glorioso — a Anunciação e a Visitação — descritos pelo
+        Evangelho de hoje e de Quarta-feira.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 118, 151–152</Typography>
@@ -29,6 +40,10 @@ export default function PageAdv35() {
       </Language>
 
       <H3 text="Oração" />
+
+      <Typography className="aside">
+        Jesus desce entre nós para se fazer o antagonista do demónio e nosso Libertador.
+      </Typography>
 
       <Language>
         <Typography className="latin">

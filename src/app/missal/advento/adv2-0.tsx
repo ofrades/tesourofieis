@@ -8,7 +8,32 @@ export default function PageAdv20() {
     <PageWrapper>
       <H1 text="Segundo Domingo do Advento" />
 
+      <Typography className="comment">
+        Toda a liturgia de hoje é repleta do pensamento de Isaías (palavra que significa: Jeová
+        salva), pois ele é, por excelência, o profeta que anuncia a vinda do reino de Cristo
+        Redentor. Sete séculos antes, ele predisse que «uma Virgem conceberia e daria à luz o
+        Emanuel» (2), que Deus enviaria «seu anjo, isto é, João Baptista, a fim de preparar o
+        caminho diante dele» (Ev.), e que o Messias viria revestido do poder do próprio Deus (3)
+        para livrar todos os povos da tirania de Satanás.
+        {"\n\n"}
+        «O boi, declara Isaías, falando dos Gentios, conhece o seu dono, e o jumento o estábulo do
+        seu senhor; Israel não me conheceu e não me compreendeu o meu povo» (4). «A estirpe de Jessé
+        (5), continua ainda, elevar-se-á para reinar sobre as nações» (Ep.), e «os surdos e cegos
+        que estão nas trevas (isto é, os pagãos) ouvirão as palavras do livro e verão» (Ev.). Então
+        a verdadeira Jerusalém, que é a Igreja, «estremecerá de júbilo» (6) (Comm.), pois a ela
+        afluirão os povos santificados pelo Cristo (Grad., All.). O Messias, explica Isaías,
+        «estabelecerá a salvação em Sião e a glória em Jerusalém» (7); «Sião será forte, pois o
+        Salvador será o seu muro e ante-muro», isto é, seu poder e protector (8).
+        {"\n\n"}
+        Faz-se em Roma a Estação na igreja da Santa Cruz de Jerusalém, edificada por Santa Helena
+        para receber as relíquias da Santa Cruz.
+      </Typography>
+
       <H3 text="Intróito" />
+
+      <Typography className="aside">
+        Jesus será o libertador e pastor dos Judeus fiéis e dos Gentios.
+      </Typography>
 
       <Typography className="em">Is. 30, 30</Typography>
 
@@ -41,6 +66,14 @@ export default function PageAdv20() {
       </Language>
 
       <H3 text="Epístola" />
+
+      <Typography className="aside">
+        Isaías havia predito «uma vergôntea sairá da raiz de Jessé e de sua raiz elevar-se-á uma
+        flor» (1.ª Lição). «Esta vergôntea, explica S. Jerónimo, é a Santíssima Virgem Maria, e a
+        flor é o Senhor, nosso Salvador» (5.ª Lição). Na Epístola, S. Paulo fala desta vergôntea de
+        Jessé, que é a esperança dos Judeus fiéis e de todas as Nações. Convida a todos os que são
+        chamados à mesma glória a serem unidos de coração a Jesus.
+      </Typography>
 
       <Typography className="em">Rm. 15, 4—13</Typography>
 
@@ -82,6 +115,11 @@ export default function PageAdv20() {
 
       <H3 text="Gradual" />
 
+      <Typography className="aside">
+        As Nações santificadas pelo Cristo entram na Igreja. Os Gentios entrarão no céu com o povo
+        de Deus.
+      </Typography>
+
       <Typography className="em">Sl. 49, 2-3 & 5</Typography>
 
       <Language>
@@ -106,6 +144,17 @@ export default function PageAdv20() {
       </Language>
 
       <H3 text="Evangelho" />
+
+      <Typography className="aside">
+        Isaías anunciou que se reconheceria o Messias por seus milagres. Também quando João
+        Baptista, enviado por Deus, segundo a predição do mesmo profeta, «a fim de preparar o
+        caminho do Messias», mandou perguntar a Jesus se Ele era «Aquele que devia vir», Jesus
+        atestou a sua missão divina por milagres por Ele operados. Mas, explica S. Gregório, «depois
+        de tantos prodígios, a morte de Jesus causou grande escândalo no espírito dos homens infiéis
+        a Deus. O Cristo nos previne contra o escândalo do qual os Judeus foram vítimas» (7.ª Liç.).
+        Acolhamos a Jesus na humildade de seu presépio e Ele nos acolherá em seu reino de glória
+        quando vier julgar o mundo.
+      </Typography>
 
       <Typography className="em">Mt, 11, 2–10</Typography>
 
@@ -148,6 +197,10 @@ export default function PageAdv20() {
 
       <H3 text="Ofertório" />
 
+      <Typography className="aside">
+        Deus mostra a sua misericórdia enviando o Salvador a todas as Nações que querem recebê-Lo.
+      </Typography>
+
       <Typography className="em">Sl. 84, 7–8</Typography>
 
       <Language>
@@ -177,6 +230,11 @@ export default function PageAdv20() {
       </Language>
 
       <H3 text="Comúnio" />
+
+      <Typography className="aside">
+        A alegria que Deus envia a Jerusalém, que é a Igreja, é a multidão dos Gentios que nela faz
+        entrar.
+      </Typography>
 
       <Typography className="em">Br. 5, 5 & 4, 36</Typography>
 

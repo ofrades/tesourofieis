@@ -8,7 +8,40 @@ export default function PageAdv30() {
     <PageWrapper>
       <H1 text="Terceiro Domingo do Advento" />
 
+      <Typography className="comment">
+        O Senhor está próximo, vinde adorá-Lo (Inv.).
+        {"\n\n"}
+        1.ª Vinda: É Maria quem nos dá Jesus: «Sois feliz, Maria, porque se cumprirá em vós o que
+        vos foi dito da parte do Senhor» (Ant. do Magn.). «É de Belém que sairá o Rei Dominador que
+        trará a paz a todas as Nações» (2.º Resp.), «e livrará o seu povo do poder dos inimigos»
+        (4.º Resp.). Nossas almas participarão de modo especial desta redenção nas festas do Natal,
+        por ser o aniversário da entrada neste mundo de Cristo, vencedor de Satanás. «Fazei, pede a
+        Igreja, que o novo nascimento de vosso Unigénito segundo a carne nos livre da antiga
+        servidão que nos detém sob o peso do pecado» (Missa do dia 25 de Dezembro).
+        {"\n\n"}
+        S. João Baptista preparou os Judeus à vinda do Messias; da mesma forma ele nos prepara cada
+        ano à união mais íntima que Jesus contrai com as nossas almas no Natal. «Fazei recto o
+        caminho do Senhor», diz o Precursor. Aplainemos os caminhos de nosso coração e o Salvador
+        dar-nos-á as suas graças libertadoras.
+        {"\n\n"}
+        2.ª Vinda: É a vinda de Jesus no fim do mundo, a que S. Gregório alude explicando o
+        Evangelho. «João, o Precursor do Redentor, declara ele, caminha diante de Jesus no espírito
+        e virtude de Elias, que será o Precursor do Juiz» (9.ª Liç.). Tomando-as também no sentido
+        literal, trata-se na Epístola e no Introito do advento da justiça. Se sentimos grande
+        alegria ao aproximarem-se as festas do Natal, que nos lembram a vinda da humilde criança do
+        presépio, quanto mais nos deve encher de santo júbilo o pensamento de sua vinda em todo o
+        brilho de seu poder.
+        {"\n\n"}
+        «Eu sou, diz João Baptista, a voz daquele que clama no deserto: Fazei recto o caminho do
+        Senhor» (Ev. S. João 1, 23).
+      </Typography>
+
       <H3 text="Intróito" />
+
+      <Typography className="aside">
+        O povo de Jacob libertado do cativeiro de Babilónia é a figura do povo cristão libertado por
+        Jesus do jugo do pecado.
+      </Typography>
 
       <Typography className="em">Fl. 4, 4–6</Typography>
 
@@ -72,6 +105,10 @@ export default function PageAdv30() {
 
       <H3 text="Gradual" />
 
+      <Typography className="aside">
+        Jesus é o chefe da Igreja figurada por Israel e José.
+      </Typography>
+
       <Typography className="em">Sl. 79, 2, 3 & 2</Typography>
 
       <Language>
@@ -96,6 +133,15 @@ export default function PageAdv30() {
       </Language>
 
       <H3 text="Evangelho" />
+
+      <Typography className="aside">
+        Os Judeus procuram saber quem é João Baptista, para o qual as multidões acorrem para serem
+        baptizadas. «Se o quiserdes, sabei-o, já lhes tinha dito Jesus, João ele próprio é mesmo
+        Elias» (S. Mat. 17, 13). «Não há nisto, explica S. Gregório, contradição com a palavra de S.
+        João, que diz que ele não é Elias, pois, sem o ser em pessoa, tem, no entanto, a virtude e o
+        espírito de Elias; e é o Precursor do Cristo em seu primeiro advento, como Elias o será no
+        segundo» (9.ª Liç.).
+      </Typography>
 
       <Typography className="em">Jo. 1, 19–28</Typography>
 

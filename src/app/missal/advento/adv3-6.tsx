@@ -8,6 +8,23 @@ export default function PageAdv36() {
     <PageWrapper>
       <H1 text="Sábado das Têmporas do Inverno" />
 
+      <Typography className="comment">
+        O Sábado era o dia mais solene das Têmporas, pois a Igreja, nesse dia, ordenava os seus
+        padres na vasta Basílica de S. Pedro. Essa ordenação no 10.º mês do ano (de onde o seu nome
+        de Dezembro) era a única outrora conhecida em Roma, sendo, pois, uma data importante. Aliás,
+        toda a Missa apresenta sinais de antiquíssima liturgia e, lembrando, com as suas numerosas
+        lições entremeadas de responsos e orações, a primitiva forma da Ante-Missa.
+        {"\n\n"}
+        Penetrando-se desses mistérios, a alma sente-se invadida como de santa impaciência e, com a
+        Igreja, «aspira ao novo nascimento do Filho Único de Deus que nos vem libertar do pecado»
+        (2.ª Or.), e espera com confiança o Senhor Jesus, que nos livrará de nossos inimigos,
+        «destruindo o Anticristo com o esplendor de sua chegada» (Ep.). O Evangelho evoca a imagem
+        de S. João Baptista, a preparar cada ano as nossas almas para a vinda do Salvador.
+        Encontramos ainda esse mesmo Evangelho na Missa do dia seguinte, porque outrora a ordenação,
+        fazendo-se à tarde, era prolongada até alta noite e, estendendo-se até ao Domingo,
+        servia-lhe de liturgia.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 79, 4 & 2</Typography>
