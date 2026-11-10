@@ -8,6 +8,21 @@ export default function PagePent20() {
     <PageWrapper>
       <H1 text="Segundo Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A Igreja escolheu para a celebração do Corpo de Deus a Quinta-feira entre o Domingo em que
+        alude à misericórdia de Deus para com os homens e ao dever de caridade fraternal dele
+        resultante (1.º depois de Pentecostes) e este Domingo (2.º depois de Pentecostes), em que
+        repete as mesmas ideias (Ep.) e apresenta o reino dos céus sob a forma da parábola do
+        banquete nupcial (Ev.) (1). Nada podia convir melhor à Eucaristia, que é o banquete onde
+        todas as almas são unidas no amor a Jesus, seu esposo, e a todos os seus membros místicos.
+        {"\n\n"}A liturgia mostra-nos, nesta época, o menino Samuel, oferecido pela mãe a Deus,
+        servindo o Senhor no templo com o coração puro e alimentando-se da verdade divina. «Aos
+        humildes, declara São Gregório, são revelados os arcanos do conselho divino»; Deus revela-se
+        aos pequenos e oculta-se aos soberbos. A parábola do banquete nupcial exorta-nos a
+        corresponder ao convite divino e a não prender o coração às delícias do corpo, mas às da
+        alma.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 17, 19-20</Typography>

@@ -8,6 +8,18 @@ export default function PagePent30() {
     <PageWrapper>
       <H1 text="Terceiro Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia de hoje canta a misericórdia divina para com os homens. Como Jesus, que tinha
+        vindo chamar não os justos, mas os pecadores, o Espírito Santo, que continua a acção de
+        Cristo nos corações, vem estabelecer o reino de Deus nas almas pecadoras.
+        {"\n\n"}
+        As lições do Breviário são hoje consagradas à história de Saul. Saul, mandado pelo pai à
+        procura das jumentas perdidas, é a figura de Jesus, enviado por seu Pai à procura das almas
+        que estavam perdidas. Deus revela-se aos humildes e esconde-se aos soberbos. A misericórdia
+        divina acolhe os pecadores arrependidos, como o pastor que procura a ovelha perdida e se
+        alegra ao encontrá-la.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 24, 16 & 18</Typography>

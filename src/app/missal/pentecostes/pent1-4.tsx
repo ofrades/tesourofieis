@@ -9,6 +9,22 @@ export default function PagePent14() {
     <PageWrapper>
       <H1 text="Santíssimo Corpo de Cristo" />
 
+      <Typography className="comment">
+        Depois do dogma da Santíssima Trindade, é o da Encarnação de Jesus que o Espírito Santo nos
+        recorda, fazendo-nos celebrar com a Igreja o Sacramento por excelência que, resumindo toda a
+        vida do Salvador, dá a Deus glória infinita e aplica às almas, em todas as épocas, os frutos
+        da Redenção (Or.). Jesus nos salvou sobre a Cruz, e a Eucaristia, instituída na véspera da
+        Paixão de Cristo, ficou sendo o seu memorial (Or.). O altar é o prolongamento do Calvário, e
+        a Missa «anuncia a morte do Senhor» (Ep.).
+        {"\n\n"}A Eucaristia foi instituída sob a forma de alimento (All.), a fim de podermos
+        unir-nos à vítima do Calvário. A hóstia santa torna-se assim «o trigo que alimenta as almas»
+        (Intr.). E, como o Cristo, tornando-se Filho de Deus, recebeu a vida eterna do Pai, da mesma
+        forma os cristãos participam dessa vida eterna (Ev.), unindo-se a Jesus pelo Sacramento «que
+        é o símbolo da unidade» (Secr.). A participação antecipada da vida divina, neste mundo, pela
+        Eucaristia, é o penhor e o começo da que havemos de gozar, em sua plenitude, no céu
+        (Postcomm.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 80, 17</Typography>

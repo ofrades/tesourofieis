@@ -8,6 +8,13 @@ export default function PagePent10() {
     <PageWrapper>
       <H1 text="Domingo da Santíssima Trindade" />
 
+      <Typography className="comment">
+        A Igreja celebra hoje o mistério fundamental da fé cristã: um só Deus em três Pessoas, Pai,
+        Filho e Espírito Santo. Toda a liturgia deste Domingo é um hino de louvor à Santíssima
+        Trindade, que nos criou, remiu e santificou. Adoremos o mistério que nos foi revelado por
+        Jesus Cristo e peçamos a graça de viver na sua unidade, guardando os seus mandamentos.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Tb. 12, 6</Typography>

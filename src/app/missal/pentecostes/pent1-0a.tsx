@@ -8,6 +8,13 @@ export default function PagePent10A() {
     <PageWrapper>
       <H1 text="Primeiro Domingo depois de Pentecostes" />
 
+      <Typography className="comment">
+        Este Domingo, o primeiro depois de Pentecostes, considera a acção do Espírito Santo na
+        Igreja. A Epístola e o Evangelho exortam-nos ao amor de Deus e ao amor do próximo, que é o
+        sinal do verdadeiro discípulo de Cristo. O Espírito Santo, que nos foi dado, derrama em
+        nossos corações a caridade e faz-nos filhos de Deus.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 12, 6</Typography>

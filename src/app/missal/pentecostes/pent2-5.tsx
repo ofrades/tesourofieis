@@ -13,6 +13,13 @@ export default function PagePent25() {
     <PageWrapper>
       <H1 text="Santíssimo Coração de Jesus" />
 
+      <Typography className="comment">
+        A festa do Sagrado Coração de Jesus é o complemento da festa do Corpo de Deus. O Coração de
+        Jesus, símbolo do seu amor, foi aberto na Cruz e deu-nos o último testemunho de sua
+        caridade. A Igreja pede a graça de amar a Deus com todo o coração e de reparar as ofensas
+        que recebe o seu amor.
+      </Typography>
+
       {isFirstFriday(date) && (
         <LinkCard
           href="/devocionario/oracoes/consagracaosagradocoracaojesus"
