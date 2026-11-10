@@ -19,6 +19,13 @@ Tesouro dos Fiéis is a universal Catholic liturgical application that provides:
 - Complete liturgical calendar system
 - Cross-platform support (iOS, Android, Web)
 
+## Work tracking
+
+Open work is tracked in BB Tasks under the **TES** project:
+`bb tasks list --project TES`. See
+[docs/agents/issue-tracker.md](docs/agents/issue-tracker.md). The Obsidian vault
+tracker was retired on 2026-11-10; its files are frozen history.
+
 ## Technology Stack
 
 - **Expo SDK 56** - Universal React Native platform

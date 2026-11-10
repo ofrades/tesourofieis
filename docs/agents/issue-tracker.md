@@ -1,89 +1,67 @@
-# Issue tracker: Obsidian vault (markdown files)
+# Issue tracker: BB Tasks
 
-Issues for this repository live as markdown files in the Obsidian vault at
-`~/Work/ofrades/notes`, under `tesourofieis/`. There is no server-side tracker: the files
-are the store, and Obsidian is the human's UI over them.
+Issues for this repository live in BB Tasks under the **TES** project. BB Tasks
+is the single source of truth for open work: status, priority, labels, comments,
+attachments and attached threads.
 
-GitHub Issues is enabled on this repository but is **not** the tracker: the
-owner moved tracking to the vault on 2026-10-19 so every project's board lives
-in one place. Do not open GitHub issues; if one arrives from outside, copy it
-here and close the GitHub one with a pointer to this file.
+- List the board: `bb tasks list --project TES`
+- Read a task: `bb tasks show TES-3 --json`
+- Task keys (`TES-3`) are permanent handles; cite them in repository documents.
 
-The vault is a **separate Git repository** (`git@github.com:ofrades/notes.git`),
-so issue history is not part of this checkout's history. If the vault path does
-not exist on the machine you are working on, stop and ask the owner where it is
-rather than creating a second tracker.
+GitHub Issues is enabled on this repository but is **not** the tracker. Do not
+open issues there; if one arrives from outside, create a BB task and close the
+GitHub issue with a pointer to this file.
+
+## Retired vault tracker
+
+The Obsidian vault tracker at `~/Work/ofrades/notes/tesourofieis/issues/` was
+retired on 2026-11-10. Its open issues were imported into BB Tasks as a
+snapshot. The markdown files are frozen history: do not add, edit, claim,
+comment on, close or move them. The vault's `tesourofieis/tesourofieis.md`
+records the old workflow for history only.
+Imported tasks keep a `**Legacy issue:** #N` footer and a
+`<!-- vault-issue: tesourofieis/N -->` marker so old issue numbers stay resolvable.
+
+## Commands
+
+| Operation          | Command                                                                                                                                   |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Create             | `bb tasks create --project TES --title "..." --description-file /tmp/task.md --priority <urgent\|high\|medium\|low\|none> --label <name>` |
+| Claim              | `bb tasks update TES-3 --status in_progress` and `bb tasks attach TES-3`                                                                  |
+| Comment            | `bb tasks comment TES-3 --body "..."`                                                                                                     |
+| Hand off to review | comment the handover, then `bb tasks update TES-3 --status in_review` and `bb tasks detach TES-3`                                         |
+| Close              | `bb tasks update TES-3 --status done` (or `canceled`)                                                                                     |
+| Parent / subtask   | `bb tasks update TES-3 --parent TES-2`                                                                                                    |
+| Attach evidence    | `bb tasks attachment add TES-3 --file <path>`                                                                                             |
+
+## Status vocabulary
+
+| BB status     | Meaning                                              |
+| ------------- | ---------------------------------------------------- |
+| `backlog`     | Accepted or untriaged; not scheduled                 |
+| `todo`        | Ready to start, by an agent or a human               |
+| `in_progress` | Claimed and actively being worked                    |
+| `in_review`   | Implementation complete, awaiting independent review |
+| `done`        | Reviewed and accepted, or the outcome delivered      |
+| `canceled`    | Wontfix or archived                                  |
+
+The five triage roles are **labels**, not statuses: `needs-triage`,
+`needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. Category is a
+label too: `bug`, `enhancement`. A `blocked` label plus the reason in the
+description marks a gate outside the board. [triage-labels.md](triage-labels.md)
+has the full mapping.
 
 ## Conventions
 
-- One issue per file: `tesourofieis/issues/<NNN>-<slug>.md`, numbered from `001`.
-  Numbers are permanent handles, never reused: repository documents cite
-  "issue #12" and stay resolvable. `id:` in the frontmatter repeats the number.
-- Closed issues move to `tesourofieis/issues/archive/<NNN>-<slug>.md` — `done`,
-  `wontfix` and `archived`. Open work stays in `tesourofieis/issues/`.
-- The frontmatter fields and the full status vocabulary are documented in the
-  vault's `tesourofieis/tesourofieis.md`. [triage-labels.md](triage-labels.md) maps the triage
-  roles onto the `status:` values.
-- History appends at the bottom under a `## Comments` heading, newest last,
-  dated `[[YYYY-MM-DD]]`. Never rewrite earlier notes.
-- Evidence in a body is a repository path (`docs/…`), never a vault link: the
-  vault cannot resolve paths inside this checkout, and this checkout cannot
-  resolve vault links.
-- Dependencies and gates are two different fields: `depends_on: [NN, …]` for
-  ticket dependencies, `blocked: true` plus `block_reason` for a gate outside
-  the tracker (a human decision, a device, a dataset, external sign-off).
-
-## Operations
-
-- **Create**: write `tesourofieis/issues/<NNN>-<slug>.md` from `Templates/Issue.md`,
-  taking the next free number — the highest `id:` across `issues/` **and**
-  `issues/archive/`, plus one. Then confirm it appears in the `Open` view of
-  `tesourofieis/tesourofieis.base`.
-- **Read**: read the file. `id:`, `status:`, `priority:`, `tags:`,
-  `depends_on:`, `blocked:` and `block_reason:` are in the frontmatter; the
-  description is above `## Comments`, the history below it.
-- **List**: there is no query CLI. Filter with the vault's Bases views
-  (`tesourofieis/tesourofieis.base`), or search the files directly for frontmatter values. For
-  agents, reading `tesourofieis/issues/*.md` and filtering on `status:` is usually
-  enough.
-- **Claim**: set `status: in-progress`, `claimed_by:` and `started:`, and save —
-  **before** editing anything. This is a cooperative lock across processes that
-  share the vault, not a transactional one: write the claim first, and re-read
-  the issue before acting if another session may be running.
-- **Comment**: append a dated note under `## Comments`.
-- **Block / unblock**: set or clear `blocked:` and `block_reason:`, with a note
-  saying what would unblock it.
-- **Hand off to review**: append the handover note, set `status: review`, drop
-  the claim. The worker does not accept its own work.
-- **Close**: `status: done` plus `completed:`, then move the file into
-  `issues/archive/`. Closing on `wontfix` or `archived` does the same.
-
-## Wayfinding operations
-
-Used by `/wayfinder`. The map is itself an issue.
-
-- **Map**: an issue with `type: map` in its frontmatter, holding Notes /
-  Decisions-so-far / Fog in the body, and a task list of its children.
-- **Child ticket**: an issue with `parent: <map id>`. Where the skill expects
-  sub-issues, the child's `parent:` field and the map's task list are the
-  linkage.
-- **Blocking**: `depends_on: [<blocker id>, …]`. A ticket is unblocked when every
-  listed issue is `done`, `archived` or `wontfix`.
-- **Frontier**: the open issues in `tesourofieis/issues/` whose `depends_on` are all
-  closed, that are not `blocked`, and that have no `claimed_by`. Lowest `id:`
-  wins.
-- **Claim**: as in **Claim** above; the session's first write.
-- **Resolve**: append the answer under `## Comments`, set `status: done` and
-  `completed:`, move the file to `issues/archive/`, then add the context pointer
-  to the map's Decisions-so-far.
-
-## When a skill says "publish to the issue tracker"
-
-Create a vault issue, as in **Create** above.
-
-## When a skill says "fetch the relevant ticket"
-
-Read the file for that issue number under `tesourofieis/issues/` or
-`tesourofieis/issues/archive/`. The owner normally passes the number or the path
-directly. Specs published by `/to-spec` live in `tesourofieis/specs/<NNN>-<slug>.md`
-and are read the same way.
+- **Claim before editing.** Set `in_progress`, attach the thread, and re-read the
+  task before touching a file. Work one task at a time.
+- **Keep WIP small:** at most two tasks `in_progress` and two `in_review` in the
+  project.
+- **Dependencies:** list blocking task keys in a `## Dependencies` section of the
+  description (`- Depends on TES-2`). Start only when those tasks are `done` or
+  `canceled`. Use `--parent` for a real subtask relationship.
+- **Evidence:** a repository path (`docs/…`), never a vault link.
+- **Handover:** a few lines plus commit hashes in a comment, then `in_review`.
+  The worker does not accept its own work.
+- **Closing:** the reviewer sets `done`; `wontfix` and `archived` become
+  `canceled`.

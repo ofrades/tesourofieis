@@ -1,32 +1,34 @@
-# Triage Labels
+# Triage labels
 
-The skills speak in terms of five canonical triage roles. In this repository
-those roles are `status:` values in the vault issue frontmatter, not labels on a
-server-side tracker.
+The skills speak in five canonical triage roles. This repository tracks work in
+BB Tasks, so each role is a **label** on a task, and the workflow state is the
+task's BB status.
 
-| Label in mattpocock/skills | Status value in our tracker | Meaning                                  |
-| -------------------------- | --------------------------- | ---------------------------------------- |
-| `needs-triage`             | `needs-triage`              | Maintainer needs to evaluate this issue  |
-| `needs-info`               | `needs-info`                | Waiting on reporter for more information |
-| `ready-for-agent`          | `ready-for-agent`           | Fully specified, ready for an AFK agent  |
-| `ready-for-human`          | `ready-for-human`           | Requires human implementation            |
-| `wontfix`                  | `wontfix`                   | Will not be actioned                     |
+| Skill role        | BB label          | BB status  | Meaning                                           |
+| ----------------- | ----------------- | ---------- | ------------------------------------------------- |
+| `needs-triage`    | `needs-triage`    | `backlog`  | Maintainer needs to evaluate this task            |
+| `needs-info`      | `needs-info`      | `backlog`  | Waiting on the reporter for more information      |
+| `ready-for-agent` | `ready-for-agent` | `todo`     | Fully specified, ready for an AFK agent           |
+| `ready-for-human` | `ready-for-human` | `todo`     | Requires human implementation or a human decision |
+| `wontfix`         | `wontfix`         | `canceled` | Will not be actioned                              |
 
-The two **category** roles live in the `category:` field instead of `status:`:
+The two **category** roles are labels as well:
 
-| Category role | Field value             | Meaning                    |
-| ------------- | ----------------------- | -------------------------- |
-| `bug`         | `category: bug`         | Something is broken        |
-| `enhancement` | `category: enhancement` | New feature or improvement |
+| Category role | BB label      | Meaning                    |
+| ------------- | ------------- | -------------------------- |
+| `bug`         | `bug`         | Something is broken        |
+| `enhancement` | `enhancement` | New feature or improvement |
 
-Two additional status values exist in this repository and are **not** triage
-roles. `backlog` holds work the maintainer has already accepted but not
-scheduled, so it does not return through triage. `archived` is dated evidence of
-superseded or cancelled work. `in-progress`, `review` and `done` are work
-states, set by the agent doing the work and by its reviewer.
+Two work states are not triage roles. `backlog` holds accepted work that is not
+scheduled, so it does not return through triage. `canceled` is dated evidence of
+superseded or cancelled work.
+
+A `blocked` label plus the reason in the task description marks a gate outside
+the board: a human decision, a device, a dataset, external sign-off. A task
+dependency is different: list the blocking task keys under `## Dependencies` in
+the description and start only when they are `done` or `canceled`.
 
 When a skill mentions a role (e.g. "apply the AFK-ready triage label"), set the
-corresponding `status:` value on the issue.
+corresponding label and status on the task.
 
-The full vocabulary and field list live in the vault's `tesourofieis/tesourofieis.md`; the
-operating conventions are in [issue-tracker.md](issue-tracker.md).
+The operating conventions are in [issue-tracker.md](issue-tracker.md).
