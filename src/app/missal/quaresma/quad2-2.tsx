@@ -8,6 +8,25 @@ export default function PageQuad22() {
     <PageWrapper>
       <H1 text="Terça-feira da 2.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é no santuário de Santa Balbina, virgem romana que viveu no século II e cujos
+        restos repousam sob o altar com os de seu pai, o mártir S. Quirino. A igreja, situada num
+        declive do Aventino, era no século V uma das 25 paróquias de Roma; a casa pertencia outrora
+        a uma matrona romana chamada Balbina. A escolha desta igreja explica-se pelo Evangelho que
+        fala da viúva de Sarepta: deste modo tem Balbina a sua fé exaltada, ela que transformara seu
+        palácio em igreja.
+        {"\n\n"}
+        Jesus declara no Evangelho que os Judeus ensinavam a lei de Moisés e não a observavam. O
+        reino de Deus abre-se aos pagãos que, pelo baptismo, se tornam discípulos de Cristo e
+        cumprem as suas obras (2). — A Epístola mostra-nos Elias pedindo alimento a uma pagã de
+        Sarepta, por ocasião do flagelo da seca sobre Israel impertinente. A viúva toma dois pedaços
+        de pau, símbolo da cruz de Jesus, e prepara um pão para o profeta e para si. Por sua piedade
+        recebe a recompensa, porque nunca mais lhe faltará o pão. Enquanto os Judeus sofrem penúria,
+        os Gentios, graças à sua fidelidade, recebem diariamente o pão eucarístico que lhes aplica o
+        merecimento da cruz do Salvador. — Peçamos o auxílio de Deus para perseverarmos na
+        observância do jejum, de que ele nos deu o exemplo (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 26, 8 & 9</Typography>

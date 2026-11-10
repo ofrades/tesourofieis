@@ -9,6 +9,21 @@ export default function PageQuad25() {
     <PageWrapper>
       <H1 text="Sexta-feira da 2.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Igreja escolheu a Estação de S. Vital para ler o Evangelho dos maus vinhateiros, porque
+        este Santo Mártir romano morreu em Roma e foi sepultado a pedradas numa fossa. A basílica,
+        uma das 25 paróquias de Roma, foi dedicada a S. Vital por Inocêncio I.
+        {"\n\n"}A Epístola e o Evangelho descrevem, por figura e em parábola, a sorte dos pagãos e
+        dos Judeus. Os catecúmenos viam em José o Cristo renegado pelos seus e transferindo à
+        Igreja, formada de ora em diante por todos os povos, a abundância de suas bênçãos. Viam
+        igualmente na parábola dos vinhateiros revoltados a história da reprovação dos Judeus e da
+        eleição dos Gentios. Os irmãos de José e os vinhateiros infiéis dizem: «Vinde, matemol-o».
+        Mas, enquanto os primeiros se arrependeram e alcançaram a clemência de sua vítima, os
+        segundos, obstinados, não reconheceram o Cristo como a pedra angular, sendo por ela
+        esmagados (Ev.) (2). — Purifiquemo-nos, pelo salutar jejum da Quaresma, a fim de celebrarmos
+        santamente as próximas festas de Páscoa (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 16, 15</Typography>

@@ -8,6 +8,27 @@ export default function PageQuad26() {
     <PageWrapper>
       <H1 text="Sábado da 2.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        Escolheu-se para a leitura da história dos dois irmãos Esaú e Jacob, dos quais um foi
+        perseguidor do outro, a basílica fundada por Santa Helena na via Lavicana, onde se achavam
+        os corpos dos dois Mártires São Marcelino, presbítero, e S. Pedro, exorcista, mortos em Roma
+        na perseguição de Diocleciano. Os seus nomes são lidos no Canon da missa (ver p. 93). São
+        Dâmaso diz que seu carrasco se converteu e recebeu o baptismo. Esta igreja é uma das 25
+        paróquias romanas do século V.
+        {"\n\n"}
+        Como ontem, a Epístola e o Evangelho (2) repetem em figura e em parábola, aos catecúmenos e
+        aos penitentes públicos, que eles ocuparão no reino de Deus o lugar dos Judeus. — Isaac tem
+        dois filhos. Esaú é o povo de Deus a vender o direito de primogenitura para satisfazer o seu
+        apetite carnal. Jacob é a gentilidade a refrear as paixões, recebendo as bênçãos celestes. —
+        Um homem, diz também Jesus, tem dois filhos: o mais velho é o elemento judaico da primitiva
+        Igreja, a escandalizar-se da vocação dos Gentios, com quem lhe repugna entrar em relações; o
+        pródigo é o elemento pagão. Depois de haver desperdiçado todos os dons de Deus, esses
+        infelizes choram seus crimes e os expiam; aproximam-se de Jesus, que lhes abre os braços,
+        aperta-os ao coração e alimenta-os com o seu sagrado Corpo e precioso Sangue, no banquete
+        eucarístico. — Peçamos a Deus que se digne abençoar o nosso jejum quaresmal, para nos ser
+        proveitoso à saúde das almas e à mortificação da carne (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 18, 8</Typography>

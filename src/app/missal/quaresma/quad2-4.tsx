@@ -8,6 +8,24 @@ export default function PageQuad24() {
     <PageWrapper>
       <H1 text="Quinta-feira da 2.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação hoje é na basílica erigida pouco depois da paz de Constantino por Júlio I; é uma
+        das primeiras igrejas dedicadas à Mãe de Deus em Roma. Maria está representada assentada
+        entre as virgens prudentes, com as suas lâmpadas nas mãos, alusão à fonte de óleo emanada
+        nesse lugar pouco antes do nascimento d'Aquele que a Santíssima Virgem teve a felicidade de
+        carregar nos braços, o Cristo ou o ungido do Senhor. No século V era esta igreja uma das 25
+        paróquias de Roma.
+        {"\n\n"}
+        Jeremias fala na Epístola de dois homens, dos quais um colocara em si próprio a sua
+        confiança e o outro em Deus. O primeiro, como a flor do deserto, murcha depressa, e o
+        segundo carrega-se de numerosos frutos de boas obras. — Havia também, narra a parábola do
+        Evangelho (2), dois homens: o primeiro gozava em vez de fazer penitência e o outro sofria. O
+        primeiro foi para o inferno, ao passo que o outro foi levado pelos Anjos ao seio de Abraão.
+        É a figura de Israel, que rejeita o Cristo e é repelido, e dos Gentios que, pelo baptismo e
+        pela penitência, entram no reino de Deus. — Peçamos ao Senhor a graça de perseverarmos na
+        oração e no jejum, a fim de sermos libertados dos inimigos da alma e do corpo (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 69, 2 & 3</Typography>

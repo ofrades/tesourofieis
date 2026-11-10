@@ -9,6 +9,22 @@ export default function PageQuad23() {
     <PageWrapper>
       <H1 text="Quarta-feira da 2.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação faz-se no santuário onde se acha o corpo da ilustre virgem romana Santa Cecília,
+        que aí viveu e foi martirizada. — Desde o século V, esta igreja era mencionada como uma das
+        paróquias ou títulos mais célebres de Roma. Está situada no Trastevere.
+        {"\n\n"}
+        Aí convinha, realmente, que fosse feita a leitura do Evangelho em que Jesus anuncia a uma
+        mulher ser necessário beber o seu cálice para participar da sua glória. Lemos na Epístola a
+        prece de Mardoqueu em favor do povo judaico, cuja perda resolvera o ímpio Amã. Suplica ao
+        Senhor mudar-lhe a tristeza em alegria. O povo cristão também se acha na luta da penitência
+        quaresmal e aspira pelas santas alegrias pascais. Mas, para as merecer, diz o Evangelho (2),
+        deveremos primeiro beber o cálice d'Aquele que vem derramar o seu sangue por nosso resgate e
+        que nos tornará participantes de sua ressurreição, se com ele morrermos aos nossos pecados.
+        — Privemo-nos dos alimentos que nutrem o nosso corpo e dos vícios que envenenam a nossa alma
+        (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 37, 22-23</Typography>

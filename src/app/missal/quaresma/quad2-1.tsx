@@ -9,6 +9,22 @@ export default function PageQuad21() {
     <PageWrapper>
       <H1 text="Segunda-feira da 2.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é na antiquíssima igreja de S. Clemente, um dos primeiros sucessores de S. Pedro e
+        cujo nome se acha no Canon da Missa (ver p. 86). Esse santuário, paróquia de Roma no século
+        V, é o único a representar-nos fielmente a antiga basílica romana. Aí se encontram, sob o
+        altar, os restos do santo Mártir.
+        {"\n\n"}
+        Nosso Senhor predisse no Evangelho (2) que os Judeus o crucificariam e afirma por três vezes
+        que eles morrerão em seu pecado, por não terem querido acreditar nele e fazer as suas obras.
+        — Assim, o furor divino desencadeado outrora sobre Jerusalém na ocasião do cativeiro de
+        Babilónia (Ep.) reacendeu-se contra Israel, cujo Templo foi queimado. Eles não poderão, do
+        mesmo modo que os cristãos culpados, voltar ao Senhor senão pela penitência, enquanto os
+        pagãos são chamados em seu lugar a crer em Jesus e fazer parte de seu povo pelo baptismo. —
+        «Mortifiquemos a nossa carne na alimentação e jejuemos quanto ao pecado, praticando a
+        justiça» (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 25, 11-12</Typography>
