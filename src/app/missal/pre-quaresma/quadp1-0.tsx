@@ -8,6 +8,62 @@ export default function PageQuadp20() {
     <PageWrapper>
       <H1 text="Domingo da Septuagésima" />
 
+      <Typography className="comment">
+        Para compreender plenamente o sentido dos textos da Missa de hoje, é preciso, como vimos,
+        estudá-los em relação com as lições do Breviário, porque, no pensamento da Igreja, a Missa e
+        o Ofício fazem uma só coisa. As Lições e Responsos do Ofício da noite, durante toda esta
+        semana, são tirados do Livro do Génesis e narram a criação do mundo, a do homem, a queda de
+        nossos primeiros pais e a promessa do Redentor; em seguida, o assassinato de Abel e a
+        geração de Adão até Noé. — «No começo, diz o Livro Sagrado, Deus criou o céu e a terra e
+        formou o homem sobre a terra, colocando-o num jardim de delícias para que o cultivasse» (3.º
+        e 4.º Resp.). Tudo isto é figurativo. «Foi dito, explica S. Gregório, que o reino do céu é
+        semelhante a um pai de família que contrata operários para cultivar a sua vinha. Ora, quem
+        pode ser mais justamente representado pelo pai de família do que o nosso Criador, o qual
+        rege por sua providência os que criou e possui os seus eleitos neste mundo, desde o justo
+        Abel até o último eleito que nascer no fim do mundo, como um Senhor tem seus servos em sua
+        casa? A vinha que ele possui é a sua Igreja. Todos quantos, com fé recta, se aplicaram e
+        exortaram a fazer o bem são obreiros dessa vinha. Os da primeira hora, assim como os da
+        terceira, sexta e nona, designam o antigo povo hebreu, que desde o começo do mundo,
+        esforçando-se na pessoa de seus santos por servir a Deus com fé recta, não têm, por assim
+        dizer, cessado de trabalhar na cultura da vinha. Mas à undécima hora são chamados os Gentios
+        e a eles se dirigem estas palavras: “Porque estais aqui todo o dia ociosos?” (3.º Noct.).
+        Todos os homens são chamados a trabalhar na vinha do Senhor, isto é, a glorificar a Deus
+        (último fim da criação), santificando-se e santificando o próximo. Mas Adão não cumpriu a
+        sua tarefa. “Porque comeste do fruto que te proibi de comer, disse-lhe Deus, a terra será
+        maldita e dela tirarás o alimento à custa de trabalhos. Ela produzirá espinhos e abrolhos, e
+        com o suor de tua fronte comerás o teu pão, até voltares à terra de onde foste tirado”».
+        {"\n\n"}
+        Exilado do Éden depois de sua falta, explica Santo Agostinho, o primeiro homem arrastou à
+        pena de morte e à reprovação todos os seus descendentes, corrompidos em sua pessoa como na
+        sua origem. Toda a massa do género humano, condenada, estava, pois, mergulhada na desgraça
+        ou, antes, via-se arrastada e precipitada de males em males (2.º Nocturno). «As dores da
+        morte me cercaram», diz o Introito, e é na basílica de S. Lourenço fora dos muros, onde se
+        acha o cemitério de Roma, que se faz a Estação. — É «com muita justiça, acrescenta a Coleta,
+        que somos afligidos por causa de nossos pecados». Também a vida cristã é representada por S.
+        Paulo, na Epístola, como uma arena onde é preciso dar-se ao trabalho e lutar para alcançar a
+        coroa. O denário da vida eterna, diz também o Evangelho, só é dado aos que trabalham na
+        vinha de Deus e, desde o pecado, esse trabalho é penoso e árduo. «Ó Deus, pede a Igreja,
+        concedei a vossos povos, designados por vós sob o nome de vinhas e colheitas, que, depois de
+        terem arrancado os feixes de abrolhos e espinhos, sejam aptos a produzir abundantes frutos.
+        Por Nosso Senhor» (Oração do Sábado Santo) (1). «Em sua sabedoria, diz São Gregório, Deus
+        preferiu tirar o bem do mal a não permitir que acontecesse mal algum» (9.ª Liç.). Deus teve
+        piedade dos homens e lhes prometeu um segundo Adão que restabeleceria a ordem perturbada
+        pelo primeiro, permitindo-lhes reconquistar o céu ao qual Adão perdera o direito ao ser
+        expulso do Éden, «que era a sombra de uma vida melhor» (4.ª Liç.). «Vós sois, Senhor, o
+        nosso socorro no tempo da necessidade e aflição» (Grad.); «a misericórdia está convosco»
+        (Tracto); «fazei brilhar a vossa face sobre o vosso servo e salvai-me por vossa
+        misericórdia» (Comm.). «Mostrai-nos a vossa face, ó Senhor, e seremos salvos», dizia
+        igualmente a Igreja chamando por Jesus no tempo do Advento. «Deus, que criou o homem de modo
+        admirável, resgatou-o de modo ainda mais admirável» (2), pois «o acto da criação do mundo no
+        começo não excedeu, em excelência, a imolação de Cristo, nossa Páscoa, na plenitude dos
+        Tempos» (3). — Assim estudada, esta Missa, em relação à queda de Adão, nos põe na
+        mentalidade exigida para entreter relações com o Tempo da Septuagesima e nos fazer
+        compreender a grandeza do mistério pascal a que este tempo deve preparar as nossas almas.
+        Correspondendo ao apelo do Mestre, vindo procurar-nos até no abismo do pecado em que nosso
+        primeiro pai nos tinha mergulhado (Trac.), vamos trabalhar na vinha do Senhor, desçamos à
+        arena e empreendamos com coragem a luta que será mais intensa no Tempo da Quaresma.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 17, 5, 6 & 7</Typography>

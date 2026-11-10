@@ -8,6 +8,38 @@ export default function PageQuadp30() {
     <PageWrapper>
       <H1 text="Domingo da Quinquagésima" />
 
+      <Typography className="comment">
+        Assim como as três primeiras profecias do Sábado Santo, com suas orações, são consagradas a
+        Adão, Noé e Abraão, da mesma forma o Breviário e o Missal, durante as três semanas do Tempo
+        da Septuagesima, se ocupam com esses patriarcas que a Igreja chama respectivamente o «pai do
+        género humano», o «pai da posteridade» e o «pai dos crentes». Adão, Noé e Abraão são figuras
+        de Cristo no mistério pascal; aos dois primeiros nos referimos no Domingo da Septuagesima e
+        Sexagesima. Hoje mencionaremos Abraão. Na liturgia ambrosiana o Domingo da Paixão era
+        chamado «Domingo de Abraão» e liam-se no Ofício os «responsos de Abraão». Na liturgia romana
+        o Evangelho do Domingo da Paixão ainda é consagrado a esse Patriarca. «Abraão, vosso pai,
+        diz Jesus, estremeceu de júbilo porque devia ver o meu dia; viu-o e regozijou-se. Em
+        verdade, em verdade, eu vos digo, antes que Abraão existisse, Eu sou.» Deus prometera a
+        Abraão que dele nasceria o Messias, inundando-o de grande alegria ao fazer-lhe contemplar de
+        antemão, por sua fé, o dia da vinda do Messias.
+        {"\n\n"}O pai de todas as nações e nos permite tornarmo-nos seus filhos faz o objecto do
+        Evangelho. Aí o Cristo anuncia a sua paixão e o seu triunfo e dá vista a um cego,
+        dizendo-lhe: «Tua fé te salvou». Não basta, porém, uma fé estéril: «Se a fé não tem as
+        obras, escreve S. Tiago, é morta em si mesma. A fé se mostra pelas obras. Queres saber como
+        a fé sem as obras é morta? Abraão, nosso pai, não foi justificado pelas obras, quando
+        ofereceu seu filho Isaac sobre o altar? Vê que a fé cooperava com as suas obras e por elas a
+        sua fé se tornou perfeita, cumprindo-se esta palavra da Escritura: Abraão creu em Deus e
+        isto lhe foi imputado por justiça e ele foi chamado amigo de Deus. Vêde que o homem é
+        justificado pelas obras e não pela fé somente» (2). Não é como filho de Abraão pela carne
+        que o homem é salvo, mas tendo uma fé semelhante à dele. «No Cristo Jesus, escreve S. Paulo,
+        nem a circuncisão (Judeus) nem a incircuncisão (Gentios) servem de nada, mas a fé que age
+        pela caridade» (3). «Caminhai no amor, diz ainda o Apóstolo, como o Cristo nos amou e se
+        entregou por nós, em oblação a Deus, como hóstia de suave odor» (4). Se é de origem
+        litúrgica conceder à nossa alma algum repouso antes de empreendermos a penitência quaresmal,
+        a todos imposta, não esqueçamos que a Igreja condena os excessos; para expiar os que se
+        cometem, unamo-nos às orações das 40 horas, enriquecidas pelo Papa Clemente XII (1765) com
+        numerosas indulgências.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 30, 3-4</Typography>

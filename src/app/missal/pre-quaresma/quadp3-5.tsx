@@ -9,6 +9,20 @@ export default function PageQuadp35() {
     <PageWrapper>
       <H1 text="Sexta-feira depois das Cinzas" />
 
+      <Typography className="comment">
+        A missa estacional é em Roma, no Monte Célio, na habitação de São João e São Paulo,
+        transformada no século V em santuário paroquial pelo senador Pamáquio, genro de Santa Paula
+        e amigo de São Jerónimo. Seis frescos dessa época representam o cativeiro e a morte dos dois
+        romanos «que a mesma fé e o mesmo martírio fizeram verdadeiramente irmãos» (2). Perto desta
+        igreja acha-se um hospital de peregrinos, Xenodochium Valerii. Pamáquio despendeu toda a sua
+        fortuna em favor dos pobres; também o Evangelho e a Postcomunhão falam da caridade.
+        {"\n\n"}A Epístola e o Evangelho (3) nos declaram também que as obras exteriores de
+        penitência, como a oração, o jejum e a esmola, a serem praticadas na Quaresma, só têm valor
+        aos olhos de Deus quando acompanhadas do espírito de sacrifício interior. Este se manifesta
+        pelas obras de misericórdia para com o próximo, sem distinção de amigos ou inimigos, e com a
+        pura intenção de agradar a Deus. Peçamos o espírito de sacrifício e de misericórdia.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 29, 11</Typography>

@@ -8,6 +8,56 @@ export default function PageQuadp10() {
     <PageWrapper>
       <H1 text="Domingo da Sexagésima" />
 
+      <Typography className="comment">
+        Como no Domingo passado e nos seguintes, até ao da Paixão, a Igreja «nos ensina a celebrar o
+        mistério pascal pelas páginas dos dois Testamentos» (2). O Breviário fala de Noé toda esta
+        semana; Deus, vendo que a malícia dos homens era grande sobre a terra, disse-lhe:
+        «Exterminarei o homem que criei. Faze uma arca de madeira resinosa; estabelecerei contigo a
+        minha aliança e entrarás na arca». Caiu, então, a chuva sobre a terra durante quarenta dias
+        e quarenta noites. A arca flutuava sobre as águas que se elevaram acima das montanhas e as
+        submergiram.
+        {"\n\n"}A arca de Noé, cuja história a liturgia evoca também no Sábado Santo (1),
+        relaciona-se com o mistério pascal e é aplicada na liturgia a Nosso Senhor e à sua Igreja.
+        «A justa cólera do Criador submergiu o mundo culpado nas águas vingadoras do dilúvio;
+        somente Noé foi salvo na arca; mais tarde, o admirável poder do amor lavou o universo no
+        sangue» (3). «Ó Deus, que, lavando pelas águas os crimes do mundo culpado, fizestes ver até
+        nas ondas do dilúvio uma imagem da regeneração, de modo que o mistério de um só e mesmo
+        elemento pôs termo aos vícios e foi a fonte de virtudes, lançai os vossos olhos sobre a
+        vossa Igreja, multiplicai os seus filhos abrindo por toda a terra a fonte baptismal para
+        regenerar as nações» (4). «O madeiro da arca salvou o género humano e o da Cruz salva por
+        sua vez o mundo.» «Só tu, diz a Igreja falando da Cruz, foste digna de ser, para este mundo
+        naufragado, a arca que conduz ao porto» (5). «A porta aberta do lado da arca, e por onde
+        entraram os que deviam escapar ao dilúvio e representavam a Igreja, é, explica a liturgia,
+        figura do mistério da Redenção, pois, sobre a Cruz, Jesus teve o lado aberto e dessa porta
+        de vida saíram os Sacramentos que dão às almas a verdadeira vida. O sangue e a água que dele
+        jorraram são, na verdade, símbolos da Eucaristia e do Baptismo» (6). Na Quinta-feira Santa o
+        Bispo, ao benzer o óleo de oliveiras que servirá para os Sacramentos, diz: «Quando os crimes
+        do mundo foram expiados pelo dilúvio, uma pomba anunciou a paz restituída à terra, pelo ramo
+        de oliveira que trazia, símbolo dos favores que nos reservava para o futuro. Essa figura se
+        realiza hoje quando as águas do baptismo, tendo apagado os nossos pecados, a unção do óleo
+        vem dar às nossas obras beleza e serenidade». «No tempo de Noé, diz S. Pedro, foram salvas
+        das águas oito pessoas; figura à qual corresponde o Baptismo que ora nos salva» (7). — O
+        Sangue de Jesus é «o sangue da nova aliança» que Deus concluiu com os homens por Jesus.
+        «Quisestes, diz a Igreja, que uma pomba anunciasse, por um ramo de oliveira, a paz à terra.»
+        Muitas vezes na Missa, memorial da Paixão, se fala da paz: «Pax Domini sit semper vobiscum».
+        O sacrifício de Noé figurava o sacrifício da Cruz e da Ceia (Comm.), cujo aniversário a
+        Igreja celebrará nas festas de Páscoa. Noé representa o Cristo, de modo particular na missão
+        de Deus recebida para ser «o pai de toda a posteridade» (8); ele foi o segundo pai do género
+        humano e o símbolo da vida renovada. «O ramo da frondosa oliveira, diz a liturgia, figura a
+        feliz fecundidade por Deus concedida a Noé saindo da arca» (9); esta é chamada por Santo
+        Ambrósio no Ofício deste dia «seminarium», isto é, lugar que contém a semente de vida que
+        deve encher o mundo. Ora, ainda muito mais que Noé, o Cristo foi o segundo Adão que povoou o
+        mundo com a geração de almas crentes e fiéis a Deus. Eis porque a oração que segue a 2.ª
+        Profecia consagrada a Noé no Sábado Santo pede ao Senhor que ele «opere na paz a obra da
+        salvação do homem, eternamente decretada, de modo que o mundo inteiro experimente e veja
+        erguido tudo o que estava caído, renovado o que envelhecera e todas as coisas restabelecidas
+        em sua integridade primitiva, por Aquele que é o começo de tudo, Jesus Cristo Nosso Senhor».
+        No começo, é pelo Verbo, isto é, por sua palavra, que Deus fez o mundo (Último Evangelho). É
+        pela pregação de seu Evangelho que Jesus vem regenerar os homens. «Fomos regenerados, diz S.
+        Pedro, por uma semente incorruptível, pela palavra de Deus que vive e permanece eternamente.
+        E essa palavra é a da boa nova (isto é, o Evangelho) que nos foi anunciada» (1).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 43, 23-26</Typography>

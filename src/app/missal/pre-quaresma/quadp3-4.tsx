@@ -8,6 +8,23 @@ export default function PageQuadp34() {
     <PageWrapper>
       <H1 text="Quinta-feira depois das Cinzas" />
 
+      <Typography className="comment">
+        A Estação, desde São Gregório II (séc. VII), tem lugar em São Jorge de Velabro, uma das 25
+        paróquias de Roma no século V, na qual é guardada sob o Altar-mor a cabeça do guerreiro
+        cristão, vítima da perseguição do imperador Diocleciano e chamado pelos Gregos «o grande
+        mártir». É porque, segundo a legenda, S. Jorge era soldado de Diocleciano (ver a festa a 23
+        de Abril) que o Evangelho é o do centurião. A liturgia de hoje nos inculca o espírito de
+        oração, que faz parte da penitência quaresmal. Pela oração obteve Ezequias a prolongação de
+        sua vida (Ep.) e o centurião a cura do servo (Ev.) (2): é também por ela que obteremos de
+        Deus a força de nos mortificarmos, a fim de recebermos, com o perdão de nossos pecados, a
+        cura de nossas almas e a vida eterna.
+        {"\n\n"}O Evangelho lembrava outrora aos catecúmenos que eles iam, pelo baptismo, entrar no
+        reino dos céus em lugar dos Judeus infiéis. Devemos, pois, nós também ser fiéis aos
+        compromissos de nosso baptismo, senão seremos rejeitados como foram os Judeus. Lembremo-nos
+        de que, se o pecado ofende a Deus e atrai sobre nós os flagelos de sua justa cólera, a
+        penitência, ao contrário, o aplaca, merecendo-nos os efeitos de sua misericórdia (Orações).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 54, 17, 19, 20 & 23</Typography>
