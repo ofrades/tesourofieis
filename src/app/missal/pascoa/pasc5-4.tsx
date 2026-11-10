@@ -8,6 +8,24 @@ export default function PagePasc54() {
     <PageWrapper>
       <H1 text="Ascensão de Nosso Senhor Jesus Cristo" />
 
+      <Typography className="comment">
+        O Cristo, depois de abençoar os Apóstolos, elevou-se nos ares por seu poder divino e subiu
+        até às nuvens, que breve o esconderam aos olhos das numerosas testemunhas de sua Ascensão.
+        {"\n\n"}
+        «Os santos Apóstolos e todos os discípulos que se haviam alarmado com a morte de Jesus
+        Cristo sobre a Cruz e tinham hesitado na fé por ocasião da Ressurreição, diz S. Leão, foram
+        tão consolidados pela evidência da verdade, que exultaram de alegria ao ver o Senhor
+        elevar-se aos céus. Havia, certamente, grande motivo de alegria, quando, diante da multidão
+        santa, uma natureza humana se elevava acima da dignidade de todas as criaturas celestes,
+        para exceder a todas as ordens angélicas, elevando-se mais alto do que os arcanjos e somente
+        parar em suas sublimes elevações quando, recebida na morada do eterno Pai, se tivesse
+        associado ao trono e à glória d'Aquele a cuja natureza já se achava unida em seu Filho.
+        Sendo a Ascensão de Cristo a nossa própria elevação, e tendo o nosso corpo a esperança de
+        reunir-se um dia ao seu chefe glorioso, exultemos de alegria, porque na pessoa de Jesus
+        temos penetrado no mais alto dos céus, de modo que, os exilados dessa morada pela inveja do
+        diabo, o Filho de Deus os incorporou e colocou à direita do Pai» (Matinas).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Act. 1, 11</Typography>

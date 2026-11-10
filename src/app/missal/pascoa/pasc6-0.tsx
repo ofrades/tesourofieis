@@ -8,6 +8,23 @@ export default function PagePasc60() {
     <PageWrapper>
       <H1 text="Domingo depois da Ascensão" />
 
+      <Typography className="comment">
+        Este Domingo cai dentro da Oitava da Ascensão. — «Celebramos hoje a Ascensão do Senhor com
+        rectidão, fidelidade, devoção, santidade e piedade, diz Santo Agostinho, se subirmos com Ele
+        e fixarmos no alto os nossos corações. Estejam nossos pensamentos no céu, com Jesus, e neste
+        mundo teremos repouso. Subamos agora com o Cristo pelo coração e, quando vier o seu dia,
+        também com o corpo o seguiremos. Mas saibamos que nem o orgulho, nem a avareza, nem a
+        luxúria se elevam com o Cristo. Se quisermos seguir nosso médico na sua Ascensão, devemos
+        depor o fardo de nossos vícios e pecados» (Matinas).
+        {"\n\n"}
+        Este Domingo prepara-nos à festa de Pentecostes. Antes de subir ao céu, Jesus, na última
+        ceia, prometeu não nos deixar órfãos, mas que enviaria o seu Espírito Consolador (Ev.,
+        All.), a fim de que em todas as coisas glorificássemos a Deus por Jesus Cristo (Ep.). — Como
+        os Apóstolos reunidos no Cenáculo, devemos preparar-nos, pela oração e caridade (Ep.), ao
+        santo dia de Pentecostes, em que Jesus, «nosso Advogado junto ao Pai» (1.º Noct.), dele nos
+        obterá o Espírito Santo.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 26, 7, 8 & 9</Typography>

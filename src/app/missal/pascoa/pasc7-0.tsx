@@ -9,6 +9,22 @@ export default function PagePasc70() {
     <PageWrapper>
       <H1 text="Domingo de Pentecostes" />
 
+      <Typography className="comment">
+        Jesus tinha colocado os fundamentos da Igreja no curso de sua vida apostólica e lhe havia
+        comunicado os seus poderes depois da Ressurreição. Ao Espírito Santo competia terminar a
+        formação dos Apóstolos e revesti-los com a força do alto (Ev.). Ao reino visível de Cristo
+        sucedia o reino visível do Espírito Santo. — «Pentecostes celebra a primeira manifestação do
+        Espírito Santo nos discípulos de Jesus Cristo e, portanto, a fundação da Igreja» (2). É bem
+        escolhida, para Estação deste dia, a basílica de S. Pedro, chefe da Igreja.
+        {"\n\n"}
+        Jesus, diz o Evangelho, havia anunciado aos seus a vinda do Divino Paráclito; a Epístola
+        mostra-nos a realização dessa promessa. À hora de Terça, o Cenáculo é investido pelo
+        Espírito de Deus. Impetuoso vento sopra de repente nas imediações da casa, e a aparição de
+        línguas de fogo no interior são os seus maravilhosos sinais. Todos foram repletos do
+        Espírito Santo e começaram a falar as maravilhas de Deus. A Igreja, que naquele dia recebeu
+        a plenitude dos dons divinos, continua a invocá-los sobre os seus filhos.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sb. 1, 7</Typography>
