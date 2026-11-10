@@ -8,6 +8,20 @@ export default function PagePasc06() {
     <PageWrapper>
       <H1 text="Sábado Pascal" />
 
+      <Typography className="comment">
+        Ao sair da fonte, os neófitos receberam uma veste branca (2), símbolo dos efeitos do
+        baptismo em sua alma: «Vós todos que fostes baptizados, vos revestistes de Jesus Cristo»
+        (Comm.). Eles a conservavam até este dia, que é chamado «Sábado em que se depõem as vestes
+        brancas», porque, reunidos em S. João de Latrão, era-lhes então retirada a sua túnica
+        baptismal.
+        {"\n\n"}A Igreja, vendo reunidos em torno de si «esses filhos recém-nascidos» (Ep.),
+        pede-lhes, pela boca de S. Pedro, seu chefe, que bebam sempre o leite espiritual e puro da
+        verdadeira doutrina. Nessa basílica, dedicada ao S. Salvador, ela lhes lembra que suas almas
+        são as pedras vivas de um edifício espiritual, cuja pedra angular é o Cristo. O Evangelho
+        apresenta o Príncipe dos Apóstolos a constatar, antes de S. João, a Ressurreição de Jesus,
+        de que ele deve ser testemunha para toda a Igreja (3).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 104, 43</Typography>

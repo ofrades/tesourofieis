@@ -8,6 +8,15 @@ export default function PagePasc04() {
     <PageWrapper>
       <H1 text="Quinta-feira Pascal" />
 
+      <Typography className="comment">
+        O Evangelho de hoje narra o baptismo do eunuco da rainha de Candace, feito por Filipe. O
+        novo discípulo crê de todo o coração e confessa que Jesus Cristo é o Filho de Deus; descendo
+        com Filipe à água, é baptizado, e continua o seu caminho cheio de alegria, enquanto Filipe,
+        arrebatado pelo Espírito, vai anunciando o nome do Senhor por todas as cidades. A Igreja
+        mostra, nesta Oitava, como a fé em Jesus ressuscitado se estende a todos os povos e como o
+        baptismo nos reveste de Cristo.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sb. 10, 20-21</Typography>

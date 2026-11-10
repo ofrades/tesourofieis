@@ -8,6 +8,20 @@ export default function PagePasc10() {
     <PageWrapper>
       <H1 text="Domingo In Albis" />
 
+      <Typography className="comment">
+        Este Domingo é chamado Quasimodo — das primeiras palavras do Introito — ou in Albis, porque
+        os neófitos acabam de depor suas vestes brancas, ou terminação da Páscoa, porque hoje acaba
+        a Oitava da Páscoa (Or.).
+        {"\n\n"}
+        Para ensinar aos que acabam de nascer pelo baptismo à vida de Deus (Intr.) com que
+        generosidade devem prestar testemunho a Jesus, a Igreja os conduz à basílica de S. Pancrácio
+        mártir, que na idade de 12 anos deu ao Cristo testemunho do sangue (1). Assim devem agir os
+        baptizados ante a perseguição tenaz de que são continuamente vítimas. Devem resistir,
+        apoiando-se na fé em Jesus, o Filho de Deus, ressuscitado. É essa fé, diz S. João, que nos
+        faz vencer o mundo, pois ela nos leva a rejeitar todas as suas tentações de nos fazer cair
+        (Ep.). Essa fé, portanto, deve ter uma base sólida. A Igreja no-la dá na Missa de hoje.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">1 Pe. 2, 2</Typography>

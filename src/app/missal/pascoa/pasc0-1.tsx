@@ -8,6 +8,18 @@ export default function PagePasc01() {
     <PageWrapper>
       <H1 text="Segunda-feira Pascal" />
 
+      <Typography className="comment">
+        Outrora, durante toda a Oitava de Páscoa não se trabalhava: era festa contínua. A missa
+        estacional reunia todos os neófitos à mesa da Comunhão. À tarde, iam ao túmulo do Chefe da
+        Igreja, São João de Latrão, para o Ofício de Vésperas.
+        {"\n\n"}O Evangelho, depois de haver descrito a manifestação de Jesus ressuscitado aos
+        discípulos de Emaús, fala de sua aparição a Pedro, no próprio dia da Ressurreição (2). Os
+        neófitos, e o mesmo devemos fazer, atestavam neste dia a fé em Jesus e na Igreja, recebendo
+        nestas festas da Páscoa o leite de nossas almas, nascidas à vida na terra de promissão da
+        Igreja (Intr.), formando todos um só coração e uma só alma, por um mesmo Sacramento, que é o
+        de Deus, para afirmarmos unânimes a nossa fé em Jesus ressuscitado (Postcomm.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Ex. 13, 5 & 9</Typography>

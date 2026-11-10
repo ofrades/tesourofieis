@@ -8,6 +8,15 @@ export default function PagePasc00() {
     <PageWrapper>
       <H1 text="Domingo da Ressurreição" />
 
+      <Typography className="comment">
+        O Tempo Pascal é a imagem do céu, a irradiação da Páscoa eterna, que é o fim de toda a nossa
+        existência. A Igreja que, no Tempo da Paixão, chorava por Jesus e pelos pecadores, tem agora
+        duplo motivo de alegria, pois Jesus ressuscitou e nasceram-lhe numerosos filhos. Essa
+        alegria é um antegosto de nossa ressurreição e de nossa entrada na pátria celeste, onde o
+        Mestre foi preparar-nos um lugar e à qual o Espírito Santo, que ele nos envia, há de
+        conduzir-nos.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 138, 18 & 5-6</Typography>

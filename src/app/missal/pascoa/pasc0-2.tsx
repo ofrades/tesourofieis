@@ -8,6 +8,24 @@ export default function PagePasc02() {
     <PageWrapper>
       <H1 text="Terça-feira Pascal" />
 
+      <Typography className="comment">
+        Após o testemunho da ressurreição de Jesus, dado pelos Anjos (Vigília e Manhã de Páscoa) e
+        pelo Príncipe dos Apóstolos (Segunda-feira de Páscoa), a liturgia nos oferece hoje o do
+        Apóstolo das Nações. Na basílica de S. Paulo, na via d'Ostia, é que a Igreja reunia neste
+        dia os seus filhos (Or.), para pregar-lhes por sua boca as palavras da Sabedoria divina
+        (Intr.).
+        {"\n\n"}A Epístola é uma parte do discurso em que S. Paulo anunciou aos Judeus da sinagoga
+        de Antioquia da Pisídia a ressurreição de Cristo, predita pelos profetas e testemunhada
+        pelos Apóstolos. O Evangelho também nos dá nova prova da ressurreição de Cristo. Conta a
+        primeira manifestação de Jesus aos Apóstolos no Cenáculo, no próprio dia de sua ressurreição
+        (2). O Salvador deixa-se tocar pelos discípulos, come diante deles e lhes prova, pela
+        Sagrada Escritura, como era preciso que o Cristo morresse para salvar o mundo. Os neófitos,
+        «arrancados das mãos do inimigo e reunidos ao povo de Deus» (Grad.), devem, e com eles todos
+        os cristãos, resumir S. Paulo, não mais viver, como Jesus ressuscitado, senão uma vida
+        celeste (Comm.), e afirmar por sua conduta a fé no Cristo (Or.). Renovemos a fé em Jesus
+        ressuscitado e exprimamo-la, tendo, como Cristo, uma vida inteiramente nova.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Ecl. 15, 3 & 4</Typography>

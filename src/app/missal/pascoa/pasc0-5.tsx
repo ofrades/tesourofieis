@@ -8,6 +8,18 @@ export default function PagePasc05() {
     <PageWrapper>
       <H1 text="Sexta-feira Pascal" />
 
+      <Typography className="comment">
+        Depois de ter reunido os seus neófitos nestes dias em S. João de Latrão, Santa Maria Maior,
+        S. Pedro, S. Paulo, S. Lourenço e nos Doze Apóstolos, a Igreja fazia hoje a Estação na
+        basílica dedicada a todos os Mártires e à sua Rainha. Aí se manifesta, principalmente, a
+        vitória de Cristo sobre o paganismo. O Panteão, que era o templo consagrado ao culto de
+        todos os deuses, foi, no século VII, consagrado a Maria e aos Mártires, cujos ossos
+        Bonifácio IV tinha feito transportar em grande número para essa basílica. A festa da
+        dedicação dessa igreja tornou-se logo a nossa festa de Todos os Santos. A liturgia do ciclo
+        pascal nos mostrou em Noé, em Moisés e nos outros justos da Antiga Aliança as figuras
+        daqueles que, pelo baptismo, morreram com Cristo para ressuscitar com Ele.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 77, 53</Typography>

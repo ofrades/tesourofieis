@@ -8,6 +8,18 @@ export default function PagePasc03() {
     <PageWrapper>
       <H1 text="Quarta-feira Pascal" />
 
+      <Typography className="comment">
+        «Pode-se perguntar, diz S. Gregório, por que o Senhor, após a ressurreição, ficou na praia,
+        enquanto os discípulos trabalhavam no mar, ele que, antes da ressurreição, caminhara sobre
+        as ondas em presença dos discípulos. A razão desse facto descobre-se logo se se pesa a
+        significação íntima. Que figura esse mar, senão o século presente, em que as vicissitudes e
+        agitações desta vida corruptível se assemelham às ondas sem cessar entrechocando-se e
+        quebrando-se? Que representa a terra firme da margem senão a perpetuidade do repouso eterno?
+        Como os discípulos se achavam ainda no meio das vagas desta vida mortal, eles trabalhavam no
+        mar. Mas o nosso Redentor, havendo despido a corruptibilidade da carne, conservava-se,
+        depois de sua ressurreição, na praia» (Matinas).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Mt. 25, 34</Typography>
