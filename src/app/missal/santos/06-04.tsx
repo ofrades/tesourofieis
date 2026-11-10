@@ -9,6 +9,23 @@ export default function Page0604() {
     <PageWrapper>
       <H1 text="S. Francisco Caracíolo, Conf., a 4 de Junho" />
 
+      <Typography className="comment">
+        Francisco, da nobre família dos Caracciolo, nos Abruzzos, resolveu, durante uma grave
+        enfermidade, consagrar-se inteiramente ao serviço de Deus, a fim de estar pronto quando o
+        Mestre o viesse buscar (Ev.). Uma carta, que lhe foi entregue por engano, o pôs a par do
+        projecto de dois homens piedosos de fundar um novo instituto religioso. O Santo viu nisso um
+        sinal da Providência e tornou-se um dos fundadores da Ordem dos Clérigos Menores regulares,
+        adoptando, na profissão, o nome de Francisco, por ser muito devoto de S. Francisco de Assis.
+        Ao amor pela penitência juntava grande zelo pela oração (Or.). Abrasado em ardente amor ao
+        divino mistério da Eucaristia, seu coração derretia-se como a cera quando se achava diante
+        do Tabernáculo (Intr.), onde experimentava toda a abundância da doçura por Deus preparada
+        para os que o temem (Comm.). Morreu aos quarenta anos em 1608, na Vigília da festa de Corpo
+        de Deus, e, «conquanto haja vivido pouco, forneceu longa carreira, pois uma vida sem mancha
+        equivale a uma verdadeira velhice» (Ep.). — A exemplo de S. Francisco, oremos e sujeitemos à
+        servidão o nosso corpo (Or.), para que, abrasados, como ele, no fogo da caridade, possamos
+        sentar-nos dignamente à mesa sagrada (Secr.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 21, 15; 68, 10</Typography>

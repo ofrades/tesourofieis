@@ -9,6 +9,23 @@ export default function Page0310() {
     <PageWrapper>
       <H1 text="Os Quarenta Mártires, a 10 de Março" />
 
+      <Typography className="comment">
+        Sob o imperador Licínio, em 320, quarenta soldados da guarnição de Sebaste, na Arménia,
+        prestaram ao Cristo glorioso testemunho (Ep.). Recusando sacrificar aos ídolos, foram, por
+        ódio ao nome de Jesus (Ev.), «encarcerados e torturados de todos os modos» (Ep.). Por
+        último, foram expostos, despojados de suas vestes, num tanque de gelo. Assim oraram ao
+        Senhor: «Tendo 40 entrado no combate, sejamos 40 a receber a coroa, 40 sendo o número
+        consagrado pelo jejum de Jesus, Moisés e Elias» (3). Um deles, perdendo a coragem, atirou-se
+        no banho tépido preparado ao lado do tanque e ali pereceu. O guarda, porém, tocado pela
+        graça do alto, tomou o seu lugar, e foram 40 a sofrer o martírio. Quando expiraram, levaram
+        em carroças os cadáveres para serem queimados, exceptuando o mais jovem dos mártires, que
+        ainda tinha vida e que esperavam decidir a sacrificar aos deuses. Mas a mãe, que era
+        sobretudo mãe no Cristo (Comm.), tomando-o nos braços, seguiu o cortejo e, ao exalar o filho
+        o último suspiro, ela própria colocou-o entre aqueles que eram mais do que nunca seus irmãos
+        em Jesus (Ev., Comm.). Unidos na morte como na vida, as suas almas entraram ao mesmo tempo
+        no céu.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 33, 18</Typography>

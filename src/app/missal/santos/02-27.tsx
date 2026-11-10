@@ -8,6 +8,18 @@ export default function Page0227() {
     <PageWrapper>
       <H1 text="S. Gabriel de N. S. das Dores, C., a 27 de Fevereiro" />
 
+      <Typography className="comment">
+        Este jovem santo que viveu ainda não há um século, de 1838 a 1862, mostra-nos, por seu
+        exemplo, não consistir a santidade em fazer grandes coisas, mas na perfeita compreensão do
+        amor de Deus. Conforme o ensinamento dado pela Epístola, São Gabriel praticou nessa intenção
+        a abnegação e a humildade. Encontrou no Instituto da Paixão de S. Paulo da Cruz poderosos
+        alimentos para a ascensão de sua alma à santidade: a imitação dos sofrimentos do Cristo e o
+        ardente amor da Divina Mãe em suas Dores. Pio X, beatificando-o, propôs-o como modelo
+        integral do jovem cristão, porque, nada tendo produzido de extraordinário, podia ser imitado
+        por todos. Bento XV canonizou-o em 1920, magníficos milagres tendo confirmado a sua precoce
+        santidade.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Ecl. 11, 13</Typography>

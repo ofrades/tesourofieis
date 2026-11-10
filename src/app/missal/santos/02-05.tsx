@@ -9,6 +9,25 @@ export default function Page0205() {
     <PageWrapper>
       <H1 text="Santa Águeda, Virgem e Márt., a 5 de Fevereiro" />
 
+      <Typography className="comment">
+        Santa Águeda, Virgem Mártir (Or.), nasceu na Sicília de pais nobres, mas julgou ser a sua
+        maior nobreza o pertencer a Jesus, a quem tomou por Esposo (Ev.). Dotada de notável beleza,
+        teve que resistir às solicitações do governador Quintiano, o qual, não podendo chegar aos
+        seus fins pela persuasão, empregou a violência, mandando dilacerar o peito da Santa, a qual
+        foi curada pelo Apóstolo S. Pedro que lhe apareceu na prisão (Comm.). Em seguida, o corpo da
+        Santa foi revolvido sobre cacos e carvões ardentes; voltando à prisão, ali expirou no meio
+        da prece. Isto passou-se em Catana, no ano de 251, sob a perseguição do imperador Décio.
+        Deus, concedendo por sua omnipotência a vitória do martírio a essa frágil mulher (Or.), quis
+        mostrar que só Ele é o nosso Redentor e por isso «escolhe o que é fraco no mundo para
+        aniquilar os que confiam em suas próprias forças» (Ep.). Diversas vezes, o véu virginal que
+        cobria o túmulo de Santa Águeda fez parar a lava que se precipitava em torrentes de fogo do
+        Etna, ameaçando destruir a cidade. Deste modo Deus honrava a resistência oposta pela sua
+        puríssima alma contra os assaltos das paixões. O seu nome está escrito no Canon da Missa
+        (2.ª lista, p. 93). Já no século VI a sua festa era celebrada em Roma. Invoquemos a Santa
+        Águeda para preservar as nossas casas dos incêndios e extinguir, pelo espírito de
+        penitência, as chamas impuras que abrasam os nossos corpos e as nossas almas.
+      </Typography>
+
       <Typography className="aside">
         Como na{" "}
         <Link className="link" href="/missal/comum/17virgensmartires1">

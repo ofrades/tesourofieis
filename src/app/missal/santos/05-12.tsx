@@ -9,6 +9,18 @@ export default function Page0512() {
     <PageWrapper>
       <H1 text="S.S. Nereu, Achileu, Domitila, Virgem e Pancracio, Mártires" />
 
+      <Typography className="comment">
+        Nereu e Aquiles, oficiais da casa de Flávia Domitila, sobrinha dos imperadores Tito e
+        Domiciano, foram baptizados por S. Pedro. O Evangelho louva-lhes a fé, na pessoa do oficial
+        que, obtendo a cura do filho, creu em Jesus. Os Santos inspiraram a Domitila a resolução de
+        consagrar a Deus a sua virgindade. Aureliano, seu noivo, acusou-os como sendo cristãos; por
+        ódio ao Cristo, foram os três condenados à morte no império de Domiciano em Terracena (pelo
+        ano 100). Seus corpos descansam em Roma na igreja dos SS. Nereu e Aquiles (2). S. Pancrácio,
+        preso em Roma, aos quatorze anos, foi martirizado cerca do ano de 275 sob Diocleciano, por
+        recusar sacrificar aos deuses. Sua constância o colocou entre os Santos cuja alegria
+        compartilha (Ep., Comm.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl 32:18-20</Typography>

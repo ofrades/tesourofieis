@@ -9,6 +9,18 @@ export default function Page0605() {
     <PageWrapper>
       <H1 text="S. Bonifácio, B. e Mártir, a 5 de Junho" />
 
+      <Typography className="comment">
+        Bonifácio nasceu na Inglaterra, nos fins do século VII, e é uma das grandes glórias da Ordem
+        de São Bento. Gregório II enviou-o à Alemanha, onde, com um escol de monges, anunciou, como
+        Jesus ressuscitado pedira aos Apóstolos, a boa Nova aos povos de Hesse, Saxe e Turíngia
+        (Or.). Nomeado por Gregório II legado da Sé apostólica, reuniu vários sínodos, entre os
+        quais o memorável Concílio de Leptines, na diocese de Cambrai. Criado arcebispo de Magonça
+        pelo Papa Zacarias, sagrou, por sua ordem, a Pepino, rei dos Francos. Depois da morte de S.
+        Vilibrordo, foi-lhe confiada a igreja de Utrecht, na Frísia. Aí os Frísios o mataram, em
+        Dokkum, com trinta de seus monges, em Junho de 755. Seu corpo foi colocado na célebre abadia
+        de Fulda, por ele fundada.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Is. 65, 19 & 23</Typography>

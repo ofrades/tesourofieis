@@ -8,6 +8,23 @@ export default function Page0211() {
     <PageWrapper>
       <H1 text="Aparição da B. Virgem Maria Imaculada, a 11 de Fevereiro" />
 
+      <Typography className="comment">
+        De 11 de Fevereiro até 16 de Julho de 1858, a Santíssima Virgem desceu 18 vezes do céu
+        (Intr.) e mostrou-se a Bernadette Soubirous (Or.) na gruta do rochedo de Massabielle
+        (Grad.). A 25 de Março, a Mãe de Deus disse à pastorinha de 14 anos: «Eu sou a Imaculada
+        Conceição» (2). A festa de hoje recorda o triunfo de Maria sobre a serpente (Tracto) a que
+        se refere a liturgia septuagesimal. Como a mulher que S. João viu «revestida do sol, tendo a
+        lua sob os pés e trazendo à cabeça uma coroa de 12 estrelas» (Ep.), a Virgem de Lourdes
+        «traja uma veste e um véu brancos como a neve, trazendo uma faixa azul e, sobre os pés
+        descalços, uma rosa de oiro» (3), símbolos de seu amor virginal. Exorta à penitência os
+        desgraçados filhos de Eva, que não foram como a Imaculada, preservados do pecado. No dia da
+        Anunciação é que declara o seu nome, a fim de mostrar que, em vista da Encarnação (Or.), foi
+        que Deus lhe fez a graça «de ser isenta da mácula original» (Tracto). — Recordando-nos ser
+        Maria «a arca da Nova Aliança» (Ep.), recorramos com confiança Àquela que, «cheia de graça»
+        (Off.), «vem visitar a nossa terra, para multiplicar em nós os dons de suas riquezas»
+        (Comm.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Ap. 21, 2</Typography>

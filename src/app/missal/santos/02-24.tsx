@@ -8,6 +8,19 @@ export default function Page0224() {
     <PageWrapper>
       <H1 text="S. Matias, Apóstolo, a 24 de Fevereiro" />
 
+      <Typography className="comment">
+        S. Pedro no livro dos Actos (Ep.) diz que o profeta tinha em vista a Judas quando declara
+        «que o seu episcopado passaria a outras mãos» (2). Foi Nosso Senhor mesmo quem mostrou o seu
+        escolhido para ser «associado aos onze apóstolos» (Ep.). A S. Matias confiou os segredos por
+        ele hauridos no seio do Pai (Ev.). Este Apóstolo participa da glória «dos príncipes por Deus
+        estabelecidos sobre as almas» (Off.), e «ele julgará as 12 tribos de Israel» (Comm.). Desde
+        a infidelidade deles, «tornou-se deserta a casa deles» (Ep.) (3), e aos Gentios, que fazem
+        penitência, passou o reino dos céus. Seu nome figura no Canon da Missa (segunda lista, p.
+        99). — Peçamos a Deus, o qual associou o Bem-aventurado S. Matias ao colégio dos Apóstolos,
+        a graça de, por sua intercessão, «expiarmos as nossas faltas» (Secr.), a fim de obtermos
+        «paz e perdão» (Postcomm.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 138, 17</Typography>

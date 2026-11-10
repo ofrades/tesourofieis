@@ -8,6 +8,26 @@ export default function Page1226() {
     <PageWrapper>
       <H1 text="S. Estêvão, Primeiro Mártir, a 26 de Dezembro" />
 
+      <Typography className="comment">
+        A Igreja estava ainda no berço quando Estêvão, notável por suas virtudes, recebeu dos
+        Apóstolos a missão de organizar as refeições em comum, destinadas aos pobres. Fez «tais
+        prodígios e tão grandes milagres» (Ep.), que alguns Judeus de cinco sinagogas diferentes se
+        afligiram e o citaram perante o sinédrio (Intr.). Jesus tinha censurado aos Judeus «haverem
+        matado e lapidado os Profetas» (Ev.). Estêvão, por sua vez, dirigindo-se a seus juízes,
+        declara-lhes que, crucificando o Cristo, eles se mostraram dignos de seus antepassados, os
+        quais mataram aos enviados de Deus. O santo diácono, levantando então os olhos ao céu,
+        declara «ver o Filho do Homem de pé, à direita de Deus» (Ev.). Belo testemunho da divindade
+        dessa criança que veneramos no presépio. Ao ouvirem essas palavras, os Judeus, realizando
+        uma vez mais a palavra do Mestre (Ev.), «precipitaram-se todos juntamente contra Estêvão e o
+        lapidaram», enquanto, de joelhos, «ele entregava a sua alma a Jesus» (Ep.) e perdoava aos
+        seus algozes. Sendo Estêvão a primeira testemunha de Cristo, é justo que seja também o
+        primeiro no glorioso cortejo dos santos, a rodearem o berço do Salvador. Num martirológio
+        grego do século IV, pode-se notar a tendência de ligar a festa dos maiores santos do Novo
+        Testamento à festa do Natal. O nome de Santo Estêvão acha-se inscrito no Canon da Missa (2.ª
+        lista, p. 93). A seu exemplo, faça-nos a caridade «amar até aos que nos fazem mal» (Or.), e,
+        como ele, estejamos prontos a dar a Jesus recém-nascido vida por vida.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 118, 23, 86 & 23</Typography>

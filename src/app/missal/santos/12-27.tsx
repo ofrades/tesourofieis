@@ -8,6 +8,33 @@ export default function Page1227() {
     <PageWrapper>
       <H1 text="S. João, Apóstolo e Evangelista, a 27 de Dezembro" />
 
+      <Typography className="comment">
+        A estação é em Santa Maria Maior, para honrar Aquela a quem Jesus, ao morrer, confiou São
+        João. «Mulher, eis aí teu filho». É a um Deus que adoramos em Belém, durante o Tempo de
+        Natal. São João, o Evangelista por excelência da divindade do Cristo, devia, pois,
+        encontrar-se junto do presépio, para nos narrar a grandeza do Menino que aí repousa. A ele é
+        que Jesus confiará Maria, quando José houver desaparecido, pelo que a liturgia gosta de nos
+        mostrar juntos, perto do Menino e de sua Mãe (Off.), aquele a quem o Evangelho denomina o
+        Justo (2), e aquele a quem a Igreja coroa hoje com o mesmo título (Off.). O Menino-Deus
+        cerca o seu presépio de almas puras: Maria é a Virgem santa, José o esposo virginal, Estêvão
+        o primeiro Mártir que lava a sua túnica no sangue do Cordeiro. Agora temos João, o apóstolo
+        virgem, coroado com a auréola dos que souberam vencer a carne; tornou-se por esse motivo «o
+        discípulo que Jesus amava e que, durante a ceia, repousou sobre o peito de Jesus» (Ev.);
+        graças à sua pureza angélica, hauriu nele a sublime sabedoria de que nos fala a Epístola, a
+        qual lhe valeu a auréola dos Doutores; por isso o Introito de sua Missa é o mesmo empregado
+        pela Igreja no «Comum dos Doutores». — A São João, que escreveu um Evangelho, três Epístolas
+        e o Apocalipse, devemos as mais belas páginas sobre a Divindade do Verbo feito carne; por
+        esse motivo é ele simbolizado pela águia a pairar nas alturas. O Apóstolo recebeu finalmente
+        a auréola do martírio; pois só escapou da morte violenta por essa proteção toda especial de
+        que nos fala o Evangelho, a que fez muitos pensarem que o discípulo bem-amado não haveria de
+        morrer; com efeito, ele só desapareceu depois de todos os outros apóstolos. O seu nome é
+        citado com o deles no Canon da Missa (1.ª lista, p. 89). O desejo de ligar os grandes Santos
+        à festa do Natal fazia celebrar-se neste dia, excepto em Roma, a festa de S. Tiago, irmão de
+        S. João, e no dia 28 a de S. Pedro e S. Paulo. Com S. João, confessemos que o Verbo se fez
+        carne. «Neste dia benze-se o vinho oferecido pelos fiéis, em memória e em honra de S. João,
+        que tomou, sem sofrer dano algum, uma taça envenenada» (Ritual Romano).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Ecl. 15, 5</Typography>

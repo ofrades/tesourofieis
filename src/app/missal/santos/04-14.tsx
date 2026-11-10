@@ -8,6 +8,24 @@ export default function Page0414() {
     <PageWrapper>
       <H1 text="S. Justino, Mártir, a 14 de Abril" />
 
+      <Typography className="comment">
+        A Igreja, no século II, teve que lutar contra os erros dos filósofos pagãos e contra o
+        gládio dos perseguidores. Deus suscitou homens corajosos, conhecidos sob o nome de Padres
+        apologistas, que defenderam, à custa da própria vida, o dogma cristão. O mais ilustre dessa
+        época foi São Justino, nascido em Naplissa (Samaria), pelo ano 100. Filósofo pagão,
+        aprofundou o ensinamento dos diferentes sistemas filosóficos do paganismo, descobrindo neles
+        somente erro e falsa ciência, pois a inteligência humana, rejeitando a luz sobrenatural,
+        logo se desvia (Ep., Grad.). São Justino estudou a palavra do divino Crucificado e
+        converteu-se ao cristianismo. Vendo na razão um precioso auxiliar da fé, abriu em Roma a
+        primeira escola de filosofia cristã, onde ensinou «a eminente ciência de Jesus Cristo»
+        (Or.). Tornou-se célebre, principalmente pelas duas apologias, que teve a coragem (Ev.) de
+        dirigir, sucessivamente, aos imperadores perseguidores Antonino e Marco Aurélio (Intr.).
+        Antonino publicou, então, um édito que aplacou a perseguição. Marco Aurélio, pelo contrário,
+        mandou flagelar com varas S. Justino e pronunciou contra ele a sentença de morte. Foi
+        martirizado no dia 13 de Abril pelo ano de 162-165. — «Conformemo-nos com os ensinamentos do
+        Bem-aventurado mártir» (Postcomm.), «a fim de permanecermos firmes na fé» (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 118, 85 & 46</Typography>

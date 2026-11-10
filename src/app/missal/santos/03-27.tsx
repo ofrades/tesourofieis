@@ -8,6 +8,30 @@ export default function Page0327() {
     <PageWrapper>
       <H1 text="S. João Damasceno, Conf. e Doutor, a 27 de Março" />
 
+      <Typography className="comment">
+        João, cognominado Damasceno (isto é, de Damasco), foi suscitado por Deus para defender o
+        culto das imagens, na época em que o imperador Leão, o Isauriano, se esforçava por
+        destruí-las. Repleto da ciência divina (Ev.), combateu fortemente os Iconoclastas (palavra
+        grega, significando quebradores de imagens); «a sua doutrina celeste e admirável força de
+        espírito» (Or.) valeram-lhe o título de Doutor. A sua biografia, escrita pelo patriarca João
+        de Jerusalém, no décimo século, reproduz diversas lendas, que inspiraram a liturgia da missa
+        de sua festa. Aí lemos, por exemplo, que, acusado de traição pelo imperador, junto ao califa
+        de Damasco, de quem era conselheiro e ministro, foi condenado a ter a mão direita cortada.
+        Mas, assim como ao homem da mão seca, de que fala o Evangelho do dia, foi-lhe a mão
+        restituída milagrosamente. João prometera à Santíssima Virgem empregá-la, daí por diante, em
+        escrever os seus louvores. Cumpriu a promessa. Seus numerosos trabalhos, férteis em ciência
+        e piedade, e sua eloquência mereceram-lhe ser comparado, pelo 2.º Concílio de Niceia, a um
+        «rio de ouro» e proclamado Doutor por Leão XIII. S. João Damasceno adormeceu na paz do
+        Cristo pelo ano 749 (ou 708?). «O que é um livro para quem sabe ler, diz o Santo, é a imagem
+        para quem o não sabe. O que a palavra é para o ouvido, a imagem é para a vista. As santas
+        imagens são memorial das obras divinas». Deve-se honrá-las, diz o Concílio de Trento, «não
+        porque se creia conterem algo de divino, algum poder que obrigue a honrá-las, ou que se
+        possa pedir-lhes alguma graça, e se deva confiar nelas, como outrora os pagãos que confiavam
+        nos ídolos, mas porque a honra que se lhes presta se dirige a seu protótipo, por elas
+        representado; de sorte que, ao beijar as imagens, reverenciá-las e ajoelhar-se diante delas,
+        adora-se a Jesus Cristo e reverencia-se os Santos, que elas representam» (Sess. XXV).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 72, 24</Typography>

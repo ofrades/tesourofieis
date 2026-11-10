@@ -9,6 +9,24 @@ export default function Page0615() {
     <PageWrapper>
       <H1 text="S. S. Vito, Modesto e Crescência, Mártires, a 15 de Junho" />
 
+      <Typography className="comment">
+        Vito, chamado também Guido, pertencia a uma ilustre família da Sicília. Seu pai, sem o
+        consentimento do qual ele havia sido baptizado, entregou-o ao juiz Valeriano para ser
+        flagelado, ficando cego, em castigo. As orações do Santo obtiveram a sua cura, porém não o
+        converteram. Vito foi, então, libertado da crueldade paterna por Modesto, seu preceptor, e
+        por Crescência, sua ama, que o conduziram a outra região. Sua santidade aí manifestou tal
+        esplendor, que Diocleciano a ele recorreu a fim de livrar seu filho atormentado pelo
+        demónio. Guido curou-o (Ev.), mas o príncipe ingrato, não podendo induzir o Santo ao culto
+        dos falsos deuses, mandou prendê-lo com Modesto e Crescência. Foram mergulhados numa
+        caldeira de chumbo derretido e de resina inflamada; desconjuntaram-lhes os membros sobre um
+        cavalete. Depois de experimentados como o oiro no cadinho (Ep.), Deus os libertou de todas
+        essas penas (Intr.), cumulou-os de alegria, dando-lhes um lugar de honra no banquete celeste
+        (Grad.). Morreram em 303. S. Vito é um dos quatorze santos auxiliares (1). Recorramos a S.
+        Guido para não sermos mordidos pelas serpentes danadas, nem atacados do triste mal que traz
+        seu nome. O Santo nos obterá grande docilidade ao Espírito Santo, para praticarmos o bem com
+        toda a liberdade, humildade e caridade (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 33, 20-21</Typography>

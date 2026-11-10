@@ -8,6 +8,23 @@ export default function Page1229() {
     <PageWrapper>
       <H1 text="S. Tomás de Cantorbéry, B. e M., a 29 de Dezembro" />
 
+      <Typography className="comment">
+        O Tempo de Natal, manifestando-nos a filiação divina da Criança do presépio, mostra-nos,
+        conforme lembra a Epístola de hoje, que ele é sacerdote. Seu sacerdócio consiste em fazer
+        penetrar a vida de Deus nas almas e em defender, à custa da própria vida, os direitos
+        divinos da Esposa bem-amada. A festa de S. Tomás Becket nos faz ver como, participando da
+        dignidade do Cristo-Sacerdote, o bispo de Cantuária soube ser também o Pastor que defende as
+        ovelhas contra o lobo arrebatador (Ev.). O rei Henrique II da Inglaterra quer fazê-lo
+        sancionar costumes contrários às liberdades da Igreja. S. Tomás sabe que tornar essa
+        sociedade divina dependente do poder secular seria atentar contra a sua constituição mesma,
+        e declara que: «Sacerdote de Jesus Cristo, ele estaria pronto a sofrer a morte para defender
+        a Igreja de Deus». Foi morto em sua catedral, pelos soldados do rei, no dia 29 de Dezembro
+        de 1170. Contra os que procuram escravizar a Igreja de Deus, não empreguemos nem as
+        habilidades da política, nem as armas assassinas, mas, a exemplo do glorioso Tomás, ferido
+        pela espada dos ímpios para defender a Igreja (Or.), saibamos resistir em face, com toda a
+        força moral que dá a defesa dos direitos de Deus.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Language>

@@ -8,6 +8,30 @@ export default function Page0325() {
     <PageWrapper>
       <H1 text="Anunciação da B. Virgem Maria, a 25 de Março" />
 
+      <Typography className="comment">
+        Março, outrora o primeiro mês do ano civil, já se ilustrou, no curto espaço de 4 dias, com
+        as festas do Arcanjo Gabriel, de S. José e de S. Bento. Hoje nos apresenta o maior
+        acontecimento da história: a Encarnação de Nosso Senhor (Ev.) no seio da Virgem (Ep.). Neste
+        dia o Verbo se fez carne, uniu-se, para todo o sempre, à humanidade de Jesus. O dia 25 de
+        Março é o aniversário da ordenação de Cristo como sacerdote, pois, pela unção da divindade,
+        tornou-se Ele supremo pontífice, medianeiro entre Deus e os homens. O mistério da Encarnação
+        dá a Maria o seu título mais belo, o de «Mãe de Deus» (Or.), em grego «Theotocos», nome que
+        a Igreja do Oriente inscrevia sempre em letras de ouro, como diadema, sobre a fronte das
+        imagens ou estátuas da Santíssima Virgem. «Colocada nos confins da Divindade» (1), visto ter
+        fornecido ao Verbo de Deus a carne à qual ele se uniu hipostaticamente, a Virgem foi sempre
+        honrada com um culto eminentíssimo ou de hiperdulia: «O Filho do Pai e o Filho da Virgem
+        tornam-se naturalmente um só e mesmo Filho», diz Santo Anselmo. Maria torna-se a rainha do
+        género humano e todos lhe devem reverência (Intr.). Ao dia 25 de Março corresponderá, nove
+        meses mais tarde, o dia 25 de Dezembro, em que se manifestará ao mundo o milagre, hoje
+        apenas conhecido pelo céu e pela humilde Virgem. Segundo os antigos martirológios, a data de
+        25 de Março seria também a da morte do Salvador. Esta Santa Quarentena relembra-nos, como
+        diz o Credo, que «por nós, homens, e para a nossa salvação, o Filho de Deus desceu do céu,
+        encarnou-se por obra do Espírito Santo, no seio da Virgem Maria, fez-se homem, padeceu sob
+        Pôncio Pilatos, foi sepultado, ressuscitou ao terceiro dia». Como o título de Mãe de Deus
+        torna Maria todo-poderosa junto ao seu Filho, recorramos à sua intercessão junto d'Ele (Or.)
+        para obtermos, pelos méritos de sua Paixão e Cruz, a glória de sua Ressurreição (Postcomm.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 44, 13, 15 & 16</Typography>

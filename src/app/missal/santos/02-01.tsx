@@ -8,6 +8,22 @@ export default function Page0201() {
     <PageWrapper>
       <H1 text="S. Inácio, B. e Márt., a 1 de Fevereiro" />
 
+      <Typography className="comment">
+        A afirmação da divindade de Jesus, apoiada na sabedoria de suas palavras e nos milagres de
+        sua vida, é o objecto da ascese do Tempo depois da Epifania, a terminar amanhã. Santo
+        Inácio, ilustre por sua doutrina, corrobora hoje, com seu martírio, um dos mais gloriosos
+        desses diversos testemunhos. Terceiro sucessor de S. Pedro em Antioquia (Grad.), foi
+        condenado às feras durante a perseguição de Trajano e, carregado de algemas, enviado a Roma.
+        O Introito e a Epístola resumem os sentimentos de seu coração: «Acabrunhem-me o fogo, a
+        cruz, as feras e todos os tormentos do demónio, contanto que goze de Jesus Cristo». «O grão
+        de trigo deve morrer, para produzir frutos abundantes» (Ev.), e Santo Inácio, ouvindo o
+        rugido dos leões, exclamava: «Eu sou o trigo de Jesus Cristo, oxalá seja eu moído pelos
+        dentes das feras e me torne pão agradável a meu Senhor Jesus Cristo» (Comm.). Foi
+        martirizado no ano de 110 ou 118 em Roma. Seu nome figura no Canon da Missa (2.ª lista, p.
+        93). À semelhança deste Santo, morramos ao mundo e a nós mesmos, testemunhando que Jesus
+        Cristo vive em nós (Al.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Gl. 6, 14</Typography>

@@ -10,6 +10,21 @@ export default function Page0212() {
     <PageWrapper>
       <H1 text="Os Fundadores da Ordem dos Servitas, a 12 de Fevereiro" />
 
+      <Typography className="comment">
+        A liturgia honra hoje sete nobres Florentinos que «enriqueceram, em 1293, a Igreja com uma
+        nova família religiosa» (Or.). Esses Santos receberam, por circunstância providencial, da
+        boca de crianças (Intr.) o nome de «Servos de Maria». Ilustres pelo nascimento, esses
+        fundadores o foram ainda mais pela influência salutar de sua Ordem (Comm.) na França,
+        Alemanha e Polónia; «a sua posteridade permanece eternamente e a sua glória nunca será
+        apagada» (Ep.), porque sobrevivem em seus discípulos. Abandonando tudo (Ev.), retiraram-se
+        para o Monte Senario, perto de Florença, e expiaram, pelas austeridades, os pecados dos
+        homens culpados (2). Revestindo o hábito preto da penitência, que lhes mostra a Virgem,
+        meditam constantemente a paixão de Jesus e as dores de Maria ao pé da Cruz (Or., Postcomm.).
+        — «Abrasados de amor pela Paixão de Jesus» (Secr.), «associemo-nos às lágrimas» (Or.) dos
+        Santos hoje festejados para que, «merecendo gozar dos frutos da Redenção do Cristo»
+        (Postcomm.), «tenhamos também parte nas suas alegrias» (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sb. 10, 20-21</Typography>

@@ -9,6 +9,21 @@ export default function Page0622() {
     <PageWrapper>
       <H1 text="S. Paulino, B. e Conf., a 22 de Junho" />
 
+      <Typography className="comment">
+        Paulino nasceu em 353, de família romana muito importante, em Bordéus, na Aquitânia. Fez
+        brilhantes estudos, sendo senador aos vinte e cinco anos. Em seguida, foi cônsul,
+        estabelecendo sua residência em Nola, na Campânia. Perto do túmulo de S. Félix, sacerdote
+        mártir, festejado pela Igreja a 14 de Janeiro (2), a graça o tocou, recebendo ele, em breve,
+        o baptismo. A exemplo do Cristo «que de rico se fez pobre» (Ep.) e que aconselhou a prática
+        da virtude de pobreza (Ev.), abandonou as inúmeras riquezas que possuía, comprando assim o
+        reino dos céus. Deixa sua esposa, que igualmente se dá a Deus, e torna-se padre, depois
+        bispo de Nola (Intr., Grad., Al., Off., Comm.). Seus amigos de outrora o censuravam, porém,
+        a «aprovação de Jesus lhe bastava» (3). Em breve, sobrevêm os Godos que devastam a Campânia,
+        e, enquanto arrancam, sem mérito algum para eles, os bens aos ricos de Roma, Paulino,
+        voluntariamente, dá os seus pelo Cristo, recebe o centuplo e, no outro mundo, a vida eterna.
+        Morreu com setenta e cinco anos, em 431, sendo sepultado perto de S. Félix, em Nola.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <LinkCard

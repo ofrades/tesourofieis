@@ -8,6 +8,24 @@ export default function Page0624() {
     <PageWrapper>
       <H1 text="Nascimento de S. João Baptista, a 24 de Junho" />
 
+      <Typography className="comment">
+        «Profeta do Altíssimo» (Al.), S. João foi figurado por Isaías e Jeremias (Intr., Ep.,
+        Grad.); melhor ainda do que eles, foi consagrado, desde o seio materno, para anunciar a
+        Jesus (Secr.) e preparar as almas à sua vinda. O Evangelho narra os prodígios que
+        assinalaram seu nascimento. Zacarias impõe à criança o nome que S. Gabriel trouxe do céu,
+        significando: «O Senhor fez graça». Ele recupera imediatamente a voz e, cheio do Espírito
+        Santo, prediz as grandezas de seu filho: «Irá diante da face do Senhor para dar ao povo o
+        conhecimento da salvação». O Anjo Gabriel anunciara a Zacarias «que muitos se alegrariam com
+        o nascimento de S. João Baptista» (2). Não foram «os vizinhos e parentes de Isabel» (3) os
+        únicos a festejarem esse acontecimento: cada ano, neste aniversário, a Igreja inteira
+        convida seus filhos a compartilharem desta santa alegria, sabendo que a natividade «do
+        Profeta do Altíssimo» (4), neste Natal do varão (5), está intimamente unida à chegada do
+        Messias. A partir da festa da Natividade de S. João, os dias diminuem, pois o sol, tendo
+        atingido o ponto culminante do seu curso anual, começa a descer. Ao contrário, a festa da
+        Natividade do Salvador, de que esta é prelúdio, marca a época em que o sol recomeça a subir
+        na sua órbita. O Precursor deve apagar-se diante de Jesus, a verdadeira luz das almas.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Is. 49, 1 & 2</Typography>

@@ -8,6 +8,31 @@ export default function Page0324() {
     <PageWrapper>
       <H1 text="S. Gabriel, Arcanjo, a 24 de Março" />
 
+      <Typography className="comment">
+        São Gabriel fora enviado a Daniel, para instruí-lo sobre a época do nascimento de Cristo
+        (Ep.), e a Zacarias, à hora em que oferecia o incenso no Templo (Off.), para anunciar-lhe o
+        nascimento de João Baptista, Precursor do Messias (Ev.). Diz S. Bernardo: «Só Gabriel, nome
+        que se interpreta "Força de Deus", foi considerado digno entre todos os Anjos para anunciar
+        a Maria os desígnios de Deus sobre ela» (Matinas). «Foi escolhido entre todos os Anjos, diz
+        a Oração, para anunciar o mistério da Encarnação». Com o máximo respeito, São Gabriel
+        aproxima-se da Virgem escolhida de toda a eternidade para ser a Mãe, na terra, d'Aquele de
+        quem Deus é o Pai, no céu. Com palavras ditadas pelo Altíssimo e que a Igreja gosta que
+        repitamos com frequência, disse-lhe: «Ave, cheia de graça, o Senhor é convosco, bendita sois
+        entre todas as mulheres». E como Maria se admira desta saudação, o Anjo explica-lhe que veio
+        buscar o seu Filho para que se cumpra o grande mistério que é a condição da Redenção do
+        género humano. «Eu sou Gabriel que estou diante de Deus e fui enviado para dizer-te e
+        anunciar-te esta feliz nova» (Matinas). Maria quer permanecer virgem e o Anjo do Senhor
+        anuncia-lhe que ela conceberá do Espírito Santo e dará à luz um Filho que receberá o nome de
+        Jesus, isto é, Salvador. Maria, sem hesitar, obedece com a mais profunda humildade: «eis
+        aqui a serva do Senhor, que se faça em mim segundo a vossa palavra». E nesse momento
+        operou-se o maior de todos os milagres: Deus, elevando até si, em união pessoal, o bendito
+        fruto do seio da Virgem, «E o Verbo se fez carne e habitou entre nós». O Verbo desposou
+        nossa humanidade, nossa pobreza, nosso nada, e deu-nos em troca a sua divindade, e o Anjo
+        voltou ao céu. «Tendo conhecido pela voz de Gabriel a Encarnação do Verbo, possamos nós
+        obter o seu auxílio e os benefícios desta mesma Encarnação» (Postcomm.). Bento XV estendeu à
+        festa de S. Gabriel a Igreja universal.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 102, 20</Typography>

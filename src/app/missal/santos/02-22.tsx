@@ -8,6 +8,25 @@ export default function Page0222() {
     <PageWrapper>
       <H1 text="Cadeira de S. Pedro em Roma, a 22 de Fevereiro" />
 
+      <Typography className="comment">
+        Para honrar a dignidade deste «príncipe» (Intr.), ao qual Jesus confiou o poder das chaves
+        (Or.), foi estabelecida a festa da primeira «Cátedra de S. Pedro» (3), encontrada desde 354
+        no calendário romano. Ocorrendo muitas vezes na Quaresma, foi a festa antecipada, em certas
+        igrejas, ao mês de Janeiro. Daí as duas festas da Cátedra de S. Pedro, que se distinguiram
+        denominando a de 22 de Fevereiro, a mais antiga (1), Cátedra de S. Pedro em Antioquia, e a
+        de 18 de Janeiro, Cátedra de Roma. Os Gentios, que dariam dignos frutos de penitência, tendo
+        tomado o lugar dos Judeus, Antioquia, onde Pedro residiu antes de estabelecer a sua sede em
+        Roma, suplantou Jerusalém. A S. Pedro, o qual proclamou ser Jesus «o Cristo Filho do Deus
+        vivo» (Ev.), no momento em que a Palestina inteira se insurgia contra ele (2), é que o
+        Mestre confia o poder de atar a Satanás, fechando as portas do inferno para abrir-nos as do
+        céu (Ev.). Ensina-nos o Chefe da Igreja, na sua 1.ª Epístola, que «pela fé na aspersão do
+        sangue de Jesus Cristo, é que o Espírito Santo santifica e reconcilia com o Pai».
+        Comemora-se S. Paulo imediatamente após a oração da festa, porque a liturgia não separa os
+        que foram tão justamente chamados as duas colunas da Igreja (Ver gravura, p. 319). Honremos
+        hoje o Chefe da Igreja que continua neste mundo a obra redentora de Jesus, e peçamos-lhe que
+        nos livre dos laços do pecado.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Ecl. 45, 30</Typography>

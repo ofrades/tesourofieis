@@ -10,6 +10,23 @@ export default function Page0602() {
     <PageWrapper>
       <H1 text="S. S. Marcelino e Outros, Mártires, a 2 de Junho" />
 
+      <Typography className="comment">
+        Pedro, o exorcista, preso sob o império de Diocleciano, converteu seu carcereiro e toda a
+        família, e conduziu-os ao sacerdote Marcelino, que os baptizou. O juiz Sereno os fez, então,
+        comparecer em sua presença, e eles deram testemunho a Jesus Cristo (Ev.). Foram condenados à
+        morte e, após suplícios atrozes, cortou-se-lhes a cabeça, cerca do ano de 303. Possuindo as
+        primícias do Espírito Santo, gemiam na espera da adopção dos filhos de Deus, e seus
+        sofrimentos não tiveram proporção alguma com a glória que hoje neles resplandece (Ep.). Os
+        dois Santos são mencionados no Canon da Missa (2.ª lista, p. 93). Já vimos que a Estação, no
+        Sábado da segunda Semana da Quaresma, tem lugar no santuário a eles dedicado (3). Santo
+        Erasmo, bispo, um dos «quatorze santos auxiliares» (4), viveu nas solidões do Líbano.
+        Cruelmente martirizado em Antioquia e na Síria, sob os imperadores Diocleciano e Maximiano,
+        obteve, em 303, a gloriosa palma do martírio. São Bento tinha grande devoção a Santo Erasmo.
+        Representam-no com um cabrestante em volta do qual se vêem intestinos enrolados. É invocado
+        contra as doenças de intestinos. Sigamos com fervor os exemplos de coragem e firmeza destes
+        Santos Mártires, cujos méritos nos alegram tanto (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <LinkCard href="/missal/santos/03-10#intróito" title="Os Quarenta Mártires" />

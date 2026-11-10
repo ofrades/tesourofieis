@@ -8,6 +8,26 @@ export default function Page1228() {
     <PageWrapper>
       <H1 text="S. S. Inocentes, Mártires, a 28 de Dezembro" />
 
+      <Typography className="comment">
+        A festa dos Inocentes data, mais ou menos, do século V. A morte dessas crianças manifesta a
+        realeza de Jesus. É por acreditar na palavra dos Magos e na dos príncipes dos Sacerdotes a
+        quem consultou, que Herodes vê um rival no menino de Belém, e persegue, invejoso, esse «Rei
+        dos Judeus que acaba de nascer» (1). Mas, conforme canta a Igreja: «Herodes cruel, porque
+        temes a chegada de um Deus que vem reinar? Não arrebata os ceptros mortais Aquele que dá os
+        reinos celestes» (2). É a esse Deus-Rei que «os Inocentes confessam pela sua morte» (Or.).
+        «A sua paixão é a exaltação do Cristo» (3). E o louvor que eles tributam a Deus é, para os
+        inimigos de Jesus, causa de confusão (Intr.), pois, longe de conseguir o seu fim, esses
+        inimigos não fizeram senão realizar as profecias que anunciavam «que o Filho do Homem
+        voltaria do Egipto» (Ev.) e que em Belém seriam ouvidas as lamentações das mães a chorarem
+        os seus filhos. A fim de pintar-nos com mais vivas cores a sua desolação, Jeremias evoca
+        Raquel, cujos gemidos envolvem as cercanias de Rama (4), porque seus filhos não existem
+        mais. Como uma mãe compassiva, a Igreja reveste hoje seus sacerdotes com paramentos de luto
+        (excepto no dia da Oitava, 4 de Janeiro) e suprime o canto do Glória e do Aleluia. Esta
+        festa é celebrada em São Paulo fora dos muros, por serem aí venerados vários corpos desses
+        santos mártires. Confessemos, por uma vida isenta de vícios, a divindade de Jesus que essas
+        almas inocentes confessaram por sua morte (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 8, 3</Typography>

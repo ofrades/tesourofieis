@@ -9,6 +9,21 @@ export default function Page0328() {
     <PageWrapper>
       <H1 text="S. João Capistrano, Conf., a 28 de Março" />
 
+      <Typography className="comment">
+        S. João, nascido em Capistrano (Abruzzos) a 24 de Junho de 1385, entrou na Ordem de S.
+        Francisco, na idade de 39 anos. Foi escolhido por Deus para libertar a Europa do Islam que
+        ameaçava invadi-la, no século XV. Maomé II apoderava-se de Constantinopla, capital do
+        império do Oriente, e marchava contra Belgrado. O Papa Calisto III decretou a Cruzada. S.
+        João pregou-a (Ev.) na Panónia e noutras províncias. Ajudado pelo nobre húngaro João
+        Hunyade, alistou setenta mil cristãos. Esses soldados improvisados só tinham, para combater,
+        forquilhas e flagelos. João, de quem «o Senhor era a força» (Intr.), «obteve com eles a
+        vitória depois de rude combate», assegurando assim o triunfo da Cruz sobre o Crescente
+        (Or.). Nessa mesma tarde, 120.000 turcos jaziam sobre o solo, ou haviam fugido, ao passo que
+        Maomé II, ferido, renunciava aos seus projectos contra a Europa cristã. Morreu em 1456.
+        Recorramos à sua protecção e à penitência para repelir os ataques do espírito maligno
+        (Postcomm.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Hab. 3, 18-19</Typography>

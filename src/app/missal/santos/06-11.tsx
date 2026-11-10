@@ -9,6 +9,27 @@ export default function Page0611() {
     <PageWrapper>
       <H1 text="S. Barnabé, Apóstolo, a 11 de Junho" />
 
+      <Typography className="comment">
+        A Igreja que Jesus ressuscitado instituiu e que o Espírito Santo cumulou em Pentecostes
+        devia estender-se através do mundo. Ora, São Paulo, ao sair do seu longo retiro na Arábia,
+        foi a Jerusalém, pela primeira vez, depois de sua conversão, e quis submeter à aprovação de
+        Pedro a missão recebida do próprio Mestre, junto aos gentios, e foi São Barnabé quem o
+        apresentou aos Apóstolos. «Homem bom e cheio do Espírito Santo» (Ep.), S. Barnabé
+        evangelizou, durante doze anos, com S. Paulo, os pagãos na ilha de Chipre e em grande número
+        de cidades e países (Grad.). A Igreja, pois, honra-o como Apóstolo, e a liturgia lhe aplica
+        as palavras de Jesus, anunciando aos Doze que, estabelecidos príncipes sobre toda a terra
+        (Off.), se assentariam sobre doze tronos, a fim de julgarem as doze tribos de Israel
+        (Comm.). Tendo deixado S. Paulo, voltou a Chipre, onde os Judeus de Salamina formaram contra
+        ele uma conspiração. Recordando, então, as palavras do Mestre, enviando os Apóstolos como
+        ovelhas no meio dos lobos (Ev.), disse aos fiéis: «O lobo não ataca o pastor primeiramente,
+        senão para atingir em seguida o rebanho. Sede firmes na fé». O Espírito de Deus lhe ditou as
+        palavras que precisava dizer aos Judeus (Ev.), porém estes o lapidaram como blasfemador.
+        Enterraram-no com o Evangelho de S. Mateus, escrito por sua própria mão. Seu nome está
+        inscrito no Canon da Missa imediatamente depois do de S. Matias (2.ª lista, p. 93). Imitemos
+        o espírito de apostolado de S. Barnabé, cuja alma estava toda abrasada nos ardores do
+        Espírito Santo.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <LinkCard href="/missal/santos/11-30#intróito" title="S. André, Apóstolo" />

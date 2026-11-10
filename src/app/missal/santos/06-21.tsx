@@ -9,6 +9,32 @@ export default function Page0621() {
     <PageWrapper>
       <H1 text="S. Luís Gonzaga, Conf., a 21 de Junho" />
 
+      <Typography className="comment">
+        O Espírito Santo, «distribuidor dos dons celestes» (Or.), fez de Luís, jovem príncipe da
+        nobre família Gonzaga, um anjo na terra, unindo nele todas as maravilhas da inocência e da
+        mortificação (id.). A Igreja aplica-lhe o versículo do Salmo onde a humanidade de Adão,
+        antes da queda, e a de Cristo são declaradas pouco inferiores à natureza angélica (Intr.).
+        Seu nascimento à vida celeste precedeu, de algum modo, ao nascimento à vida natural, pois
+        veio ao mundo, no castelo de Castiglione, na Itália, em tão perigosas circunstâncias que lhe
+        foi, às pressas, conferido o baptismo (Grad.). Quando criança, todos os que o carregavam
+        julgavam ter nos braços um anjo. Com a idade de nove anos, fez em Florença, diante do altar
+        da Bem-aventurada Virgem Maria, o voto de virgindade e, durante toda a sua vida, praticou a
+        mais austera modéstia no olhar. No meio das seduções das cortes principescas, onde o enviou
+        seu pai, sempre guardou tão perfeitamente a inocência baptismal que fazia crer ter sido
+        confirmado em graça (Ev.). Aos onze anos mais ou menos, recebeu pela primeira vez, das mãos
+        de S. Carlos Borromeu, o pão dos Anjos (Comm.); aos dezesseis anos entrou, em Roma, para a
+        Companhia de Jesus, da qual é uma das glórias. Distinguiu-se tanto pela sua mortificação e
+        amor a Deus que é comparado aos eleitos na condição que lhes fixará a ressurreição geral.
+        «Vivem como os Anjos», diz Jesus, pois a alma exercerá pleno império sobre o corpo, que
+        participou de sua natureza espiritual. Com a idade de vinte e dois anos (1591), revestido de
+        sua inocência como de uma veste nupcial, ornada com as pérolas de suas contínuas lágrimas,
+        morreu vítima de sua dedicação pelos pestíferos, subindo à montanha santa para tomar parte
+        no banquete celeste por Deus preparado para os corações puros (Secr., Off., Grad.).
+        Recorramos aos méritos e à intercessão de S. Luís. Bento XIII propôs-no por modelo à
+        juventude que, não tendo sempre imitado a sua inocência, imite ao menos a sua penitência
+        (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 8, 6</Typography>

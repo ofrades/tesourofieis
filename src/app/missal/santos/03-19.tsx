@@ -8,6 +8,33 @@ export default function Page0319() {
     <PageWrapper>
       <H1 text="S. José, Esposo da B. Virgem Maria, a 19 de Março" />
 
+      <Typography className="comment">
+        A Igreja honra sempre a S. José com Maria e Jesus, especialmente nas festas de Natal, por
+        isso lê hoje o Evangelho de 24 de Dezembro. Por um calendário copto, sabemos que a Igreja
+        prestava a este Santo um culto litúrgico na data de 20 de Julho, desde o século VIII. A
+        festa foi estabelecida, no fim do século XV, para o dia 19 de Março e, em 1621, Gregório XV
+        estendeu-a à Igreja universal. Em 1870, Pio IX proclamou a S. José protector da Igreja
+        universal. O Santo «da raça real de David» era um homem justo (Ev.). Como, pelo facto de
+        seus esponsais com a Santíssima Virgem, São José tem direitos sobre o bendito fruto do seio
+        virginal da esposa, uma afinidade de ordem moral existe entre ele e Jesus. Exerceu sobre o
+        Menino Deus certo direito paternal ao qual o Prefácio de S. José delicadamente alude pela
+        palavra «paterna vice». Sem haver engendrado a Jesus, S. José, pelos laços que o unem a
+        Maria, é legal e moralmente o Pai do Filho da Santíssima Virgem; é, pois, mister reconhecer
+        esta dignidade ou excelência sobrenatural de São José, por actos do culto. «Havia na família
+        de Nazareth, diz Cornélio a Lapide, as três pessoas mais ilustres, mais excelentes do
+        universo: o Cristo Homem-Deus, a Virgem Mãe de Deus e José, pai matrimonial do Cristo. Por
+        isso ao Cristo é devido o culto de latria, à Virgem o culto de hiperdulia e a S. José o
+        culto de suprema dulia» (2). Deus lhe revelou o mistério da Encarnação (Mt.) e «o escolheu
+        entre todos» (Ep.) para confiar-lhe a guarda do Verbo encarnado e a Virgindade de Maria (3).
+        Diz o Hymno de Laudes: «O Cristo e a Virgem o assistiram na hora suprema. S. José tinha a
+        face estampada de serenidade». S. José foi para o céu gozar eternamente da visão, face a
+        face, do Verbo, cuja humanidade contemplara, tanto tempo e tão de perto, na terra. O Santo
+        é, com razão, considerado como padroeiro e modelo das almas interiores e contemplativas. Na
+        pátria celeste ele conserva grande poder sobre o coração do Filho da sua Santíssima Esposa
+        (Or.). Imitemos neste Santo Tempo a pureza, a humildade, o espírito de oração e de
+        recolhimento de José em Nazareth, onde viveu com Deus, como Moisés na nuvem (Ep.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Language>
