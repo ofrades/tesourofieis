@@ -8,6 +8,14 @@ export default function PagePasc71() {
     <PageWrapper>
       <H1 text="Segunda-feira de Pentecostes" />
 
+      <Typography className="comment">
+        A liturgia da oitava de Pentecostes mostra-nos os frutos do Espírito Santo na Igreja
+        nascente. O Evangelho de hoje recorda as palavras de Jesus sobre o Espírito que consola e
+        ensina toda a verdade; a Epístola narra a descida do Espírito sobre os primeiros
+        convertidos. Peçamos ao divino Paráclito que habite em nossas almas e as cumule dos seus
+        dons.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 80, 17</Typography>

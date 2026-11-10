@@ -8,6 +8,12 @@ export default function PagePasc72() {
     <PageWrapper>
       <H1 text="Terça-feira de Pentecostes" />
 
+      <Typography className="comment">
+        A Igreja continua a celebrar os mistérios de Pentecostes. O Evangelho apresenta Jesus como o
+        bom Pastor, cuja voz as ovelhas reconhecem; o Espírito Santo, que ele prometeu, conduz as
+        almas ao conhecimento da verdade e à vida eterna. Ouçamos a sua voz e sigamo-lo.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">4 Esd. 2, 36 & 37</Typography>

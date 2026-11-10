@@ -9,6 +9,12 @@ export default function PagePasc74() {
     <PageWrapper>
       <H1 text="Quinta-feira de Pentecostes" />
 
+      <Typography className="comment">
+        O Espírito Santo, que desceu sobre os Apóstolos, continua a vivificar a Igreja. A liturgia
+        de hoje celebra os seus dons e pede que ele nos ensine toda a verdade e nos faça perseverar
+        na caridade. «Não vos deixarei órfãos», diz o Senhor; «tornarei a vós».
+      </Typography>
+
       <Typography className="aside">
         Como no dia da{" "}
         <Link className="link" href="/missal/pascoa/pasc7-0">

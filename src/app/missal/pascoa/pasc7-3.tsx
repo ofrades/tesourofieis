@@ -8,6 +8,13 @@ export default function PagePasc73() {
     <PageWrapper>
       <H1 text="Quarta-feira das Têmporas de Pentecostes" />
 
+      <Typography className="comment">
+        As Têmporas de Pentecostes, como as do Advento e da Quaresma, consagram a Deus a nova
+        estação e preparam, pelo jejum e pela oração, os que vão receber as Ordens sagradas. A
+        Igreja pede ao Espírito Santo que desça sobre os seus ministros e sobre todo o povo fiel,
+        como desceu sobre os Apóstolos no Cenáculo.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 67, 8 & 9</Typography>

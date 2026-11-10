@@ -8,6 +8,12 @@ export default function PagePasc75() {
     <PageWrapper>
       <H1 text="Sexta-feira das Têmporas de Pentecostes" />
 
+      <Typography className="comment">
+        A Igreja, reunida nas Têmporas de Pentecostes, implora os dons do Espírito Santo sobre os
+        que serão ordenados e sobre todos os fiéis. O jejum e a oração dispõem as almas para
+        receberem a plenitude da graça que o Paráclito veio trazer ao mundo.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 70, 8 & 23</Typography>

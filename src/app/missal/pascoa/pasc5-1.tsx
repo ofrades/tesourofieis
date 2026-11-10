@@ -9,6 +9,19 @@ export default function PagePasc51() {
     <PageWrapper>
       <H1 text="Dias de Rogação" />
 
+      <Typography className="comment">
+        Após as calamidades públicas que no século V desolaram a diocese de Viena, no Delfinado, S.
+        Mamerto estabeleceu uma solene procissão de penitência nos três dias que precedem a festa da
+        Ascensão. Por prescrição do Concílio de Orleães (511), este costume espalhou-se pelo resto
+        da França. Em 816, Leão III introduziu-o em Roma e breve se estendeu pela Igreja inteira.
+        {"\n\n"}
+        As Ladainhas dos Santos, os Salmos e as Orações usadas são preces de suplicação; daí o nome
+        de Rogações. Pedem o afastamento dos flagelos da justiça de Deus e a misericórdia de suas
+        bênçãos sobre os bens da terra. Em sinal de penitência usam-se os paramentos roxos e não se
+        acende o Círio Pascal. As ladainhas dos Santos são um tipo admirável de oração. Com a Igreja
+        aprendamos a praticá-las: são jaculatórias curtas e dialogadas.
+      </Typography>
+
       <H2 text="Procissão" />
 
       <H3 text="Antífona" />

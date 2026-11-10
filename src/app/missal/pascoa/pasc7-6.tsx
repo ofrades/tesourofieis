@@ -8,6 +8,12 @@ export default function PagePasc76() {
     <PageWrapper>
       <H1 text="Sábado das Têmporas de Pentecostes" />
 
+      <Typography className="comment">
+        O Sábado das Têmporas de Pentecostes era outrora o dia das ordenações. A Igreja pede ao
+        Espírito Santo que santifique os seus ministros e renove a face da terra. «Enviai o vosso
+        Espírito e tudo será criado, e renovareis a face da terra» (Off.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Rm. 5, 5</Typography>

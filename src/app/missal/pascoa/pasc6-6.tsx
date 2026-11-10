@@ -9,6 +9,13 @@ export default function PagePasc66() {
   return (
     <PageWrapper>
       <H1 text="Missa da Vigília de Pentecostes" />
+
+      <Typography className="comment">
+        Cheios de fé em Jesus Cristo, os discípulos de João Baptista, encontrados por Paulo em
+        Éfeso, receberam o Baptismo e o Crisma (cf. Epístola de Terça-feira, p. 784). Por ocasião
+        das festas de Pentecostes, a Igreja conferia outrora esses dois Sacramentos aos catecúmenos,
+        que assim recebiam o Espírito Santo, que é o «Espírito de Cristo».
+      </Typography>
       <H2 text="Profecias" />
       <H3 text="Primeira Profecia" />
       <LinkCard

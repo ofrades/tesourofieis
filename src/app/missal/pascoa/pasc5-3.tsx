@@ -9,6 +9,13 @@ export default function PagePasc53() {
     <PageWrapper>
       <H1 text="Vigília da Festa da Ascensão de N. S. J. C." />
 
+      <Typography className="comment">
+        Terminadas as Rogações, a Igreja, com grande alegria, reveste-se de paramentos brancos e
+        prepara-se para a grande solenidade da Ascensão por uma Vigília na qual se canta o Glória in
+        excélsis. A Missa transborda de sentimentos de alegria, porque o Salvador triunfante vai
+        entrar no céu, na glória do Pai, depois de haver triunfado de Satanás e do pecado.
+      </Typography>
+
       <Typography className="aside">
         Como no{" "}
         <Link className="link" href="/missal/pascoa/pasc5-0">
