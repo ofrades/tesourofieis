@@ -8,6 +8,28 @@ export default function PagePasc20() {
     <PageWrapper>
       <H1 text="Segundo Domingo depois da Páscoa" />
 
+      <Typography className="comment">
+        Este Domingo é chamado o Domingo do Bom Pastor. S. Pedro, constituído por Jesus ressuscitado
+        chefe e Pastor de sua Igreja, diz na Epístola que o Cristo é o Pastor de nossas almas, as
+        quais eram como ovelhas errantes. Ele veio dar a vida por essas ovelhas, e elas se agruparam
+        em volta dele. O Evangelho repete a parábola do Bom Pastor (1), que defende as suas ovelhas
+        contra os ataques do lobo e as preserva da morte (Or.); anuncia também que os pagãos virão
+        juntar-se aos Judeus da Antiga Lei, não formando mais que uma só Igreja e um só rebanho, sob
+        um mesmo Pastor.
+        {"\n\n"}
+        Jesus reconhece-as por suas ovelhas e, como os discípulos de Emaús, cujos «olhos se abrem à
+        fracção do pão» (Ev., 1.º Alel., S. Leão, lição VII), essas ovelhas reconhecem, por sua vez,
+        no altar, onde o padre consagra a Hóstia, que é o memorial da Paixão de Jesus, ser o Cristo
+        «o bom Pastor que deu a vida para poder alimentar as suas ovelhas com o seu corpo e sangue»
+        (S. Gregório, lição X). Levantando os olhos para ele (Off.), elas lhe exprimem o
+        reconhecimento pela sua grande misericórdia (Intr.). «Nestes dias, exclama S. Leão, é que o
+        Espírito Santo se espalhou sobre todos os Apóstolos pela insuflação do Senhor, e que o
+        bem-aventurado Apóstolo Pedro, elevado acima de todos, viu ser-lhe confiado, depois das
+        chaves do reino, o cuidado do rebanho do Senhor» (2.º Noct.). Eis o prelúdio da fundação da
+        Igreja. — Unamo-nos em roda do divino Pastor de nossas almas, oculto na Eucaristia, e de
+        quem o Papa, Pastor da Igreja universal, é o representante visível.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 32, 5-6</Typography>

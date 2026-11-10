@@ -8,6 +8,20 @@ export default function PagePasc40() {
     <PageWrapper>
       <H1 text="Quarto Domingo depois da Páscoa" />
 
+      <Typography className="comment">
+        É pela paciência que, sob o influxo do Espírito Santo que Deus nos dá, realizaremos em nossa
+        vida a palavra do Evangelho. «É a paciência, escreve S. Cipriano, que nos torna agradáveis a
+        Deus e nos conserva em seu serviço: é ela que acalma a cólera, encadeia a língua, governa o
+        espírito, guarda a paz, regula a disciplina, contém a impetuosidade das paixões, comprime os
+        arrebatamentos do orgulho, extingue o incêndio do ódio. Ela nos ensina a perdoar, triunfa
+        das tentações, suporta as perseguições, coroa os sofrimentos e o martírio» (1.º Nocturno).
+        {"\n\n"}
+        Toda a dádiva óptima e todo o dom perfeito vem do alto, e desce do Pai das luzes, no qual
+        não há mudança nem sombra de variação. Por sua própria vontade ele nos gerou pela palavra da
+        verdade, para que sejamos como as primícias de suas criaturas (Ep.). Correspondamos, pois,
+        com uma vida santa e paciente, ao dom da fé que recebemos no baptismo.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 97, 1 & 2</Typography>

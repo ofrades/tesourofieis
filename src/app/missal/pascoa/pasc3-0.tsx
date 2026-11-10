@@ -8,6 +8,29 @@ export default function PagePasc30() {
     <PageWrapper>
       <H1 text="Terceiro Domingo depois da Páscoa" />
 
+      <Typography className="comment">
+        A Igreja se acha na alegria porque Jesus ressuscitou e nos libertou (Al.). Ela prorrompe em
+        brados jubilosos (Intr.) e canta os louvores de Deus (Off.). «Ainda um pouco e não me
+        vereis, havia dito Jesus no Cenáculo, e chorareis e lamentar-vos-eis; e ainda um pouco e
+        tornar-me-eis a ver, e o vosso coração se alegrará» (Ev.).
+        {"\n\n"}
+        Os Apóstolos, vendo de novo o Cristo ressuscitado, experimentaram essa alegria que
+        transborda ainda da liturgia pascal. Sendo a Páscoa figura da Páscoa eterna, essa alegria é
+        também a que experimentará a Igreja quando, tendo na dor gerado almas para Deus, ela tornar
+        a ver, no fim dos séculos, tempo bem curto comparado com a eternidade (Matinas), Jesus que
+        aparecerá triunfante no céu. «Ele então mudará nossa aflição em alegria que ninguém poderá
+        arrebatar-nos» (Ev.). Essa alegria santa começa já nesta vida, pois Jesus não nos deixa
+        órfãos, mas vem a nós pelo Espírito Santo, cuja graça nos cumula de felicidade na esperança
+        da felicidade futura.
+        {"\n\n"}
+        Estrangeiros e viajantes, que caminhamos para o céu, seguindo o divino ressuscitado, não nos
+        prendamos, diz S. Pedro, aos vãos prazeres deste mundo, mas observemos os preceitos tanto
+        negativos como positivos do Evangelho (Ep.), para que, «fazendo profissão de ser cristãos,
+        possamos rejeitar o que desonra esse nome, praticar o que lhe é conforme» (Or.), e chegar
+        assim à Jerusalém celeste, cujos esplendores e alegrias S. João nos descreve nas lições e
+        responsos do 1.º e 2.º Nocturno.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 65, 1-2</Typography>

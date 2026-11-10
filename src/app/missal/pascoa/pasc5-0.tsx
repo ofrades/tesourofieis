@@ -8,6 +8,20 @@ export default function PagePasc50() {
     <PageWrapper>
       <H1 text="Quinto Domingo depois da Páscoa" />
 
+      <Typography className="comment">
+        O cristão não deve somente escutar a palavra divina, mas realizá-la. Refreemos a língua,
+        pratiquemos a caridade, especialmente para com os que são mais dignos de compaixão, e
+        acautelemo-nos contra o mundo.
+        {"\n\n"}
+        Sede praticantes da palavra, e não somente ouvintes, enganando-vos a vós mesmos. Porque, se
+        alguém é ouvinte da palavra e não praticante, é como o homem que considera num espelho o seu
+        rosto natural: considerou-se, foi-se, e logo esqueceu qual era. Mas aquele que perscrutar a
+        lei perfeita da liberdade e nela permanecer, não sendo ouvinte esquecido, mas praticante da
+        obra, esse será bem-aventurado no que fizer (Ep.). — Peçamos a Deus, de quem procedem todos
+        os bens, a graça de pensar, por sua inspiração, o que é recto e, dirigidos por ele, pô-lo em
+        prática (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Is. 48, 20</Typography>
