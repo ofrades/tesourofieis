@@ -9,6 +9,23 @@ export default function PageQuad45() {
     <PageWrapper>
       <H1 text="Sexta-feira da 4.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é no santuário erigido no local da casa onde Santo Eusébio, ardente defensor da fé
+        contra Ário, viveu. Era natural que se escolhesse para a leitura da Epístola e do Evangelho
+        que falam da ressurreição, porque se erguia perto da grande necrópole do Esquilino.
+        {"\n\n"}
+        Como na missa de ontem, a Epístola e o Evangelho (1) narram uma dupla ressurreição, imagem
+        do que devia operar-se nas almas dos catecúmenos e dos penitentes públicos nas festas
+        pascais, e do que se faz pelos pecadores durante a Quaresma. Como a viúva de Sarepta (ver p.
+        427), que foi ter com Eliseu, a mãe que recorre a Elias representa a gentilidade, pois ambas
+        são pagãs. Enquanto os Judeus infiéis foram repelidos, as nossas almas participaram, pelos
+        sacramentos do Baptismo e da Penitência, da ressurreição d'Aquele que é «a Vida» (Ev.). A
+        morte corporal do filho da viúva de Naim e de Lázaro figuram também a morte espiritual de
+        nossas almas, causada pelo pecado grave. A penitência faz-nos reviver e participar das
+        influências sobrenaturais d'Aquele que é a «ressurreição» (id.). — Pela oração e penitência,
+        cuidemos de nossos interesses espirituais (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 18, 15</Typography>

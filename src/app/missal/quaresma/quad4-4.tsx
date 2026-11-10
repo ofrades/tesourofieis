@@ -8,6 +8,26 @@ export default function PageQuad44() {
     <PageWrapper>
       <H1 text="Quinta-feira da 4.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é num santuário situado sobre o Esquilino (1). O Papa S. Silvestre recebeu de um
+        santo sacerdote a sua casa, para dela fazer uma igreja. No século VI, o Papa S. Símaco
+        construiu uma nova ao lado da primeira, em nível mais elevado, e as dedicou a S. Silvestre e
+        a S. Martinho, o grande taumaturgo das Gálias (2). É uma das 25 paróquias de Roma do século
+        V.
+        {"\n\n"}
+        Foi escolhida para aí se ler o Evangelho que é o da ressurreição, porque, em nome da
+        Santíssima Trindade, São Martinho ressuscitou três mortos. Figura dos baptizados, que nascem
+        a uma vida nova em nome da Santíssima Trindade. A Epístola e o Evangelho (3) anunciam o
+        grande mistério da Ressurreição de Jesus Cristo, que se aproxima e do qual os penitentes
+        públicos participavam nas festas da Páscoa. A Sunamita e a viúva de Naim perderam ambas o
+        filho. Eliseu, figura de Jesus, ressuscita o primeiro, e o Cristo restitui à mãe o segundo.
+        É o que Deus vai fazer, em sua misericórdia, no santo tribunal da penitência, pelas almas
+        que o pecado matou: vai ressuscitá-las à vida da graça e restituí-las à Igreja, sua mãe.
+        Preparemo-nos para a nossa confissão pascal, que vai dar mais abundantemente à nossa alma a
+        vida sobrenatural. — Moderemos pelo jejum os nossos apetites terrestres, para melhor
+        saborearmos as coisas celestes (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 104, 3-4</Typography>

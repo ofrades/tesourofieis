@@ -9,6 +9,26 @@ export default function PageQuad41() {
     <PageWrapper>
       <H1 text="Segunda-feira da 4.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é no Monte Célio, numa igreja (1) construída no século VII em honra de quatro
+        oficiais do exército romano que, tendo recusado adorar uma estátua de Esculápio, receberam a
+        coroa do martírio. Foram os Quatro Coroados, cujas relíquias se veneram nesse santuário,
+        assim como a cabeça do mártir São Sebastião, oficial do exército de Diocleânio. Essa é uma
+        das 25 paróquias romanas do século V.
+        {"\n\n"}A Epístola narra a célebre sentença de Salomão, uma das duas mulheres que disputavam
+        um filho, e a Igreja dá a vida pelo baptismo e pela penitência. Os penitentes e catecúmenos
+        preparavam-se para o baptismo e a penitência durante a Quaresma; preparemo-nos para a nossa
+        confissão pascal. A sabedoria de Salomão, admirada por todo o mundo, figura a do verdadeiro
+        Salomão, cuja doutrina vem regenerar o mundo. O Evangelho deste dia estabelece outra
+        superioridade de Jesus sobre o seu real antepassado: Salomão havia construído um templo
+        superior ao de Moisés (ver p. 480); Jesus, falando de seu próprio corpo, faz este desafio
+        aos inimigos: «Destruí este templo, e eu o reconstruirei em três dias». Ele ressuscita, com
+        efeito, no 3.º dia depois de sua morte. Da Igreja, seu corpo místico, expulsa os indignos,
+        como expulsara os vendedores do templo (1), e aí faz entrar todos os que nele creem. —
+        Tornemo-nos de corpo e alma agradáveis a Deus, pela religiosa observância das santas
+        práticas da Quaresma.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 53, 3-4</Typography>

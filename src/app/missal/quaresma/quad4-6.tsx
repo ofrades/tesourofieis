@@ -8,6 +8,22 @@ export default function PageQuad46() {
     <PageWrapper>
       <H1 text="Sábado da 4.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é feita numa igreja construída sobre a ruína de três templos pagãos e consagrada a
+        S. Nicolau. Traz o nome de in carcere, porque esse lugar era outrora ocupado por um cárcere
+        (1). Sob o altar-mor veneram-se numa urna antiga os restos dos Santos Mártires Marcos,
+        Marcelino, Faustino, Simplício e Beatriz.
+        {"\n\n"}
+        Isaías nos dá o Introito e a Epístola da missa. O profeta vê chegarem de todos os lados os
+        catecúmenos e os penitentes públicos, a esperarem com santa impaciência as festas de Páscoa,
+        quando as suas almas poderão enfim desalterar-se nas fontes da graça, nos sacramentos do
+        Baptismo e da Penitência. — Achavam-se nas trevas e Jesus as esclarece (Ep.), pois Ele nos
+        diz no Evangelho que Ele é a luz do mundo e que não caminha nas trevas, mas à luz da vida,
+        aquele que o segue (2). Também nós, pela penitência, expulsemos o pecado de nossos corações
+        e peçamos ao Cristo iluminá-los com a sua graça. Supliquemos-lhe que converta as nossas
+        vidas.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Is. 55, 1</Typography>

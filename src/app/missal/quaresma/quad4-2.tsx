@@ -8,6 +8,21 @@ export default function PageQuad42() {
     <PageWrapper>
       <H1 text="Terça-feira da 4.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação é na igreja construída no século IV pelo Papa S. Dâmaso, em honra do célebre
+        diácono, o mártir São Lourenço (1). Este santuário conserva as relíquias do santo e é uma
+        das paróquias romanas mais antigas.
+        {"\n\n"}A Epístola mostra-nos Moisés intercedendo pelo povo infiel e levando os Israelitas
+        ao arrependimento. Façamos penitência e Deus ouvirá as nossas preces, pois agora fazemos
+        parte do povo de Deus. O Evangelho (1) nos introduz no templo onde Jesus é atacado por seus
+        pérfidos inimigos. Ele os confunde, apoiando-se na autoridade de Moisés, mas nem assim lhes
+        muda o coração. Repelido por Jerusalém, fundará um novo povo, a Igreja, que se espalhará por
+        todo o universo e terá em breve a alegria de ver acrescido o número de seus filhos nas
+        festas de Páscoa. Alegremo-nos por fazer parte dessa Igreja. — Perseveremos generosamente no
+        jejum e na humilde sujeição ao Evangelho, o que nos garantirá o auxílio contínuo de Deus e
+        favorecerá nosso progresso na perfeição (Or.).
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Sl. 54, 2-3</Typography>

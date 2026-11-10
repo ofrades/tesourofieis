@@ -9,6 +9,24 @@ export default function PageQuad43() {
     <PageWrapper>
       <H1 text="Quarta-feira da 4.ª Semana da Quaresma" />
 
+      <Typography className="comment">
+        A Estação fazia-se em Roma na grande basílica de S. Paulo, da via d'Ostia (1). Era natural
+        reunir-se junto ao túmulo do Doutor dos Gentios, neste dia que se chamava a Feria do Grande
+        Escrutínio, por se proceder então ao exame do qual dependia a admissão dos catecúmenos ao
+        baptismo.
+        {"\n\n"}
+        Depois de Isaías, que falam dessa mesma purificação «em que as almas se tornam brancas como
+        a neve», lia-se-lhes o início dos 4 Evangelhos e explicava-se-lhes o Símbolo dos Apóstolos e
+        o Pater. Amemos a leitura do Evangelho, recitemos muitas vezes o Símbolo e o Pater. O
+        Evangelho (1) fala da cura do cego de nascença, que teve de lavar-se na piscina de Siloé,
+        novo símbolo do baptismo e das instruções que o precedem, que trazem aos Gentios a luz
+        sobrenatural da qual estão privados, e a fé na divindade de Jesus Cristo. Purifiquemo-nos,
+        pela penitência, das manchas que tivemos a infelicidade de contrair após o baptismo, e Deus
+        tornará a nossa alma branca como a neve. — Vendo no jejum um meio para o justo aumentar os
+        seus méritos e o culpado obter o perdão de seus pecados (Or.), mortifiquemos corajosamente
+        os nossos corpos, a fim de podermos saborear com mais facilidade as coisas do céu.
+      </Typography>
+
       <H3 text="Intróito" />
 
       <Typography className="em">Ez. 36, 23-26</Typography>
