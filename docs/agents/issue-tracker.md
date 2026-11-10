@@ -12,15 +12,14 @@ GitHub Issues is enabled on this repository but is **not** the tracker. Do not
 open issues there; if one arrives from outside, create a BB task and close the
 GitHub issue with a pointer to this file.
 
-## Retired vault tracker
+## Removed vault tracker
 
-The Obsidian vault tracker at `~/Work/ofrades/notes/tesourofieis/issues/` was
-retired on 2026-11-10. Its open issues were imported into BB Tasks as a
-snapshot. The markdown files are frozen history: do not add, edit, claim,
-comment on, close or move them. The vault's `tesourofieis/tesourofieis.md`
-records the old workflow for history only.
+The Obsidian vault tracker at `~/Work/ofrades/notes/tesourofieis/issues/` was removed
+on 2026-11-10. Its open issues were imported into BB Tasks (TES). The markdown files are preserved in the notes git
+history. The vault's `tesourofieis/tesourofieis.md` is now only a BB Tasks pointer.
 Imported tasks keep a `**Legacy issue:** #N` footer and a
-`<!-- vault-issue: tesourofieis/N -->` marker so old issue numbers stay resolvable.
+`<!-- vault-issue: tesourofieis/N -->` marker so old issue numbers stay
+resolvable.
 
 ## Commands
 

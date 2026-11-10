@@ -24,7 +24,8 @@ Tesouro dos Fiéis is a universal Catholic liturgical application that provides:
 Open work is tracked in BB Tasks under the **TES** project:
 `bb tasks list --project TES`. See
 [docs/agents/issue-tracker.md](docs/agents/issue-tracker.md). The Obsidian vault
-tracker was retired on 2026-11-10; its files are frozen history.
+tracker was removed on 2026-11-10; its files are preserved in the notes git
+history.
 
 ## Technology Stack
 

@@ -251,8 +251,8 @@ operating conventions are in
 [docs/agents/issue-tracker.md](docs/agents/issue-tracker.md).
 
 The Obsidian vault tracker at `~/Work/ofrades/notes/tesourofieis/issues/` was
-retired on 2026-11-10; its open issues were imported into BB Tasks and the
-markdown files are frozen history. Do not edit them.
+removed on 2026-11-10; its open issues were imported into BB Tasks and the
+markdown files are preserved in the notes git history.
 
 GitHub Issues is enabled on this repository but is not the tracker; do not open
 issues there. If someone files one, create a BB task and close the GitHub issue
